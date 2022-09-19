@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../style.css';
+import './NewReservation.css';
 
 class ReseReserveForm extends React.Component {
 
@@ -7,13 +8,14 @@ class ReseReserveForm extends React.Component {
         return(
                 <div>
                     <ul>
-                    <h4> RESERVED BY </h4>
-
+                        <div>
+                            <h4 className="label"> RESERVED BY </h4>
+                        </div>
                     <div className="form_content_div">
                         <div className="row">
                             <div className="col-sm-4">
-                                <div className="form-group">
-                                    <label>Title</label>
+                                <div className="inputfieldpadding">
+                                    <label className="text-left">Title</label>
                                     <select className="form-control m-bot15">
                                         <option>Option 1</option>
                                         <option>Option 2</option>
@@ -22,28 +24,28 @@ class ReseReserveForm extends React.Component {
                                 </div>
                             </div>
                             <div className="col-sm-4">
-                                <div className="form-group">
-                                    <label>First Name</label>
+                                <div className="inputfieldpadding">
+                                    <label className="text-left">First Name</label>
                                     <input type="text" className="form-control" placeholder="" />
                                 </div>
                             </div>
                             <div className="col-sm-4">
-                                <div className="form-group">
-                                    <label>Last Name</label>
+                                <div className="inputfieldpadding">
+                                    <label className="text-left">Last Name</label>
                                     <input type="text" className="form-control" placeholder="" />
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-sm-8">
-                                <div className="form-group">
-                                    <label>Address</label>
+                                <div className="inputfieldpadding">
+                                    <label className="text-left">Address</label>
                                     <textarea className="form-control" style={{ height: 60,}} placeholder=""></textarea>
                                 </div>
                             </div>
                             <div className="col-sm-4">
-                                <div className="form-group">
-                                    <label>Gender</label>
+                                <div className="inputfieldpadding">
+                                    <label className="text-left">Gender</label>
                                     <select className="form-control m-bot15">
                                         <option>Male</option>
                                         <option>Female</option>
@@ -53,22 +55,22 @@ class ReseReserveForm extends React.Component {
                         </div>
                         <div className="row">
                             <div className="col-sm-6">
-                                <div className="form-group">
-                                    <label>E-mail</label>
+                                <div  className="inputfieldpadding">
+                                    <label className="text-left">E-mail</label>
                                     <input type="text" className="form-control" placeholder="" />
                                 </div>
                             </div>
                             <div className="col-sm-6">
-                                <div className="form-group">
-                                    <label>Phone</label>
+                                <div className="inputfieldpadding">
+                                    <label className="text-left">Phone</label>
                                     <input type="text" className="form-control" placeholder="" />
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-sm-4">
-                                <div className="form-group">
-                                    <label>Country</label>
+                                <div className="inputfieldpadding">
+                                    <label  className="text-left">Country</label>
                                     <select className="form-control m-bot15">
                                         <option>Option 1</option>
                                         <option>Option 2</option>
@@ -77,8 +79,8 @@ class ReseReserveForm extends React.Component {
                                 </div>
                             </div>
                             <div className="col-sm-4">
-                                <div className="form-group">
-                                    <label>State</label>
+                                <div className="inputfieldpadding">
+                                    <label className="text-left">State</label>
                                     <select className="form-control m-bot15">
                                         <option>Option 1</option>
                                         <option>Option 2</option>
@@ -87,8 +89,8 @@ class ReseReserveForm extends React.Component {
                                 </div>
                             </div>
                             <div className="col-sm-4">
-                                <div className="form-group">
-                                    <label>Zone</label>
+                                <div className="inputfieldpadding">
+                                    <label className="text-left">Zone</label>
                                     <select className="form-control m-bot15">
                                         <option>Option 1</option>
                                         <option>Option 2</option>

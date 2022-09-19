@@ -182,16 +182,55 @@ class NewReservation extends React.Component {
 
 
                      {/* ----- Room Rate Type Discount ------ */}
-                     <div className="" >
-                        <div className="row">
-                            <div className="col-sm-5 padcolumn reseform" >
+                     
+                        <div className="row pb-5" >
+                            <div className="col-sm-5" >
                                 <ReseReserveForm></ReseReserveForm>
+                                <div>
+                                <div className="col-sm-12 padcolumn">
+
+                                            <h4 className="text-center"> COMMENTS </h4>
+
+                                            <div className="column">
+                                                <div className="row">
+                                                    <div className="col-sm-12">
+                                                        <div className="form-group">
+                                                            <label>Special Instructions/Comments</label>
+                                                            <input type="text" className="form-control" placeholder="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-sm-12">
+                                                        <div className="form-group">
+                                                            <label>Show Discounts</label>
+                                                            <div className="row">
+                                                                <div className="col-sm-6">
+                                                                    <input type="text" className="form-control shw_dsct_lft" value="GENERAL" />
+                                                                </div>
+                                                                <div className="col-sm-6">
+                                                                    <input type="text" className="form-control shw_dsct_rgt" value="'100 RS" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="row" >
+                                                            <div className="col-sm-6"></div>
+                                                            <div className="col-sm-6">
+                                                                <button type="button" className="btn btn-success btnflot w-100" > Submit</button>
+                                                            </div>
+                                                </div>
+                                            </div>
+
+                                            </div>
+                                </div>
                             </div>
-                            <div className="col-sm-6 padcolumn reseform" >
+                            <div className="col-sm-6" style={{float : 'right'}} >
                                 <ReseReservedFor></ReseReservedFor>
                             </div>
                         </div>
-                    </div>
+                    
                     
                      <div>
                         
