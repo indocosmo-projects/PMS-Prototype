@@ -2,7 +2,6 @@ import React from 'react';
 import '../../style.css';
 import './NewReservation.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ReseCalendar from './ReseCalendar';
 
 
 
@@ -53,12 +52,12 @@ class ReseReservedFor extends React.Component {
         return (
 
             <div >
-                <ul style={{ listStyleType: 'none'}}>
+                <ul className="ulistmargin">
                     {this.state.persons.map(person => <li key={person.id} className={this.display(person.id)} >
 
                         <div>
                             <form >
-                                <div className="row">
+                                <div className="row mb-5 border-bottom">
                                         <div className="col-sm-12 ">
                                                 <h4 className="label">RESERVED FOR 
                                                     <label className="chkbox" >
@@ -67,7 +66,7 @@ class ReseReservedFor extends React.Component {
                                                 </h4>
                                         </div>
          
-                                <div className="form_content_div">
+                                <div className="border-bottom">
                                     <div className="row">
                                         <div className="col-sm-4">
                                             <div className="inputfieldpadding">
@@ -166,11 +165,14 @@ class ReseReservedFor extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <br/>
-                                        <div className="col-sm-12 " >
+                                    </div>
                                     
+                                        <div className="col-sm-12 " >
+                                                <div className="col-sm-12 ">
+                                                        <h4 className="label">RESERVED FOR </h4>
+                                                </div>
+
                                                 <div className="row">
-                                           
                                                     <div className="col-sm-12">
                                                     <div className="row ">
                                                         <div className="col-sm-4 ">
@@ -193,7 +195,7 @@ class ReseReservedFor extends React.Component {
                                                         </div>
                                                     </div>
                                                     </div>
-                                                    <div className="col-sm-12" style={{marginTop : 5}}>
+                                                    <div className="col-sm-12" >
                                                         <div className="row">
                                                             
                                                             <div className="col-sm-4">
@@ -216,17 +218,9 @@ class ReseReservedFor extends React.Component {
                                         </div>
                                     </div>
 
-                                 
-                                    <div className="row" >
-                                        <div className="col-sm-6"></div>
-                                        <div className="col-sm-6">
-                                            <button type="button" className="btn btn-success btnflot w-100" > Submit</button>
-                                        </div>
-                                    </div>
-                                    
 
 
-                                    </div>
+                                   
                                 </div>
                             </form>
                         </div>

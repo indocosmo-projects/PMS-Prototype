@@ -40,6 +40,12 @@
     height: 100%;
 }
 
+.formxs{
+    padding: 25px;
+  
+  
+}
+
 .theadpadding{
     background-color: rgb(241, 238, 238);
     padding: 20px;
@@ -88,4 +94,15 @@
     float : right;
     font-size : 16px;
     font-weight : normal;
+}
+
+.border-bottom{
+    border-bottom : 1px solid lightgray;
+    padding-bottom : 15px; 
+    margin-bottom : 40px; 
+}
+
+.ulistmargin{
+    margin : 0px !important;
+    padding: 0px;
 }
