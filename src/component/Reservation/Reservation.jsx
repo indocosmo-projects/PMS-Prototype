@@ -3,8 +3,8 @@ import React from 'react';
 class Reservation extends React.Component {
 
     state = {
-        details :  
     
+    details :  
     [{id: 1, rese:'R-000001',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
     {id: 2, rese:'R-000002',arrival :'27-DEC-2018',nights:'4',rooms:'2',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
     {id: 3, rese:' R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
@@ -14,6 +14,8 @@ class Reservation extends React.Component {
     {id: 7, rese:'R-000007',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
     ],
 
+    dropdown : 0,
+
 }
 
     tdata = () =>{
@@ -21,8 +23,8 @@ class Reservation extends React.Component {
         return(
                 <tbody>
                     {
-                    this.state.details.map(detail =>  <tr key={detail.id}  className="" >
-                        <td>{detail.rese}</td>
+                    this.state.details.map(detail =>  <tr key={detail.id} >
+                        <td style={{color : 'blue'}} >{detail.rese}</td>
                         <td>{detail.arrival}</td>
                         <td>{detail.nights}</td>
                         <td>{detail.rooms}</td>
@@ -30,7 +32,7 @@ class Reservation extends React.Component {
                         <td>{detail.bookedby}</td>
                         <td>{detail.bookedfor}</td>
                         <td>{detail.bookedon}</td>
-                        <td>{detail.status}</td>
+                        <td style={{color : 'blue'}} >{detail.status}</td>
                     </tr>
                     )}
                     
@@ -40,7 +42,51 @@ class Reservation extends React.Component {
     }
 
 
-    render() { 
+    count = () =>{
+
+        if(this.state.dropdown === 1) {
+            this.setState({dropdown : 0})
+            console.log("this.state.dropdown"+this.state.dropdown);
+        }
+
+        if(this.state.dropdown === 0) {
+            this.setState({dropdown : 1})
+            console.log("this.state.dropdown"+this.state.dropdown);
+        }
+    }
+
+    dropdown = () => {
+        if(this.state.dropdown === 0) return "";
+
+        if(this.state.dropdown === 1) return (
+            <div className="dpdown shadow">
+            <div className="row p-4">
+                <div class="col-sm-6 form-group inputfieldpadding">
+                    <label className="text-left" for="reservedby">Reserved By :</label>
+                    <input type="text" class="form-control" name="reservedby" id="reservedby"/>
+                </div>
+                <div class="col-sm-6 form-group inputfieldpadding">
+                    <label className="text-left" for="reservedstatus">Reservation Status :</label>
+                    <input type="text" class="form-control" name="reservedstatus" id="reservedstatus"/>
+                </div>
+                <div class="col-sm-6 form-group inputfieldpadding">
+                    <label className="text-left" for="departdate">Reserved Date :</label>
+                    <input type="date" class="form-control" name="departdate" id="departdate"/>
+                </div>
+                <div class="col-sm-6 form-group inputfieldpadding">
+                    <label className="text-left" for="arrival">Arrival Date :</label>
+                    <input type="date" class="form-control " name="arrival" id="arrival"/>
+                </div>
+                <div class="col-sm-6 form-group inputfieldpadding">
+                    <button className="btn btn-danger m-1">Search</button>
+                    <button className="btn btn-secondary m-1">Close</button>
+                </div>
+            </div>
+            </div>
+        );
+    }
+  
+      render() { 
         return (
             <div className="section">
                 <div className="container-fluid">
@@ -49,18 +95,19 @@ class Reservation extends React.Component {
                         <h5 className="header"> RESERVATIONS </h5>
                     </div>
                     
-                    <div className="p-4">
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <div className="input-group mb-3">
+                    <div className="p-4 parentdpdown">
+                    <div className="row ">
+                        <div className="col-sm-6 ">
+                            <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
-                                <div className="input-group-append p-0 bg-white">
-                                    <span className="input-group-text p-0 bg-white br" ><button className="btn" ><i className="bi bi-caret-down"></i></button></span>
+                                <div className="input-group-append p-0 bg-white ">
+                                    <span className="input-group-text p-0 bg-white br" ><button className="btn"    onClick={this.count}  ><i className="bi bi-caret-down"></i></button></span>
                                 </div>
                                 <div className="input-group-append p-0">
                                     <span className="input-group-text p-0 br"><button className="btn btn-primary br" >Search</button></span>
                                 </div>
                             </div>
+                            {this.dropdown()}
                         </div>
                         <div className="col-sm-6">
                             <div className="mb-3 ">
@@ -89,11 +136,11 @@ class Reservation extends React.Component {
 
                     <div className="row">
                         <div className="col-sm-12 ">
-                            <table className="table table-bordered" >
+                            <table className="table table-striped table-bordered" >
                                 <thead >
                                     <tr>
                                         <th className="thstyle">RESV.#</th>
-                                        <th className="thstyle">ARRIVAL  <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">ARRIVAL <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th> 
                                         <th className="thstyle">NIGHTS <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i> </th>
                                         <th className="thstyle">ROOMS <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
                                         <th className="thstyle">DEPARTURE <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
@@ -110,6 +157,7 @@ class Reservation extends React.Component {
                         </div>
                     
                     </div>
+
 
                     </div>
                 </div>

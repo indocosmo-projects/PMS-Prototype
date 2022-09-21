@@ -2,7 +2,7 @@ import React from 'react';
 import './Navigation.css';
 import logo from '../../assets/niko.png';
 import {Nav ,NavLink ,Navbar } from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -11,6 +11,18 @@ class Navigationbar extends React.Component {
 
     state={
         dropdownindex : 0,
+    }
+
+
+    display = () =>{
+        
+        if(this.state.dropdownindex === 0){
+            this.setState({ dropdownindex : 1})
+        }
+
+        if(this.state.dropdownindex === 1){
+            this.setState({ dropdownindex : 0})
+        }
     }
 
     dropdown = () =>{
@@ -68,7 +80,7 @@ class Navigationbar extends React.Component {
                     </Navbar>
                     </div>
                     <div className="col-sm-2 user marginzero">
-                         <button className="bg-white btn" onClick={() => this.setState({ dropdownindex : 1})} 
+                         <button className="bg-white btn" onClick={this.display} 
                          >Suresh Somanathan <i class="bi bi-caret-down"></i></button>
                          {this.dropdown()}
                     </div>
