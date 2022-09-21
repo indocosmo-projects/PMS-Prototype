@@ -30,7 +30,7 @@ class Reservation extends React.Component {
                         <td>{detail.bookedon}</td>
                         <td>{detail.status}</td>
                     </tr>
-                    )};
+                    )}
                     
                 </tbody>
         );
@@ -47,26 +47,51 @@ class Reservation extends React.Component {
                         <h5 className="header"> RESERVATION </h5>
                     </div>
                     
-
-                     <table className="table table-bordered">
-                        <thead >
-                            <tr>
-                                <th className="thstyle">RESV.#</th>
-                                <th className="thstyle">ARRIVAL</th>
-                                <th className="thstyle">NIGHTS</th>
-                                <th className="thstyle">ROOMS</th>
-                                <th className="thstyle">DEPARTURE</th>
-                                <th className="thstyle">BOOKED BY</th>
-                                <th className="thstyle">BOOKED FOR</th>
-                                <th className="thstyle">BOOKED ON</th>
-                                <th className="thstyle">STATUS</th>
-                            </tr>
-                        </thead>
-                        
-                                {this.tdata()}
-                  
-                    </table>
+                    <div className="p-4">
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <div className="input-group mb-3">
+                                <input type="text" className="form-control" placeholder="Search..." />
+                                <div className="input-group-append p-0 bg-white">
+                                    <span className="input-group-text p-0 bg-white br" ><button className="btn" ><i className="bi bi-caret-down"></i></button></span>
+                                </div>
+                                <div className="input-group-append p-0">
+                                    <span className="input-group-text p-0 br"><button className="btn btn-primary br" >Search</button></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-6">
+                            <div className="mb-3 ">
+                                <a href="/newreservation"><button className="btn btn-secondary" style={{float : 'right'}}>Add New <i className="bi bi-plus"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
                     
+                    <div className="row">
+                        <div className="col-sm-12 ">
+                            <table className="table table-bordered">
+                                <thead >
+                                    <tr>
+                                        <th className="thstyle">RESV.#</th>
+                                        <th className="thstyle">ARRIVAL</th>
+                                        <th className="thstyle">NIGHTS</th>
+                                        <th className="thstyle">ROOMS</th>
+                                        <th className="thstyle">DEPARTURE</th>
+                                        <th className="thstyle">BOOKED BY</th>
+                                        <th className="thstyle">BOOKED FOR</th>
+                                        <th className="thstyle">BOOKED ON</th>
+                                        <th className="thstyle">STATUS</th>
+                                    </tr>
+                                </thead>
+                                
+                                        {this.tdata()}
+                        
+                            </table>
+                        </div>
+                    
+                    </div>
+
+                    </div>
                 </div>
             </div>
         );

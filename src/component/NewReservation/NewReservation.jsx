@@ -181,7 +181,7 @@ class NewReservation extends React.Component {
                     </div>
 
 
-                     {/* ----- Room Rate Type Discount ------ */}
+                     {/* ----- Room Reserved By And Reserved For ------ */}
                      
                         <div className="row formxs mt-1 pb-5" >
                             <div className="col-sm-6" >
@@ -194,6 +194,7 @@ class NewReservation extends React.Component {
                     
                     
                
+                     {/* ----- Buttons ------ */}
                      <div className="row " >
                                 <div className="col-sm-3"></div>
                                 <div className="col-sm-6">

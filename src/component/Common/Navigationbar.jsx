@@ -55,8 +55,8 @@ class Navigationbar extends React.Component {
                         <Navbar.Toggle aria-controls="navbarScroll" data-bs-target="#navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
                                 <Nav>
-                                    <NavLink className="nlink" eventKey="1" as={Link} to="/home">Home</NavLink>
-                                    <NavLink className="nlink" eventKey="2" as={Link} to="/reservation">Reservation</NavLink>
+                                    <NavLink className="nlink" eventKey="1" as={Link} href="/home" to="/home">Home</NavLink>
+                                    <NavLink className="nlink" eventKey="2" as={Link} href="/reservation" to="/reservation">Reservation</NavLink>
                                     <NavLink className="nlink" eventKey="3" as={Link} to="/reception">Reception</NavLink>
                                     <NavLink className="nlink" eventKey="4" as={Link} to="/shift">Shift <i class="bi bi-caret-down"></i></NavLink>
                                     <NavLink className="nlink" eventKey="5" as={Link} to="/requests">Requests</NavLink>
