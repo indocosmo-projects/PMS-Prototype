@@ -59,7 +59,7 @@ class Reservation extends React.Component {
         if(this.state.dropdown === 0) return "";
 
         if(this.state.dropdown === 1) return (
-            <div className="dpdown shadow">
+            <div className="dpdown shadow ">
             <div className="row p-4">
                 <div class="col-sm-6 form-group inputfieldpadding">
                     <label className="text-left" for="reservedby">Reserved By :</label>
@@ -95,9 +95,9 @@ class Reservation extends React.Component {
                         <h5 className="header"> RESERVATIONS </h5>
                     </div>
                     
-                    <div className="p-4 parentdpdown">
+                    <div className="p-4 ">
                     <div className="row ">
-                        <div className="col-sm-6 ">
+                        <div className="col-sm-6 parentdpdown ">
                             <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
                                 <div className="input-group-append p-0 bg-white ">
