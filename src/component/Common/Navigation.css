@@ -75,9 +75,16 @@
     padding : 10px;
 }
 
+.nlink{
+    text-decoration: none;
+    padding: 10px;
+    color: whitesmoke;
+}
+
 .nlink:hover{
-    background-color: red;
+    background-color: red ;
     opacity: 1 ;
+    color: white ;
 }
 
 .marginzero{

@@ -67,6 +67,24 @@ class Reservation extends React.Component {
                         </div>
                     </div>
                     
+                    <div class="form-group mb-3">
+                        <div className="row">
+                            <div className="col-sm-1">
+                                <select class="form-control" id="sel1">
+                                    <option>5</option>
+                                    <option>15</option>
+                                    <option>20</option>
+                                    <option>All</option>
+                                </select>
+                            </div>
+                            <div className="col-sm-11">
+                                <label for="sel1" style={{float : 'left'}}> records per page</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  
+
                     <div className="row">
                         <div className="col-sm-12 ">
                             <table className="table table-bordered">

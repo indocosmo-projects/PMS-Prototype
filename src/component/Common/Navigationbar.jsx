@@ -55,14 +55,14 @@ class Navigationbar extends React.Component {
                         <Navbar.Toggle aria-controls="navbarScroll" data-bs-target="#navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
                                 <Nav>
-                                    <NavLink className="nlink" eventKey="1" as={Link} href="/home" to="/home">Home</NavLink>
-                                    <NavLink className="nlink" eventKey="2" as={Link} href="/reservation" to="/reservation">Reservation</NavLink>
-                                    <NavLink className="nlink" eventKey="3" as={Link} to="/reception">Reception</NavLink>
-                                    <NavLink className="nlink" eventKey="4" as={Link} to="/shift">Shift <i class="bi bi-caret-down"></i></NavLink>
-                                    <NavLink className="nlink" eventKey="5" as={Link} to="/requests">Requests</NavLink>
-                                    <NavLink className="nlink" eventKey="6" as={Link} to="/reports">Reports</NavLink>
-                                    <NavLink className="nlink" eventKey="7" as={Link} to="/tools">Tools <i class="bi bi-caret-down"></i></NavLink>
-                                    <NavLink className="nlink" eventKey="8" as={Link} to="/setup">Setup <i class="bi bi-caret-down"></i></NavLink>
+                                    <a className="nlink" href="/home">Home</a>
+                                    <a className="nlink" href="/reservation">Reservation</a>
+                                    <a className="nlink" href="/reception">Reception</a>
+                                    <a className="nlink" href="/shift">Shift <i class="bi bi-caret-down"></i></a>
+                                    <a className="nlink" href="/requests">Requests</a>
+                                    <a className="nlink" href="/reports">Reports</a>
+                                    <a className="nlink" href="/tools">Tools <i class="bi bi-caret-down"></i></a>
+                                    <a className="nlink" href="/setup">Setup <i class="bi bi-caret-down"></i></a>
                                 </Nav>
                             </Navbar.Collapse>
                     </Navbar>
