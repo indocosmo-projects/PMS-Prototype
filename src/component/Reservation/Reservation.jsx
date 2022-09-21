@@ -10,6 +10,8 @@ class Reservation extends React.Component {
     {id: 3, rese:' R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
     {id: 4, rese:'R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
     {id: 5, rese:'R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
+    {id: 6, rese:'R-000007',arrival :'16-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+    {id: 7, rese:'R-000007',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
     ],
 
 }
@@ -19,7 +21,7 @@ class Reservation extends React.Component {
         return(
                 <tbody>
                     {
-                    this.state.details.map(detail => <tr key={detail.id} >
+                    this.state.details.map(detail =>  <tr key={detail.id}  className="" >
                         <td>{detail.rese}</td>
                         <td>{detail.arrival}</td>
                         <td>{detail.nights}</td>
@@ -44,7 +46,7 @@ class Reservation extends React.Component {
                 <div className="container-fluid">
                     {/* ----- Heading ------ */}
                     <div>
-                        <h5 className="header"> RESERVATION </h5>
+                        <h5 className="header"> RESERVATIONS </h5>
                     </div>
                     
                     <div className="p-4">
@@ -87,18 +89,18 @@ class Reservation extends React.Component {
 
                     <div className="row">
                         <div className="col-sm-12 ">
-                            <table className="table table-bordered">
+                            <table className="table table-bordered" >
                                 <thead >
                                     <tr>
                                         <th className="thstyle">RESV.#</th>
-                                        <th className="thstyle">ARRIVAL</th>
-                                        <th className="thstyle">NIGHTS</th>
-                                        <th className="thstyle">ROOMS</th>
-                                        <th className="thstyle">DEPARTURE</th>
-                                        <th className="thstyle">BOOKED BY</th>
-                                        <th className="thstyle">BOOKED FOR</th>
-                                        <th className="thstyle">BOOKED ON</th>
-                                        <th className="thstyle">STATUS</th>
+                                        <th className="thstyle">ARRIVAL  <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">NIGHTS <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i> </th>
+                                        <th className="thstyle">ROOMS <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">DEPARTURE <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">BOOKED BY <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">BOOKED FOR <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">BOOKED ON <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">STATUS <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
                                     </tr>
                                 </thead>
                                 

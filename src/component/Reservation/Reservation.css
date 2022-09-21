@@ -7,3 +7,11 @@
   border-radius : 0px;
 }
 
+.right{
+  float : 'right' ;
+}
+
+.even{
+  background-color: #f2f2f2;
+}
+
