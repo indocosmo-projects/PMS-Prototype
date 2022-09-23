@@ -15,7 +15,7 @@ class Reservation extends React.Component {
         ],
 
         dropdown : 0,
-        recordno : 0,
+        recordno : 5,
 
     }
 
@@ -168,13 +168,13 @@ class Reservation extends React.Component {
                     </div>
 
                     <div className="row">
-                        <div className="col-sm-3" >Showing 1 to 5 of 7 entries</div>
+                        <div className="col-sm-3" style={{textAlign : 'left'}}>Showing 1 to {this.state.recordno} of {this.state.details.length} entries</div>
                         <div className="col-sm-6"></div>
-                        <div className="col-sm-3" >
-                            <button className="btn bg-white  btn-outline-dark">Prev</button>
-                            <button className="btn bg-white  btn-outline-dark">1</button>
-                            <button className="btn bg-white  btn-outline-dark">2</button>
-                            <button className="btn bg-white  btn-outline-dark">Next</button>
+                        <div className="col-sm-3" style={{textAlign : 'right'}}>
+                            <button className="btn btn-outline-dark">Prev</button>
+                            <button className="btn btn-outline-dark">1</button>
+                            <button className="btn btn-outline-dark">2</button>
+                            <button className="btn btn-outline-dark">Next</button>
                         </div>
                     </div>
 
