@@ -23,12 +23,12 @@ class Reception extends React.Component {
                 <tbody>
                     {
                     this.state.details.map(detail => <tr key={detail.id} >
-                        <td>{detail.roomno}</td>
-                        <td >{detail.guest}</td>
-                        <td>{detail.arrival}</td>
-                        <td>{detail.departure}</td>
-                        <td>{detail.foliobalance}</td>
-                        <td><button className="btn btn-success w-100">CHECK-IN</button></td>
+                        <td className="left">{detail.roomno}</td>
+                        <td className="left">{detail.guest}</td>
+                        <td className="left">{detail.arrival}</td>
+                        <td className="left">{detail.departure}</td>
+                        <td className="left">{detail.foliobalance}</td>
+                        <td className="bg-success"><button className="btn btn-success w-100">CHECK-IN</button></td>
                         <td className="tdwidth">
                             <div className="row">
                                 <div className="col-2">
@@ -135,8 +135,10 @@ class Reception extends React.Component {
                                     <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
                                 </div>
                             </div>
-                            <div  style={{height : 370,width: 550, zIndex : 100, position : 'absolute',opacity: 1}}>
-                                {this.dropdown()}
+                            <div className="parentdpdown">
+                                <div className="ddw" >
+                                    {this.dropdown()}
+                                </div>
                             </div>
                         </div>
                        
@@ -151,12 +153,12 @@ class Reception extends React.Component {
                      <table className="table table-bordered">
                         <thead >
                             <tr>
-                                <th className="thstyle">Room No.</th>
-                                <th className="tdwidthguest">Guest</th>
-                                <th className="thstyle">Arrival</th>
-                                <th className="thstyle">Departure</th>
-                                <th className="thstyle">Folio Balance</th>
-                                <th className="thstyle">Status</th>
+                                <th className="thstyle left">Room No.</th>
+                                <th className="tdwidthguest left">Guest</th>
+                                <th className="thstyle left">Arrival</th>
+                                <th className="thstyle left">Departure</th>
+                                <th className="thstyle left">Folio Balance</th>
+                                <th className="thstyle left">Status</th>
                                 <th className="tdwidth"></th>
                             </tr>
                         </thead>

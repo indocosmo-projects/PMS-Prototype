@@ -30,15 +30,15 @@ class Reservation extends React.Component {
                 <tbody>
                     {
                     this.state.details.map(detail =>  <tr key={detail.id} >
-                        <td style={{color : 'blue'}} >{detail.rese}</td>
-                        <td>{detail.arrival}</td>
-                        <td>{detail.nights}</td>
-                        <td>{detail.rooms}</td>
-                        <td>{detail.departure}</td>
-                        <td>{detail.bookedby}</td>
-                        <td>{detail.bookedfor}</td>
-                        <td>{detail.bookedon}</td>
-                        <td style={{color : 'blue'}} >{detail.status}</td>
+                        <td className="left" style={{color : 'blue'}} >{detail.rese}</td>
+                        <td className="left">{detail.arrival}</td>
+                        <td >{detail.nights}</td>
+                        <td >{detail.rooms}</td>
+                        <td className="left">{detail.departure}</td>
+                        <td className="left">{detail.bookedby}</td>
+                        <td className="left">{detail.bookedfor}</td>
+                        <td className="left">{detail.bookedon}</td>
+                        <td className="left" style={{color : 'blue'}} >{detail.status}</td>
                     </tr>
                     )}
                     
@@ -96,7 +96,7 @@ class Reservation extends React.Component {
   
       render() { 
         return (
-            <div className="section parentdpdown">
+            <div className="section ">
                 <div className="container-fluid ">
                     {/* ----- Heading ------ */}
                     <div>
@@ -115,8 +115,10 @@ class Reservation extends React.Component {
                                     <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
                                 </div>
                             </div>
-                            <div  style={{height : 670,width: 550, zIndex : 100, position : 'absolute',opacity: 1}}>
-                                {this.dropdown()}
+                            <div className="parentdpdown">
+                                <div className="ddw" >
+                                    {this.dropdown()}
+                                </div>
                             </div>
                         </div>
                        
@@ -153,15 +155,15 @@ class Reservation extends React.Component {
                             <table className="table table-striped table-bordered" >
                                 <thead >
                                     <tr>
-                                        <th className="thstyle">RESV.#</th>
-                                        <th className="thstyle">ARRIVAL <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th> 
-                                        <th className="thstyle">NIGHTS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i> </th>
-                                        <th className="thstyle">ROOMS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle">DEPARTURE <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle">BOOKED BY <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle">BOOKED FOR <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle">BOOKED ON <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle">STATUS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">RESV.#</th>
+                                        <th className="thstyle left">ARRIVAL <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th> 
+                                        <th className="thstyle left">NIGHTS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i> </th>
+                                        <th className="thstyle left">ROOMS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">DEPARTURE <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">BOOKED BY <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">BOOKED FOR <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">BOOKED ON <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">STATUS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
                                     </tr>
                                 </thead>
                                 

@@ -6,13 +6,15 @@ import '../../style.css';
 class ReceptionExpectedArrivals extends React.Component {
     state = {
 
-    details :  [{id: 1, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 2, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 3, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 4, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 5, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                ],
-
+        details :  
+        [{id: 1, rese:'104',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        {id: 2, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'2',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        {id: 3, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
+        {id: 4, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
+        {id: 5, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
+        {id: 6, rese:'104',arrival :'16-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        {id: 7, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        ],
     dropdown : 0,
     }
 
@@ -22,32 +24,16 @@ class ReceptionExpectedArrivals extends React.Component {
         return(
                 <tbody>
                     {
-                    this.state.details.map(detail => <tr key={detail.id} >
-                        <td>{detail.roomno}</td>
-                        <td >{detail.guest}</td>
-                        <td>{detail.arrival}</td>
-                        <td>{detail.departure}</td>
-                        <td>{detail.foliobalance}</td>
-                        <td><button className="btn btn-success w-100">CHECK-IN</button></td>
-                        <td className="tdwidth">
-                            <div className="row">
-                                <div className="col-2">
-                                    <button className="btn btn-primary">Deposit</button>
-                                </div>
-                                <div className="col-2">
-                                    <button className="btn btn-primary">Posting</button>
-                                </div>
-                                <div className="col-3">
-                                    <button className="btn btn-primary">Bill Review</button>
-                                </div>
-                                <div className="col-2">
-                                    <button className="btn btn-primary">Sharer</button>
-                                </div>
-                                <div className="col-2">
-                                    <button className="btn btn-primary">Reprint</button>
-                                </div>
-                            </div>
-                        </td>
+                     this.state.details.map(detail =>  <tr key={detail.id} >
+                        <td className="left" style={{color : 'blue'}} >{detail.rese}</td>
+                        <td className="left">{detail.arrival}</td>
+                        <td >{detail.nights}</td>
+                        <td >{detail.rooms}</td>
+                        <td className="left">{detail.departure}</td>
+                        <td className="left">{detail.bookedby}</td>
+                        <td className="left">{detail.bookedfor}</td>
+                        <td className="left">{detail.bookedon}</td>
+                        <td className="bg-success" ><button className="btn btn-success">CHECK-IN</button></td>
                     </tr>
                     )}
                     
@@ -135,8 +121,10 @@ class ReceptionExpectedArrivals extends React.Component {
                                     <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
                                 </div>
                             </div>
-                            <div  style={{height : 370,width: 550, zIndex : 100, position : 'absolute',opacity: 1}}>
-                                {this.dropdown()}
+                            <div className="parentdpdown">
+                                <div className="ddw" >
+                                    {this.dropdown()}
+                                </div>
                             </div>
                         </div>
                        
@@ -151,14 +139,16 @@ class ReceptionExpectedArrivals extends React.Component {
                      <table className="table table-bordered">
                         <thead >
                             <tr>
-                                <th className="thstyle">Room No.</th>
-                                <th className="tdwidthguest">Guest</th>
-                                <th className="thstyle">Arrival</th>
-                                <th className="thstyle">Departure</th>
-                                <th className="thstyle">Folio Balance</th>
-                                <th className="thstyle">Status</th>
-                                <th className="tdwidth"></th>
-                            </tr>
+                                <th className="thstyle left">RESV.#</th>
+                                <th className="tdwidthguest left">ARRIVAL</th>
+                                <th className="thstyle left">NIGHTS</th>
+                                <th className="thstyle left">ROOMS</th>
+                                <th className="thstyle left">DEPARTURE</th>
+                                <th className="thstyle left">BOOKED BY</th>
+                                <th className="tdwidth left">BOOKED FOR</th>
+                                <th className="tdwidth left">BOOKED ON</th>
+                                <th className="tdwidth left">STATUS</th>
+                            </tr>							
                         </thead>
                                 {this.tdata()}
 
