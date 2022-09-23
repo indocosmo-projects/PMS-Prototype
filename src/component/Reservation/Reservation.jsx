@@ -127,10 +127,10 @@ class Reservation extends React.Component {
                             <div className="col-sm-1">
                                 <div className="inputfieldpadding">
                                     <select className=" form-select" id="rec" onChange={(e) => this.setState({recordno : e.target.value}) }>
-                                        <option value="5">5</option>
-                                        <option value="15">15</option>
-                                        <option value="20">20</option>
-                                        <option value="21">All</option>
+                                        <option defaultValue="5">5</option>
+                                        <option defaultValue="15">15</option>
+                                        <option defaultValue="20">20</option>
+                                        <option defaultValue="21">All</option>
                                     </select>
                                 </div>
                             </div>

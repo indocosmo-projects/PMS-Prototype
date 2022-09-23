@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navigation.css';
 import logo from '../../assets/niko.png';
-import {Nav ,NavLink ,Navbar } from 'react-bootstrap';
+import {Nav ,Navbar } from 'react-bootstrap';
 //import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -60,7 +60,7 @@ class Navigationbar extends React.Component {
             <div  >
                 <div className="row navbar " >
                     <div className="col-sm-1">                    
-                        <img src={logo} className="logo" />
+                        <img src={logo} className="logo" alt="logo" />
                     </div>
                     <div className="col-sm-9 marginzero" >
                     <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark" >

@@ -28,7 +28,7 @@ class ReseReservedFor extends React.Component {
 
     handleIncrement = () => {
         this.setState({ count: this.state.count + 1 });
-        this.state.cn = this.state.cn + 1;
+        this.setState({ cn: this.state.cn + 1 });
         this.state.persons.push({ id: this.state.cn, name: 'person' + this.state.cn + '' });
         console.log(this.state.persons);
         console.log(this.state.count);
