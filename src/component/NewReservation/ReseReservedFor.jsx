@@ -177,13 +177,13 @@ class ReseReservedFor extends React.Component {
                                                     <div className="row ">
                                                         <div className="col-sm-4 ">
                                                             <div className="inputfieldpadding">
-                                                                <label className="text-left" for="arrivaldate">Date :</label>
+                                                                <label className="text-left" htmlFor="arrivaldate">Date :</label>
                                                                     <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                                             </div>
                                                         </div>
                                                         <div className="col-sm-4">
                                                             <div className="inputfieldpadding">
-                                                                <label className="text-left" for="arrivaldate">Date :</label>
+                                                                <label className="text-left" htmlFor="arrivaldate">Date :</label>
                                                                     <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                                             </div>
                                                         </div>

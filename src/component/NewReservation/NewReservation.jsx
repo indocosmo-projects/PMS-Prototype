@@ -22,25 +22,25 @@ class NewReservation extends React.Component {
                             <div className="row ">
                                 <div className="col-sm ">
                                     <div className="inputfieldpadding">
-                                        <label className="text-left" for="reseNumber">Reservation Number :</label>
+                                        <label className="text-left" htmlFor="reseNumber">Reservation Number :</label>
                                             <input type="number" className="form-control" id="reseNumber" value="100" name="reseNumber" disabled />
                                     </div>
                                 </div>
                                 <div className="col-sm">
                                     <div className="inputfieldpadding">
-                                        <label className="text-left" for="arrivaldate">Date :</label>
+                                        <label className="text-left" htmlFor="arrivaldate">Date :</label>
                                             <input type="date" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                     </div>
                                 </div>
                                 <div className="col-sm">
                                     <div className="inputfieldpadding">
-                                        <label className="text-left" for="departdate">By :</label>
+                                        <label className="text-left" htmlFor="departdate">By :</label>
                                             <input type="date" className="form-control" id="departdate" placeholder="Enter Depart Date" name="departdate" />
                                     </div>
                                 </div>
                                 <div className="col-sm">
                                     <div  className="inputfieldpadding">
-                                        <label className="text-left" for="email">Source :</label>
+                                        <label className="text-left" htmlFor="email">Source :</label>
                                         <select className="form-select">
                                             <option>FIT/TA/CORPORATE</option>
                                             <option>FIT/TA/CORPORATE</option>
@@ -51,7 +51,7 @@ class NewReservation extends React.Component {
                                 </div>
                                 <div className="col-sm">
                                     <div  className="inputfieldpadding">
-                                        <label className="text-left" for="email">TA/Company Name : </label>
+                                        <label className="text-left" htmlFor="email">TA/Company Name : </label>
                                         <select className="form-select">
                                             <option>Option 1</option>
                                             <option>Option 2</option>
@@ -62,7 +62,7 @@ class NewReservation extends React.Component {
                                 </div>
                                 <div className="col-sm">
                                     <div  className="inputfieldpadding">
-                                        <label className="text-left" for="email">GST :</label>
+                                        <label className="text-left" htmlFor="email">GST :</label>
                                         <select className="form-select">
                                             <option>Option 1</option>
                                             <option>Option 2</option>
@@ -80,24 +80,24 @@ class NewReservation extends React.Component {
                         <div className="col-sm-3 p-3 ">
                                 <div className="col-sm-12">
                                     <div className="form-group inputfieldpadding">
-                                        <label className="text-left" for="arrival">Arrival :</label>
+                                        <label className="text-left" htmlFor="arrival">Arrival :</label>
                                             <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival"/>
                                     </div>
                                     <div className="form-group inputfieldpadding">
-                                        <label className="text-left" for="departure">Departure :</label>
+                                        <label className="text-left" htmlFor="departure">Departure :</label>
                                             <input type="datetime-local" className="form-control departure" name="departure" id="departure"/>
                                     </div>
                                 </div>
                                 <div className="col-sm-12 p-1">   
                                     <div className="row">
                                         <div className="col-sm-6 inputfieldpadding">
-                                            <label className="text-left" for="nights">Nights</label>
+                                            <label className="text-left" htmlFor="nights">Nights</label>
                                             <div className="form-group">
                                                 <input type="number"  className="form-control"  placeholder="Select Nights count"  min="1" name="nights" id="nights"  />
                                             </div>
                                         </div>
                                          <div className="col-sm-6 inputfieldpadding">
-                                            <label className="text-left" for="rooms">Rooms</label>
+                                            <label className="text-left" htmlFor="rooms">Rooms</label>
                                             <div className="form-group">
                                                 <input type="number"  className="form-control"  placeholder="Select Rooms count" min="1"  name="rooms" id="rooms"  />
                                             </div>

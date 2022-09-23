@@ -64,19 +64,19 @@ class Reservation extends React.Component {
             <div className="dpdown shadow ">
             <div className="row p-4">
                 <div className="col-sm-6 form-group inputfieldpadding">
-                    <label className="text-left" for="reservedby">Reserved By :</label>
+                    <label className="text-left" htmlFor="reservedby">Reserved By :</label>
                     <input type="text" className="form-control" name="reservedby" id="reservedby"/>
                 </div>
                 <div className="col-sm-6 form-group inputfieldpadding">
-                    <label className="text-left" for="reservedstatus">Reservation Status :</label>
+                    <label className="text-left" htmlFor="reservedstatus">Reservation Status :</label>
                     <input type="text" className="form-control" name="reservedstatus" id="reservedstatus"/>
                 </div>
                 <div className="col-sm-6 form-group inputfieldpadding">
-                    <label className="text-left" for="departdate">Reserved Date :</label>
+                    <label className="text-left" htmlFor="departdate">Reserved Date :</label>
                     <input type="date" className="form-control" name="departdate" id="departdate"/>
                 </div>
                 <div className="col-sm-6 form-group inputfieldpadding">
-                    <label className="text-left" for="arrival">Arrival Date :</label>
+                    <label className="text-left" htmlFor="arrival">Arrival Date :</label>
                     <input type="date" className="form-control " name="arrival" id="arrival"/>
                 </div>
                 <div className="col-sm-6 form-group inputfieldpadding">
