@@ -19,8 +19,9 @@
     cursor: pointer;
 }
 .navbar{
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* display: block; */
+    /* justify-content: center; */
     background-color: var(--white) !important;
     box-shadow:  0 1px 1px 0 rgba(219, 219, 219, 0.4);
 }

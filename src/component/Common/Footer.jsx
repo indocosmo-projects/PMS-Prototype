@@ -4,9 +4,9 @@ import './Footer.css';
 class Footer extends React.Component {
     render() { 
         return(
-            <div className="footer">
+            <footer className="footer">
                 <p > 2022  &#169; PMS. </p>
-            </div>
+            </footer>
         );
     }
 }

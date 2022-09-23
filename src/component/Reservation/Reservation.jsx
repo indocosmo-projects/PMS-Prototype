@@ -1,4 +1,6 @@
 import React from 'react';
+import '../../style.css';
+import './Reservation.css';
 
 class Reservation extends React.Component {
 
@@ -30,45 +32,49 @@ class Reservation extends React.Component {
                         <td>{detail.bookedon}</td>
                         <td>{detail.status}</td>
                     </tr>
-                    )};
+                    )}
                     
                 </tbody>
         );
 
     }
 
-
+    
+    
     render() { 
         return (
             <div className="section">
                 <div className="container-fluid">
-                    {/* ----- Heading ------ */}
-                    <div>
-                        <h5 className="header"> RESERVATION </h5>
-                    </div>
-                    
+                <h5 className="header"> RESERVATION </h5>
 
-                     <table className="table table-bordered">
-                        <thead >
-                            <tr>
-                                <th className="thstyle">RESV.#</th>
-                                <th className="thstyle">ARRIVAL</th>
-                                <th className="thstyle">NIGHTS</th>
-                                <th className="thstyle">ROOMS</th>
-                                <th className="thstyle">DEPARTURE</th>
-                                <th className="thstyle">BOOKED BY</th>
-                                <th className="thstyle">BOOKED FOR</th>
-                                <th className="thstyle">BOOKED ON</th>
-                                <th className="thstyle">STATUS</th>
-                            </tr>
-                        </thead>
-                        
-                                {this.tdata()}
-                  
-                    </table>
+                    <div className='reservation_table'>
+                    {/* ----- Heading ------ */}
+                    {/* <div className='reservation_table_head'> */}
+                    {/* </div> */}
                     
+                    
+                            <table className="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th className="thstyle">RESV.#</th>
+                                        <th className="thstyle">ARRIVAL</th>
+                                        <th className="thstyle">NIGHTS</th>
+                                        <th className="thstyle">ROOMS</th>
+                                        <th className="thstyle">DEPARTURE</th>
+                                        <th className="thstyle">BOOKED BY</th>
+                                        <th className="thstyle">BOOKED FOR</th>
+                                        <th className="thstyle">BOOKED ON</th>
+                                        <th className="thstyle">STATUS</th>
+                                    </tr>
+                                </thead>
+                                
+                                        {this.tdata()}
+                        
+                            </table>
+                    </div>
                 </div>
             </div>
+            
         );
     }
 }
