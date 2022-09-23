@@ -2,7 +2,7 @@ import React from 'react';
 import './Reception.css';
 import '../../style.css';
 
-class Reception extends React.Component {
+class ReceptionExpectedArrivals extends React.Component {
     state = {
 
     details :  [{id: 1, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
@@ -116,8 +116,8 @@ class Reception extends React.Component {
                     
                     <div className="p-3">
                         <div className="height">
-                            <a className="nvlink active" href="/reception">IN-HOUSE</a>
-                            <a className="nvlink" href="/receptionexpectedarrival">EXPECTED ARRIVALS</a>
+                            <a className="nvlink" href="/reception">IN-HOUSE</a>
+                            <a className="nvlink active" href="/receptionexpectedarrival">EXPECTED ARRIVALS</a>
                             <a className="nvlink" href="/receptionhotelstatus">HOTEL STATUS</a>
                         </div>
                     </div>
@@ -170,4 +170,4 @@ class Reception extends React.Component {
     }
 }
  
-export default Reception;
+export default ReceptionExpectedArrivals;
