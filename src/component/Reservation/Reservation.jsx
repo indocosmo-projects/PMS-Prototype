@@ -21,6 +21,9 @@ class Reservation extends React.Component {
 
     tdata = () =>{
         
+        var pageno = ( this.state.details.length / this.state.recordno );
+        var balancepage = ( this.state.details.length % this.state.recordno );
+        console.log("pageno==>" + pageno + "balancepage==>" + balancepage);
         return(
                 <tbody>
                     {
@@ -98,7 +101,7 @@ class Reservation extends React.Component {
                         <h5 className="header"> RESERVATIONS </h5>
                     </div>
                     
-                    <div className="p-4 ">
+                    <div className="p-3 ">
                     <div className="row ">
                         <div className="col-sm-6  ">
                             <div className="input-group mb-3 ">
@@ -107,7 +110,7 @@ class Reservation extends React.Component {
                                     <span className="input-group-text p-0 bg-white br" ><button className="btn"  onClick={this.count}  ><i className="bi bi-caret-down"></i></button></span>
                                 </div>
                                 <div className="input-group-append p-0">
-                                    <span className="input-group-text p-0 br"><button className="btn btn-primary br" >Search</button></span>
+                                    <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
                                 </div>
                             </div>
                             <div  style={{height : 370,width: 550, zIndex : 100, position : 'absolute',opacity: 1}}>
@@ -117,7 +120,7 @@ class Reservation extends React.Component {
                        
                         <div className="col-sm-6">
                             <div className="mb-3 ">
-                                <a href="/newreservation"><button className="btn btn-secondary" style={{float : 'right'}}>Add New <i className="bi bi-plus"></i></button></a>
+                                <a href="/newreservation"><button className="btn btn-secondary" title="New Reservation" style={{float : 'right'}}>Add New <i className="bi bi-plus"></i></button></a>
                             </div>
                         </div>
                     </div>
@@ -126,7 +129,7 @@ class Reservation extends React.Component {
                         <div className="row">
                             <div className="col-sm-1">
                                 <div className="inputfieldpadding p-0">
-                                    <select className=" form-select" id="rec" onChange={(e) => this.setState({recordno : e.target.value}) }>
+                                    <select className=" form-select" title="select" name="rec" id="rec" onChange={(e) => this.setState({recordno : e.target.value}) }>
                                         <option defaultValue="5">5</option>
                                         <option defaultValue="15">15</option>
                                         <option defaultValue="20">20</option>
@@ -171,10 +174,10 @@ class Reservation extends React.Component {
                         <div className="col-sm-3" style={{textAlign : 'left'}}>Showing 1 to {this.state.recordno} of {this.state.details.length} entries</div>
                         <div className="col-sm-6"></div>
                         <div className="col-sm-3" style={{textAlign : 'right'}}>
-                            <button className="btn btn-outline-dark">Prev</button>
-                            <button className="btn btn-outline-dark">1</button>
-                            <button className="btn btn-outline-dark">2</button>
-                            <button className="btn btn-outline-dark">Next</button>
+                            <button className="btn btn-outline-dark m-1">Prev</button>
+                            <button className="btn btn-outline-dark m-1">1</button>
+                            <button className="btn btn-outline-dark m-1">2</button>
+                            <button className="btn btn-outline-dark m-1">Next</button>
                         </div>
                     </div>
 
