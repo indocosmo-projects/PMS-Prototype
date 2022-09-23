@@ -2,6 +2,7 @@ import React from 'react';
 import './Reception.css';
 import '../../style.css';
 
+
 class ReceptionExpectedArrivals extends React.Component {
     state = {
 

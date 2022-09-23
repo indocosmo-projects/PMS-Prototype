@@ -4,6 +4,8 @@ import './NewReservation.css';
 import ReseTable from './ReseTable';
 import ReseReserveForm from './ReseReserveForm';
 import ReseReservedFor from './ReseReservedFor';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 class NewReservation extends React.Component {

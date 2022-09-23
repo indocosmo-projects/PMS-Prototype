@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../style.css';
+import './Reservation.css';
 
 class Reservation extends React.Component {
 
@@ -65,30 +66,30 @@ class Reservation extends React.Component {
 
         if(this.state.dropdown === 1) return (
             <div className="bg-white">
-            <div className="dpdown shadow ">
-            <div className="row p-4">
-                <div className="col-sm-6 form-group inputfieldpadding">
-                    <label className="text-left" htmlFor="reservedby">Reserved By :</label>
-                    <input type="text" className="form-control" name="reservedby" id="reservedby"/>
+                <div className="dpdown shadow ">
+                    <div className="row p-4">
+                        <div className="col-sm-6 form-group inputfieldpadding">
+                            <label className="text-left" htmlFor="reservedby">Reserved By :</label>
+                            <input type="text" className="form-control" name="reservedby" id="reservedby"/>
+                        </div>
+                        <div className="col-sm-6 form-group inputfieldpadding">
+                            <label className="text-left" htmlFor="reservedstatus">Reservation Status :</label>
+                            <input type="text" className="form-control" name="reservedstatus" id="reservedstatus"/>
+                        </div>
+                        <div className="col-sm-6 form-group inputfieldpadding">
+                            <label className="text-left" htmlFor="departdate">Reserved Date :</label>
+                            <input type="date" className="form-control" name="departdate" id="departdate"/>
+                        </div>
+                        <div className="col-sm-6 form-group inputfieldpadding">
+                            <label className="text-left" htmlFor="arrival">Arrival Date :</label>
+                            <input type="date" className="form-control " name="arrival" id="arrival"/>
+                        </div>
+                        <div className="col-sm-6 form-group inputfieldpadding">
+                            <button className="btn btn-danger m-1">Search</button>
+                            <button className="btn btn-secondary m-1" onClick={() =>this.setState({dropdown : 0}) }>Close</button>
+                        </div>
+                    </div>
                 </div>
-                <div className="col-sm-6 form-group inputfieldpadding">
-                    <label className="text-left" htmlFor="reservedstatus">Reservation Status :</label>
-                    <input type="text" className="form-control" name="reservedstatus" id="reservedstatus"/>
-                </div>
-                <div className="col-sm-6 form-group inputfieldpadding">
-                    <label className="text-left" htmlFor="departdate">Reserved Date :</label>
-                    <input type="date" className="form-control" name="departdate" id="departdate"/>
-                </div>
-                <div className="col-sm-6 form-group inputfieldpadding">
-                    <label className="text-left" htmlFor="arrival">Arrival Date :</label>
-                    <input type="date" className="form-control " name="arrival" id="arrival"/>
-                </div>
-                <div className="col-sm-6 form-group inputfieldpadding">
-                    <button className="btn btn-danger m-1">Search</button>
-                    <button className="btn btn-secondary m-1" onClick={() =>this.setState({dropdown : 0}) }>Close</button>
-                </div>
-            </div>
-            </div>
             </div>
         );
     }
@@ -114,7 +115,7 @@ class Reservation extends React.Component {
                                     <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
                                 </div>
                             </div>
-                            <div  style={{height : 370,width: 550, zIndex : 100, position : 'absolute',opacity: 1}}>
+                            <div  style={{height : 670,width: 550, zIndex : 100, position : 'absolute',opacity: 1}}>
                                 {this.dropdown()}
                             </div>
                         </div>
