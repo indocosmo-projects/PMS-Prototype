@@ -32,20 +32,20 @@ class Navigationbar extends React.Component {
                     onMouseUp={() => this.setState({ dropdownindex : 0})}>
                                 <div className="row padding">
                                     <div className="col uslink">
-                                        <div><i class="bi bi-briefcase-fill iconsize"></i></div>
+                                        <div><i className="bi bi-briefcase-fill iconsize"></i></div>
                                         <p>Profile</p>
                                     </div>
                                     <div className="col uslink">
-                                        <div><i class="bi bi-gear-fill iconsize"></i></div>
+                                        <div><i className="bi bi-gear-fill iconsize"></i></div>
                                         <p>Settings</p>
                                     </div>
                                     <div className="col uslink">
-                                        <div><i class="bi bi-bell iconsize"></i></div>
+                                        <div><i className="bi bi-bell iconsize"></i></div>
                                         <p>Notification</p>
                                     </div>
                                 </div>
                                 <div className="logout text-white">
-                                    <div><i class="bi bi-key-fill iconsizelog"></i></div>
+                                    <div><i className="bi bi-key-fill iconsizelog"></i></div>
                                     <p className="uslinklog">LOGOUT</p>
                                 </div>
                          </div>
@@ -70,18 +70,18 @@ class Navigationbar extends React.Component {
                                     <a className="nlink" href="/home">Home</a>
                                     <a className="nlink" href="/reservation">Reservation</a>
                                     <a className="nlink" href="/reception">Reception</a>
-                                    <a className="nlink" href="/shift">Shift <i class="bi bi-caret-down"></i></a>
+                                    <a className="nlink" href="/shift">Shift <i className="bi bi-caret-down"></i></a>
                                     <a className="nlink" href="/requests">Requests</a>
                                     <a className="nlink" href="/reports">Reports</a>
-                                    <a className="nlink" href="/tools">Tools <i class="bi bi-caret-down"></i></a>
-                                    <a className="nlink" href="/setup">Setup <i class="bi bi-caret-down"></i></a>
+                                    <a className="nlink" href="/tools">Tools <i className="bi bi-caret-down"></i></a>
+                                    <a className="nlink" href="/setup">Setup <i className="bi bi-caret-down"></i></a>
                                 </Nav>
                             </Navbar.Collapse>
                     </Navbar>
                     </div>
                     <div className="col-sm-2 user marginzero">
                          <button className="bg-white btn" onClick={this.display} 
-                         >Suresh Somanathan <i class="bi bi-caret-down"></i></button>
+                         >Suresh Somanathan <i className="bi bi-caret-down"></i></button>
                          {this.dropdown()}
                     </div>
                 </div>

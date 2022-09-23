@@ -60,26 +60,26 @@ class Reservation extends React.Component {
         if(this.state.dropdown === 0) return "";
 
         if(this.state.dropdown === 1) return (
-            <div style={{backgroundColor : 'white'}}>
+            <div className="bg-white">
             <div className="dpdown shadow ">
             <div className="row p-4">
                 <div className="col-sm-6 form-group inputfieldpadding">
                     <label className="text-left" for="reservedby">Reserved By :</label>
-                    <input type="text" class="form-control" name="reservedby" id="reservedby"/>
+                    <input type="text" className="form-control" name="reservedby" id="reservedby"/>
                 </div>
-                <div classN="col-sm-6 form-group inputfieldpadding">
+                <div className="col-sm-6 form-group inputfieldpadding">
                     <label className="text-left" for="reservedstatus">Reservation Status :</label>
-                    <input type="text" class="form-control" name="reservedstatus" id="reservedstatus"/>
+                    <input type="text" className="form-control" name="reservedstatus" id="reservedstatus"/>
                 </div>
-                <div class="col-sm-6 form-group inputfieldpadding">
+                <div className="col-sm-6 form-group inputfieldpadding">
                     <label className="text-left" for="departdate">Reserved Date :</label>
-                    <input type="date" class="form-control" name="departdate" id="departdate"/>
+                    <input type="date" className="form-control" name="departdate" id="departdate"/>
                 </div>
-                <div class="col-sm-6 form-group inputfieldpadding">
+                <div className="col-sm-6 form-group inputfieldpadding">
                     <label className="text-left" for="arrival">Arrival Date :</label>
-                    <input type="date" class="form-control " name="arrival" id="arrival"/>
+                    <input type="date" className="form-control " name="arrival" id="arrival"/>
                 </div>
-                <div class="col-sm-6 form-group inputfieldpadding">
+                <div className="col-sm-6 form-group inputfieldpadding">
                     <button className="btn btn-danger m-1">Search</button>
                     <button className="btn btn-secondary m-1" onClick={() =>this.setState({dropdown : 0}) }>Close</button>
                 </div>
@@ -149,14 +149,14 @@ class Reservation extends React.Component {
                                 <thead >
                                     <tr>
                                         <th className="thstyle">RESV.#</th>
-                                        <th className="thstyle">ARRIVAL <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th> 
-                                        <th className="thstyle">NIGHTS <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i> </th>
-                                        <th className="thstyle">ROOMS <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle">DEPARTURE <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle">BOOKED BY <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle">BOOKED FOR <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle">BOOKED ON <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle">STATUS <i class="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">ARRIVAL <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th> 
+                                        <th className="thstyle">NIGHTS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i> </th>
+                                        <th className="thstyle">ROOMS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">DEPARTURE <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">BOOKED BY <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">BOOKED FOR <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">BOOKED ON <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle">STATUS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
                                     </tr>
                                 </thead>
                                 

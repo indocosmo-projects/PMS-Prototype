@@ -176,19 +176,19 @@ class ReseReservedFor extends React.Component {
                                                     <div className="col-sm-12">
                                                     <div className="row ">
                                                         <div className="col-sm-4 ">
-                                                            <div class="inputfieldpadding">
+                                                            <div className="inputfieldpadding">
                                                                 <label className="text-left" for="arrivaldate">Date :</label>
-                                                                    <input type="datetime-local" class="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
+                                                                    <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                                             </div>
                                                         </div>
                                                         <div className="col-sm-4">
-                                                            <div class="inputfieldpadding">
+                                                            <div className="inputfieldpadding">
                                                                 <label className="text-left" for="arrivaldate">Date :</label>
-                                                                    <input type="datetime-local" class="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
+                                                                    <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                                             </div>
                                                         </div>
                                                         <div className="col-sm-4">
-                                                                <div class="inputfieldpadding">
+                                                                <div className="inputfieldpadding">
                                                                     <label className="text-left">Location</label>
                                                                     <input type="text" className="form-control" placeholder="" />
                                                                 </div>
@@ -199,13 +199,13 @@ class ReseReservedFor extends React.Component {
                                                         <div className="row">
                                                             
                                                             <div className="col-sm-4">
-                                                                <div class="inputfieldpadding">
+                                                                <div className="inputfieldpadding">
                                                                     <label className="text-left">Seats</label>
                                                                     <input type="text" className="form-control" placeholder="" />
                                                                 </div>
                                                             </div>
                                                             <div className="col-sm-8">
-                                                                <div class="inputfieldpadding">
+                                                                <div className="inputfieldpadding">
                                                                     <label className="text-left">Remarks</label>
                                                                     <input type="text" className="form-control" placeholder="" />
                                                                 </div>

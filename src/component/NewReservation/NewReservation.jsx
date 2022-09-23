@@ -21,27 +21,27 @@ class NewReservation extends React.Component {
                         <form action="#">
                             <div className="row ">
                                 <div className="col-sm ">
-                                    <div class="inputfieldpadding">
+                                    <div className="inputfieldpadding">
                                         <label className="text-left" for="reseNumber">Reservation Number :</label>
-                                            <input type="number" class="form-control" id="reseNumber" value="100" name="reseNumber" disabled />
+                                            <input type="number" className="form-control" id="reseNumber" value="100" name="reseNumber" disabled />
                                     </div>
                                 </div>
                                 <div className="col-sm">
-                                    <div class="inputfieldpadding">
+                                    <div className="inputfieldpadding">
                                         <label className="text-left" for="arrivaldate">Date :</label>
-                                            <input type="date" class="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
+                                            <input type="date" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                     </div>
                                 </div>
                                 <div className="col-sm">
-                                    <div class="inputfieldpadding">
+                                    <div className="inputfieldpadding">
                                         <label className="text-left" for="departdate">By :</label>
-                                            <input type="date" class="form-control" id="departdate" placeholder="Enter Depart Date" name="departdate" />
+                                            <input type="date" className="form-control" id="departdate" placeholder="Enter Depart Date" name="departdate" />
                                     </div>
                                 </div>
                                 <div className="col-sm">
-                                    <div  class="inputfieldpadding">
+                                    <div  className="inputfieldpadding">
                                         <label className="text-left" for="email">Source :</label>
-                                        <select class="form-select">
+                                        <select className="form-select">
                                             <option>FIT/TA/CORPORATE</option>
                                             <option>FIT/TA/CORPORATE</option>
                                             <option>FIT/TA/CORPORATE</option>
@@ -50,9 +50,9 @@ class NewReservation extends React.Component {
                                     </div>
                                 </div>
                                 <div className="col-sm">
-                                    <div  class="inputfieldpadding">
+                                    <div  className="inputfieldpadding">
                                         <label className="text-left" for="email">TA/Company Name : </label>
-                                        <select class="form-select">
+                                        <select className="form-select">
                                             <option>Option 1</option>
                                             <option>Option 2</option>
                                             <option>Option 3</option>
@@ -61,9 +61,9 @@ class NewReservation extends React.Component {
                                     </div>
                                 </div>
                                 <div className="col-sm">
-                                    <div  class="inputfieldpadding">
+                                    <div  className="inputfieldpadding">
                                         <label className="text-left" for="email">GST :</label>
-                                        <select class="form-select">
+                                        <select className="form-select">
                                             <option>Option 1</option>
                                             <option>Option 2</option>
                                             <option>Option 3</option>
@@ -79,13 +79,13 @@ class NewReservation extends React.Component {
                     <div className="row p-3">
                         <div className="col-sm-3 p-3 ">
                                 <div className="col-sm-12">
-                                    <div class="form-group inputfieldpadding">
+                                    <div className="form-group inputfieldpadding">
                                         <label className="text-left" for="arrival">Arrival :</label>
-                                            <input type="datetime-local" class="form-control arrival" name="arrival" id="arrival"/>
+                                            <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival"/>
                                     </div>
-                                    <div class="form-group inputfieldpadding">
+                                    <div className="form-group inputfieldpadding">
                                         <label className="text-left" for="departure">Departure :</label>
-                                            <input type="datetime-local" class="form-control departure" name="departure" id="departure"/>
+                                            <input type="datetime-local" className="form-control departure" name="departure" id="departure"/>
                                     </div>
                                 </div>
                                 <div className="col-sm-12 p-1">   
@@ -111,7 +111,7 @@ class NewReservation extends React.Component {
                         </div>
                         <div className="col-sm-9">
                         <div className= "roomavailability">
-                            <table class="table " style={{marginBottom: 0,}}>
+                            <table className="table " style={{marginBottom: 0,}}>
                                 <thead className="tabhead">
                                     <tr>
                                         <th>Room Type</th>
