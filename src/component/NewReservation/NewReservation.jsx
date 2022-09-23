@@ -7,6 +7,11 @@ import ReseReservedFor from './ReseReservedFor';
 
 
 class NewReservation extends React.Component {
+
+    handleChange = () =>{
+
+    }
+
     render() { 
         return(
             <div className="section">
@@ -23,7 +28,7 @@ class NewReservation extends React.Component {
                                 <div className="col-sm ">
                                     <div className="inputfieldpadding">
                                         <label className="text-left" htmlFor="reseNumber">Reservation Number :</label>
-                                            <input type="number" className="form-control" id="reseNumber" value="100" name="reseNumber" disabled />
+                                            <input type="number" className="form-control" id="reseNumber" defaultValue="100" name="reseNumber" disabled />
                                     </div>
                                 </div>
                                 <div className="col-sm">

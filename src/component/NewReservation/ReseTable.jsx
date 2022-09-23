@@ -49,7 +49,7 @@ class ReseTable extends React.Component {
                         <td>
                         <div className="input-group mb-3">
                                 <div className="input-group-prepend">
-                                    <input type="text" className="input-group-text appendsize" value="2" />
+                                    <input type="text" className="input-group-text appendsize" defaultValue="2" />
                                 </div>
                                 <input type="text" className="form-control apptexboxsize" placeholder=""/>
                                 <div className="input-group-prepend">
@@ -60,7 +60,7 @@ class ReseTable extends React.Component {
                         <td>
                         <div className="input-group mb-3">
                                 <div className="input-group-prepend">
-                                    <input type="text" className="input-group-text appendsize" value="2" />
+                                    <input type="text" className="input-group-text appendsize" defaultValue="2" />
                                 </div>
                                 <input type="text" className="form-control apptexboxsize" placeholder=""/>
                                 <div className="input-group-prepend">
@@ -71,7 +71,7 @@ class ReseTable extends React.Component {
                         <td>
                         <div className="input-group mb-3">
                                 <div className="input-group-prepend">
-                                    <input type="text" className="input-group-text appendsize" value="2" />
+                                    <input type="text" className="input-group-text appendsize" defaultValue="2" />
                                 </div>
                                 <input type="text" className="form-control apptexboxsize" placeholder=""/>
                                 <div className="input-group-prepend">
@@ -80,13 +80,13 @@ class ReseTable extends React.Component {
                             </div>
                         </td>
                         <td>
-                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" value="" />
+                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
                         </td>
                         <td>
-                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" value="" />
+                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
                         </td>
                         <td>
-                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" value="" />
+                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
                         </td>
                         <td>
                             <button className="btn btn-danger btn-xs"><i className="bi bi-trash "></i></button>
@@ -110,7 +110,7 @@ class ReseTable extends React.Component {
                         <td>
                             <div className="input-group mb-3">
                                 <div className="input-group-prepend">
-                                    <input type="text" className="input-group-text appendsize" value="2" />
+                                    <input type="text" className="input-group-text appendsize" defaultValue="2" />
                                 </div>
                                 <input type="text" className="form-control apptexboxsize" placeholder=""/>
                                 <div className="input-group-prepend">
@@ -121,7 +121,7 @@ class ReseTable extends React.Component {
                         <td>
                         <div className="input-group mb-3">
                                 <div className="input-group-prepend">
-                                    <input type="text" className="input-group-text appendsize" value="2" />
+                                    <input type="text" className="input-group-text appendsize" defaultValue="2" />
                                 </div>
                                 <input type="text" className="form-control apptexboxsize" placeholder=""/>
                                 <div className="input-group-prepend">
@@ -132,7 +132,7 @@ class ReseTable extends React.Component {
                         <td>
                         <div className="input-group mb-3">
                                 <div className="input-group-prepend">
-                                    <input type="text" className="input-group-text appendsize" value="2" />
+                                    <input type="text" className="input-group-text appendsize" defaultValue="2" />
                                 </div>
                                 <input type="text" className="form-control apptexboxsize" placeholder=""/>
                                 <div className="input-group-prepend">
@@ -141,13 +141,13 @@ class ReseTable extends React.Component {
                             </div>
                         </td>
                         <td>
-                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" value="" />
+                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
                         </td>
                         <td>
-                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" value="" />
+                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
                         </td>
                         <td>
-                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" value="" />
+                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
                         </td>
                         <td>
                             <button className="btn btn-primary btn-xs"><i className="bi bi-plus" ></i></button>

@@ -125,10 +125,10 @@ class ReseReserveForm extends React.Component {
                                         <label className="text-left">Show Discounts</label>
                                         <div className="row">
                                             <div className="col-sm-6">
-                                                <input type="text" className="form-control shw_dsct_lft" value="GENERAL" />
+                                                <input type="text" className="form-control shw_dsct_lft" defaultValue="GENERAL" />
                                             </div>
                                             <div className="col-sm-6">
-                                                <input type="text" className="form-control shw_dsct_rgt" value="'100 RS" />
+                                                <input type="text" className="form-control shw_dsct_rgt" defaultValue="'100 RS" />
                                             </div>
                                         </div>
                                     </div>
