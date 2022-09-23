@@ -15,6 +15,7 @@ class Reservation extends React.Component {
     ],
 
     dropdown : 0,
+    recordno : 0,
 
 }
 
@@ -59,13 +60,14 @@ class Reservation extends React.Component {
         if(this.state.dropdown === 0) return "";
 
         if(this.state.dropdown === 1) return (
+            <div style={{backgroundColor : 'white'}}>
             <div className="dpdown shadow ">
             <div className="row p-4">
-                <div class="col-sm-6 form-group inputfieldpadding">
+                <div className="col-sm-6 form-group inputfieldpadding">
                     <label className="text-left" for="reservedby">Reserved By :</label>
                     <input type="text" class="form-control" name="reservedby" id="reservedby"/>
                 </div>
-                <div class="col-sm-6 form-group inputfieldpadding">
+                <div classN="col-sm-6 form-group inputfieldpadding">
                     <label className="text-left" for="reservedstatus">Reservation Status :</label>
                     <input type="text" class="form-control" name="reservedstatus" id="reservedstatus"/>
                 </div>
@@ -79,8 +81,9 @@ class Reservation extends React.Component {
                 </div>
                 <div class="col-sm-6 form-group inputfieldpadding">
                     <button className="btn btn-danger m-1">Search</button>
-                    <button className="btn btn-secondary m-1">Close</button>
+                    <button className="btn btn-secondary m-1" onClick={() =>this.setState({dropdown : 0}) }>Close</button>
                 </div>
+            </div>
             </div>
             </div>
         );
@@ -88,8 +91,8 @@ class Reservation extends React.Component {
   
       render() { 
         return (
-            <div className="section">
-                <div className="container-fluid">
+            <div className="section parentdpdown">
+                <div className="container-fluid ">
                     {/* ----- Heading ------ */}
                     <div>
                         <h5 className="header"> RESERVATIONS </h5>
@@ -97,18 +100,21 @@ class Reservation extends React.Component {
                     
                     <div className="p-4 ">
                     <div className="row ">
-                        <div className="col-sm-6 parentdpdown ">
+                        <div className="col-sm-6  ">
                             <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
                                 <div className="input-group-append p-0 bg-white ">
-                                    <span className="input-group-text p-0 bg-white br" ><button className="btn"    onClick={this.count}  ><i className="bi bi-caret-down"></i></button></span>
+                                    <span className="input-group-text p-0 bg-white br" ><button className="btn"  onClick={this.count}  ><i className="bi bi-caret-down"></i></button></span>
                                 </div>
                                 <div className="input-group-append p-0">
                                     <span className="input-group-text p-0 br"><button className="btn btn-primary br" >Search</button></span>
                                 </div>
                             </div>
-                            {this.dropdown()}
+                            <div  style={{height : 370,width: 550, zIndex : 100, position : 'absolute',opacity: 1}}>
+                                {this.dropdown()}
+                            </div>
                         </div>
+                       
                         <div className="col-sm-6">
                             <div className="mb-3 ">
                                 <a href="/newreservation"><button className="btn btn-secondary" style={{float : 'right'}}>Add New <i className="bi bi-plus"></i></button></a>
@@ -116,18 +122,21 @@ class Reservation extends React.Component {
                         </div>
                     </div>
                     
-                    <div class="form-group mb-3">
+                    <div className="mb-0">
                         <div className="row">
                             <div className="col-sm-1">
-                                <select class="form-control" id="sel1">
-                                    <option>5</option>
-                                    <option>15</option>
-                                    <option>20</option>
-                                    <option>All</option>
-                                </select>
+                                <div className="inputfieldpadding">
+                                    <select className=" form-select" id="rec" onChange={(e) => this.setState({recordno : e.target.value}) }>
+                                        <option value="5">5</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                        <option value="21">All</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div className="col-sm-11">
-                                <label for="sel1" style={{float : 'left'}}> records per page</label>
+                            <div className="col-sm-10 inputfieldpadding">
+                                <p className="text-left">records per page</p>
+                               
                             </div>
                         </div>
                     </div>
