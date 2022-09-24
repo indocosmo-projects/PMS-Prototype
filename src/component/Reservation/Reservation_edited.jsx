@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../style.css';
-import './Reservation.css';
+import './Reservation_style.css';
 
 class Reservation extends React.Component {
 
