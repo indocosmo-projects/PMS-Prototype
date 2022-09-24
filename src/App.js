@@ -9,7 +9,7 @@ import CheckIn from './component/CheckIn/CheckIn.jsx';
 import Reception from './component/Reception/Reception';
 import ReceptionExpectedArrivals from './component/Reception/ReceptionExpectedArrivals';
 import ReceptionHotelStatus from './component/Reception/ReceptionHotelStatus';
-import NavigationbarMannual from './component/Common/NavigationbarMannual';
+/*import NavigationbarMannual from './component/Common/NavigationbarMannual'; */
 
 function App() {
         return (
