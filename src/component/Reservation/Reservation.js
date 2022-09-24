@@ -1,12 +1,11 @@
 import React from 'react';
 import '../../style.css';
 import './Reservation.css';
+import { useState } from 'react';
 
-class Reservation extends React.Component {
-
-    state = {
+function Reservation() {
     
-        details :  
+    const details =  
         [{id: 1, rese:'R-000001',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         {id: 2, rese:'R-000002',arrival :'27-DEC-2018',nights:'4',rooms:'2',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         {id: 3, rese:' R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
@@ -14,22 +13,21 @@ class Reservation extends React.Component {
         {id: 5, rese:'R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
         {id: 6, rese:'R-000007',arrival :'16-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         {id: 7, rese:'R-000007',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        ],
+        ];
 
-        dropdown : 0,
-        recordno : 5,
+        const [dropdown, setDropdown] = useState(0);
+        const [recordno, setRecordno] = useState(5);
 
-    }
 
-    tdata = () =>{
+    const tdata = () =>{
         
-        var pageno = ( this.state.details.length / this.state.recordno );
-        var balancepage = ( this.state.details.length % this.state.recordno );
+        var pageno = ( details.length / recordno );
+        var balancepage = ( details.length % recordno );
         console.log("pageno==>" + pageno + "balancepage==>" + balancepage);
         return(
                 <tbody>
                     {
-                    this.state.details.map(detail =>  <tr key={detail.id} >
+                    details.map(detail =>  <tr key={detail.id} >
                         <td className="left" style={{color : 'blue'}} >{detail.rese}</td>
                         <td className="left">{detail.arrival}</td>
                         <td >{detail.nights}</td>
@@ -48,23 +46,23 @@ class Reservation extends React.Component {
     }
 
 
-    count = () =>{
+    const count = () =>{
 
-        if(this.state.dropdown === 1) {
-            this.setState({dropdown : 0})
-            console.log("this.state.dropdown"+this.state.dropdown);
+        if(dropdown === 1) {
+            setDropdown(( 0 ));
+            console.log("dropdown"+ dropdown);
         }
 
-        if(this.state.dropdown === 0) {
-            this.setState({dropdown : 1})
-            console.log("this.state.dropdown"+this.state.dropdown);
+        if(dropdown === 0) {
+            setDropdown(( 1 ));
+            console.log("dropdown"+ dropdown);
         }
     }
 
-    dropdown = () => {
-        if(this.state.dropdown === 0) return "";
+    const dropdownfn = () => {
+        if(dropdown === 0) return "";
 
-        if(this.state.dropdown === 1) return (
+        if(dropdown === 1) return (
             <div className="bg-white">
                 <div className="dpdown shadow ">
                     <div className="row p-4">
@@ -86,15 +84,15 @@ class Reservation extends React.Component {
                         </div>
                         <div className="col-sm-6 form-group inputfieldpadding">
                             <button className="btn btn-danger m-1">Search</button>
-                            <button className="btn btn-secondary m-1" onClick={() =>this.setState({dropdown : 0}) }>Close</button>
+                            <button className="btn btn-secondary m-1" onClick={() =>setDropdown(( 0 )) }>Close</button>
                         </div>
                     </div>
                 </div>
             </div>
         );
-    }
+    } 
   
-      render() { 
+    
         return (
             <div className="section ">
                 <div className="container-fluid ">
@@ -109,7 +107,7 @@ class Reservation extends React.Component {
                             <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
                                 <div className="input-group-append p-0 bg-white ">
-                                    <span className="input-group-text p-0 bg-white br" ><button className="btn"  onClick={this.count}  ><i className="bi bi-caret-down"></i></button></span>
+                                    <span className="input-group-text p-0 bg-white br" ><button className="btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button></span>
                                 </div>
                                 <div className="input-group-append p-0">
                                     <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
@@ -117,7 +115,7 @@ class Reservation extends React.Component {
                             </div>
                             <div className="parentdpdown">
                                 <div className="ddw" >
-                                    {this.dropdown()}
+                                    {dropdownfn()}  
                                 </div>
                             </div>
                         </div>
@@ -133,7 +131,7 @@ class Reservation extends React.Component {
                         <div className="row">
                             <div className="col-sm-1">
                                 <div className="inputfieldpadding p-0">
-                                    <select className=" form-select" title="select" name="rec" id="rec" onChange={(e) => this.setState({recordno : e.target.value}) }>
+                                    <select className=" form-select" title="select" name="rec" id="rec" onChange={(e) => setRecordno(( e.target.value )) }>
                                         <option defaultValue="5">5</option>
                                         <option defaultValue="15">15</option>
                                         <option defaultValue="20">20</option>
@@ -167,7 +165,7 @@ class Reservation extends React.Component {
                                     </tr>
                                 </thead>
                                 
-                                        {this.tdata()}
+                                    {tdata()} 
                         
                             </table>
                         </div>
@@ -175,7 +173,7 @@ class Reservation extends React.Component {
                     </div>
 
                     <div className="row">
-                        <div className="col-sm-3" style={{textAlign : 'left'}}>Showing 1 to {this.state.recordno} of {this.state.details.length} entries</div>
+                        <div className="col-sm-3" style={{textAlign : 'left'}}>Showing 1 to {recordno} of {details.length} entries</div>
                         <div className="col-sm-6"></div>
                         <div className="col-sm-3" style={{textAlign : 'right'}}>
                             <button className="btn btn-outline-dark m-1">Prev</button>
@@ -190,7 +188,7 @@ class Reservation extends React.Component {
                 </div>
             </div>
         );
-    }
+    
 }
  
 export default Reservation;

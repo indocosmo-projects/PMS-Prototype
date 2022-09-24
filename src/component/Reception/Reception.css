@@ -1,0 +1,44 @@
+.tdwidthguest{
+    width : 280px;
+}
+
+.tdwidth{
+    width : 630px;
+}
+
+.height{
+    padding : 10px;
+    padding-top: 35px;
+    padding-bottom: 18px;
+    padding-left: 0px;
+    text-align: left;
+    border-bottom : 1px solid lightgray;
+}
+
+.nvlink{
+    height:  150px;
+    padding : 22px;
+    text-decoration: none;
+    background-color: rgb(218, 213, 213);
+    color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin : 1px;
+    opacity : 0.6;
+}
+
+.nvlink:hover{
+    color : black;
+}
+
+.active{
+    background-color: red;
+    color: white;
+}
+
+.active:hover{
+    color: white;
+}
+
+
+  
