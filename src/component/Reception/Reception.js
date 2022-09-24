@@ -16,7 +16,7 @@ function Reception() {
                 ];
 
     const [dropdown, setDropdown] = useState(0);
-    const [recordno, setRecordno] = useState(5);
+  /*  const [recordno, setRecordno] = useState(5); */
 
 
     const tdata = () =>{
@@ -64,12 +64,10 @@ function Reception() {
 
         if(dropdown === 1) {
             setDropdown(( 0 ));
-            console.log("dropdown" + dropdown);
         }
 
         if(dropdown === 0) {
             setDropdown(( 1 ));
-            console.log("dropdown"+ dropdown);
         }
     }
 
@@ -98,7 +96,7 @@ function Reception() {
                 </div>
                 <div className="col-sm-6 form-group inputfieldpadding">
                     <button className="btn btn-danger m-1">Search</button>
-                    <button className="btn btn-secondary m-1" onClick={() => this.setDropdown(( 0 )) }>Close</button>
+                    <button className="btn btn-secondary m-1" onClick={() => setDropdown(( 0 )) }>Close</button>
                 </div>
             </div>
             </div>

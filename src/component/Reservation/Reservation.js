@@ -100,102 +100,98 @@ function Reservation() {
             <div className="section ">
                 <div className="container-fluid ">
                     {/* ----- Heading ------ */}
-                    
+
                     <div className="row search-area-bg">
 
-                    <div className="col-sm-6">
-                        <h5 className="header mt-2"> Reservations </h5>
-                       </div>
-
-                       
                         <div className="col-sm-6">
-                            <div className="input-group mt-1">
+                            <h5 className="header mt-2"> Reservations </h5>
+                        </div>
+
+                        <div className="row ">
+                        <div className="col-sm-6  ">
+                            <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
                                 <div className="input-group-append p-0 bg-white ">
                                     <span className="input-group-text p-0 bg-white br" ><button className="btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button></span>
-                                <div className="input-group-append p-0">
-                                    <button className="btn btn-secondary search-opt-btn"  onClick={this.count}  ><i className="bi bi-caret-down-fill"></i></button>
                                 </div>
                                 <div className="input-group-append p-0">
-                                    <button className="btn btn-primary ms-3" title="Search" >Search</button>
+                                    <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
                                 </div>
                             </div>
                             <div className="parentdpdown">
                                 <div className="ddw" >
-                                    {dropdownfn()}  
+                                    {dropdownfn()}
                                 </div>
                             </div>
                         </div>
-                      
-                        
-                    </div>
-                    
-                    <div className="mb-0">
-            
-                        <div className="row mt-4">
-                            <div className="col-md-2 col-lg-1 col-3">
-                                       <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" onChange={(e) => setRecordno(( e.target.value ))}>
-                                            <option value="1">5</option>
-                                            <option value="2">10</option>
-                                            <option value="3">15</option>
-                                            <option value="3">All</option>
-                                        </Form.Select>
+                        </div>
+
+                        <div className="mb-0">
+
+                            <div className="row mt-4">
+                                <div className="col-md-2 col-lg-1 col-3">
+                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" onChange={(e) => setRecordno((e.target.value))}>
+                                        <option value="1">5</option>
+                                        <option value="2">10</option>
+                                        <option value="3">15</option>
+                                        <option value="3">All</option>
+                                    </Form.Select>
+
+                                </div>
+                                <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
+                                    <p className="text-left">records per page</p>
+                                </div>
+
+                                <div className="col-sm-4 col-4 col-lg-4">
+                                    <div className="mb-3 ">
+                                        <a href="/newreservation"><button className="btn btn-success" title="New Reservation" style={{ float: 'right' }}>Add New <i className="bi bi-plus"></i></button></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div className="row">
+                                <div className="col-sm-12 reservation_table">
+                                    <table className="table table-striped table-bordered" >
+                                        <thead >
+                                            <tr>
+                                                <th className="thstyle left">RESV.#</th>
+                                                <th className="thstyle left">ARRIVAL <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
+                                                <th className="thstyle left">NIGHTS <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i> </th>
+                                                <th className="thstyle left">ROOMS <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
+                                                <th className="thstyle left">DEPARTURE <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
+                                                <th className="thstyle left">BOOKED BY <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
+                                                <th className="thstyle left">BOOKED FOR <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
+                                                <th className="thstyle left">BOOKED ON <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
+                                                <th className="thstyle left">STATUS <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
+                                            </tr>
+                                        </thead>
+
+                                        {tdata()}
+
+                                    </table>
+                                </div>
 
                             </div>
-                            <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
-                                <p className="text-left">records per page</p>
+
+
+                            <div className="row">
+                                <div className="col-sm-3" style={{ textAlign: 'left' }}>Showing 1 to {recordno} of {details.length} entries</div>
+                                <div className="col-sm-6"></div>
+                                <div className="col-sm-3" style={{ textAlign: 'right' }}>
+                                    <button className="btn btn-outline-dark m-1">Prev</button>
+                                    <button className="btn btn-outline-dark m-1">1</button>
+                                    <button className="btn btn-outline-dark m-1">2</button>
+                                    <button className="btn btn-outline-dark m-1">Next</button>
+                                </div>
                             </div>
 
-                            <div className="col-sm-4 col-4 col-lg-4">
-                            <div className="mb-3 ">
-                                <a href="/newreservation"><button className="btn btn-success"  title="New Reservation" style={{float : 'right'}}>Add New <i className="bi bi-plus"></i></button></a>
-                            </div>
-                        </div>
-                        </div>
-                    
-                  
 
-                    <div className="row">
-                        <div className="col-sm-12 reservation_table">
-                            <table className="table table-striped table-bordered" >
-                                <thead >
-                                    <tr>
-                                        <th className="thstyle left">RESV.#</th>
-                                        <th className="thstyle left">ARRIVAL <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th> 
-                                        <th className="thstyle left">NIGHTS <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i> </th>
-                                        <th className="thstyle left">ROOMS <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle left">DEPARTURE <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle left">BOOKED BY <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle left">BOOKED FOR <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle left">BOOKED ON <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle left">STATUS <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
-                                    </tr>
-                                </thead>
-                                
-                                    {tdata()} 
-                        
-                            </table>
-                        </div>
-                    
-                    </div>
-
-
-                    <div className="row">
-                        <div className="col-sm-3" style={{textAlign : 'left'}}>Showing 1 to {recordno} of {details.length} entries</div>
-                        <div className="col-sm-6"></div>
-                        <div className="col-sm-3" style={{textAlign : 'right'}}>
-                            <button className="btn btn-outline-dark m-1">Prev</button>
-                            <button className="btn btn-outline-dark m-1">1</button>
-                            <button className="btn btn-outline-dark m-1">2</button>
-                            <button className="btn btn-outline-dark m-1">Next</button>
                         </div>
                     </div>
-
-
-                </div>
                 </div>
             </div>
-        </div>
         );
     
     }

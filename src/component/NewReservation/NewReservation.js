@@ -1,25 +1,8 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../../style.css';
 import './NewReservation.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
-/*
-const state = {
-    count: 1,
-    cn: 5,
-    persons: [
-        { id: 1, name: 'person1' },
-        { id: 2, name: 'person2' },
-        { id: 3, name: 'person3' },
-        { id: 4, name: 'person4' },
-        { id: 5, name: 'person5' },
-    ],
-}
-*/
-
-
-
 
 
 
@@ -42,14 +25,10 @@ const handleIncrement = () => {
     setCount((count + 1 ));
     setCn(( cn + 1 ));
     persons.push({ id: cn, name: 'person' + cn + '' });
-    console.log(persons);
-    console.log(count); 
 }
 
 const handleDecrement = () => {
     setCount((count - 1 ));
-    console.log(persons);
-    console.log(count); 
 }
 
 const display = (e) => {

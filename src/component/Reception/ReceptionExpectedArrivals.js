@@ -1,13 +1,12 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import './Reception.css';
 import '../../style.css';
 
 
 function ReceptionExpectedArrivals() {
-    {/*
-    state = {
 
-        details :  
+
+    const details =  
         [{id: 1, rese:'104',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         {id: 2, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'2',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         {id: 3, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
@@ -15,17 +14,16 @@ function ReceptionExpectedArrivals() {
         {id: 5, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
         {id: 6, rese:'104',arrival :'16-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         {id: 7, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        ],
-    dropdown : 0,
-    }
+        ];
+        const [dropdown, setDropdown] = useState(0);
 
 
-    tdata = () =>{
+    const tdata = () =>{
         
         return(
                 <tbody>
                     {
-                     this.state.details.map(detail =>  <tr key={detail.id} >
+                     details.map(detail =>  <tr key={detail.id} >
                         <td className="left" style={{color : 'blue'}} >{detail.rese}</td>
                         <td className="left">{detail.arrival}</td>
                         <td >{detail.nights}</td>
@@ -45,23 +43,21 @@ function ReceptionExpectedArrivals() {
 
 
     
-    count = () =>{
+    const count = () =>{
 
-        if(this.state.dropdown === 1) {
-            this.setState({dropdown : 0})
-            console.log("this.state.dropdown"+this.state.dropdown);
+        if(dropdown === 1) {
+            setDropdown((0));
         }
 
-        if(this.state.dropdown === 0) {
-            this.setState({dropdown : 1})
-            console.log("this.state.dropdown"+this.state.dropdown);
+        if(dropdown === 0) {
+            setDropdown((1));
         }
     }
 
-    dropdown = () => {
-        if(this.state.dropdown === 0) return "";
+    const dropdownfn = () => {
+        if(dropdown === 0) return "";
 
-        if(this.state.dropdown === 1) return (
+        if(dropdown === 1) return (
             <div className="bg-white">
             <div className="dpdown shadow ">
             <div className="row p-4">
@@ -83,7 +79,7 @@ function ReceptionExpectedArrivals() {
                 </div>
                 <div className="col-sm-6 form-group inputfieldpadding">
                     <button className="btn btn-danger m-1">Search</button>
-                    <button className="btn btn-secondary m-1" onClick={() =>this.setState({dropdown : 0}) }>Close</button>
+                    <button className="btn btn-secondary m-1" onClick={() => setDropdown((0)) }>Close</button>
                 </div>
             </div>
             </div>
@@ -92,8 +88,6 @@ function ReceptionExpectedArrivals() {
     }
   
 
-
-render() {  */}
         return (
             <div className="section">
                 <div className="container-fluid">
@@ -116,7 +110,7 @@ render() {  */}
                             <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
                                 <div className="input-group-append p-0 bg-white ">
-                                    <span className="input-group-text p-0 bg-white br" ><button className="btn"  onClick={this.count}  ><i className="bi bi-caret-down"></i></button></span>
+                                    <span className="input-group-text p-0 bg-white br" ><button className="btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button></span>
                                 </div>
                                 <div className="input-group-append p-0">
                                     <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
@@ -124,7 +118,7 @@ render() {  */}
                             </div>
                             <div className="parentdpdown">
                                 <div className="ddw" >
-                                    {this.dropdown()}
+                                    {dropdownfn()}
                                 </div>
                             </div>
                         </div>
@@ -151,7 +145,7 @@ render() {  */}
                                 <th className="tdwidth left">STATUS</th>
                             </tr>							
                         </thead>
-                                {this.tdata()}
+                                {tdata()}
 
                     </table>
                     
