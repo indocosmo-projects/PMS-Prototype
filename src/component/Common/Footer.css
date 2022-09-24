@@ -1,9 +1,10 @@
 .footer{
     font-size: .8em;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(82, 155, 223);
     padding: 1px;
     padding-top : 10px;
-    color : rgb(66, 66, 66);
+ /* color : rgb(66, 66, 66); */
+    color : white;
     box-shadow:  0 -1px 1px 0 rgba(219, 219, 219, 0.4);
 
 }

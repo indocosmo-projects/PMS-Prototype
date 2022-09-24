@@ -124,6 +124,11 @@ function Reservation() {
                                 </div>
                             </div>
                         </div>
+                        <div className="col-sm-6  ">
+                                    <div className="mb-3 ">
+                                        <a href="/newreservation"><button className="btn btn-success" title="New Reservation" style={{ float: 'right' }}>Add New <i className="bi bi-plus"></i></button></a>
+                                    </div>
+                        </div>
                         </div>
 
                         <div className="mb-0">
@@ -142,11 +147,7 @@ function Reservation() {
                                     <p className="text-left">records per page</p>
                                 </div>
 
-                                <div className="col-sm-4 col-4 col-lg-4">
-                                    <div className="mb-3 ">
-                                        <a href="/newreservation"><button className="btn btn-success" title="New Reservation" style={{ float: 'right' }}>Add New <i className="bi bi-plus"></i></button></a>
-                                    </div>
-                                </div>
+                               
                             </div>
 
 
@@ -176,14 +177,14 @@ function Reservation() {
                             </div>
 
 
-                            <div className="row">
-                                <div className="col-sm-3" style={{ textAlign: 'left' }}>Showing 1 to {recordno} of {details.length} entries</div>
-                                <div className="col-sm-6"></div>
-                                <div className="col-sm-3" style={{ textAlign: 'right' }}>
-                                    <button className="btn btn-outline-dark m-1">Prev</button>
+                            <div className="row m-3">
+                                <div className="col-3 left" >Showing 1 to {recordno} of {details.length} entries</div>
+                                <div className="col-6"></div>
+                                <div className="col-3" >
+                                    <button className="btn btn-outline-dark m-1"><i class="bi bi-arrow-left"></i>Prev</button>
                                     <button className="btn btn-outline-dark m-1">1</button>
                                     <button className="btn btn-outline-dark m-1">2</button>
-                                    <button className="btn btn-outline-dark m-1">Next</button>
+                                    <button className="btn btn-outline-dark m-1">Next<i class="bi bi-arrow-right"></i></button>
                                 </div>
                             </div>
 
