@@ -1,29 +1,30 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import './Reception.css';
 import '../../style.css';
 
 
 function Reception() {
-  {/*}
-    state = {
+  
+    
 
-    details :  [{id: 1, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
+    const details =
+                [{id: 1, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
                 {id: 2, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
                 {id: 3, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
                 {id: 4, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
                 {id: 5, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                ],
+                ];
 
-    dropdown : 0,
-    }
+    const [dropdown, setDropdown] = useState(0);
+    const [recordno, setRecordno] = useState(5);
 
 
-    tdata = () =>{
+    const tdata = () =>{
         
         return(
                 <tbody>
                     {
-                    this.state.details.map(detail => <tr key={detail.id} >
+                    details.map(detail => <tr key={detail.id} >
                         <td className="left">{detail.roomno}</td>
                         <td className="left">{detail.guest}</td>
                         <td className="left">{detail.arrival}</td>
@@ -59,23 +60,23 @@ function Reception() {
 
 
     
-    count = () =>{
+    const count = () =>{
 
-        if(this.state.dropdown === 1) {
-            this.setState({dropdown : 0})
-            console.log("this.state.dropdown"+this.state.dropdown);
+        if(dropdown === 1) {
+            setDropdown(( 0 ));
+            console.log("dropdown" + dropdown);
         }
 
-        if(this.state.dropdown === 0) {
-            this.setState({dropdown : 1})
-            console.log("this.state.dropdown"+this.state.dropdown);
+        if(dropdown === 0) {
+            setDropdown(( 1 ));
+            console.log("dropdown"+ dropdown);
         }
     }
 
-    dropdown = () => {
-        if(this.state.dropdown === 0) return "";
+    const dropdownfn = () => {
+        if(dropdown === 0) return "";
 
-        if(this.state.dropdown === 1) return (
+        if(dropdown === 1) return (
             <div className="bg-white">
             <div className="dpdown shadow ">
             <div className="row p-4">
@@ -97,7 +98,7 @@ function Reception() {
                 </div>
                 <div className="col-sm-6 form-group inputfieldpadding">
                     <button className="btn btn-danger m-1">Search</button>
-                    <button className="btn btn-secondary m-1" onClick={() =>this.setState({dropdown : 0}) }>Close</button>
+                    <button className="btn btn-secondary m-1" onClick={() => this.setDropdown(( 0 )) }>Close</button>
                 </div>
             </div>
             </div>
@@ -105,9 +106,6 @@ function Reception() {
         );
     }
   
-
-
-render() { */}
         return (
             <div className="section">
                 <div className="container-fluid">
@@ -130,7 +128,7 @@ render() { */}
                             <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
                                 <div className="input-group-append p-0 bg-white ">
-                                    <span className="input-group-text p-0 bg-white br" ><button className="btn"  onClick={this.count}  ><i className="bi bi-caret-down"></i></button></span>
+                                    <span className="input-group-text p-0 bg-white br" ><button className="btn"  onClick={count()}  ><i className="bi bi-caret-down"></i></button></span>
                                 </div>
                                 <div className="input-group-append p-0">
                                     <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
@@ -138,7 +136,7 @@ render() { */}
                             </div>
                             <div className="parentdpdown">
                                 <div className="ddw" >
-                                    {this.dropdown()}
+                                    {dropdownfn()}
                                 </div>
                             </div>
                         </div>
@@ -163,7 +161,7 @@ render() { */}
                                 <th className="tdwidth"></th>
                             </tr>
                         </thead>
-                                {this.tdata()}
+                                {tdata()}
 
                     </table>
                     
