@@ -9,10 +9,10 @@ import './Navigation.css';
 
 function NavigationBar() {
   return (
-    <Navbar bg="light" expand="md">
+    <Navbar  className="bg-dark text-white" expand="md">
       <Container>
     
-        <Navbar.Brand href="#home"><div className='logo-cover'><img src={logo} className="logo" /></div></Navbar.Brand>
+        <Navbar.Brand href="#home"><div className='logo-cover'><img src={logo} className="logo" alt="logo"/></div></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         
         <Navbar.Collapse id="basic-navbar-nav">
