@@ -1,3 +1,10 @@
+:root {
+  --grey: #6b6b6b;
+  --light-grey: #949494;
+  --white: #ffffff;
+}
+
+
 .inputfieldpadding{
   padding : 5px;
   text-align : left;
@@ -9,21 +16,75 @@
   font-size: 14px;
 }
 
-.thstyle{
-  /*  width: 125px; */
+
+.btn-primary{
+  border-radius: .5em;
+  box-shadow: 2px 2px 5px rgba(127, 127, 127, 0.297);
+}
+.btn-success{
+  border-radius: .5em;
+  box-shadow: 2px 2px 5px rgba(127, 127, 127, 0.297);
+}
+
+.sort-btn{
+  color: var(--light-grey);
 }
 
 
-.br{
-  border-radius : 0px;
+.search-opt-btn{
+  border-radius: 0em .5em .5em 0em;
 }
+
+/* .select-no-records{
+margin-bottom: 1em;
+padding-left: 1em;
+} */
 
 .right{
-  float : 'right' ;
+  float : right;
 }
 
-.textcolor{
+/* .textcolor{
   color: blue;
+} */
+
+
+.reservation_table{
+  background-color: rgb(255, 255, 255);
+  border-radius:.5em;
+  padding:0 .5em;
+  padding-top: 1em !important;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-shadow: 5px 5px 10px rgba(98, 108, 126, 0.134);
 }
 
+.search-area-bg{
+  background-color: rgb(255, 255, 255);
+  border-radius:.5em;
+  box-shadow: 5px 5px 20px rgba(124, 130, 138, 0.053);
+  padding: .5em;
+}
 
+.table-bordered>:not(caption)>* {
+  border-width: .5px 0 !important;
+}
+.table-bordered>:not(caption)>*>* {
+  border-width: 0 .5px !important;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(67, 67, 67);
+  border-radius: 10px;
+}

@@ -1,14 +1,17 @@
 import React from 'react';
+import Form from 'react-bootstrap/Form';
 import '../../style.css';
 import './Reservation.css';
 import { useState } from 'react';
 
 function Reservation() {
     
+
     const details =  
-        [{id: 1, rese:'R-000001',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        [{id: 0, rese:'R-000001',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        {id: 1, rese:'R-000001',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',status:'GRANTED'},
         {id: 2, rese:'R-000002',arrival :'27-DEC-2018',nights:'4',rooms:'2',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 3, rese:' R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
+        {id: 3, rese:' R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',status:'CANCELLED'},
         {id: 4, rese:'R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
         {id: 5, rese:'R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
         {id: 6, rese:'R-000007',arrival :'16-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
@@ -97,20 +100,24 @@ function Reservation() {
             <div className="section ">
                 <div className="container-fluid ">
                     {/* ----- Heading ------ */}
-                    <div>
-                        <h5 className="header"> RESERVATIONS </h5>
-                    </div>
                     
-                    <div className="p-3 ">
-                    <div className="row ">
-                        <div className="col-sm-6  ">
-                            <div className="input-group mb-3 ">
+                    <div className="row search-area-bg">
+
+                    <div className="col-sm-6">
+                        <h5 className="header mt-2"> Reservations </h5>
+                       </div>
+
+                       
+                        <div className="col-sm-6">
+                            <div className="input-group mt-1">
                                 <input type="text" className="form-control" placeholder="Search..." />
                                 <div className="input-group-append p-0 bg-white ">
                                     <span className="input-group-text p-0 bg-white br" ><button className="btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button></span>
+                                <div className="input-group-append p-0">
+                                    <button className="btn btn-secondary search-opt-btn"  onClick={this.count}  ><i className="bi bi-caret-down-fill"></i></button>
                                 </div>
                                 <div className="input-group-append p-0">
-                                    <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
+                                    <button className="btn btn-primary ms-3" title="Search" >Search</button>
                                 </div>
                             </div>
                             <div className="parentdpdown">
@@ -119,49 +126,49 @@ function Reservation() {
                                 </div>
                             </div>
                         </div>
-                       
-                        <div className="col-sm-6">
-                            <div className="mb-3 ">
-                                <a href="/newreservation"><button className="btn btn-secondary" title="New Reservation" style={{float : 'right'}}>Add New <i className="bi bi-plus"></i></button></a>
-                            </div>
-                        </div>
+                      
+                        
                     </div>
                     
                     <div className="mb-0">
-                        <div className="row">
-                            <div className="col-sm-1">
-                                <div className="inputfieldpadding p-0">
-                                    <select className=" form-select" title="select" name="rec" id="rec" onChange={(e) => setRecordno(( e.target.value )) }>
-                                        <option defaultValue="5">5</option>
-                                        <option defaultValue="15">15</option>
-                                        <option defaultValue="20">20</option>
-                                        <option defaultValue="21">All</option>
-                                    </select>
-                                </div>
+            
+                        <div className="row mt-4">
+                            <div className="col-md-2 col-lg-1 col-3">
+                                       <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" onChange={(e) => setRecordno(( e.target.value ))}>
+                                            <option value="1">5</option>
+                                            <option value="2">10</option>
+                                            <option value="3">15</option>
+                                            <option value="3">All</option>
+                                        </Form.Select>
+
                             </div>
-                            <div className="col-sm-10 inputfieldpadding">
+                            <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
                                 <p className="text-left">records per page</p>
-                               
+                            </div>
+
+                            <div className="col-sm-4 col-4 col-lg-4">
+                            <div className="mb-3 ">
+                                <a href="/newreservation"><button className="btn btn-success"  title="New Reservation" style={{float : 'right'}}>Add New <i className="bi bi-plus"></i></button></a>
                             </div>
                         </div>
-                    </div>
+                        </div>
                     
                   
 
                     <div className="row">
-                        <div className="col-sm-12 ">
+                        <div className="col-sm-12 reservation_table">
                             <table className="table table-striped table-bordered" >
                                 <thead >
                                     <tr>
                                         <th className="thstyle left">RESV.#</th>
-                                        <th className="thstyle left">ARRIVAL <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th> 
-                                        <th className="thstyle left">NIGHTS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i> </th>
-                                        <th className="thstyle left">ROOMS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle left">DEPARTURE <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle left">BOOKED BY <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle left">BOOKED FOR <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle left">BOOKED ON <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
-                                        <th className="thstyle left">STATUS <i className="bi bi-arrow-down-up" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">ARRIVAL <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th> 
+                                        <th className="thstyle left">NIGHTS <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i> </th>
+                                        <th className="thstyle left">ROOMS <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">DEPARTURE <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">BOOKED BY <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">BOOKED FOR <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">BOOKED ON <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
+                                        <th className="thstyle left">STATUS <i className="bi bi-arrow-down-up sort-btn" style={{float : 'right'}}></i></th>
                                     </tr>
                                 </thead>
                                 
@@ -171,6 +178,7 @@ function Reservation() {
                         </div>
                     
                     </div>
+
 
                     <div className="row">
                         <div className="col-sm-3" style={{textAlign : 'left'}}>Showing 1 to {recordno} of {details.length} entries</div>
@@ -184,11 +192,12 @@ function Reservation() {
                     </div>
 
 
-                    </div>
+                </div>
                 </div>
             </div>
+        </div>
         );
     
-}
+    }
  
 export default Reservation;
