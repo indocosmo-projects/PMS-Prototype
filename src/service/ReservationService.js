@@ -9,6 +9,10 @@ class ReservationService{
         axios.get(USERS_REST_API_URL);
     }
 
+    getReservationSearchData(){
+        axios.get(USERS_REST_API_URL);
+    }
+
 }
 
 export default new ReservationService();

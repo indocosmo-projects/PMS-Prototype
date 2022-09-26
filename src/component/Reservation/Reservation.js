@@ -24,14 +24,17 @@ function Reservation() {
         const [dropdown, setDropdown] = useState(0);
         const [recordno, setRecordno] = useState(5);
 
-
-    const tdata = () =>{
+    const fetchdata = () =>{
         ReservationService.getReservationList().then((response) => {
             setDetails((response.data));
             console.log("response" + response);
             console.log("details" + details);
         });
+    }
 
+
+    const tdata = () =>{
+    
         var pageno = ( details.length / recordno );
         var balancepage = ( details.length % recordno );
         console.log("pageno==>" + pageno + "balancepage==>" + balancepage);
@@ -189,10 +192,10 @@ function Reservation() {
                                 <div className="col-3 left" >Showing 1 to {recordno} of {details.length} entries</div>
                                 <div className="col-6"></div>
                                 <div className="col-3" >
-                                    <button className="btn btn-outline-dark m-1"><i class="bi bi-arrow-left"></i>Prev</button>
+                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-left"></i>Prev</button>
                                     <button className="btn btn-outline-dark m-1">1</button>
                                     <button className="btn btn-outline-dark m-1">2</button>
-                                    <button className="btn btn-outline-dark m-1">Next<i class="bi bi-arrow-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1">Next<i className="bi bi-arrow-right"></i></button>
                                 </div>
                             </div>
 
