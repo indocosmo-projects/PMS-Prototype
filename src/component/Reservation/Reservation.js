@@ -103,8 +103,8 @@ function Reservation() {
 
                     <div className="row search-area-bg">
 
-                        <div className="col-sm-6">
-                            <h5 className="header mt-2"> Reservations </h5>
+                        <div className="col-sm-6 mb-2">
+                            <h5 className="header"> Reservations </h5>
                         </div>
 
                         <div className="row ">
@@ -112,9 +112,9 @@ function Reservation() {
                             <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
                                 <div className="input-group-append p-0 bg-white ">
-                                    <span className="input-group-text p-0 bg-white br" ><button className="btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button></span>
+                                    <span className="input-group-text p-0 bg-white search-opt-btn" ><button className="btn btn-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button></span>
                                 </div>
-                                <div className="input-group-append p-0">
+                                <div className="input-group-append p-0 ms-2">
                                     <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
                                 </div>
                             </div>
@@ -151,7 +151,7 @@ function Reservation() {
 
 
 
-                            <div className="row">
+                            <div className="row mb-2">
                                 <div className="col-sm-12 reservation_table">
                                     <table className="table table-striped table-bordered" >
                                         <thead >
