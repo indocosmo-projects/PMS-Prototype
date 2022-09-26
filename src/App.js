@@ -5,7 +5,7 @@ import Navigationbar from './component/Common/Navigationbar';
 import Footer from './component/Common/Footer';
 
 import Reservation from './component/Reservation/Reservation';
-import CheckIn from './component/CheckIn/CheckIn.jsx';
+import CheckIn from './component/CheckIn/CheckIn';
 import Reception from './component/Reception/Reception';
 import ReceptionExpectedArrivals from './component/Reception/ReceptionExpectedArrivals';
 import ReceptionHotelStatus from './component/Reception/ReceptionHotelStatus';

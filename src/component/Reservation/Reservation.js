@@ -3,10 +3,11 @@ import Form from 'react-bootstrap/Form';
 import '../../style.css';
 import './Reservation.css';
 import { useState } from 'react';
+import ReservationService from '../../service/ReservationService';
 
 function Reservation() {
     
-
+{/*
     const details =  
         [{id: 0, rese:'R-000001',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         {id: 1, rese:'R-000001',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',status:'GRANTED'},
@@ -17,13 +18,20 @@ function Reservation() {
         {id: 6, rese:'R-000007',arrival :'16-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         {id: 7, rese:'R-000007',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         ];
-
+    */}
+        const [details, setDetails] = useState([]); 
+        
         const [dropdown, setDropdown] = useState(0);
         const [recordno, setRecordno] = useState(5);
 
 
     const tdata = () =>{
-        
+        ReservationService.getReservationList().then((response) => {
+            setDetails((response.data));
+            console.log("response" + response);
+            console.log("details" + details);
+        });
+
         var pageno = ( details.length / recordno );
         var balancepage = ( details.length % recordno );
         console.log("pageno==>" + pageno + "balancepage==>" + balancepage);
