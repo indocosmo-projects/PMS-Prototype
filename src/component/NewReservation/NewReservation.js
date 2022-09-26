@@ -41,14 +41,14 @@ const display = (e) => {
     return(
         <div>
             <div className="section">
-                <div className="container-fluid">
+                <div className="container-fluid formcontent">
                     {/* ----- Heading ------ */}
                     <div>
-                        <h5 className="header"> NEW RESERVATION </h5>
+                        <h5 className="header"> New Reservation </h5>
                     </div>
 
                      {/* ----- Form   ------ */}
-                    <div className="formcontent">
+                    <div className="">
                         <form action="#">
                             <div className="row ">
                                 <div className="col-sm ">
@@ -108,7 +108,7 @@ const display = (e) => {
 
                      {/* ----- Room Availability ------ */}
                     <div className="row p-3">
-                        <div className="col-sm-3 p-3 ">
+                        <div className="col-sm-3 p-3 availability_check_bg">
                                 <div className="col-sm-12">
                                     <div className="form-group inputfieldpadding">
                                         <label className="text-left" htmlFor="arrival">Arrival :</label>
@@ -135,23 +135,24 @@ const display = (e) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="form-group mt-3" >
+                                <div className="form-group mt-3 d-flex justify-content-end" >
+                                    <button type="button" className="btn btn-secondary w-25 btnstyle">Edit</button>
                                     <button type="button" className="btn btn-success w-25 btnstyle">Go</button>
-                                    <button type="button" className="btn btn-info w-25 btnstyle">Edit</button>
                                 </div>
                         </div>
                         <div className="col-sm-9">
                         <div className= "roomavailability">
-                            <table className="table " style={{marginBottom: 0,}}>
+                            <div className='m-2'>
+                            <table className="table" style={{marginBottom: 0,}}>
                                 <thead className="tabhead">
                                     <tr>
                                         <th>Room Type</th>
-                                        <th>Tue <br/> 16-Oct-18</th>
-                                        <th>Tue <br/> 16-Oct-18</th>
-                                        <th>Tue <br/> 16-Oct-18</th>
-                                        <th>Tue <br/> 16-Oct-18</th>
-                                        <th>Tue <br/> 16-Oct-18</th>
-                                        <th>Tue <br/> 16-Oct-18</th>
+                                        <th><span className='avail-date'>16-Sep-22</span><br/><span className='avail-date-head'> Fri </span></th>
+                                        <th><span className='avail-date'>17-Sep-22</span><br/><span className='avail-date-head'> Sat </span></th>
+                                        <th><span className='avail-date'>18-Sep-22</span><br/><span className='avail-date-head'> Sun </span></th>
+                                        <th><span className='avail-date'>19-Sep-22</span><br/><span className='avail-date-head'> Mon </span></th>
+                                        <th><span className='avail-date'>20-Sep-22</span><br/><span className='avail-date-head'> Tue </span></th>
+                                        <th><span className='avail-date'>21-Sep-22</span><br/><span className='avail-date-head'> Wed </span></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -202,6 +203,7 @@ const display = (e) => {
                                     </tr>
                                 </tbody>
                             </table>
+                            </div>
                             </div>
                         </div>
                     </div>
