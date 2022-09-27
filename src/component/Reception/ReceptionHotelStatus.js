@@ -5,7 +5,6 @@ import Form from 'react-bootstrap/Form';
 
 function ReceptionHotelStatus() {
 
-
     const [recordno, setRecordno] = useState(5); 
 
         return(
