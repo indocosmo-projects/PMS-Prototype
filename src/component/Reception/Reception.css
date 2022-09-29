@@ -1,3 +1,11 @@
+:root{
+    --occupied : pink;
+    --reserved : #81D4FA;
+    --vaccant : darkblue;
+    --clean : #AB47BC;
+    --dirty : goldenrod;
+}
+
 .tdwidthguest{
     width : 320px;
 }
@@ -11,6 +19,7 @@
     width: 70px;
     padding : 5px;
 }
+
 
 .height{
     padding : 10px;
@@ -56,26 +65,69 @@
 .square{
     height: 15px;
     width: 15px;
+    float : right !important;
+    margin-top : 4px;
+    margin-left: 20px;
 }
 
 .occupied{
-    background-color : rgb(248, 148, 148);
+    background-color : var(--occupied);
 }
 
 .reserved{
-    background-color : pink;
+    background-color : var(--reserved);
 }
 
 .vaccant{
-    background-color : darkblue;;
+    background-color : var(--vaccant);
 }
 
 .clean{
-    background-color : rgb(160, 137, 177);
+    background-color : var(--clean);
 }
 
 .dirty{
-    background-color : goldenrod;
+    background-color : var(--dirty);
 }
 
-  
+.left{
+    text-align : left;
+}
+
+.room{
+    width : 100px;
+    border : 5px solid var(--occupied);
+    border-bottom-right-radius : 15px;
+    border-bottom-left-radius : 15px;
+    margin : 10px;
+}
+
+.rmtype{
+    border-bottom : 5px solid var(--occupied);
+    height : 40px;
+    padding : 5px;
+}
+
+.rmback{
+    height: 30px;
+    background-color : var(--occupied);
+}
+
+.stat{
+    background-color: rgb(99, 236, 99);
+    color: white;
+    padding: 6px;
+    border-radius : 5px; 
+}
+
+.ulistmargin{
+    list-style-type: none;
+    margin : 0px !important;
+    padding: 0px;
+}
+
+.rmnum{
+    height: 30px;
+    font-weight: bolder;
+
+}

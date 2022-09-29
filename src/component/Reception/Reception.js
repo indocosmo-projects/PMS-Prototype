@@ -30,7 +30,7 @@ function Reception() {
                         <td className="left">{detail.arrival}</td>
                         <td className="left">{detail.departure}</td>
                         <td className="left">{detail.foliobalance}</td>
-                        <td className="bg-success"><button className="btn btn-success w-100 button">CHECK-IN</button></td>
+                        <td className="bg-success text-white pt-4">CHECK-IN</td>
                         <td className="tdwidth">
                             <div className="row">
                                 <div className="col-2">

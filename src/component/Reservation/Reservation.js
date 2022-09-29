@@ -7,7 +7,7 @@ import ReservationService from '../../service/ReservationService';
 
 function Reservation() {
     
-
+ 
     const details =  
         [{id: 0, rese:'R-000001',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         {id: 1, rese:'R-000001',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',status:'GRANTED'},
@@ -19,7 +19,8 @@ function Reservation() {
         {id: 7, rese:'R-000007',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         ];
     
-     {/*  const [details, setDetails] = useState([]);  */}
+    
+    {/* const [details, setDetails] = useState([]);  */}
         
         const [dropdown, setDropdown] = useState(0);
         const [recordno, setRecordno] = useState(5);
@@ -32,7 +33,24 @@ function Reservation() {
             console.log("details" + details);
         });
     }
+    
+        ReservationService.getReservationList().then((response) => {
+            setDetails((response.data));
+            console.log("response" + response);
+            console.log("details" + details);
+        });
+        ReservationService.getReservationSearchData().then((response) => {
+            setDetails((response.data));
+            console.log("response" + response);
+            console.log("details" + details);
+        });
+        ReservationService.getReservation().then((response) => {
+            setDetails((response.data));
+            console.log("response" + response);
+            console.log("details" + details);
+        });
 */}
+
 
 
     const tdata = () =>{

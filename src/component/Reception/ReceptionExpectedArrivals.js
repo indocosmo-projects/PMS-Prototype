@@ -32,7 +32,7 @@ function ReceptionExpectedArrivals() {
                         <td className="left">{detail.bookedby}</td>
                         <td className="left">{detail.bookedfor}</td>
                         <td className="left">{detail.bookedon}</td>
-                        <td className="bg-success" ><button className="btn btn-success">CHECK-IN</button></td>
+                        <td className="bg-success text-white" >CHECK-IN</td>
                     </tr>
                     )}
                     
