@@ -124,6 +124,8 @@
     list-style-type: none;
     margin : 0px !important;
     padding: 0px;
+    height : 400px;
+    overflow : auto;
 }
 
 .listItem{

@@ -21,6 +21,13 @@ function ReceptionHotelStatus() {
         {id: 10, name : '110' },
         {id: 11, name : '111' },
         {id: 12, name : '112' },
+        {id: 13, name : '113' },
+        {id: 14, name : '114' },
+        {id: 15, name : '115' },
+        {id: 16, name : '116' },
+        {id: 17, name : '117' },
+        {id: 18, name : '118' },
+        {id: 19, name : '119' },
     ]
 
     const roomlist = () => {
@@ -114,11 +121,23 @@ function ReceptionHotelStatus() {
                             </div>
                     </div>
 
-                    <div className="row">
-                        <div className="col-sm-8">
+                    <div className="row p-3">
+                        <div className="col-sm-8 " >
                             {roomlist()}
                         </div>
-                        <div className="col-sm-4"></div>
+                        <div className="col-sm-4 p-3">
+                            <div className="row">
+                                <div className="col-sm-12">
+                                    <button className="btn btn-secondary w-100 text-white mb-2">Deposit</button>
+                                    <button className="btn btn-secondary w-100 text-white mb-2">Posting</button>
+                                    <button className="btn btn-secondary w-100 text-white mb-2">Bill Preview</button>
+                                    <button className="btn btn-secondary w-100 text-white mb-2">Sharer</button>
+                                    <button className="btn btn-info w-100 text-white mb-2">Deposit</button>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
