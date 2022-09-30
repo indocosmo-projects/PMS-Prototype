@@ -70,25 +70,73 @@
     margin-left: 20px;
 }
 
+
+
+.left{
+    text-align : left;
+}
+
+
 .occupied{
     background-color : var(--occupied);
 }
+.border-occupied{
+    border : 5px solid var(--occupied);
+}
+.border-bottom-occupied{
+    border-bottom : 5px solid var(--occupied);
+}
+
+
 
 .reserved{
     background-color : var(--reserved);
 }
+.border-reserved{
+    border : 5px solid var(--reserved);
+}
+.border-bottom-reserved{
+    border-bottom : 5px solid var(--reserved);
+}
+
+
 
 .vaccant{
     background-color : var(--vaccant);
 }
+.border-vaccant{
+    border : 5px solid var(--vaccant);
+}
+.border-bottom-vaccant{
+    border-bottom : 5px solid var(--vaccant);
+}
+
+
 
 .clean{
     background-color : var(--clean);
 }
+.border-clean{
+    border : 5px solid var(--clean);
+}
+.border-bottom-clean{
+    border-bottom : 5px solid var(--clean);
+}
+
+
 
 .dirty{
     background-color : var(--dirty);
 }
+.border-dirty{
+    border : 5px solid var(--dirty);
+}
+.border-bottom-dirty{
+    border-bottom : 5px solid var(--dirty);
+}
+
+
+
 
 .left{
     text-align : left;
@@ -96,21 +144,20 @@
 
 .room{
     width : 100px;
-    border : 5px solid var(--occupied);
+ /*   border : 5px solid var(--occupied); */
     border-bottom-right-radius : 15px;
     border-bottom-left-radius : 15px;
     margin : 10px;
 }
 
 .rmtype{
-    border-bottom : 5px solid var(--occupied);
+  /*  border-bottom : 5px solid var(--occupied); */
     height : 60px;
     padding : 5px;
 }
 
 .rmback{
     height: 30px;
-    background-color : var(--occupied);
 }
 
 .stat{
@@ -124,7 +171,7 @@
     list-style-type: none;
     margin : 0px !important;
     padding: 0px;
-    height : 400px;
+    height : 610px;
     overflow : auto;
 }
 
@@ -137,5 +184,16 @@
     height: 50px;
     font-weight: bolder;
     font-size : 30px;
+}
 
+.left{
+    text-align: left;
+}
+
+.roomicon{
+    color : white;
+    background-color: rgb(58, 145, 57);
+    padding : 10px;
+    font-size : 20px;
+    text-align: left;
 }

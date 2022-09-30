@@ -9,43 +9,69 @@ function ReceptionHotelStatus() {
     const [recordno, setRecordno] = useState(5); 
     const rooms = 
     [
-        {id: 1, name : '101' },
-        {id: 2, name : '102' },
-        {id: 3, name : '103' },
-        {id: 4, name : '104' },
-        {id: 5, name : '105' },
-        {id: 6, name : '106' },
-        {id: 7, name : '107' },
-        {id: 8, name : '108' },
-        {id: 9, name : '109' },
-        {id: 10, name : '110' },
-        {id: 11, name : '111' },
-        {id: 12, name : '112' },
-        {id: 13, name : '113' },
-        {id: 14, name : '114' },
-        {id: 15, name : '115' },
-        {id: 16, name : '116' },
-        {id: 17, name : '117' },
-        {id: 18, name : '118' },
-        {id: 19, name : '119' },
+        {id: 1, name : '101', status: 'O' },
+        {id: 2, name : '102', status: 'R' },
+        {id: 3, name : '103', status: 'V' },
+        {id: 4, name : '104', status: 'C' },
+        {id: 5, name : '105', status: 'D' },
+        {id: 6, name : '106', status: 'O' },
+        {id: 7, name : '107', status: 'R' },
+        {id: 8, name : '108', status: 'V' },
+        {id: 9, name : '109', status: 'C' },
+        {id: 10, name : '110', status: 'D' },
+        {id: 11, name : '111', status: 'O' },
+        {id: 12, name : '112', status: 'R' },
+        {id: 13, name : '113', status: 'V' },
+        {id: 14, name : '114', status: 'C' },
+        {id: 15, name : '115', status: 'D' },
+        {id: 16, name : '116', status: 'O' },
+        {id: 17, name : '117', status: 'R' },
+        {id: 18, name : '118', status: 'V' },
+        {id: 19, name : '119', status: 'C' },
     ]
 
-    const roomlist = () => {
+    const roomlist = (room) => {
         
-        return (
-                <div>
-                    <ul className="ulistmargin ">
-                        {rooms.map(room => <li key={room.id} className="listItem">
-                            <div className="room row">
-                                <div className="rmtype col-12"><i className="bi bi-distribute-vertical stat" style={{float : 'left'}} ></i>DLX</div>
-                                <div className="col-12 rmnum">{room.name}</div>
-                                <div className="rmback col-12"></div>
-                            </div>
-                        </li>
-                        )}
-                    </ul>
-                </div>
+        if(room.status === 'O')return (
+                <div className="room row border-occupied">
+                    <div className="rmtype border-bottom-occupied col-12"><i className="fa fa-bed roomicon" style={{float : 'left'}} ></i>DLX</div>
+                    <div className="col-12 rmnum">{room.name}</div>
+                    <div className="rmback occupied col-12"></div>
+                </div>    
             );
+
+            if(room.status === 'R')return (
+                <div className="room row border-reserved">
+                    <div className="rmtype border-bottom-reserved col-12"><i className="fa fa-bed roomicon" style={{float : 'left'}} ></i>DLX</div>
+                    <div className="col-12 rmnum">{room.name}</div>
+                    <div className="rmback reserved col-12"></div>
+                </div>    
+            );
+        
+            if(room.status === 'V')return (
+                <div className="room row border-vaccant">
+                    <div className="rmtype border-bottom-vaccant col-12"><i className="fa fa-bed roomicon" style={{float : 'left'}} ></i>DLX</div>
+                    <div className="col-12 rmnum">{room.name}</div>
+                    <div className="rmback vaccant col-12"></div>
+                </div>    
+            );
+
+            if(room.status === 'C')return (
+                <div className="room row border-clean">
+                    <div className="rmtype border-bottom-clean col-12"><i className="fa fa-bed roomicon" style={{float : 'left'}} ></i>DLX</div>
+                    <div className="col-12 rmnum">{room.name}</div>
+                    <div className="rmback clean col-12"></div>
+                </div>    
+            );
+
+            if(room.status === 'D')return (
+                <div className="room row border-dirty">
+                    <div className="rmtype border-bottom-dirty col-12"><i className="fa fa-bed roomicon" style={{float : 'left'}} ></i>DLX</div>
+                    <div className="col-12 rmnum">{room.name}</div>
+                    <div className="rmback dirty col-12"></div>
+                </div>    
+            );
+
     }
 
         return(
@@ -123,7 +149,15 @@ function ReceptionHotelStatus() {
 
                     <div className="row p-3">
                         <div className="col-sm-8 " >
-                            {roomlist()}
+                            <div>
+                        <h4 className="left">FLOOR-01</h4>
+                        <ul className="ulistmargin ">
+                            {rooms.map(room => <li key={room.id} className="listItem">
+                            {roomlist(room)}
+                            </li>
+                            )}
+                        </ul>
+                    </div>
                         </div>
                         <div className="col-sm-4 p-3">
                             <div className="row">
@@ -133,8 +167,89 @@ function ReceptionHotelStatus() {
                                     <button className="btn btn-secondary w-100 text-white mb-2">Bill Preview</button>
                                     <button className="btn btn-secondary w-100 text-white mb-2">Sharer</button>
                                     <button className="btn btn-info w-100 text-white mb-2">Deposit</button>
-
-                                    
+                                    <div class="form-group left mt-2">
+                                        <label for="room"><b>Room Number</b></label>
+                                        <input type="text" class="form-control" id="room" />
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-sm-6">
+                                            <div className="left p-2 row" >
+                                                <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> Complementary BreakFast</div>
+                                            </div>
+                                            <div className="left p-2 row" >
+                                                <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> Television</div>
+                                            </div>
+                                            <div className="left p-2 row" >
+                                                <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> Coffee Maker</div>
+                                            </div>
+                                            <div className="left p-2 row" >
+                                                <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> Pick & Drop</div>
+                                            </div>
+                                            <div className="left p-2 row" >
+                                                <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> 24x7 Room Service</div>
+                                            </div>
+                                            <div className="left p-2 row" >
+                                                <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> Mineral Water 500 ml</div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div className="col-sm-6">
+                                        <div className="left p-2 row" >
+                                            <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> Free WiFi</div>
+                                            </div>
+                                            <div className="left p-2 row" >
+                                                <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> Light Music</div>
+                                            </div>
+                                            <div className="left p-2 row" >
+                                                <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> Iron Box & Iron Board</div>
+                                            </div>
+                                            <div className="left p-2 row" >
+                                                <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> Self Laundry</div>
+                                            </div>
+                                            <div className="left p-2 row" >
+                                                <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> 24x7 Hot/Cold Water</div>
+                                            </div>
+                                            <div className="left p-2 row" >
+                                                <div className="col-sm-2">
+                                                    <i className="fa fa-hand-o-right"></i>
+                                                </div>
+                                                <div className="col-sm-10"> 24x7 Help Desk</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
