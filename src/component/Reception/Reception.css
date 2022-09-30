@@ -126,13 +126,14 @@
     padding: 0px;
 }
 
-.listIitem{
+.listItem{
     padding : 10px;
     display : inline-block;
 }
 
 .rmnum{
-    height: 30px;
+    height: 50px;
     font-weight: bolder;
+    font-size : 30px;
 
 }

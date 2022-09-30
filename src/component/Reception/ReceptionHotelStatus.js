@@ -15,6 +15,12 @@ function ReceptionHotelStatus() {
         {id: 4, name : '104' },
         {id: 5, name : '105' },
         {id: 6, name : '106' },
+        {id: 7, name : '107' },
+        {id: 8, name : '108' },
+        {id: 9, name : '109' },
+        {id: 10, name : '110' },
+        {id: 11, name : '111' },
+        {id: 12, name : '112' },
     ]
 
     const roomlist = () => {
@@ -22,10 +28,10 @@ function ReceptionHotelStatus() {
         return (
                 <div>
                     <ul className="ulistmargin ">
-                        {rooms.map(room => <li key={room.id} className="listIitem">
+                        {rooms.map(room => <li key={room.id} className="listItem">
                             <div className="room row">
                                 <div className="rmtype col-12"><i className="bi bi-distribute-vertical stat" style={{float : 'left'}} ></i>DLX</div>
-                                <div className="col-12 rmnum">100</div>
+                                <div className="col-12 rmnum">{room.name}</div>
                                 <div className="rmback col-12"></div>
                             </div>
                         </li>
