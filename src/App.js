@@ -15,8 +15,8 @@ function App() {
         return (
     <div className="App">
         <Router>
-           {/*} <Navigationbar/>  */}
-           <NavigationbarMannual/>
+            <Navigationbar/>  
+       {/*}    <NavigationbarMannual/> */}
             <Switch>
                 <Route exact path='/' component={Reservation}/>
                 <Route exact path='/newreservation' component={NewReservation}/>
