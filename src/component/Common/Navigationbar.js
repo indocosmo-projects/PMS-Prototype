@@ -2,25 +2,32 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from "react-router-dom";
 
 import logo from '../../assets/niko.png';
 import './Navigation.css';
-import { Link } from "react-router-dom";
+
 
 
 function NavigationBar() {
   return (
-    <Navbar  bg="dark"  expand="md">
+    <Navbar  bg="dark"  expand="lg">
       <Container className="nav">
     
         <Navbar.Brand href="#home"><div className='logo-cover'><img src={logo} className="logo" alt="logo"/></div></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto gap-2">
           <Link className="nlink" to="/home">Home</Link>
           <Link className="nlink" to="/reservation">Reservation</Link>
           <Link className="nlink" to="/reception">Reception</Link>
+
+
+              <Nav.Link><Link to="/home" className='nlink'>Home</Link></Nav.Link>
+              <Nav.Link><Link to="/reservation" className='nlink'>Reservation</Link></Nav.Link>
+              <Nav.Link><Link to="/reception" className='nlink'>Reception</Link></Nav.Link>
+
             <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -33,8 +40,12 @@ function NavigationBar() {
 
             <Link className="nlink" to="/requests">Requests</Link>
             <Link className="nlink" to="/reports">Reports</Link>
+            <Nav.Link><Link to="/requests" className='nlink'>Requests</Link></Nav.Link>
+            <Nav.Link><Link to="/reports" className='nlink'>Reports</Link></Nav.Link>
 
-            <NavDropdown title="Tools" id="basic-nav-dropdown">
+
+
+            <NavDropdown title="Tools" id="basic-nav-dropdown" className="nlink">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
@@ -44,7 +55,7 @@ function NavigationBar() {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="Setup" id="basic-nav-dropdown">
+            <NavDropdown title="Setup" id="basic-nav-dropdown" className="nlink">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>

@@ -144,7 +144,7 @@ function Reservation() {
                             <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
                                 <div className="input-group-append p-0 bg-white ">
-                                    <span className="input-group-text p-0 bg-white search-opt-btn" ><button className="btn btn-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button></span>
+                                    <span className="input-group-text p-0 bg-white search-opt-btn" ><button className="btn btn-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down-fill"></i></button></span>
                                 </div>
                                 <div className="input-group-append p-0 ms-2">
                                     <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>

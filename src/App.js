@@ -11,14 +11,17 @@ import ReceptionExpectedArrivals from './component/Reception/ReceptionExpectedAr
 import ReceptionHotelStatus from './component/Reception/ReceptionHotelStatus';
 
 import NavigationbarMannual from './component/Common/NavigationbarMannual';
+// import NavigationbarMannual from './component/Common/NavigationbarMannual';
 
 
 function App() {
         return (
     <div className="App">
         <Router>
-        {/*}     <Navigationbar/>  */}
-          <NavigationbarMannual/> 
+
+           <Navigationbar/> 
+           {/* <NavigationbarMannual/> */}
+
             <Switch>
                 <Route exact path='/' component={Reservation}/>
                 <Route exact path='/newreservation' component={NewReservation}/>
