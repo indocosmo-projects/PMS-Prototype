@@ -17,6 +17,7 @@ function App() {
         <Router>
            <Navigationbar/> 
            {/* <NavigationbarMannual/> */}
+
             <Switch>
                 <Route exact path='/' component={Reservation}/>
                 <Route exact path='/newreservation' component={NewReservation}/>
