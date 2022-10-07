@@ -2,6 +2,7 @@ import React,{ useState } from 'react';
 import './Reception.css';
 import '../../style.css';
 import Form from 'react-bootstrap/Form';
+import { Link } from "react-router-dom";
 
 
 function Reception() {
@@ -114,9 +115,9 @@ function Reception() {
                     
                     <div className="p-3">
                         <div className="height">
-                            <a className="nvlink active" href="/reception">IN-HOUSE</a>
-                            <a className="nvlink" href="/receptionexpectedarrival">EXPECTED ARRIVALS</a>
-                            <a className="nvlink" href="/receptionhotelstatus">HOTEL STATUS</a>
+                            <Link className="nvlink" to="/reception">IN-HOUSE</Link>
+                            <Link className="nvlink" to="/receptionexpectedarrival">EXPECTED ARRIVALS</Link>
+                            <Link className="nvlink active" to="/receptionhotelstatus">HOTEL STATUS</Link> 
                         </div>
                     </div>
    
@@ -141,7 +142,7 @@ function Reception() {
          
                                 <div className="col-sm-6">
                                     <div className="mb-3 ">
-                                        <a href="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}>NEW CHECK-IN<i className="bi bi-plus"></i></button></a>
+                                    <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}>NEW CHECK-IN<i className="bi bi-plus"></i></button></Link>
                                     </div>
                                 </div>
                         </div>

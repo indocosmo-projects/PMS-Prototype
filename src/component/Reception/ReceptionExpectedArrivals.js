@@ -1,6 +1,7 @@
 import React,{ useState } from 'react';
 import './Reception.css';
 import '../../style.css';
+import { Link } from "react-router-dom";
 
 
 function ReceptionExpectedArrivals() {
@@ -98,10 +99,10 @@ function ReceptionExpectedArrivals() {
                     
                     <div className="p-3">
                         <div className="height">
-                            <a className="nvlink" href="/reception">IN-HOUSE</a>
-                            <a className="nvlink active" href="/receptionexpectedarrival">EXPECTED ARRIVALS</a>
-                            <a className="nvlink" href="/receptionhotelstatus">HOTEL STATUS</a>
-                        </div>
+                            <Link className="nvlink" to="/reception">IN-HOUSE</Link>
+                            <Link className="nvlink" to="/receptionexpectedarrival">EXPECTED ARRIVALS</Link>
+                            <Link className="nvlink active" to="/receptionhotelstatus">HOTEL STATUS</Link>
+                          </div>
                     </div>
 
                     <div className="p-3">
@@ -125,7 +126,7 @@ function ReceptionExpectedArrivals() {
                        
                         <div className="col-sm-6">
                             <div className="mb-3 ">
-                                <a href="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}>NEW CHECK-IN<i className="bi bi-plus"></i></button></a>
+                            <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}>NEW CHECK-IN<i className="bi bi-plus"></i></button></Link>
                             </div>
                         </div>
                     </div>

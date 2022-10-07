@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import logo from '../../assets/niko.png';
 import './Navigation.css';
+import { Link } from "react-router-dom";
 
 
 function NavigationBar() {
@@ -17,9 +18,9 @@ function NavigationBar() {
         
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto gap-2">
-            <a href="/home" className="nlink" >Home</a>
-            <a href="/reservation" className="nlink">Reservation</a>
-            <a href="/reception" className="nlink" >Reception</a>
+          <Link className="nlink" to="/home">Home</Link>
+          <Link className="nlink" to="/reservation">Reservation</Link>
+          <Link className="nlink" to="/reception">Reception</Link>
             <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -30,8 +31,8 @@ function NavigationBar() {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <a href="/requests" className="nlink" >Requests</a>
-            <a href="/reports" className="nlink" >Reports</a>
+            <Link className="nlink" to="/requests">Requests</Link>
+            <Link className="nlink" to="/reports">Reports</Link>
 
             <NavDropdown title="Tools" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

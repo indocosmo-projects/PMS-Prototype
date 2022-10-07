@@ -4,6 +4,7 @@ import logo from '../../assets/niko.png';
 import {Nav ,Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Link } from "react-router-dom";
 
 
 function NavigationbarMannual(){
@@ -61,14 +62,14 @@ function NavigationbarMannual(){
                         <Navbar.Toggle aria-controls="navbarScroll" data-bs-target="#navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
                                 <Nav>
-                                    <a className="nlink" href="/home">Home</a>
-                                    <a className="nlink" href="/reservation">Reservation</a>
-                                    <a className="nlink" href="/reception">Reception</a>
-                                    <a className="nlink" href="/shift">Shift <i className="bi bi-caret-down"></i></a>
-                                    <a className="nlink" href="/requests">Requests</a>
-                                    <a className="nlink" href="/reports">Reports</a>
-                                    <a className="nlink" href="/tools">Tools <i className="bi bi-caret-down"></i></a>
-                                    <a className="nlink" href="/setup">Setup <i className="bi bi-caret-down"></i></a>
+                                    <Link className="nlink" to="/home">Home</Link>
+                                    <Link className="nlink" to="/reservation">Reservation</Link>
+                                    <Link className="nlink" to="/reception">Reception</Link>
+                                    <Link className="nlink" to="/shift">Shift <i className="bi bi-caret-down"></i></Link>
+                                    <Link className="nlink" to="/requests">Requests</Link>
+                                    <Link className="nlink" to="/reports">Reports</Link>
+                                    <Link className="nlink" to="/tools">Tools <i className="bi bi-caret-down"></i></Link>
+                                    <Link className="nlink" to="/setup">Setup <i className="bi bi-caret-down"></i></Link>
                                 </Nav>
                             </Navbar.Collapse>
                     </Navbar>
