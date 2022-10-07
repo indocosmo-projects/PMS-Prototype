@@ -23,7 +23,7 @@
 .availability_check_bg{
     background-color: rgb(255, 255, 255);
     border-radius:.5em;
-    box-shadow: 5px 5px 10px rgba(171, 171, 171, 0.238);
+    box-shadow: 5px 5px 10px rgba(216, 216, 216, 0.238);
     padding: .5em;
     border: .5px solid rgb(239, 239, 239);
 }
