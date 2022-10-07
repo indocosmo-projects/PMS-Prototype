@@ -9,8 +9,20 @@
 .container{
     margin: 0;
     z-index: 999999;
+    align-items: center;
+    padding: 1em 3em;
+    width: 100vw;
+    position: fixed;
+    background-color: #ffffff;
+    top:0;
+    left: 0;
+    box-shadow:  0 1px 1px 0 rgba(219, 219, 219, 0.4);
+    min-width: 100vw;
 }
 
+.navbar{
+    margin-bottom:4.5em;
+}
 .grey{
     color: var(--grey);
 }
@@ -109,7 +121,7 @@
     color: white;
     height : 30%;
     width : 100%;
-    background-color: rgb(54, 54, 54);
+    /* background-color: rgb(54, 54, 54); */
     box-sizing: border-box;
     border-radius:0 0 1em 1em;
 }
@@ -131,18 +143,20 @@
 }
 
 .nlink{
-    color: white !important;
-    font-weight: 500;
+    color: rgb(121, 121, 121) !important;
+    font-weight: 400;
     text-decoration: none;
-    background-color: black;
+    /* background-color: black; */
 }
 
 .nlink:hover{
     /* border-bottom: solid 1em rgb(173, 173, 173); */
     opacity: 1 ;
-    color: rgb(17, 15, 15);
-    background-color: red;
-    border-radius: .5em;
+    color: rgb(17, 17, 17) !important;
+    /* background-color: rgb(231, 231, 231); */
+    /* padding: .5em; */
+    border-bottom: 2px solid rgb(187, 187, 187);
+    /* border-radius: .5em; */
     
 }
 
@@ -159,4 +173,8 @@ div[role='menu'] {
 
 div[role='menu'].visible {
     visibility: visible;
+}
+
+#basic-navbar-nav{
+    text-align: left;
 }
