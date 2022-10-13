@@ -99,6 +99,10 @@ function RoomAvailability() {
                     </tr>
                 </tbody>
             </table>
+                <div class="d-flex justify-content-end">
+                    <button type="button" className="btn"><i class="bi bi-chevron-left"></i></button>
+                    <button type="button" className="btn"><i class="bi bi-chevron-right"></i></button>
+                </div>
             </div>
             </div>
         </div>
