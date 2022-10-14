@@ -62,16 +62,16 @@ function Reservation() {
         return(
                 <tbody>
                     {
-                    details.map(detail =>  <tr key={detail.id} >
-                        <td className="left" style={{color : 'blue'}} >{detail.rese}</td>
-                        <td className="left">{detail.arrival}</td>
+                    details.map(detail =>  <tr className="left" key={detail.id} >
+                        <td style={{color : 'blue'}} >{detail.rese}</td>
+                        <td>{detail.arrival}</td>
                         <td >{detail.nights}</td>
                         <td >{detail.rooms}</td>
-                        <td className="left">{detail.departure}</td>
-                        <td className="left">{detail.bookedby}</td>
-                        <td className="left">{detail.bookedfor}</td>
-                        <td className="left">{detail.bookedon}</td>
-                        <td className="left" style={{color : 'blue'}} >{detail.status}</td>
+                        <td>{detail.departure}</td>
+                        <td>{detail.bookedby}</td>
+                        <td>{detail.bookedfor}</td>
+                        <td>{detail.bookedon}</td>
+                        <td style={{color : 'blue'}} >{detail.status}</td>
                     </tr>
                     )}
                     
@@ -102,23 +102,23 @@ function Reservation() {
                 <div className="dpdown shadow ">
                     <div className="row p-4">
                         <div className="col-sm-6 form-group inputfieldpadding">
-                            <label className="text-left" htmlFor="reservedby">Reserved By :</label>
+                            <label className="text" htmlFor="reservedby">Reserved By :</label>
                             <input type="text" className="form-control" name="reservedby" id="reservedby"/>
                         </div>
                         <div className="col-sm-6 form-group inputfieldpadding">
-                            <label className="text-left" htmlFor="reservedstatus">Reservation Status :</label>
+                            <label className="text" htmlFor="reservedstatus">Reservation Status :</label>
                             <input type="text" className="form-control" name="reservedstatus" id="reservedstatus"/>
                         </div>
                         <div className="col-sm-6 form-group inputfieldpadding">
-                            <label className="text-left" htmlFor="departdate">Reserved Date :</label>
+                            <label className="text" htmlFor="departdate">Reserved Date :</label>
                             <input type="date" className="form-control" name="departdate" id="departdate"/>
                         </div>
                         <div className="col-sm-6 form-group inputfieldpadding">
-                            <label className="text-left" htmlFor="arrival">Arrival Date :</label>
+                            <label className="text" htmlFor="arrival">Arrival Date :</label>
                             <input type="date" className="form-control " name="arrival" id="arrival"/>
                         </div>
                         <div className="col-sm-6 form-group inputfieldpadding">
-                            <button className="btn btn-danger m-1">Search</button>
+                            <button className="btn btn-primary m-1">Search</button>
                             <button className="btn btn-secondary m-1" onClick={() =>setDropdown(( 0 )) }>Close</button>
                         </div>
                     </div>
@@ -136,19 +136,21 @@ function Reservation() {
                     <div className="row search-area-bg">
 
                         <div className="col-sm-6 mb-2">
-                            <h5 className="header"> Reservations </h5>
+                            <h5 className="header green"> Reservations </h5>
                         </div>
 
-                        <div className="row ">
-                        <div className="col-sm-6  ">
+                        <div className="row d-flex justify-content-between">
+                        <div className="col-sm-6">
                             <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
-                                <div className="input-group-append p-0 bg-white ">
-                                    <span className="input-group-text p-0 bg-white search-opt-btn" ><button className="btn btn-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down-fill"></i></button></span>
-                                </div>
-                                <div className="input-group-append p-0 ms-2">
-                                    <span className="input-group-text p-0 br"><button className="btn btn-primary br" title="Search" >Search</button></span>
-                                </div>
+                                {/* <div className="input-group-append p-0 bg-white "> */}
+                                    {/* <span className="input-group-text p-0 bg-white search-opt-btn" > */}
+                                        <button className="btn btn-dropdown search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down-fill"></i></button>
+                                    {/* </span></div> */}
+                                {/* <div className="input-group-append p-0 ms-2"> */}
+                                    {/* <span className="input-group-text p-0 br"> */}
+                                        <button className="btn btn-primary" title="Search" >Search</button>
+                                 {/* </span></div> */}
                             </div>
                             <div className="parentdpdown">
                                 <div className="ddw" >
@@ -156,9 +158,9 @@ function Reservation() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-6  ">
+                        <div className="col-sm-6 d-flex justify-content-end">
                                     <div className="mb-3 ">
-                                        <a href="/newreservation"><button className="btn btn-success" title="New Reservation" style={{ float: 'right' }}>Add New <i className="bi bi-plus"></i></button></a>
+                                        <a href="/newreservation"><button className="btn btn-success" title="New Reservation">Add New <i className="bi bi-plus"></i></button></a>
                                     </div>
                         </div>
                         </div>
@@ -176,7 +178,7 @@ function Reservation() {
 
                                 </div>
                                 <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
-                                    <p className="text-left">records per page</p>
+                                    <p className="text">records per page</p>
                                 </div>
 
                                
@@ -188,16 +190,16 @@ function Reservation() {
                                 <div className="col-sm-12 reservation_table">
                                     <table className="table table-striped table-bordered" >
                                         <thead >
-                                            <tr>
-                                                <th className="thstyle left">RESV.#</th>
-                                                <th className="thstyle left">ARRIVAL <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
-                                                <th className="thstyle left">NIGHTS <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i> </th>
-                                                <th className="thstyle left">ROOMS <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
-                                                <th className="thstyle left">DEPARTURE <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
-                                                <th className="thstyle left">BOOKED BY <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
-                                                <th className="thstyle left">BOOKED FOR <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
-                                                <th className="thstyle left">BOOKED ON <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
-                                                <th className="thstyle left">STATUS <i className="bi bi-arrow-down-up sort-btn" style={{ float: 'right' }}></i></th>
+                                            <tr className='left'>
+                                                <th className="">RESV.#</th>
+                                                <th className="">ARRIVAL <i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">NIGHTS <i className="bi bi-arrow-down-up sort-btn"></i> </th>
+                                                <th className="">ROOMS <i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">DEPARTURE <i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">BOOKED BY <i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">BOOKED FOR <i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">BOOKED ON <i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">STATUS <i className="bi bi-arrow-down-up sort-btn"></i></th>
                                             </tr>
                                         </thead>
 
@@ -209,14 +211,15 @@ function Reservation() {
                             </div>
 
 
-                            <div className="row m-3">
-                                <div className="col-3 left" >Showing 1 to {recordno} of {details.length} entries</div>
-                                <div className="col-6"></div>
-                                <div className="col-3" >
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-left"></i>Prev</button>
-                                    <button className="btn btn-outline-dark m-1">1</button>
-                                    <button className="btn btn-outline-dark m-1">2</button>
-                                    <button className="btn btn-outline-dark m-1">Next<i className="bi bi-arrow-right"></i></button>
+                            <div className="row m-3 d-flex justify-content-between">
+                                <div className="col-4 d-flex justify-content-start" >Showing 1 to {recordno} of {details.length} entries</div>
+                                {/* <div className="col-6"></div> */}
+                                <div className="col-8 d-flex justify-content-end">
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-arrow-left me-1"></i><span class="hide-element">Prev</span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">1</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border active">2</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element">Next</span><i className="bi bi-arrow-right ms-1"></i></button>
                                 </div>
                             </div>
 

@@ -4,7 +4,7 @@ function RoomRateTypeDiscount() {
         return(
                 <div>
                     <div className="padcolumn mt-1" >
-                        <div className="table-responsive table ">
+                        <div className="table-responsive table">
 
                             <table className="table">
                                 <thead className="theadpadding">
