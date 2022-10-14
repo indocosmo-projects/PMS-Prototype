@@ -2,32 +2,24 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from "react-router-dom";
 
 import logo from '../../assets/niko.png';
 import './Navigation.css';
 
 
-
 function NavigationBar() {
   return (
-    <Navbar  bg="dark"  expand="lg">
+    <Navbar  bg="dark"  expand="md">
       <Container className="nav">
     
         <Navbar.Brand href="#home"><div className='logo-cover'><img src={logo} className="logo" alt="logo"/></div></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto gap-2">
-          <Link className="nlink" to="/home">Home</Link>
-          <Link className="nlink" to="/reservation">Reservation</Link>
-          <Link className="nlink" to="/reception">Reception</Link>
-
-
-              <Nav.Link><Link to="/home" className='nlink'>Home</Link></Nav.Link>
-              <Nav.Link><Link to="/reservation" className='nlink'>Reservation</Link></Nav.Link>
-              <Nav.Link><Link to="/reception" className='nlink'>Reception</Link></Nav.Link>
-
+            <a href="/home" className="nlink" >Home</a>
+            <a href="/reservation" className="nlink">Reservation</a>
+            <a href="/reception" className="nlink" >Reception</a>
             <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -38,14 +30,10 @@ function NavigationBar() {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Link className="nlink" to="/requests">Requests</Link>
-            <Link className="nlink" to="/reports">Reports</Link>
-            <Nav.Link><Link to="/requests" className='nlink'>Requests</Link></Nav.Link>
-            <Nav.Link><Link to="/reports" className='nlink'>Reports</Link></Nav.Link>
+            <a href="/requests" className="nlink" >Requests</a>
+            <a href="/reports" className="nlink" >Reports</a>
 
-
-
-            <NavDropdown title="Tools" id="basic-nav-dropdown" className="nlink">
+            <NavDropdown title="Tools" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
@@ -55,7 +43,7 @@ function NavigationBar() {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="Setup" id="basic-nav-dropdown" className="nlink">
+            <NavDropdown title="Setup" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
