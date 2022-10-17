@@ -94,7 +94,7 @@ function NewReservation() {
 
                      <Accordion className="my-4" defaultActiveKey="0" alwaysOpen>
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header>Reserved By</Accordion.Header>
+                                <Accordion.Header><h5>Reserved By</h5></Accordion.Header>
                                 <Accordion.Body>
 
                     {/* ----- Room Reserved By  ------ */}
@@ -103,7 +103,7 @@ function NewReservation() {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
-                                <Accordion.Header>Reserved For</Accordion.Header>
+                                <Accordion.Header><h5>Reserved For</h5></Accordion.Header>
                                 <Accordion.Body>
                                     
                     {/* -------- Reserved For----------- */}
