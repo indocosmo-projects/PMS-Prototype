@@ -84,10 +84,8 @@ function ReservedBy() {
                                 <div className="column">
                                     <div className="row">
                                         <div className="col-sm-12">
-                                            {/* <div  className="inputfieldpadding"> */}
                                                 <label className="text-left">Special Instructions/Comments</label>
                                                 <input type="text" className="form-control" placeholder="" />
-                                            {/* </div> */}
                                         </div>
                                     </div>
                                     
@@ -98,12 +96,10 @@ function ReservedBy() {
                                                     </div>
                                                     <div className="col-sm-6">
                                                         <label className="text-left">Discount Amount</label>
-                                                        <input type="text" className="form-control shw_dsct_rgt" defaultValue="'100 RS" />
+                                                        <input type="text" className="form-control shw_dsct_rgt" defaultValue="₹ 100" />
                                                     </div>
                                                 </div>
                                                 
-                                 
-                        
                                 </div>
 
                             </div>
