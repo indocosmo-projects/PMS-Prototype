@@ -83,13 +83,13 @@ const display = (e) => {
 
                         <div>
                             <form >
-                                <div className="row mb-5">
+                                <div className="row my-5 grey-bg px-2 py-4">
                                     <div className="col-sm-12 ">
-                                        {/* <h4 className="">RESERVED FOR
+                                        <h4 className="text-start">Add Customer details
                                                 <label className="chkbox" >
                                                 <input type="checkbox" name="chkbox" /> Remember me
                                                 </label>
-                                        </h4> */}
+                                        </h4>
                                     </div>
 
                                     <div className="border-bottom">
@@ -159,21 +159,19 @@ const display = (e) => {
 
                             </div>
 
-                                    <div className="col-sm-12 " >
-                                        <div className="col-sm-12 ">
-                                            <h4 className="label">RESERVED FOR </h4>
+                                    <div className="col-sm-12" >
+                                        <div className="col-sm-12">
+                                            <h5 className="text-start">Reservation Details </h5>
                                         </div>
 
-                                        <div className="row">
-                                            <div className="col-sm-12">
-                                                <div className="row ">
-                                                    <div className="col-sm-4 ">
+                                                <div className="row">
+                                                    <div className="col-sm-2">
                                                         <div className="inputfieldpadding">
                                                             <label className="text-left" htmlFor="arrivaldate">Date :</label>
                                                             <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                                         </div>
                                                     </div>
-                                                    <div className="col-sm-4">
+                                                    <div className="col-sm-2">
                                                         <div className="inputfieldpadding">
                                                             <label className="text-left" htmlFor="arrivaldate">Date :</label>
                                                             <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
@@ -185,32 +183,24 @@ const display = (e) => {
                                                             <input type="text" className="form-control" placeholder="" />
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-12" >
-                                                <div className="row">
-
                                                     <div className="col-sm-4">
                                                         <div className="inputfieldpadding">
                                                             <label className="text-left">Seats</label>
                                                             <input type="text" className="form-control" placeholder="" />
                                                         </div>
                                                     </div>
-                                                    <div className="col-sm-8">
+                                                </div>
+                                            
+                                                <div className="row">
+
+                                                    <div className="col-sm-12">
                                                         <div className="inputfieldpadding">
                                                             <label className="text-left">Remarks</label>
-                                                            <input type="text" className="form-control" placeholder="" />
+                                                            <textarea type="text" className="form-control" placeholder="" />
                                                         </div>
                                                     </div>
                                                 </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-
+                                     </div>
 
 
                                 </div>
@@ -224,13 +214,14 @@ const display = (e) => {
                 {/* </ul> */}
                 <br />
                 <div className="row">
-                    <div className="col-sm-6"></div>
-                    <div className="col-sm-3">
-                        <button type="button" onClick={handleIncrement} className="btn btn-danger btnflot w-100" > +  Add</button>
-                    </div>
-                    <div className="col-sm-3">
-                        <button type="button" onClick={handleDecrement} className="btn btn-warning btnflot w-100" > -  Remove</button>
-                    </div>
+                    
+                <div className='col-12 d-flex justify-content-center'>
+                   
+                    
+                        <button type="button" onClick={handleDecrement} className="btn btn-danger px-3 me-2" > -  Remove</button>
+                        <button type="button" onClick={handleIncrement} className="btn btn-primary px-4" > +  Add</button>
+
+                  </div>
                 </div>
             </div>
 

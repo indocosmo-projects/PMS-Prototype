@@ -6,20 +6,20 @@ import InputGroup from 'react-bootstrap/InputGroup';
 function RoomRateTypeDiscount() {
         return(
                 <div>
-                    <div className="padcolumn mt-1 total-bg" >
+                    <div className="padcolumn mt-1 pb-3 total-bg" >
                         {/* <div className="table"> */}
 
                             <table className="table type-table">
                                 <thead className="">
                                     <tr>
-                                        <th className="thstyle">ROOM TYPE</th>
-                                        <th className="thstyle">RATE CODE</th>
+                                        <th>ROOM TYPE</th>
+                                        <th>RATE CODE</th>
                                         <th>SINGLE</th>
                                         <th>DOUBLE</th>
                                         <th>TRIPPLE</th>
-                                        <th className="thstyle">TOTAL</th>
-                                        <th className="thstyle">DISCOUNT</th>
-                                        <th className="thstyle">SUB TOTAL</th>
+                                        <th>TOTAL</th>
+                                        <th>DISCOUNT</th>
+                                        <th>SUB TOTAL</th>
                                         <th>&nbsp;</th>
                                     </tr>
                                 </thead>
@@ -90,7 +90,7 @@ function RoomRateTypeDiscount() {
                                  
                                 </td>
                                 <td>
-                                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
+                                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="20" type="text" defaultValue="" />
                                 </td>
                                 <td>
                                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
@@ -196,8 +196,8 @@ function RoomRateTypeDiscount() {
                             </table>
                         {/* </div> */}
                             <div className='row'>
-                            <div className='col-lg-8 col-md-8 col-3 d-flex justify-content-end total-text'>TOTAL</div>
-                            <div className='col-lg-2 col-md-2 col-3 d-flex justify-content-center total-text'>50000</div>
+                            <div className='col-lg-8 col-md-8 col-3 d-flex justify-content-end total-text'>TOTAL (Excl. GST)</div>
+                            <div className='col-lg-2 col-md-2 col-3 d-flex justify-content-center total-text grey-bg'>50000</div>
                             <div className='col-lg-2 col-md-2 col-6 d-flex justify-content-center'><button className="btn btn-outline-secondary">Download<i className="bi bi-download ms-2"></i></button></div>
                             </div>
                     </div>

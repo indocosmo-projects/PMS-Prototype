@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 function ReservedBy() {
     return(
-        <div className="col-12" >
+        <div className="col-12 grey-bg px-2 py-4" >
                 <div>
                         {/* <ul> */}
                             <div>
                                 {/* <h4> RESERVED BY </h4> */}
                             </div>
-                            <div className="border-bottom">
+                            <div className="border-bottom ">
                                 <div className="row">
                                     <div className="col-sm-4">
                                         <div className="inputfieldpadding">
@@ -84,10 +84,8 @@ function ReservedBy() {
                                 <div className="column">
                                     <div className="row">
                                         <div className="col-sm-12">
-                                            {/* <div  className="inputfieldpadding"> */}
                                                 <label className="text-left">Special Instructions/Comments</label>
                                                 <input type="text" className="form-control" placeholder="" />
-                                            {/* </div> */}
                                         </div>
                                     </div>
                                     
@@ -98,12 +96,10 @@ function ReservedBy() {
                                                     </div>
                                                     <div className="col-sm-6">
                                                         <label className="text-left">Discount Amount</label>
-                                                        <input type="text" className="form-control shw_dsct_rgt" defaultValue="'100 RS" />
+                                                        <input type="text" className="form-control shw_dsct_rgt" defaultValue="₹ 100" />
                                                     </div>
                                                 </div>
                                                 
-                                 
-                        
                                 </div>
 
                             </div>

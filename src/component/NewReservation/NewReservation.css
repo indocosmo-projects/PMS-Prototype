@@ -26,7 +26,7 @@
     border-radius:.5em;
     box-shadow: 5px 5px 10px rgba(216, 216, 216, 0.238);
     padding: .5em;
-    border: .5px solid rgb(239, 239, 239);
+    border: .5px solid rgb(235, 235, 235);
 }
 
 .roomavailability{
@@ -162,8 +162,9 @@ border-color: rgb(236, 236, 236);
   /* .room-discount-table{
     background-color: #ffffff;
   } */
-  .theadpadding{
+  .grey-bg{
     background-color: #f7f7f7 !important;
+    border-radius: .5em;
   }
 
    .type-table{
@@ -177,7 +178,7 @@ border-color: rgb(236, 236, 236);
     padding: .5em;
     border-radius: .5em;
     box-shadow: 3px 3px 10px rgba(158, 158, 158, 0.219);
-    border: .5px solid rgb(239, 239, 239);
+    border: .5px solid rgb(235, 235, 235);
   }
 
  .total-text{
