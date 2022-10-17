@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 function RoomRateTypeDiscount() {
         return(
                 <div>
-                    <div className="padcolumn mt-1" >
-                        <div className="table-responsive table">
+                    <div className="padcolumn mt-1 total-bg" >
+                        {/* <div className="table"> */}
 
-                            <table className="table">
-                                <thead className="theadpadding">
+                            <table className="table type-table">
+                                <thead className="">
                                     <tr>
                                         <th className="thstyle">ROOM TYPE</th>
                                         <th className="thstyle">RATE CODE</th>
@@ -23,53 +26,68 @@ function RoomRateTypeDiscount() {
                                 
                         <tbody>
                         
-                            <tr className="">
+                            <tr>
                                 <td>
-                                    <select className="form-control">
+                                    <select className="form-control form-select text-center">
                                         <option> DLX</option>
-                                        <option> 2</option>
+                                        <option> STND</option>
                                         <option> 3</option>
                                     </select>
                                 </td>
                                 <td>
-                                    <select className="form-control">
+                                    <select className="form-control form-select text-center">
                                         <option> RACKRATE</option>
                                         <option> 2</option>
                                         <option> 3</option>
                                     </select>
                                 </td>
                                 <td>
-                                <div className="input-group mb-3">
-                                        <div className="input-group-prepend">
-                                            <input type="text" className="input-group-text appendsize" defaultValue="2" />
-                                        </div>
-                                        <input type="text" className="form-control apptexboxsize" placeholder=""/>
-                                        <div className="input-group-prepend">
-                                            <button className="btn btn-danger prependsize" type="button"><i className="bi bi-pencil"></i></button>
-                                        </div>
-                                    </div>
+                                <InputGroup className="mb-3">
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-dash"></i>
+                                        </Button>
+                                        <Form.Control className='text-center'
+                                            placeholder="1"
+                                            aria-label="1"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-plus-lg"></i>
+                                        </Button>
+                                    </InputGroup>
+                                 
                                 </td>
                                 <td>
-                                <div className="input-group mb-3">
-                                        <div className="input-group-prepend">
-                                            <input type="text" className="input-group-text appendsize" defaultValue="2" />
-                                        </div>
-                                        <input type="text" className="form-control apptexboxsize" placeholder=""/>
-                                        <div className="input-group-prepend">
-                                            <button className="btn btn-danger prependsize" type="button"><i className="bi bi-pencil"></i></button>
-                                        </div>
-                                    </div>
+                                <InputGroup className="mb-3">
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-dash"></i>
+                                        </Button>
+                                        <Form.Control className='text-center'
+                                            placeholder="1"
+                                            aria-label="1"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-plus-lg"></i>
+                                        </Button>
+                                    </InputGroup>
+                                 
                                 </td>
                                 <td>
-                                <div className="input-group mb-3">
-                                        <div className="input-group-prepend">
-                                            <input type="text" className="input-group-text appendsize" defaultValue="2" />
-                                        </div>
-                                        <input type="text" className="form-control apptexboxsize" placeholder=""/>
-                                        <div className="input-group-prepend">
-                                            <button className="btn btn-danger prependsize" type="button"><i className="bi bi-pencil"></i></button>
-                                        </div>
-                                    </div>
+                                <InputGroup className="mb-3">
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-dash"></i>
+                                        </Button>
+                                        <Form.Control className='text-center'
+                                            placeholder="1"
+                                            aria-label="1"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-plus-lg"></i>
+                                        </Button>
+                                    </InputGroup>
+                                 
                                 </td>
                                 <td>
                                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
@@ -86,51 +104,67 @@ function RoomRateTypeDiscount() {
                             </tr>
                             <tr className="">
                                 <td>
-                                    <select className="form-control">
+                                    <select className="form-control form-select text-center">
                                         <option> DLX</option>
-                                        <option> 2</option>
+                                        <option> STND</option>
                                         <option> 3</option>
                                     </select>
                                 </td>
                                 <td>
-                                    <select className="form-control">
+                                    <select className="form-control form-select text-center">
                                         <option> RACKRATE</option>
                                         <option> 2</option>
                                         <option> 3</option>
                                     </select>
                                 </td>
+
                                 <td>
-                                    <div className="input-group mb-3">
-                                        <div className="input-group-prepend">
-                                            <input type="text" className="input-group-text appendsize" defaultValue="2" />
-                                        </div>
-                                        <input type="text" className="form-control apptexboxsize" placeholder=""/>
-                                        <div className="input-group-prepend">
-                                            <button className="btn btn-danger prependsize" type="button"><i className="bi bi-pencil"></i></button>
-                                        </div>
-                                    </div>
+                                    <InputGroup className="mb-3">
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-dash"></i>
+                                        </Button>
+                                        <Form.Control className='text-center'
+                                            placeholder="1"
+                                            aria-label="1"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-plus-lg"></i>
+                                        </Button>
+                                    </InputGroup>
+                                </td>
+
+                                <td>
+                                <InputGroup className="mb-3">
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-dash"></i>
+                                        </Button>
+                                        <Form.Control className='text-center'
+                                            placeholder="1"
+                                            aria-label="1"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-plus-lg"></i>
+                                        </Button>
+                                    </InputGroup>
+                                 
                                 </td>
                                 <td>
-                                <div className="input-group mb-3">
-                                        <div className="input-group-prepend">
-                                            <input type="text" className="input-group-text appendsize" defaultValue="2" />
-                                        </div>
-                                        <input type="text" className="form-control apptexboxsize" placeholder=""/>
-                                        <div className="input-group-prepend">
-                                            <button className="btn btn-danger prependsize" type="button"><i className="bi bi-pencil"></i></button>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                <div className="input-group mb-3">
-                                        <div className="input-group-prepend">
-                                            <input type="text" className="input-group-text appendsize" defaultValue="2" />
-                                        </div>
-                                        <input type="text" className="form-control apptexboxsize" placeholder=""/>
-                                        <div className="input-group-prepend">
-                                            <button className="btn btn-danger prependsize" type="button"><i className="bi bi-pencil"></i></button>
-                                        </div>
-                                    </div>
+                                <InputGroup className="mb-3">
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-dash"></i>
+                                        </Button>
+                                        <Form.Control className='text-center'
+                                            placeholder="1"
+                                            aria-label="1"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <Button variant="btn btn-secondary" id="button-addon2">
+                                        <i class="bi bi-plus-lg"></i>
+                                        </Button>
+                                    </InputGroup>
+                                 
                                 </td>
                                 <td>
                                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
@@ -145,7 +179,7 @@ function RoomRateTypeDiscount() {
                                     <button className="btn btn-primary btn-xs"><i className="bi bi-plus" ></i></button>
                                 </td>
                             </tr>
-                            <tr style={{backgroundColor :  'rgb(241, 238, 238)'}} >
+                            {/* <tr className="theadpadding">
                                 <td colSpan="7" align="right">
                                     TOTAL
                                 </td>
@@ -156,13 +190,16 @@ function RoomRateTypeDiscount() {
                                 <td>
                                     <button className="btn btn-success btn-xs"><i className="bi bi-download"></i></button>
                                 </td>
-                            </tr>
+                            </tr> */}
                             
                         </tbody>
-                        
                             </table>
-
-                        </div>
+                        {/* </div> */}
+                            <div className='row'>
+                            <div className='col-lg-8 col-md-8 col-3 d-flex justify-content-end total-text'>TOTAL</div>
+                            <div className='col-lg-2 col-md-2 col-3 d-flex justify-content-center total-text'>50000</div>
+                            <div className='col-lg-2 col-md-2 col-6 d-flex justify-content-center'><button className="btn btn-outline-secondary">Download<i className="bi bi-download ms-2"></i></button></div>
+                            </div>
                     </div>
                 </div>
         );

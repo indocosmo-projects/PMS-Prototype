@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import Table from 'react-bootstrap/Table';
 
 function ReservedFor() {
 
@@ -33,122 +34,130 @@ const display = (e) => {
 
     return (
 
-        <div className="col-sm-6" style={{ float: 'right' }} >
+        <div className="col-12">
+
+
+                        <Table responsive>
+                        <thead>
+                            <tr>
+                            <th>No.</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Gender</th>
+                            <th>Country</th>
+                            <th>State</th>
+                            <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>1</td>
+                            {Array.from({ length: 6 }).map((_, index) => (
+                                <td key={index}>Table cell {index}</td>
+                            ))}
+                            <td><button className='btn btn-outline-secondary me-2'><i class="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i class="bi bi-trash3"></i></button></td>
+                            </tr>
+                            <tr>
+                            <td>2</td>
+                            {Array.from({ length: 6 }).map((_, index) => (
+                                <td key={index}>Table cell {index}</td>
+                            ))}
+                            <td><button className='btn btn-outline-secondary me-2'><i class="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i class="bi bi-trash3"></i></button></td>
+                            </tr>
+                            <tr>
+                            <td>3</td>
+                            {Array.from({ length: 6 }).map((_, index) => (
+                                <td key={index}>Table cell {index}</td>
+                            ))}
+                            <td><button className='btn btn-outline-secondary me-2'><i class="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i class="bi bi-trash3"></i></button></td>
+                            </tr>
+                        </tbody>
+                        </Table>
+
+
+
             <div >
-                <ul className="ulistmargin">
+                {/* <ul> */}
                     {persons.map(person => <li key={person.id} className={display(person.id)} >
 
                         <div>
                             <form >
-                                <div className="row mb-5 border-bottom">
+                                <div className="row mb-5">
                                     <div className="col-sm-12 ">
-                                        <h4 className="label">RESERVED FOR
+                                        {/* <h4 className="">RESERVED FOR
                                                 <label className="chkbox" >
                                                 <input type="checkbox" name="chkbox" /> Remember me
                                                 </label>
-                                        </h4>
+                                        </h4> */}
                                     </div>
 
                                     <div className="border-bottom">
-                                        <div className="row">
-                                            <div className="col-sm-4">
-                                                <div className="inputfieldpadding">
-                                                    <label className="text-left">Title</label>
-                                                    <select className="form-control m-bot15"
-                                                        name="title" >
-                                                        <option>Option 1</option>
-                                                        <option>Option 2</option>
-                                                        <option>Option 3</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="inputfieldpadding">
-                                                    <label className="text-left">First Name</label>
-                                                    <input type="text" className="form-control "
-                                                        name="fname" placeholder=""
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="inputfieldpadding">
-                                                    <label className="text-left">Last Name</label>
-                                                    <input type="text" className="form-control "
-                                                        placeholder="" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-sm-8">
-                                                <div className="inputfieldpadding">
-                                                    <label className="text-left">Address</label>
-                                                    <textarea className="form-control "
-                                                        placeholder=""></textarea>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="inputfieldpadding">
-                                                    <label className="text-left">Gender</label>
-                                                    <select className="form-control m-bot15 "
-                                                        name="gender">
-                                                        <option>Male</option>
-                                                        <option>Female</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-sm-6">
-                                                <div className="inputfieldpadding">
-                                                    <label className="text-left">E-mail</label>
-                                                    <input type="text" className="form-control "
-                                                        placeholder="" />
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-6">
-                                                <div className="inputfieldpadding">
-                                                    <label className="text-left">Phone</label>
-                                                    <input type="text" className="form-control phone"
-                                                        name="phone" placeholder="" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-sm-4">
-                                                <div className="inputfieldpadding">
-                                                    <label className="text-left">Country</label>
-                                                    <select className="form-control m-bot15 "
-                                                        name="country">
-                                                        <option>Option 1</option>
-                                                        <option>Option 2</option>
-                                                        <option>Option 3</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="inputfieldpadding">
-                                                    <label className="text-left">State</label>
-                                                    <select className="form-control m-bot15"
-                                                        name="state">
-                                                        <option>Option 1</option>
-                                                        <option>Option 2</option>
-                                                        <option>Option 3</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="inputfieldpadding">
-                                                    <label className="text-left">Zone</label>
-                                                    <select className="form-control m-bot15 "
-                                                        name="zone">
-                                                        <option>Option 1</option>
-                                                        <option>Option 2</option>
-                                                        <option>Option 3</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                <div className="row">
+                                    <div className="col-sm-4">
+                                        <div className="inputfieldpadding">
+                                            <label className="text-left"></label>
+                                            <input type="text" className="form-control" placeholder="Full Name" />
                                         </div>
                                     </div>
+                                    <div className="col-sm-4">
+                                        <div className="inputfieldpadding">
+                                            <label className="text-left"></label>
+                                            <input type="text" className="form-control" placeholder="Phone Number" />
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-4">
+                                        <div className="inputfieldpadding">
+                                            <label className="text-left"></label>
+                                            <input type="text" className="form-control" placeholder="E-mail" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-sm-4">
+                                        <div className="inputfieldpadding">
+                                            <label className="text-left"></label>
+                                            <textarea className="form-control" style={{ height: 60, }} placeholder="Address"></textarea>
+                                        </div>
+                                    </div>
+                                   
+                                    <div className="col-sm-2">
+                                        <div className="inputfieldpadding">
+                                            <label className="text-left">Gender</label>
+                                            <select className="form-control m-bot15">
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-sm-3">
+                                        <div className="inputfieldpadding">
+                                            <label className="text-left">Country</label>
+                                            <select className="form-control m-bot15">
+                                                <option>Option 1</option>
+                                                <option>Option 2</option>
+                                                <option>Option 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-3">
+                                        <div className="inputfieldpadding">
+                                            <label className="text-left">State</label>
+                                            <select className="form-control m-bot15">
+                                                <option>Option 1</option>
+                                                <option>Option 2</option>
+                                                <option>Option 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+
+                            
+
+                            </div>
 
                                     <div className="col-sm-12 " >
                                         <div className="col-sm-12 ">
@@ -212,7 +221,7 @@ const display = (e) => {
                     </li>
 
                     )}
-                </ul>
+                {/* </ul> */}
                 <br />
                 <div className="row">
                     <div className="col-sm-6"></div>
