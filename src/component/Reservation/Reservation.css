@@ -110,3 +110,6 @@ padding-left: 1em;
   background-color: #cccccc !important;
 
 }
+.btn-outline-secondary{
+  border-color: #d3d3d3;
+}

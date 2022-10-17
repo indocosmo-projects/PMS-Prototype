@@ -83,13 +83,13 @@ const display = (e) => {
 
                         <div>
                             <form >
-                                <div className="row mb-5">
+                                <div className="row my-5 grey-bg px-2 py-4">
                                     <div className="col-sm-12 ">
-                                        {/* <h4 className="">RESERVED FOR
+                                        <h4 className="text-start">Add Customer details
                                                 <label className="chkbox" >
                                                 <input type="checkbox" name="chkbox" /> Remember me
                                                 </label>
-                                        </h4> */}
+                                        </h4>
                                     </div>
 
                                     <div className="border-bottom">
@@ -161,7 +161,7 @@ const display = (e) => {
 
                                     <div className="col-sm-12" >
                                         <div className="col-sm-12">
-                                            <h4 className="text-start">Reservation Details </h4>
+                                            <h5 className="text-start">Reservation Details </h5>
                                         </div>
 
                                                 <div className="row">
