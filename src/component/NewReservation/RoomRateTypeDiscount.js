@@ -12,14 +12,14 @@ function RoomRateTypeDiscount() {
                             <table className="table type-table">
                                 <thead className="">
                                     <tr>
-                                        <th className="thstyle">ROOM TYPE</th>
-                                        <th className="thstyle">RATE CODE</th>
+                                        <th>ROOM TYPE</th>
+                                        <th>RATE CODE</th>
                                         <th>SINGLE</th>
                                         <th>DOUBLE</th>
                                         <th>TRIPPLE</th>
-                                        <th className="thstyle">TOTAL</th>
-                                        <th className="thstyle">DISCOUNT</th>
-                                        <th className="thstyle">SUB TOTAL</th>
+                                        <th>TOTAL</th>
+                                        <th>DISCOUNT</th>
+                                        <th>SUB TOTAL</th>
                                         <th>&nbsp;</th>
                                     </tr>
                                 </thead>
@@ -90,7 +90,7 @@ function RoomRateTypeDiscount() {
                                  
                                 </td>
                                 <td>
-                                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
+                                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="20" type="text" defaultValue="" />
                                 </td>
                                 <td>
                                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
