@@ -4,7 +4,7 @@ function RoomRateTypeDiscount() {
         return(
                 <div>
                     <div className="padcolumn mt-1" >
-                        <div className="table-responsive table">
+                        <div className="table-responsive table room-discount-table">
 
                             <table className="table">
                                 <thead className="theadpadding">
@@ -145,7 +145,7 @@ function RoomRateTypeDiscount() {
                                     <button className="btn btn-primary btn-xs"><i className="bi bi-plus" ></i></button>
                                 </td>
                             </tr>
-                            <tr style={{backgroundColor :  'rgb(241, 238, 238)'}} >
+                            <tr className="theadpadding">
                                 <td colSpan="7" align="right">
                                     TOTAL
                                 </td>
