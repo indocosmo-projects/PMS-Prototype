@@ -102,8 +102,6 @@ function ReservedBy() {
                                                     </div>
                                                 </div>
                                                 
-                                 
-                        
                                 </div>
 
                             </div>
