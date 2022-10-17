@@ -1,0 +1,25 @@
+.greyshade{
+    background-color :  rgb(218, 213, 213);
+}
+
+.roomform{
+    border : 1px solid gray;
+}
+
+.roomheader{
+    background-color: lightgray;
+    padding : 10px;
+    font-weight : bolder;
+    color : darkblue;
+    text-align: left;
+}
+
+.inline{
+    display : inline-block;
+    margin: 10px;
+    text-align: left;
+}
+
+.bggrey{
+    color : grey;
+}

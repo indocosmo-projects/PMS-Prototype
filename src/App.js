@@ -1,7 +1,7 @@
 import './App.css';
 import NewReservation from './component/NewReservation/NewReservation';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Navigationbar from './component/Common/Navigationbar';
+// import Navigationbar from './component/Common/Navigationbar';
 import Footer from './component/Common/Footer';
 
 import Reservation from './component/Reservation/Reservation';
@@ -9,8 +9,9 @@ import CheckIn from './component/CheckIn/CheckIn';
 import Reception from './component/Reception/Reception';
 import ReceptionExpectedArrivals from './component/Reception/ReceptionExpectedArrivals';
 import ReceptionHotelStatus from './component/Reception/ReceptionHotelStatus';
+import RoomList from './component/RoomList/RoomList';
 
-// import NavigationbarMannual from './component/Common/NavigationbarMannual';
+import NavigationbarMannual from './component/Common/NavigationbarMannual';
 
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
     <div className="App">
         <Router>
 
-           <Navigationbar/> 
-           {/* <NavigationbarMannual/> */}
+           {/* <Navigationbar/>   */}
+           <NavigationbarMannual/>
 
             <Switch>
                 <Route exact path='/' component={Reservation}/>
@@ -29,6 +30,7 @@ function App() {
                 <Route exact path="/reception" component={Reception}/>
                 <Route exact path="/receptionexpectedarrival" component={ReceptionExpectedArrivals}/>
                 <Route exact path="/receptionhotelstatus" component={ReceptionHotelStatus}/>
+                <Route exact path="/roomlist" component={RoomList}/>
             </Switch>
             <Footer/>
         </Router>

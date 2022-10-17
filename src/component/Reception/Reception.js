@@ -115,9 +115,9 @@ function Reception() {
                     
                     <div className="p-3">
                         <div className="height">
-                            <Link className="nvlink" to="/reception">IN-HOUSE</Link>
+                            <Link className="nvlink active" to="/reception">IN-HOUSE</Link>
                             <Link className="nvlink" to="/receptionexpectedarrival">EXPECTED ARRIVALS</Link>
-                            <Link className="nvlink active" to="/receptionhotelstatus">HOTEL STATUS</Link> 
+                            <Link className="nvlink " to="/receptionhotelstatus">HOTEL STATUS</Link> 
                         </div>
                     </div>
    
