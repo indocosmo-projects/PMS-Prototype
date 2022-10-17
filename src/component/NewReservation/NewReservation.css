@@ -118,10 +118,6 @@ border-color: rgb(236, 236, 236);
     margin-bottom : 40px; 
 }
 
-.ulistmargin{
-    margin : 0px !important;
-    padding: 0px;
-}
 
 .avail-date-head{
     color: rgb(255, 255, 255);
@@ -163,9 +159,38 @@ border-color: rgb(236, 236, 236);
     background-color: #ffffff;
   }
   
-  .room-discount-table{
+  /* .room-discount-table{
     background-color: #ffffff;
-  }
+  } */
   .theadpadding{
     background-color: #f7f7f7 !important;
   }
+
+   .type-table{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .total-bg{
+    background-color: rgb(255, 255, 255);
+    padding: .5em;
+    border-radius: .5em;
+    box-shadow: 3px 3px 10px rgba(158, 158, 158, 0.219);
+    border: .5px solid rgb(239, 239, 239);
+  }
+
+ .total-text{
+    align-items: center;
+ }
+ .type-table .input-group{
+    flex-wrap: unset;
+    /* min-width: max-content; */
+ }
+
+ .type-table input.text-center.form-control {
+    width: 80px;
+}
+select.form-control.form-select.text-center {
+    min-width: max-content;
+}
