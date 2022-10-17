@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Accordion from 'react-bootstrap/Accordion';
 import '../../style.css';
 import './NewReservation.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -91,34 +92,42 @@ function NewReservation() {
                      <RoomRateTypeDiscount/>
                    
 
-                   
-                     
-                        <div className="row formxs mt-1 pb-5" >
-                            
-                            {/* ----- Room Reserved By  ------ */}
-                            <ReservedBy />
-                           
-                            {/* -------- Reserved For----------- */}
-                            <ReservedFor />  
-                        </div>
-                    
+                     <Accordion className="my-4" defaultActiveKey="0" alwaysOpen>
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>Reserved By</Accordion.Header>
+                                <Accordion.Body>
+
+                    {/* ----- Room Reserved By  ------ */}
+                                <ReservedBy />
+
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="1">
+                                <Accordion.Header>Reserved For</Accordion.Header>
+                                <Accordion.Body>
+                                    
+                    {/* -------- Reserved For----------- */}
+                              <ReservedFor />  
+
+                                </Accordion.Body>
+                            </Accordion.Item>
+                    </Accordion>
+                
                     
                
                      {/* ----- Buttons ------ */}
-                     <div className="row " >
-                                <div className="col-sm-3"></div>
-                                <div className="col-sm-6">
+                    
+                                
+                                
                                 <div className="row mb-3">
-                                    <div className="col-sm-6">
-                                        <button type="button" className="btn btn-secondary btnflot w-100" > Back</button>
-                                    </div>
-                                    <div className="col-sm-6">
-                                        <button type="button" className="btn btn-success btnflot w-100" > Update</button>
-                                    </div>
+                                    <div className='col-12 d-flex justify-content-end'>
+                                        <button type="button" className="btn btn-secondary me-2 px-3" > Back</button>
+                                        <button type="button" className="btn btn-success px-3" > Update</button>
+                                        </div>
                                 </div>
-                                </div>
-                                <div className="col-sm-3"></div>
-                    </div>
+                                
+                                
+                  
 
                     
 
