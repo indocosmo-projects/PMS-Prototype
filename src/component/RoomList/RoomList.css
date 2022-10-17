@@ -21,5 +21,13 @@
 }
 
 .bggrey{
-    color : grey;
+    background-color : grey;
+}
+
+.colpadding{
+    padding : 10px;
+}
+
+.border{
+    border : 1px solid black;
 }
