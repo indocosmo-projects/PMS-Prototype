@@ -7,6 +7,7 @@ function RoomRateTypeDiscount() {
 
     const [count, setCount] = useState(1);
     const [cn, setCn] = useState(5);
+    const [del, setDel] = useState(0);
     const details =
         [
             { id: 1, name: 'room1' },
@@ -25,9 +26,17 @@ function RoomRateTypeDiscount() {
         const handleDecrement = () => {
             setCount((count - 1 ));
         }
+
+        const deleteEachRow = (e) => {
+            setDel(e);
+        }
         
         const display = (e) => {
             let classes = "left ";
+            if(del === e){
+                classes += "hide" 
+                return classes;
+            }
             classes += e <= count ? "show " : "hide";
             return classes;
         }
@@ -37,6 +46,7 @@ function RoomRateTypeDiscount() {
         return(
             <tbody>
             { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} >
+                
                 <td>
                     <select className="form-control form-select text-center">
                         <option> DLX</option>
@@ -112,9 +122,9 @@ function RoomRateTypeDiscount() {
                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
                 </td>
                 <td>
-                   
+                    <button className="btn btn-danger btn-xs me-2" onClick={(e) => deleteEachRow(detail.id)}><i className="bi bi-trash "></i></button>
                 </td>
-            
+                    
                 </tr>
                 )}
         </tbody>
