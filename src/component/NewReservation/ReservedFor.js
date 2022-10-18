@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 
 function ReservedFor() {
 
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(0);
     const [cn, setCn] = useState(5);
     const persons =
         [
@@ -56,21 +56,21 @@ const display = (e) => {
                             {Array.from({ length: 6 }).map((_, index) => (
                                 <td key={index}>Table cell {index}</td>
                             ))}
-                            <td><button className='btn btn-outline-secondary me-2'><i class="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i class="bi bi-trash3"></i></button></td>
+                            <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                             <tr>
                             <td>2</td>
                             {Array.from({ length: 6 }).map((_, index) => (
                                 <td key={index}>Table cell {index}</td>
                             ))}
-                            <td><button className='btn btn-outline-secondary me-2'><i class="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i class="bi bi-trash3"></i></button></td>
+                            <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                             <tr>
                             <td>3</td>
                             {Array.from({ length: 6 }).map((_, index) => (
                                 <td key={index}>Table cell {index}</td>
                             ))}
-                            <td><button className='btn btn-outline-secondary me-2'><i class="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i class="bi bi-trash3"></i></button></td>
+                            <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                         </tbody>
                         </Table>
@@ -217,9 +217,9 @@ const display = (e) => {
                     
                 <div className='col-12 d-flex justify-content-center'>
                    
-                    
-                        <button type="button" onClick={handleDecrement} className="btn btn-danger px-3 me-2" > -  Remove</button>
                         <button type="button" onClick={handleIncrement} className="btn btn-primary px-4" > +  Add</button>
+                        <button type="button" onClick={handleDecrement} className="btn btn-danger px-3 me-2" > -  Remove</button>
+                        
 
                   </div>
                 </div>

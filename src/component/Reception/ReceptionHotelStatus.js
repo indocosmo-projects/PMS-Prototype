@@ -168,9 +168,9 @@ function ReceptionHotelStatus() {
                                     <button className="btn btn-secondary w-100 text-white mb-2">Bill Preview</button>
                                     <button className="btn btn-secondary w-100 text-white mb-2">Sharer</button>
                                     <button className="btn btn-info w-100 text-white mb-2">Deposit</button>
-                                    <div class="form-group left mt-2">
+                                    <div className="form-group left mt-2">
                                         <label for="room"><b>Room Number</b></label>
-                                        <input type="text" class="form-control" id="room" />
+                                        <input type="text" className="form-control" id="room" />
                                     </div>
                                     <div className="row">
                                         <div className="col-sm-6">

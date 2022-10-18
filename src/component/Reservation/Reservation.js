@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import '../../style.css';
 import './Reservation.css';
 import { useState } from 'react';
-import ReservationService from '../../service/ReservationService';
+//import ReservationService from '../../service/ReservationService';
 
 function Reservation() {
     
@@ -20,13 +20,13 @@ function Reservation() {
         ];
     
     
-    {/* const [details, setDetails] = useState([]);  */}
+    /* const [details, setDetails] = useState([]);  */
         
         const [dropdown, setDropdown] = useState(0);
-        const [recordno, setRecordno] = useState(5);
+  /*     const [recordno, setRecordno] = useState(5);  */
 
         
-   {/*
+   /*
     const fetchdata = () =>{
         ReservationService.getReservationList().then((response) => {
             setDetails((response.data));
@@ -50,15 +50,15 @@ function Reservation() {
             console.log("response" + response);
             console.log("details" + details);
         });
-*/}
+*/
 
 
 
     const tdata = () =>{
 
-        var pageno = ( details.length / recordno );
-        var balancepage = ( details.length % recordno );
-        console.log("pageno==>" + pageno + "balancepage==>" + balancepage);
+/*        var pageno = ( details.length / recordno );
+        var balancepage = ( details.length % recordno ); 
+        console.log("pageno==>" + pageno + "balancepage==>" + balancepage); */
         return(
                 <tbody>
                     {
@@ -169,7 +169,7 @@ function Reservation() {
 
                             <div className="row mt-4">
                                 <div className="col-md-2 col-lg-1 col-3">
-                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" onChange={(e) => setRecordno((e.target.value))}>
+                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/ >
                                         <option value="1">5</option>
                                         <option value="2">10</option>
                                         <option value="3">15</option>
@@ -212,14 +212,14 @@ function Reservation() {
 
 
                             <div className="row m-3 d-flex justify-content-between">
-                                <div className="col-4 d-flex justify-content-start" >Showing 1 to {recordno} of {details.length} entries</div>
+                 {/*               <div className="col-4 d-flex justify-content-start" >Showing 1 to {recordno} of {details.length} entries</div> */}
                                 {/* <div className="col-6"></div> */}
                                 <div className="col-8 d-flex justify-content-end">
-                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-arrow-left me-1"></i><span class="hide-element">Prev</span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-arrow-left me-1"></i><span className="hide-element">Prev</span></button>
                                     <button className="btn btn-outline-dark m-1 grey-border">1</button>
                                     <button className="btn btn-outline-dark m-1 grey-border active">2</button>
                                     <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element">Next</span><i className="bi bi-arrow-right ms-1"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element">Next</span><i className="bi bi-arrow-right ms-1"></i></button>
                                 </div>
                             </div>
 

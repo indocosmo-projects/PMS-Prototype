@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './RoomList.css' ;
 
@@ -119,15 +119,15 @@ function RoomList(){
                             <div className="bggrey" >
                                 <div className="row">
                                     <div className="col-sm-6">
-                                        <div class="form-group inline">
+                                        <div className="form-group inline">
                                             <label for="bookedrooms">Booked Rooms:</label>
-                                            <input type="text" class="form-control" placeholder="Enter Booked Rooms" id="bookedrooms" />
+                                            <input type="text" className="form-control" placeholder="Enter Booked Rooms" id="bookedrooms" />
                                         </div>
-                                        <div class="form-group inline">
+                                        <div className="form-group inline">
                                             <label for="date">Date:</label>
-                                            <input type="datetime-local" class="form-control" placeholder="Enter Date" id="date" />
+                                            <input type="datetime-local" className="form-control" placeholder="Enter Date" id="date" />
                                         </div>
-                                        <div class="form-group inline">
+                                        <div className="form-group inline">
                                             <button type="button" className="btn btn-success">UPDATE</button>
                                         </div>
                                     </div>
@@ -138,9 +138,9 @@ function RoomList(){
                                 <div>
                                 <div className="row colpadding left">
                                     <div className="col-sm-3">
-                                        <div class="form-group ">
+                                        <div className="form-group ">
                                             <label for="title">Title:</label>
-                                            <select class="form-control" id="title">
+                                            <select className="form-control" id="title">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -150,23 +150,23 @@ function RoomList(){
                                     </div>
 
                                      <div className="col-sm-3">
-                                        <div class="form-group ">
+                                        <div className="form-group ">
                                                 <label for="fname">First Name:</label>
-                                                <input type="text" class="form-control" placeholder="Enter First Name" id="fname" />
+                                                <input type="text" className="form-control" placeholder="Enter First Name" id="fname" />
                                             </div>
                                      </div>
 
                                       <div className="col-sm-3">
-                                        <div class="form-group ">
+                                        <div className="form-group ">
                                                 <label for="lname">Last Name:</label>
-                                                <input type="text" class="form-control" placeholder="Enter Last Name" id="lname" />
+                                                <input type="text" className="form-control" placeholder="Enter Last Name" id="lname" />
                                             </div>
                                      </div>
 
                                      <div className="col-sm-3">
-                                        <div class="form-group ">
+                                        <div className="form-group ">
                                             <label for="sel1">Gender:</label>
-                                            <select class="form-control" id="sel1">
+                                            <select className="form-control" id="sel1">
                                                 <option>Male</option>
                                                 <option>Female</option>
                                             </select>
@@ -176,24 +176,24 @@ function RoomList(){
 
                                     <div className="row colpadding left">
                                     <div className="col-sm-6">
-                                        <div class="form-group ">
+                                        <div className="form-group ">
                                                 <label for="address">Address:</label>
-                                                <input type="text" class="form-control" placeholder="Enter Address" id="address" />
+                                                <input type="text" className="form-control" placeholder="Enter Address" id="address" />
                                             </div>
                                      </div>
 
                                     <div className="col-sm-6">
-                                        <div class="form-group ">
+                                        <div className="form-group ">
                                                 <label for="emailaddress">Email Address:</label>
-                                                <input type="text" class="form-control" placeholder="Enter Email Address" id="emailaddress" />
+                                                <input type="text" className="form-control" placeholder="Enter Email Address" id="emailaddress" />
                                             </div>
                                      </div>
                                     </div>
                                     <div className="row colpadding left">
                                     <div className="col-sm-3">
-                                        <div class="form-group ">
+                                        <div className="form-group ">
                                             <label for="country">Country:</label>
-                                            <select class="form-control" id="country">
+                                            <select className="form-control" id="country">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -201,9 +201,9 @@ function RoomList(){
                                         </div>
                                     </div>
                                     <div className="col-sm-3">
-                                        <div class="form-group ">
+                                        <div className="form-group ">
                                             <label for="state">State:</label>
-                                            <select class="form-control" id="state">
+                                            <select className="form-control" id="state">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -211,9 +211,9 @@ function RoomList(){
                                         </div>
                                     </div>
                                     <div className="col-sm-3">
-                                        <div class="form-group ">
+                                        <div className="form-group ">
                                             <label for="zone">Zone:</label>
-                                            <select class="form-control" id="zone">
+                                            <select className="form-control" id="zone">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -222,9 +222,9 @@ function RoomList(){
                                     </div>
 
                                      <div className="col-sm-3">
-                                        <div class="form-group ">
+                                        <div className="form-group ">
                                                 <label for="phone">Phone:</label>
-                                                <input type="text" class="form-control" placeholder="Enter Phone" id="phone" />
+                                                <input type="text" className="form-control" placeholder="Enter Phone" id="phone" />
                                             </div>
                                      </div>
 
@@ -240,33 +240,33 @@ function RoomList(){
                                     <div >
                                         <div className="row colpadding left">
                                             <div className="col-sm-2">
-                                                <div class="form-group ">
+                                                <div className="form-group ">
                                                         <label for="adults">Adults:</label>
-                                                        <input type="text" class="form-control" placeholder="Enter Adults" id="adults" />
+                                                        <input type="text" className="form-control" placeholder="Enter Adults" id="adults" />
                                                 </div>
                                             </div>
                                              <div className="col-sm-2">
-                                                <div class="form-group ">
+                                                <div className="form-group ">
                                                         <label for="children">Children:</label>
-                                                        <input type="text" class="form-control" placeholder="Enter Children" id="children" />
+                                                        <input type="text" className="form-control" placeholder="Enter Children" id="children" />
                                                 </div>
                                             </div>
                                              <div className="col-sm-2">
-                                                <div class="form-group ">
+                                                <div className="form-group ">
                                                         <label for="infants">Infants:</label>
-                                                        <input type="text" class="form-control" placeholder="Enter Infants" id="infants" />
+                                                        <input type="text" className="form-control" placeholder="Enter Infants" id="infants" />
                                                 </div>
                                             </div>
                                             <div className="col-sm-4">
-                                                <div class="form-group ">
+                                                <div className="form-group ">
                                                         <label for="remarks">Remarks:</label>
-                                                        <input type="text" class="form-control" placeholder="Enter Remarks" id="remarks" />
+                                                        <input type="text" className="form-control" placeholder="Enter Remarks" id="remarks" />
                                                 </div>
                                             </div>
                                             <div className="col-sm-2">
-                                                <div class="form-group ">
+                                                <div className="form-group ">
                                                         <label for="gst">GST#:</label>
-                                                        <input type="text" class="form-control" placeholder="Enter GST" id="gst" />
+                                                        <input type="text" className="form-control" placeholder="Enter GST" id="gst" />
                                                 </div>
                                             </div>
                                         </div>
@@ -282,9 +282,9 @@ function RoomList(){
                                     <div>
                                         <div className="row colpadding left">
                                                 <div className="col-sm-3">
-                                                    <div class="form-group ">
+                                                    <div className="form-group ">
                                                     <label for="adults">Adults:</label>
-                                                    <select class="form-control" id="adults">
+                                                    <select className="form-control" id="adults">
                                                         <option>option 1</option>
                                                         <option>option 2</option>
                                                         <option>option 3</option>
@@ -293,23 +293,23 @@ function RoomList(){
                                                 </div>
 
                                                 <div className="col-sm-3">
-                                                    <div class="form-group ">
+                                                    <div className="form-group ">
                                                             <label for="passportnumber">Passport Number:</label>
-                                                            <input type="text" class="form-control" placeholder="Enter Passport Number" id="passportnumber" />
+                                                            <input type="text" className="form-control" placeholder="Enter Passport Number" id="passportnumber" />
                                                     </div>
                                                 </div>
 
                                                 <div className="col-sm-3">
-                                                    <div class="form-group ">
+                                                    <div className="form-group ">
                                                             <label for="issueon">Issued On:</label>
-                                                            <input type="text" class="form-control" placeholder="Enter Issued On" id="issueon" />
+                                                            <input type="text" className="form-control" placeholder="Enter Issued On" id="issueon" />
                                                     </div>
                                                 </div>
 
                                                 <div className="col-sm-3">
-                                                    <div class="form-group ">
+                                                    <div className="form-group ">
                                                             <label for="expon">Expiry On:</label>
-                                                            <input type="text" class="form-control" placeholder="Enter Expiry Date" id="expon" />
+                                                            <input type="text" className="form-control" placeholder="Enter Expiry Date" id="expon" />
                                                     </div>
                                                 </div>
 

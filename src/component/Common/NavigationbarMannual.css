@@ -84,7 +84,7 @@
 .nlink{
     text-decoration: none;
     padding: 10px;
-    color: whitesmoke;
+    color: royalblue !important;
 }
 
 .nlink:hover{
