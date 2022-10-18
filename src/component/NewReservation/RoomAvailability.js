@@ -18,12 +18,14 @@ function RoomAvailability() {
         console.log(diffDays + " days");
         setNights((diffDays));
        
-        return diffDays;
+        return (
+            diffDays
+        );
     }
     
     return (
        
-        <div className="row p-3">
+        <div className="row p-3" onMouseUp={nightcalculation}>
         <div className="col-md-3 availability_check_bg">
                 <div className="col-sm-12">
                     <div className="form-group">
@@ -36,13 +38,14 @@ function RoomAvailability() {
                             <input type="datetime-local" className="form-control departure" name="departure"
                             onChange={(e) => setDeptdate((e.target.value))} id="departure" />
                     </div>
+                    
                 </div>
                 <div className="col-sm-12">   
                     <div className="row">
                         {/* <div className="col-sm-6"> */}
                             <div className="form-group">
                             <label className="text-left" htmlFor="nights">Nights</label>
-                                <input type="number"  className="form-control"  defaultValue={nights} 
+                                <input type="number"  className="form-control"  value={nights} 
                                  min="1" name="nights" id="nights" />
                             {/* </div> */}
                         </div>
@@ -54,9 +57,12 @@ function RoomAvailability() {
                         </div>
                     </div>
                 </div>
+                <h1></h1>
                 <div className="form-group mt-3 d-flex justify-content-end" >
                     <button type="button" className="btn btn-secondary w-25 btnstyle">Edit</button>
                     <button type="button" className="btn btn-success w-25 btnstyle">Go</button>
+                    <button type="button" className="btn btn-warning w-25 btnstyle text-white" title="Calculate Nights" onClick={nightcalculation}>Nights</button>
+                    
                 </div>
         </div> 
         <div className="col-md-9">
