@@ -1,18 +1,42 @@
-import React, { Component } from 'react';
+import React, {  useState } from 'react';
+
+
 
 function RoomAvailability() {
-   
+    const [arrdate, setArrdate] = useState('');
+    const [deptdate, setDeptdate] = useState('');
+    const [nights, setNights] = useState(0);
+
+    const nightcalculation = () =>{
+        var arrd = arrdate.substring(0,10);
+        var deptd = deptdate.substring(0,10);
+        const date1 = new Date(arrd);
+        const date2 = new Date(deptd);
+        const diffTime = Math.abs(date2 - date1);
+        var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+        console.log(diffTime + " milliseconds");
+        console.log(diffDays + " days");
+        setNights((diffDays));
+        console.log(nights + " days");
+
+        return nights;
+    }
+    console.log("====="+arrdate + "---" +deptdate);
     return (
+
+        
         <div className="row p-3">
         <div className="col-md-3 availability_check_bg">
                 <div className="col-sm-12">
                     <div className="form-group">
                         <label className="text-left" htmlFor="arrival">Arrival:</label>
-                            <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival"/>
+                            <input type="datetime-local" className="form-control arrival" name="arrival"
+                             id="arrival" onChange={(e) => setArrdate((e.target.value))}/>
                     </div>
                     <div className="form-group">
                         <label className="text-left" htmlFor="departure">Departure:</label>
-                            <input type="datetime-local" className="form-control departure" name="departure" id="departure"/>
+                            <input type="datetime-local" className="form-control departure" name="departure"
+                            onChange={(e) => setDeptdate((e.target.value))} id="departure"/>
                     </div>
                 </div>
                 <div className="col-sm-12">   
@@ -20,7 +44,8 @@ function RoomAvailability() {
                         {/* <div className="col-sm-6"> */}
                             <div className="form-group">
                             <label className="text-left" htmlFor="nights">Nights</label>
-                                <input type="number"  className="form-control"  placeholder="Select Nights count"  min="1" name="nights" id="nights"  />
+                                <input type="number"  className="form-control"  placeholder="Select Nights count" 
+                                 min="1" name="nights" id="nights" defaultValue={nightcalculation()} />
                             {/* </div> */}
                         </div>
                          {/* <div className="col-sm-6"> */}
@@ -129,6 +154,7 @@ function RoomAvailability() {
                     </tr>
                 </tbody>
             </table>
+
                 <div className="d-flex justify-content-end">
                     <button type="button" className="btn"><i className="bi bi-chevron-left me-1"></i>Prev</button>
                     <button type="button" className="btn">Next<i className="bi bi-chevron-right ms-1"></i></button>

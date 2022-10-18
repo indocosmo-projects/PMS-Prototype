@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React from 'react';
 import './Reception.css';
 import '../../style.css';
 import Form from 'react-bootstrap/Form';
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function ReceptionHotelStatus() {
 
-    const [recordno, setRecordno] = useState(5); 
+/*    const [recordno, setRecordno] = useState(5);  */
     const rooms = 
     [
         {id: 1, name : '101', status: 'O' },
@@ -128,7 +128,7 @@ function ReceptionHotelStatus() {
                                       <div className="row" >
                                         <div className="col-12 left" >SORT BY</div> 
                                             <div className="col-12">
-                                                <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" onChange={(e) => setRecordno((e.target.value))}>
+                                                <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))} */>
                                                     <option value="1">5</option>
                                                     <option value="2">10</option>
                                                     <option value="3">15</option>

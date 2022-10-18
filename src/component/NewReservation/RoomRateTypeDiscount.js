@@ -7,7 +7,6 @@ function RoomRateTypeDiscount() {
 
     const [count, setCount] = useState(1);
     const [cn, setCn] = useState(5);
-    const [del, setDel] = useState(0);
     const details =
         [
             { id: 1, name: 'room1' },
