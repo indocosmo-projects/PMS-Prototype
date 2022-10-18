@@ -85,7 +85,7 @@ function NewReservation() {
 
 
                      {/* ----- Room Availability ------ */}
-                     <RoomAvailability/>
+                     <RoomAvailability/>  
                     
 
                      {/* ----- Room Rate Type Discount ------ */}

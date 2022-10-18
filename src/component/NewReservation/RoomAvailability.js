@@ -5,7 +5,7 @@ import React, {  useState } from 'react';
 function RoomAvailability() {
     const [arrdate, setArrdate] = useState('');
     const [deptdate, setDeptdate] = useState('');
-    const [nights, setNights] = useState(0);
+    const [nights, setNights] = useState(1);
 
     const nightcalculation = () =>{
         var arrd = arrdate.substring(0,10);
@@ -14,17 +14,15 @@ function RoomAvailability() {
         const date2 = new Date(deptd);
         const diffTime = Math.abs(date2 - date1);
         var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-        console.log(diffTime + " milliseconds");
+        console.log("====="+arrdate + "---" +deptdate +"----"+ diffDays);
         console.log(diffDays + " days");
         setNights((diffDays));
-        console.log(nights + " days");
-
-        return nights;
+       
+        return diffDays;
     }
-    console.log("====="+arrdate + "---" +deptdate);
+    
     return (
-
-        
+       
         <div className="row p-3">
         <div className="col-md-3 availability_check_bg">
                 <div className="col-sm-12">
@@ -36,7 +34,7 @@ function RoomAvailability() {
                     <div className="form-group">
                         <label className="text-left" htmlFor="departure">Departure:</label>
                             <input type="datetime-local" className="form-control departure" name="departure"
-                            onChange={(e) => setDeptdate((e.target.value))} id="departure"/>
+                            onChange={(e) => setDeptdate((e.target.value))} id="departure" />
                     </div>
                 </div>
                 <div className="col-sm-12">   
@@ -44,8 +42,8 @@ function RoomAvailability() {
                         {/* <div className="col-sm-6"> */}
                             <div className="form-group">
                             <label className="text-left" htmlFor="nights">Nights</label>
-                                <input type="number"  className="form-control"  placeholder="Select Nights count" 
-                                 min="1" name="nights" id="nights" defaultValue={nightcalculation()} />
+                                <input type="number"  className="form-control"  defaultValue={nights} 
+                                 min="1" name="nights" id="nights" />
                             {/* </div> */}
                         </div>
                          {/* <div className="col-sm-6"> */}
@@ -60,7 +58,7 @@ function RoomAvailability() {
                     <button type="button" className="btn btn-secondary w-25 btnstyle">Edit</button>
                     <button type="button" className="btn btn-success w-25 btnstyle">Go</button>
                 </div>
-        </div>
+        </div> 
         <div className="col-md-9">
         <div className= "roomavailability">
             <div className='m-2'>

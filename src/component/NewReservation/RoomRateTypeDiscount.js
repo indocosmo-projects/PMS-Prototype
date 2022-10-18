@@ -27,8 +27,8 @@ function RoomRateTypeDiscount() {
         }
         
         const display = (e) => {
-            let classes = "left ";
-            classes += e <= count ? "show" : "hide";
+            let classes = "W-100 left ";
+            classes += e <= count ? "show " : "hide";
             return classes;
         }
         
