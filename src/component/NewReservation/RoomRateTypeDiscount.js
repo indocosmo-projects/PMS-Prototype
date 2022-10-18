@@ -126,25 +126,28 @@ function RoomRateTypeDiscount() {
                 <div>
                     <div className="padcolumn mt-1 total-bg" >
                         {/* <div className="table"> */}
-                        <h4 className='left ms-2 mt-2'>Payment Details</h4>
+                            <div className='d-flex justify-content-between'>
+                                <h4 className='left ms-2 mt-2'>Payment Details</h4>
+                                <div>
+                                <button className="btn btn-danger btn-xs me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
+                                <button className="btn btn-primary btn-xs" onClick={handleIncrement}><i className="bi bi-plus" ></i></button>
+                                </div>
+                            </div>
                             <table className="table type-table">
                                 <thead className="">
                                     <tr>
-                                        <th className="thstyle">ROOM TYPE</th>
-                                        <th className="thstyle">RATE CODE</th>
+                                        <th>ROOM TYPE</th>
+                                        <th>RATE CODE</th>
                                         <th>SINGLE</th>
                                         <th>DOUBLE</th>
                                         <th>TRIPPLE</th>
-                                        <th className="thstyle">TOTAL</th>
-                                        <th className="thstyle">DISCOUNT</th>
-                                        <th className="thstyle">SUB TOTAL</th>
-                                        <th><button className="btn btn-primary btn-xs" onClick={handleIncrement}><i className="bi bi-plus" ></i></button>
-                                            <button className="btn btn-danger btn-xs" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
-                                        </th>
+                                        <th>TOTAL</th>
+                                        <th>DISCOUNT</th>
+                                        <th>SUB TOTAL</th>
                                     </tr>
                                 </thead>
-                                
                                 {tdata()}
+
                             </table>
                         {/* </div> */}
                             <div className='row'>
