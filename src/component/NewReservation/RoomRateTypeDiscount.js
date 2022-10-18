@@ -36,7 +36,7 @@ function RoomRateTypeDiscount() {
     const tdata = () => {
         return(
             <tbody>
-            { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} >
+          { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} >
                 <td>
                     <select className="form-control form-select text-center">
                         <option> DLX</option>
