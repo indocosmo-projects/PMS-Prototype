@@ -8,18 +8,18 @@ function RoomRateTypeDiscount() {
                 <div>
                     <div className="padcolumn mt-1 pb-3 total-bg" >
                         {/* <div className="table"> */}
-
+                        <h4 className='left ms-2 mt-2'>Payment Details</h4>
                             <table className="table type-table">
                                 <thead className="">
                                     <tr>
-                                        <th>ROOM TYPE</th>
-                                        <th>RATE CODE</th>
-                                        <th>SINGLE</th>
-                                        <th>DOUBLE</th>
-                                        <th>TRIPPLE</th>
-                                        <th>TOTAL</th>
-                                        <th>DISCOUNT</th>
-                                        <th>SUB TOTAL</th>
+                                        <th>Room Type</th>
+                                        <th>Discount</th>
+                                        <th>Single</th>
+                                        <th>Double</th>
+                                        <th>Tripple</th>
+                                        <th>Total</th>
+                                        <th>Discount Amt</th>
+                                        <th>Sub Total</th>
                                         <th>&nbsp;</th>
                                     </tr>
                                 </thead>
