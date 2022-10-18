@@ -3,20 +3,21 @@ import Form from 'react-bootstrap/Form';
 import '../../style.css';
 import './Reservation.css';
 import { useState } from 'react';
-//import ReservationService from '../../service/ReservationService';
+import { Link } from "react-router-dom";
+import ReservationService from '../../service/ReservationService';
 
 function Reservation() {
     
  
     const details =  
-        [{id: 0, rese:'R-000001',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 1, rese:'R-000001',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',status:'GRANTED'},
-        {id: 2, rese:'R-000002',arrival :'27-DEC-2018',nights:'4',rooms:'2',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 3, rese:' R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',status:'CANCELLED'},
-        {id: 4, rese:'R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 5, rese:'R-000003',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 6, rese:'R-000007',arrival :'16-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 7, rese:'R-000007',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        [   {id: 0, rese:'R-000001',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'GRANTED'},
+            {id: 1, rese:'R-000001',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Clark Kent', bookedon:'10-Oct-2022',status:'CANCELLED'},
+            {id: 2, rese:'R-000002',arrival :'10-Oct-2022',nights:'4',rooms:'2',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'GRANTED'},
+            {id: 3, rese:'R-000003',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
+            {id: 4, rese:'R-000003',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Peter Parker', bookedon:'10-Oct-2022',status:'GRANTED'},
+            {id: 5, rese:'R-000003',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
+            {id: 6, rese:'R-000007',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Peter Parker', bookedon:'10-Oct-2022',status:'GRANTED'},
+            {id: 7, rese:'R-000008',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
         ];
     
     
@@ -62,16 +63,16 @@ function Reservation() {
         return(
                 <tbody>
                     {
-                    details.map(detail =>  <tr className="left" key={detail.id} >
+                    details.map(detail =>  <tr className="center" key={detail.id} >
                         <td style={{color : 'blue'}} >{detail.rese}</td>
                         <td>{detail.arrival}</td>
-                        <td >{detail.nights}</td>
-                        <td >{detail.rooms}</td>
+                        <td>{detail.nights}</td>
+                        <td>{detail.rooms}</td>
                         <td>{detail.departure}</td>
                         <td>{detail.bookedby}</td>
                         <td>{detail.bookedfor}</td>
                         <td>{detail.bookedon}</td>
-                        <td style={{color : 'blue'}} >{detail.status}</td>
+                        <td className="status-clr">{detail.status}</td>
                     </tr>
                     )}
                     
@@ -160,7 +161,8 @@ function Reservation() {
                         </div>
                         <div className="col-sm-6 d-flex justify-content-end">
                                     <div className="mb-3 ">
-                                        <a href="/newreservation"><button className="btn btn-success" title="New Reservation">Add New <i className="bi bi-plus"></i></button></a>
+                                        {/* <a href="/newreservation"><button className="btn btn-success" title="New Reservation">Add New <i className="bi bi-plus"></i></button></a> */}
+                                        <Link to="/newreservation"><button className="btn btn-success" title="New Reservation">Add New <i className="bi bi-plus"></i></button></Link>
                                     </div>
                         </div>
                         </div>
@@ -178,7 +180,7 @@ function Reservation() {
 
                                 </div>
                                 <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
-                                    <p className="text">records per page</p>
+                                    <p className="text">Records per Page</p>
                                 </div>
 
                                
@@ -190,16 +192,16 @@ function Reservation() {
                                 <div className="col-sm-12 reservation_table">
                                     <table className="table table-striped table-bordered" >
                                         <thead >
-                                            <tr className='left'>
-                                                <th className="">RESV.#</th>
-                                                <th className="">ARRIVAL <i className="bi bi-arrow-down-up sort-btn"></i></th>
-                                                <th className="">NIGHTS <i className="bi bi-arrow-down-up sort-btn"></i> </th>
-                                                <th className="">ROOMS <i className="bi bi-arrow-down-up sort-btn"></i></th>
-                                                <th className="">DEPARTURE <i className="bi bi-arrow-down-up sort-btn"></i></th>
-                                                <th className="">BOOKED BY <i className="bi bi-arrow-down-up sort-btn"></i></th>
-                                                <th className="">BOOKED FOR <i className="bi bi-arrow-down-up sort-btn"></i></th>
-                                                <th className="">BOOKED ON <i className="bi bi-arrow-down-up sort-btn"></i></th>
-                                                <th className="">STATUS <i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                            <tr className='center'>
+                                                <th className="">Booking Id</th>
+                                                <th className="">Arrival Date<i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">Nights<i className="bi bi-arrow-down-up sort-btn"></i> </th>
+                                                <th className="">No of Rooms<i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">Departure Date<i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">Booked By<i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">Booked For<i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">Booked On<i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">Status<i className="bi bi-arrow-down-up sort-btn"></i></th>
                                             </tr>
                                         </thead>
 
@@ -212,14 +214,16 @@ function Reservation() {
 
 
                             <div className="row m-3 d-flex justify-content-between">
-                 {/*               <div className="col-4 d-flex justify-content-start" >Showing 1 to {recordno} of {details.length} entries</div> */}
+                                    
+                                    <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
                                 {/* <div className="col-6"></div> */}
                                 <div className="col-8 d-flex justify-content-end">
-                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-arrow-left me-1"></i><span className="hide-element">Prev</span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-arrow-left"></i><span class="hide-element"></span></button>
                                     <button className="btn btn-outline-dark m-1 grey-border">1</button>
                                     <button className="btn btn-outline-dark m-1 grey-border active">2</button>
                                     <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element">Next</span><i className="bi bi-arrow-right ms-1"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i className="bi bi-arrow-right"></i></button>
+                                    
                                 </div>
                             </div>
 
