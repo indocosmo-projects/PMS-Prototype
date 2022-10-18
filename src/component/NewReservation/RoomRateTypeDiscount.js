@@ -23,21 +23,13 @@ function RoomRateTypeDiscount() {
             details.push(({ id: cn, name: 'rooms' + cn + '' }));
         }
         
-        const handleDecrement = (i) => {
-            setDel((i));
+        const handleDecrement = () => {
+            setCount((count - 1 ));
         }
         
         const display = (e) => {
             let classes = "left ";
-
-         //   console.log(classes+ del +"---disp"+e)
-            if(del === e && del <= count){ 
-                return( 
-                classes = "left hide"
-            );
-            }else{
-                classes += e <= count ? "show" : "hide";
-            }
+            classes += e <= count ? "show" : "hide";
             return classes;
         }
         
@@ -121,7 +113,7 @@ function RoomRateTypeDiscount() {
                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
                 </td>
                 <td>
-                    <button className="btn btn-danger btn-xs" onClick={(e)=>handleDecrement(detail.id)}><i className="bi bi-trash "></i></button>
+                   
                 </td>
             
                 </tr>
@@ -147,7 +139,9 @@ function RoomRateTypeDiscount() {
                                         <th className="thstyle">TOTAL</th>
                                         <th className="thstyle">DISCOUNT</th>
                                         <th className="thstyle">SUB TOTAL</th>
-                                        <th><button className="btn btn-primary btn-xs" onClick={handleIncrement}><i className="bi bi-plus" ></i></button></th>
+                                        <th><button className="btn btn-primary btn-xs" onClick={handleIncrement}><i className="bi bi-plus" ></i></button>
+                                            <button className="btn btn-danger btn-xs" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
+                                        </th>
                                     </tr>
                                 </thead>
                                 
