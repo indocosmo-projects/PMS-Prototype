@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -44,7 +44,7 @@ function RoomRateTypeDiscount() {
                                 <td>
                                 <InputGroup className="mb-3">
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-dash"></i>
+                                        <i className="bi bi-dash"></i>
                                         </Button>
                                         <Form.Control className='text-center'
                                             placeholder="1"
@@ -52,7 +52,7 @@ function RoomRateTypeDiscount() {
                                             aria-describedby="basic-addon2"
                                         />
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-plus-lg"></i>
+                                        <i className="bi bi-plus-lg"></i>
                                         </Button>
                                     </InputGroup>
                                  
@@ -60,7 +60,7 @@ function RoomRateTypeDiscount() {
                                 <td>
                                 <InputGroup className="mb-3">
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-dash"></i>
+                                        <i className="bi bi-dash"></i>
                                         </Button>
                                         <Form.Control className='text-center'
                                             placeholder="1"
@@ -68,7 +68,7 @@ function RoomRateTypeDiscount() {
                                             aria-describedby="basic-addon2"
                                         />
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-plus-lg"></i>
+                                        <i className="bi bi-plus-lg"></i>
                                         </Button>
                                     </InputGroup>
                                  
@@ -76,7 +76,7 @@ function RoomRateTypeDiscount() {
                                 <td>
                                 <InputGroup className="mb-3">
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-dash"></i>
+                                        <i className="bi bi-dash"></i>
                                         </Button>
                                         <Form.Control className='text-center'
                                             placeholder="1"
@@ -84,7 +84,7 @@ function RoomRateTypeDiscount() {
                                             aria-describedby="basic-addon2"
                                         />
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-plus-lg"></i>
+                                        <i className="bi bi-plus-lg"></i>
                                         </Button>
                                     </InputGroup>
                                  
@@ -121,7 +121,7 @@ function RoomRateTypeDiscount() {
                                 <td>
                                     <InputGroup className="mb-3">
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-dash"></i>
+                                        <i className="bi bi-dash"></i>
                                         </Button>
                                         <Form.Control className='text-center'
                                             placeholder="1"
@@ -129,7 +129,7 @@ function RoomRateTypeDiscount() {
                                             aria-describedby="basic-addon2"
                                         />
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-plus-lg"></i>
+                                        <i className="bi bi-plus-lg"></i>
                                         </Button>
                                     </InputGroup>
                                 </td>
@@ -137,7 +137,7 @@ function RoomRateTypeDiscount() {
                                 <td>
                                 <InputGroup className="mb-3">
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-dash"></i>
+                                        <i className="bi bi-dash"></i>
                                         </Button>
                                         <Form.Control className='text-center'
                                             placeholder="1"
@@ -145,7 +145,7 @@ function RoomRateTypeDiscount() {
                                             aria-describedby="basic-addon2"
                                         />
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-plus-lg"></i>
+                                        <i className="bi bi-plus-lg"></i>
                                         </Button>
                                     </InputGroup>
                                  
@@ -153,7 +153,7 @@ function RoomRateTypeDiscount() {
                                 <td>
                                 <InputGroup className="mb-3">
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-dash"></i>
+                                        <i className="bi bi-dash"></i>
                                         </Button>
                                         <Form.Control className='text-center'
                                             placeholder="1"
@@ -161,7 +161,7 @@ function RoomRateTypeDiscount() {
                                             aria-describedby="basic-addon2"
                                         />
                                         <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i class="bi bi-plus-lg"></i>
+                                        <i className="bi bi-plus-lg"></i>
                                         </Button>
                                     </InputGroup>
                                  

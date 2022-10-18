@@ -31,9 +31,9 @@ function CheckInEditOtherDetails() {
                             </div>
                             
                             <div className="col-sm-3">
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label className="text-left" htmlFor="source">Source:</label>
-                                    <select class="form-control" id="source">
+                                    <select className="form-control" id="source">
                                         <option>FIT/TA/CORPORATE</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -41,18 +41,18 @@ function CheckInEditOtherDetails() {
                                     </select>
                                 </div>
 
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label className="text-left" htmlFor="pwd">Password:</label>
-                                    <input type="password" class="form-control" placeholder="Enter password" id="pwd" />
+                                    <input type="password" className="form-control" placeholder="Enter password" id="pwd" />
                                 </div>
                             </div>
 
                             <div className="col-sm-3">
                                 <div className="row">
                                     <div className="col-sm-6">
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label className="text-left" htmlFor="pwd">Password:</label>
-                                            <input type="password" class="form-control" placeholder="Enter password" id="pwd" />
+                                            <input type="password" className="form-control" placeholder="Enter password" id="pwd" />
                                         </div>
                                     </div>
                                     <div className="col-sm-6 pt-4">
@@ -62,9 +62,9 @@ function CheckInEditOtherDetails() {
 
                                  <div className="row">
                                     <div className="col-sm-2">
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label className="text-left" htmlFor="adult">Adult:</label>
-                                            <select class="form-control" id="adult">
+                                            <select className="form-control" id="adult">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -73,9 +73,9 @@ function CheckInEditOtherDetails() {
                                         </div>
                                     </div>
                                     <div className="col-sm-2">
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label className="text-left" htmlFor="child">Child:</label>
-                                            <select class="form-control" id="child">
+                                            <select className="form-control" id="child">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -84,9 +84,9 @@ function CheckInEditOtherDetails() {
                                         </div>
                                     </div>
                                     <div className="col-sm-2">
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label className="text-left" htmlFor="infant">Infant:</label>
-                                            <select class="form-control" id="infant">
+                                            <select className="form-control" id="infant">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -96,7 +96,7 @@ function CheckInEditOtherDetails() {
                                     </div>
                                     <div className="col-sm-4 left">
                                     <label  htmlFor="extrabed"><p style={{fontSize :14}}>Extra Bed:</p></label>
-                                    <div class="form-group">
+                                    <div className="form-group">
                                             <div className="bg-success " style={{height : 30 , width : 30}}></div>
                                         </div>
                                     </div>
@@ -146,9 +146,9 @@ function CheckInEditOtherDetails() {
                             </h5>
                                         <div className="row colpadding left">
                                                 <div className="col-sm-3">
-                                                    <div class="form-group ">
+                                                    <div className="form-group ">
                                                     <label for="adults">Adults:</label>
-                                                    <select class="form-control" id="adults">
+                                                    <select className="form-control" id="adults">
                                                         <option>option 1</option>
                                                         <option>option 2</option>
                                                         <option>option 3</option>
@@ -157,23 +157,23 @@ function CheckInEditOtherDetails() {
                                                 </div>
 
                                                 <div className="col-sm-3">
-                                                    <div class="form-group ">
+                                                    <div className="form-group ">
                                                             <label for="passportnumber">Passport Number:</label>
-                                                            <input type="text" class="form-control" placeholder="Enter Passport Number" id="passportnumber" />
+                                                            <input type="text" className="form-control" placeholder="Enter Passport Number" id="passportnumber" />
                                                     </div>
                                                 </div>
 
                                                 <div className="col-sm-3">
-                                                    <div class="form-group ">
+                                                    <div className="form-group ">
                                                             <label for="issueon">Issued On:</label>
-                                                            <input type="text" class="form-control" placeholder="Enter Issued On" id="issueon" />
+                                                            <input type="text" className="form-control" placeholder="Enter Issued On" id="issueon" />
                                                     </div>
                                                 </div>
 
                                                 <div className="col-sm-3">
-                                                    <div class="form-group ">
+                                                    <div className="form-group ">
                                                             <label for="expon">Expiry On:</label>
-                                                            <input type="text" class="form-control" placeholder="Enter Expiry Date" id="expon" />
+                                                            <input type="text" className="form-control" placeholder="Enter Expiry Date" id="expon" />
                                                     </div>
                                                 </div>
 

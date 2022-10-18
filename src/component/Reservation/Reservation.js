@@ -21,13 +21,13 @@ function Reservation() {
         ];
     
     
-    {/* const [details, setDetails] = useState([]);  */}
+    /* const [details, setDetails] = useState([]);  */
         
         const [dropdown, setDropdown] = useState(0);
-        const [recordno, setRecordno] = useState(5);
+  /*     const [recordno, setRecordno] = useState(5);  */
 
         
-   {/*
+   /*
     const fetchdata = () =>{
         ReservationService.getReservationList().then((response) => {
             setDetails((response.data));
@@ -51,15 +51,15 @@ function Reservation() {
             console.log("response" + response);
             console.log("details" + details);
         });
-*/}
+*/
 
 
 
     const tdata = () =>{
 
-        var pageno = ( details.length / recordno );
-        var balancepage = ( details.length % recordno );
-        console.log("pageno==>" + pageno + "balancepage==>" + balancepage);
+/*        var pageno = ( details.length / recordno );
+        var balancepage = ( details.length % recordno ); 
+        console.log("pageno==>" + pageno + "balancepage==>" + balancepage); */
         return(
                 <tbody>
                     {
@@ -171,7 +171,7 @@ function Reservation() {
 
                             <div className="row mt-4">
                                 <div className="col-md-2 col-lg-1 col-3">
-                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" onChange={(e) => setRecordno((e.target.value))}>
+                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/ >
                                         <option value="1">5</option>
                                         <option value="2">10</option>
                                         <option value="3">15</option>
@@ -214,7 +214,8 @@ function Reservation() {
 
 
                             <div className="row m-3 d-flex justify-content-between">
-                                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                    
+                                    <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
                                 {/* <div className="col-6"></div> */}
                                 <div className="col-8 d-flex justify-content-end">
                                     <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-arrow-left"></i><span class="hide-element"></span></button>
@@ -222,6 +223,7 @@ function Reservation() {
                                     <button className="btn btn-outline-dark m-1 grey-border active">2</button>
                                     <button className="btn btn-outline-dark m-1 grey-border">3</button>
                                     <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i className="bi bi-arrow-right"></i></button>
+                                    
                                 </div>
                             </div>
 

@@ -130,8 +130,8 @@ function RoomAvailability() {
                 </tbody>
             </table>
                 <div class="d-flex justify-content-end">
-                    <button type="button" className="btn"><i class="bi bi-chevron-left me-1"></i>Prev</button>
-                    <button type="button" className="btn">Next<i class="bi bi-chevron-right ms-1"></i></button>
+                    <button type="button" className="btn"><i className="bi bi-chevron-left me-1"></i>Prev</button>
+                    <button type="button" className="btn">Next<i className="bi bi-chevron-right ms-1"></i></button>
                 </div>
             </div>
             </div>
