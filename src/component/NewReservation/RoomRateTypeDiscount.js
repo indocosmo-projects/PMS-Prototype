@@ -131,7 +131,7 @@ function RoomRateTypeDiscount() {
                                 <h4 className='left ms-2 mt-2'>Payment Details</h4>
                                 <div>
                                 {/* <button className="btn btn-danger btn-xs me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button> */}
-                                <button className="btn btn-primary btn-xs" onClick={handleIncrement}><i className="bi bi-plus" ></i> Add Payment</button>
+                                <button className="btn btn-primary btn-xs" onClick={handleIncrement}><i className="bi bi-plus" ></i> Add details</button>
                                 </div>
                             </div>
                             <table className="table type-table">
