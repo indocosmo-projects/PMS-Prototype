@@ -36,7 +36,8 @@ function RoomRateTypeDiscount() {
     const tdata = () => {
         return(
             <tbody>
-            { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} >
+            {/* { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} > */}
+            <tr>
                 <td>
                     <select className="form-control form-select text-center">
                         <option> DLX</option>
@@ -112,11 +113,11 @@ function RoomRateTypeDiscount() {
                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
                 </td>
                 <td>
-                   
+                <button className="btn btn-danger btn-xs me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
                 </td>
             
                 </tr>
-                )}
+                {/* )} */}
         </tbody>
         );
 }
@@ -129,8 +130,8 @@ function RoomRateTypeDiscount() {
                             <div className='d-flex justify-content-between'>
                                 <h4 className='left ms-2 mt-2'>Payment Details</h4>
                                 <div>
-                                <button className="btn btn-danger btn-xs me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
-                                <button className="btn btn-primary btn-xs" onClick={handleIncrement}><i className="bi bi-plus" ></i></button>
+                                {/* <button className="btn btn-danger btn-xs me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button> */}
+                                <button className="btn btn-primary btn-xs" onClick={handleIncrement}><i className="bi bi-plus" ></i> Add Payment</button>
                                 </div>
                             </div>
                             <table className="table type-table">
@@ -144,8 +145,10 @@ function RoomRateTypeDiscount() {
                                         <th>TOTAL</th>
                                         <th>DISCOUNT</th>
                                         <th>SUB TOTAL</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
+                                {tdata()}
                                 {tdata()}
 
                             </table>

@@ -217,8 +217,8 @@ const display = (e) => {
                     
                 <div className='col-12 d-flex justify-content-center'>
                    
-                        <button type="button" onClick={handleIncrement} className="btn btn-primary px-4" > +  Add</button>
-                        <button type="button" onClick={handleDecrement} className="btn btn-danger px-3 me-2" > -  Remove</button>
+                        <button type="button" onClick={handleDecrement} className="btn btn-danger px-3 me-2" >Close</button>
+                        <button type="button" onClick={handleIncrement} className="btn btn-primary px-4" >Add</button>
                         
 
                   </div>
