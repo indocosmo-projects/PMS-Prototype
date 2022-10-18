@@ -1,9 +1,136 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
 function RoomRateTypeDiscount() {
+
+    const [count, setCount] = useState(1);
+    const [cn, setCn] = useState(5);
+    const [del, setDel] = useState(0);
+    const details =
+        [
+            { id: 1, name: 'room1' },
+            { id: 2, name: 'room2' },
+            { id: 3, name: 'room3' },
+            { id: 4, name: 'room4' },
+            { id: 5, name: 'room5' },
+        ];
+
+        const handleIncrement = () => {
+            setCount((count + 1 ));
+            setCn(( cn + 1 ));
+            details.push(({ id: cn, name: 'rooms' + cn + '' }));
+        }
+        
+        const handleDecrement = (i) => {
+            setDel((i));
+        }
+        
+        const display = (e) => {
+            let classes = "left ";
+
+         //   console.log(classes+ del +"---disp"+e)
+            if(del === e && del <= count){ 
+                return( 
+                classes = "left hide"
+            );
+            }else{
+                classes += e <= count ? "show" : "hide";
+            }
+            return classes;
+        }
+        
+
+    const tdata = () => {
+        return(
+            <tbody>
+            { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} >
+                <td>
+                    <select className="form-control form-select text-center">
+                        <option> DLX</option>
+                        <option> STND</option>
+                        <option> PREM</option>
+                        <option> CLASS</option>
+                        <option> PREM</option>
+                    </select>
+                </td>
+                <td>
+                    <select className="form-control form-select text-center">
+                        <option> RACKRATE</option>
+                        <option> 2</option>
+                        <option> 3</option>
+                    </select>
+                </td>
+
+                <td>
+                    <InputGroup className="mb-3">
+                        <Button variant="btn btn-secondary" id="button-addon2">
+                        <i className="bi bi-dash"></i>
+                        </Button>
+                        <Form.Control className='text-center'
+                            placeholder="1"
+                            aria-label="1"
+                            aria-describedby="basic-addon2"
+                        />
+                        <Button variant="btn btn-secondary" id="button-addon2">
+                        <i className="bi bi-plus-lg"></i>
+                        </Button>
+                    </InputGroup>
+                </td>
+
+                <td>
+                <InputGroup className="mb-3">
+                        <Button variant="btn btn-secondary" id="button-addon2">
+                        <i className="bi bi-dash"></i>
+                        </Button>
+                        <Form.Control className='text-center'
+                            placeholder="1"
+                            aria-label="1"
+                            aria-describedby="basic-addon2"
+                        />
+                        <Button variant="btn btn-secondary" id="button-addon2">
+                        <i className="bi bi-plus-lg"></i>
+                        </Button>
+                    </InputGroup>
+                
+                </td>
+                <td>
+                <InputGroup className="mb-3">
+                        <Button variant="btn btn-secondary" id="button-addon2">
+                        <i className="bi bi-dash"></i>
+                        </Button>
+                        <Form.Control className='text-center'
+                            placeholder="1"
+                            aria-label="1"
+                            aria-describedby="basic-addon2"
+                        />
+                        <Button variant="btn btn-secondary" id="button-addon2">
+                        <i className="bi bi-plus-lg"></i>
+                        </Button>
+                    </InputGroup>
+                
+                </td>
+                <td>
+                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
+                </td>
+                <td>
+                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
+                </td>
+                <td>
+                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
+                </td>
+                <td>
+                    <button className="btn btn-danger btn-xs" onClick={(e)=>handleDecrement(detail.id)}><i className="bi bi-trash "></i></button>
+                </td>
+            
+                </tr>
+                )}
+        </tbody>
+        );
+}
+
+
         return(
                 <div>
                     <div className="padcolumn mt-1 total-bg" >
@@ -20,179 +147,11 @@ function RoomRateTypeDiscount() {
                                         <th className="thstyle">TOTAL</th>
                                         <th className="thstyle">DISCOUNT</th>
                                         <th className="thstyle">SUB TOTAL</th>
-                                        <th>&nbsp;</th>
+                                        <th><button className="btn btn-primary btn-xs" onClick={handleIncrement}><i className="bi bi-plus" ></i></button></th>
                                     </tr>
                                 </thead>
                                 
-                        <tbody>
-                        
-                            <tr>
-                                <td>
-                                    <select className="form-control form-select text-center">
-                                        <option> DLX</option>
-                                        <option> STND</option>
-                                        <option> 3</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select className="form-control form-select text-center">
-                                        <option> RACKRATE</option>
-                                        <option> 2</option>
-                                        <option> 3</option>
-                                    </select>
-                                </td>
-                                <td>
-                                <InputGroup className="mb-3">
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-dash"></i>
-                                        </Button>
-                                        <Form.Control className='text-center'
-                                            placeholder="1"
-                                            aria-label="1"
-                                            aria-describedby="basic-addon2"
-                                        />
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-plus-lg"></i>
-                                        </Button>
-                                    </InputGroup>
-                                 
-                                </td>
-                                <td>
-                                <InputGroup className="mb-3">
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-dash"></i>
-                                        </Button>
-                                        <Form.Control className='text-center'
-                                            placeholder="1"
-                                            aria-label="1"
-                                            aria-describedby="basic-addon2"
-                                        />
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-plus-lg"></i>
-                                        </Button>
-                                    </InputGroup>
-                                 
-                                </td>
-                                <td>
-                                <InputGroup className="mb-3">
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-dash"></i>
-                                        </Button>
-                                        <Form.Control className='text-center'
-                                            placeholder="1"
-                                            aria-label="1"
-                                            aria-describedby="basic-addon2"
-                                        />
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-plus-lg"></i>
-                                        </Button>
-                                    </InputGroup>
-                                 
-                                </td>
-                                <td>
-                                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
-                                </td>
-                                <td>
-                                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
-                                </td>
-                                <td>
-                                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
-                                </td>
-                                <td>
-                                    <button className="btn btn-danger btn-xs"><i className="bi bi-trash "></i></button>
-                                </td>
-                            </tr>
-                            <tr className="">
-                                <td>
-                                    <select className="form-control form-select text-center">
-                                        <option> DLX</option>
-                                        <option> STND</option>
-                                        <option> 3</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select className="form-control form-select text-center">
-                                        <option> RACKRATE</option>
-                                        <option> 2</option>
-                                        <option> 3</option>
-                                    </select>
-                                </td>
-
-                                <td>
-                                    <InputGroup className="mb-3">
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-dash"></i>
-                                        </Button>
-                                        <Form.Control className='text-center'
-                                            placeholder="1"
-                                            aria-label="1"
-                                            aria-describedby="basic-addon2"
-                                        />
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-plus-lg"></i>
-                                        </Button>
-                                    </InputGroup>
-                                </td>
-
-                                <td>
-                                <InputGroup className="mb-3">
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-dash"></i>
-                                        </Button>
-                                        <Form.Control className='text-center'
-                                            placeholder="1"
-                                            aria-label="1"
-                                            aria-describedby="basic-addon2"
-                                        />
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-plus-lg"></i>
-                                        </Button>
-                                    </InputGroup>
-                                 
-                                </td>
-                                <td>
-                                <InputGroup className="mb-3">
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-dash"></i>
-                                        </Button>
-                                        <Form.Control className='text-center'
-                                            placeholder="1"
-                                            aria-label="1"
-                                            aria-describedby="basic-addon2"
-                                        />
-                                        <Button variant="btn btn-secondary" id="button-addon2">
-                                        <i className="bi bi-plus-lg"></i>
-                                        </Button>
-                                    </InputGroup>
-                                 
-                                </td>
-                                <td>
-                                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
-                                </td>
-                                <td>
-                                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
-                                </td>
-                                <td>
-                                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
-                                </td>
-                                <td>
-                                    <button className="btn btn-primary btn-xs"><i className="bi bi-plus" ></i></button>
-                                </td>
-                            </tr>
-                            {/* <tr className="theadpadding">
-                                <td colSpan="7" align="right">
-                                    TOTAL
-                                </td>
-                                <td align="right">
-                                    5000
-                                </td>
-                            
-                                <td>
-                                    <button className="btn btn-success btn-xs"><i className="bi bi-download"></i></button>
-                                </td>
-                            </tr> */}
-                            
-                        </tbody>
+                                {tdata()}
                             </table>
                         {/* </div> */}
                             <div className='row'>
