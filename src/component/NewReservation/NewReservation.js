@@ -42,8 +42,8 @@ function NewReservation() {
                                 </div>
                                 <div className="col-sm">
                                     <div className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="departdate">By :</label>
-                                            <input type="date" className="form-control" id="departdate" placeholder="Enter Depart Date" name="departdate" />
+                                        <label className="text-left" htmlFor="departdate">Reserved By :</label>
+                                            <input type="text" className="form-control" id="departdate" placeholder="Enter Depart Date" name="departdate" />
                                     </div>
                                 </div>
                                 <div className="col-sm">
