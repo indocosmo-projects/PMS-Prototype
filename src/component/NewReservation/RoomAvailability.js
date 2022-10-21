@@ -59,9 +59,9 @@ function RoomAvailability() {
                 </div>
                 <h1></h1>
                 <div className="form-group mt-3 d-flex justify-content-end" >
-                    <button type="button" className="btn btn-secondary w-25 btnstyle">Edit</button>
+                    {/* <button type="button" className="btn btn-secondary btnstyle text-white" title="Calculate Nights" onClick={nightcalculation}>Check Nights</button> */}
+                    {/* <button type="button" className="btn btn-secondary w-25 btnstyle">Edit</button> */}
                     <button type="button" className="btn btn-success w-25 btnstyle">Go</button>
-                    <button type="button" className="btn btn-warning w-25 btnstyle text-white" title="Calculate Nights" onClick={nightcalculation}>Nights</button>
                     
                 </div>
         </div> 
