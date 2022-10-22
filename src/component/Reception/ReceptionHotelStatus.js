@@ -76,21 +76,8 @@ function ReceptionHotelStatus() {
     }
 
         return(
-            <div className="section">
                 <div className="container-fluid">
-                    {/* ----- Heading ------ */}
-                    <div>
-                        <h5 className="header"> RESERVATIONS </h5>
-                    </div>
-
-                    <div className="p-3">
-                        <div className="height">
-                            <Link className="nvlink" to="/reception">IN-HOUSE</Link>
-                            <Link className="nvlink" to="/receptionexpectedarrival">EXPECTED ARRIVALS</Link>
-                            <Link className="nvlink active" to="/receptionhotelstatus">HOTEL STATUS</Link>
-                        </div>
-                    </div>
-
+                
                     <div className="shade row">
                         <div className="col-sm-9">
                             <div className="row">
@@ -257,7 +244,6 @@ function ReceptionHotelStatus() {
                     </div>
 
                 </div>
-            </div>
         );
 }
  

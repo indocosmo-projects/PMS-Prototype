@@ -10,9 +10,9 @@
     width : 320px;
 }
 
-.tdwidth{
+/* .tdwidth{
     width : 630px;
-}
+} */
 
 .button{
     height: 60px;
@@ -20,6 +20,23 @@
     padding : 5px;
 }
 
+
+.reception-table{
+    /* background-color: rgb(255, 255, 255); */
+    border-radius:.5em;
+    padding:0 .5em;
+    padding-top: 1em !important;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-shadow: 3px 3px 10px rgba(129, 141, 163, 0.134);
+    border: .5px solid rgb(235, 235, 235);
+}
+
+/* .reception-table-btn{
+    display: flex;
+    flex-direction: row;
+} */
 
 .height{
     padding : 10px;
@@ -47,13 +64,13 @@
 }
 
 .active{
-    background-color: red;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    /* color: white; */
 }
 
-.active:hover{
+/* .active:hover{
     color: white;
-}
+} */
 
 .shade{
     background-color:  rgb(241, 238, 238); 

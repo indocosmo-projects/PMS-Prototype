@@ -118,9 +118,9 @@ function Reservation() {
                             <label className="text" htmlFor="arrival">Arrival Date :</label>
                             <input type="date" className="form-control " name="arrival" id="arrival"/>
                         </div>
-                        <div className="col-sm-6 form-group inputfieldpadding">
-                            <button className="btn btn-primary m-1">Search</button>
+                        <div className="col-sm-12 form-group inputfieldpadding d-flex justify-content-end mt-3">
                             <button className="btn btn-secondary m-1" onClick={() =>setDropdown(( 0 )) }>Close</button>
+                            <button className="btn btn-primary m-1">Search</button>
                         </div>
                     </div>
                 </div>
@@ -162,7 +162,7 @@ function Reservation() {
                         <div className="col-sm-6 d-flex justify-content-end">
                                     <div className="mb-3 ">
                                         {/* <a href="/newreservation"><button className="btn btn-success" title="New Reservation">Add New <i className="bi bi-plus"></i></button></a> */}
-                                        <Link to="/newreservation"><button className="btn btn-success" title="New Reservation">Add New <i className="bi bi-plus"></i></button></Link>
+                                        <Link to="/newreservation"><button className="btn btn-success" title="New Reservation"><i className="bi bi-plus"></i>Add New</button></Link>
                                     </div>
                         </div>
                         </div>
