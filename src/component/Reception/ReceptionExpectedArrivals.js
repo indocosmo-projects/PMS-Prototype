@@ -19,24 +19,24 @@ function ReceptionExpectedArrivals() {
         {id: 7, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         ];
         const [dropdown, setDropdown] = useState(0);
-        const [recordno, setRecordno] = useState(5); 
+        // const [recordno, setRecordno] = useState(5); 
 
 
 
     const tdata = () =>{
         
-        return(
+        return( 
                 <tbody>
                     {
                      details.map(detail =>  <tr key={detail.id} >
-                        <td className="left" style={{color : 'blue'}} >{detail.rese}</td>
-                        <td className="left">{detail.arrival}</td>
+                        <td  style={{color : 'blue'}} >{detail.rese}</td>
+                        <td >{detail.arrival}</td>
                         <td >{detail.nights}</td>
                         <td >{detail.rooms}</td>
-                        <td className="left">{detail.departure}</td>
-                        <td className="left">{detail.bookedby}</td>
-                        <td className="left">{detail.bookedfor}</td>
-                        <td className="left">{detail.bookedon}</td>
+                        <td >{detail.departure}</td>
+                        <td >{detail.bookedby}</td>
+                        <td >{detail.bookedfor}</td>
+                        <td >{detail.bookedon}</td>
                         <td className="bg-success text-white" >CHECK-IN</td>
                     </tr>
                     )}
@@ -113,13 +113,13 @@ function ReceptionExpectedArrivals() {
                        
                         <div className="col-sm-6">
                             <div className="mb-3 ">
-                            <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}>NEW CHECK-IN<i className="bi bi-plus"></i></button></Link>
+                            <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}><i className="bi bi-plus"></i>New Check-in</button></Link>
                             </div>
                         </div>
                     </div>
                     <div className="row mt-4">
                                 <div className="col-md-2 col-lg-1 col-3">
-                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" onChange={(e) => setRecordno((e.target.value))}>
+                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/>
                                         <option value="1">5</option>
                                         <option value="2">10</option>
                                         <option value="3">15</option>
@@ -134,18 +134,18 @@ function ReceptionExpectedArrivals() {
                                
                         </div> 
 
-                     <table className="table table-bordered">
+                     <table className="table table-bordered reception-table">
                         <thead >
                             <tr>
-                                <th className="thstyle left">RESV.#</th>
-                                <th className="tdwidthguest left">ARRIVAL</th>
-                                <th className="thstyle left">NIGHTS</th>
-                                <th className="thstyle left">ROOMS</th>
-                                <th className="thstyle left">DEPARTURE</th>
-                                <th className="thstyle left">BOOKED BY</th>
-                                <th className="tdwidth left">BOOKED FOR</th>
-                                <th className="tdwidth left">BOOKED ON</th>
-                                <th className="tdwidth left">STATUS</th>
+                                <th className="thstyle">RESV.#</th>
+                                <th className="tdwidthguest">ARRIVAL</th>
+                                <th className="thstyle">NIGHTS</th>
+                                <th className="thstyle">ROOMS</th>
+                                <th className="thstyle">DEPARTURE</th>
+                                <th className="thstyle">BOOKED BY</th>
+                                <th className="tdwidth">BOOKED FOR</th>
+                                <th className="tdwidth">BOOKED ON</th>
+                                <th className="tdwidth">STATUS</th>
                             </tr>							
                         </thead>
                                 {tdata()}
@@ -154,6 +154,7 @@ function ReceptionExpectedArrivals() {
                     
                     </div>
                 </div>
+                
         );
     
 }

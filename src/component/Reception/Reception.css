@@ -1,9 +1,9 @@
 :root{
-    --occupied : pink;
-    --reserved : #81D4FA;
-    --vaccant : darkblue;
-    --clean : #AB47BC;
-    --dirty : goldenrod;
+    --occupied : rgb(207, 56, 56);
+    --reserved : #4184ff;
+    --vaccant : rgb(131, 131, 131);
+    --clean : #176825;
+    --dirty : rgb(196, 151, 39);
 }
 
 .tdwidthguest{
@@ -14,29 +14,30 @@
     width : 630px;
 } */
 
-.button{
-    height: 60px;
-    width: 70px;
-    padding : 5px;
-}
-
-
 .reception-table{
-    /* background-color: rgb(255, 255, 255); */
-    border-radius:.5em;
-    padding:0 .5em;
-    padding-top: 1em !important;
-    display: block;
+    /* border-radius:.5em; */
+    padding: .5em;
     overflow-x: auto;
     white-space: nowrap;
-    box-shadow: 3px 3px 10px rgba(129, 141, 163, 0.134);
-    border: .5px solid rgb(235, 235, 235);
+    min-width: 100%;
+    /* box-shadow: 3px 3px 10px rgba(129, 141, 163, 0.134); */
+    /* border: .5px solid rgb(235, 235, 235); */
 }
 
-/* .reception-table-btn{
+@media only screen and (max-width: 1300px) {
+    .reception-table{
+        display: block;
+    }
+    }
+
+.reception-table td{
+    width: max-content;
+}
+
+.reception-table-btn{
     display: flex;
     flex-direction: row;
-} */
+}
 
 .height{
     padding : 10px;
@@ -79,15 +80,12 @@
     margin: auto;
 }
 
-.square{
-    height: 15px;
-    width: 15px;
-    float : right !important;
-    margin-top : 4px;
-    margin-left: 20px;
+.circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 50em;
+    /* float : right !important; */
 }
-
-
 
 .left{
     text-align : left;
@@ -98,10 +96,10 @@
     background-color : var(--occupied);
 }
 .border-occupied{
-    border : 5px solid var(--occupied);
+    border: 5px solid var(--occupied);
 }
 .border-bottom-occupied{
-    border-bottom : 5px solid var(--occupied);
+    border: 5px solid var(--occupied);
 }
 
 
@@ -110,10 +108,10 @@
     background-color : var(--reserved);
 }
 .border-reserved{
-    border : 5px solid var(--reserved);
+    border: 5px solid var(--reserved);
 }
 .border-bottom-reserved{
-    border-bottom : 5px solid var(--reserved);
+    border: 5px solid var(--reserved);
 }
 
 
@@ -125,7 +123,7 @@
     border : 5px solid var(--vaccant);
 }
 .border-bottom-vaccant{
-    border-bottom : 5px solid var(--vaccant);
+    border: 5px solid var(--vaccant);
 }
 
 
@@ -161,8 +159,7 @@
 
 .room{
     width : 100px;
-    border-bottom-right-radius : 15px;
-    border-bottom-left-radius : 15px;
+    border-radius : 15px;
     margin : 10px;
 }
 
@@ -212,3 +209,31 @@
     font-size : 20px;
     text-align: left;
 }
+
+
+.br-bg-occupied{
+    padding-top: .5em;
+    color: white;
+    background-color: var(--occupied);
+}
+.br-bg-reserved{
+    padding-top: .5em;
+    color: white;
+    background-color: var(--reserved);
+}
+.br-bg-clean{
+    padding-top: .5em;
+    color: white;
+    background-color: var(--clean);
+}
+.br-bg-vacant{
+    padding-top: .5em;
+    color: white;
+    background-color: var(--vaccant);
+}
+.br-bg-dirty{
+    padding-top: .5em;
+    color: white;
+    background-color: var(--dirty);
+}
+
