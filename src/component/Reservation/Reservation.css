@@ -44,15 +44,15 @@
   border-radius: .5em;
 }
 .reservation_table{
-  background-color: rgb(255, 255, 255);
-  border-radius:.5em;
-  padding:0 .5em;
-  padding-top: 1em !important;
+  /* background-color: rgb(255, 255, 255); */
+  /* border-radius:.5em; */
+  padding: .5em;
+  /* padding-top: 1em !important; */
   display: block;
   overflow-x: auto;
   white-space: nowrap;
-  box-shadow: 3px 3px 10px rgba(129, 141, 163, 0.134);
-  border: .5px solid rgb(235, 235, 235);
+  /* box-shadow: 3px 3px 10px rgba(129, 141, 163, 0.134); */
+  /* border: .5px solid rgb(235, 235, 235); */
 
 }
 
@@ -71,17 +71,20 @@
 }
 
 ::-webkit-scrollbar {
-  height: 5px;
+  height: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  border-radius: 4px;
+  background-color: #cecece;
+  border-radius: .3em;
+
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(211, 211, 211);
+  background: rgb(161, 161, 161);
+  border-radius: .3em;
 }
 
 @media only screen and (max-width: 600px) {
