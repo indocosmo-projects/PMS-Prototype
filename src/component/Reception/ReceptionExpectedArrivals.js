@@ -94,10 +94,10 @@ function ReceptionExpectedArrivals() {
   
 
         return (
-                <div className="container-fluid">
+                <div className="container-fluid tab-bg">
                
                     <div className="p-3">
-                    <div className="row ">
+                    <div className="row mt-4">
                     <div className="col-sm-6">
                             <div className="input-group mb-3 ">
                                         <input type="text" className="form-control" placeholder="Search..." />
@@ -113,7 +113,7 @@ function ReceptionExpectedArrivals() {
                        
                         <div className="col-sm-6">
                             <div className="mb-3 ">
-                            <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}><i className="bi bi-plus"></i>New Check-in</button></Link>
+                            <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
                             </div>
                         </div>
                     </div>

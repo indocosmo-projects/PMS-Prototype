@@ -121,13 +121,12 @@ function Reception() {
                 <Tabs
                     defaultActiveKey="inhouse"
                     id="justify-tab-example"
-                    className="mt-4 mb-4"
-                    justify
-                    >
-                    <Tab eventKey="inhouse" title="IN-HOUSE">
+                    className="mt-4 mb-4 status-tab"
+                    justify >
+                    <Tab className='tab-content-bg tab-bg' eventKey="inhouse" title={<span> <i class="bi bi-house-door-fill me-2"/>In House</span>}>
                     
                     <div className="p-3">
-                        <div className="row ">
+                        <div className="row mt-4">
                                
 
                         <div className="col-sm-6">
@@ -146,7 +145,7 @@ function Reception() {
          
                                 <div className="col-sm-6">
                                     <div className="mb-3 ">
-                                    <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}><i className="bi bi-plus"></i>Add New</button></Link>
+                                    <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>Add New</button></Link>
                                     </div>
                                 </div>
                         </div>
@@ -207,7 +206,7 @@ function Reception() {
                     </div>
 
                     </Tab>
-                    <Tab eventKey="expectedarrivals" title="EXPECTED ARRIVALS">
+                    <Tab className='tab-content-bg tab-bg' eventKey="expectedarrivals" title={<span> <i class="bi bi-arrow-down-right-square-fill me-2"/>Expected Arrivals</span>}>
                         <ReceptionExpectedArrivals />
                         <div className="row m-3">
                                 {/* <div className="col-3 " >Showing 1 to {recordno} of {details.length} entries</div> */}
@@ -224,7 +223,7 @@ function Reception() {
 
                         
                     </Tab>
-                    <Tab eventKey="hotelstatus" title="HOTEL STATUS">
+                    <Tab className='tab-content-bg tab-bg' eventKey="hotelstatus" title={<span> <i class="bi bi-exclamation-circle-fill me-2"/>Hotel Status</span>}>
                         <ReceptionHotelStatus />
                     </Tab>
                     {/* <Tab eventKey="contact" title="Contact" disabled>

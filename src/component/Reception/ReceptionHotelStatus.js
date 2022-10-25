@@ -36,35 +36,35 @@ function ReceptionHotelStatus() {
     const roomlist = (room) => {
         
         if(room.status === 'O')return (
-                <div className="room row border-occupied">
+                <div className="room row border-occupied mx-1">
                     <div className="col-12 rmnum">{room.name}</div>
                     <div className="col-12 br-bg-occupied"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
                 </div>    
             );
 
             if(room.status === 'R')return (
-                <div className="room row border-reserved">
+                <div className="room row border-reserved mx-1">
                     <div className="col-12 rmnum">{room.name}</div>
                     <div className="col-12 br-bg-reserved"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
                 </div>    
             );
         
             if(room.status === 'V')return (
-                <div className="room row border-vaccant">
+                <div className="room row border-vaccant mx-1">
                     <div className="col-12 rmnum">{room.name}</div>
                     <div className="col-12 br-bg-vacant"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
                 </div>    
             );
 
             if(room.status === 'C')return (
-                <div className="room row border-clean">
+                <div className="room row border-clean  mx-1">
                     <div className="col-12 rmnum">{room.name}</div>
                     <div className="col-12 br-bg-clean"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
                 </div>    
             );
 
             if(room.status === 'D')return (
-                <div className="room row border-dirty">
+                <div className="room row border-dirty mx-1">
                     <div className="col-12 rmnum">{room.name}</div>
                     <div className="col-12 br-bg-dirty"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
                 </div>    
@@ -73,41 +73,20 @@ function ReceptionHotelStatus() {
     }
 
         return(
-                <div className="container-fluid">
+                <div className="container-fluid tab-bg">
                 
-                    <div className=" row">
-                        <div className="col-sm-9">
-                            <div className="row">
-                                    <div className="col-sm-2 p-3">
-                                        <div className="row">
-                                            <div className="col-2 circle occupied" ></div>
-                                            <div className="col-8 left">OCCUPIED</div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-2  p-3">
-                                        <div className="row">
-                                            <div className="col-2 circle reserved" ></div>
-                                            <div className="col-8 left">RESERVED</div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-2 p-3">
-                                        <div className="row">
-                                            <div className="col-2 circle vaccant" ></div>
-                                            <div className="col-8 left">VACCANT</div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-2 p-3">
-                                        <div className="row">
-                                            <div className="col-2 circle clean" ></div>
-                                            <div className="col-8 left">CLEAN</div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-2 p-3">
-                                        <div className="row">
-                                            <div className="col-2 circle dirty" ></div>
-                                            <div className="col-8 left">DIRTY</div>
-                                        </div>
-                                    </div>
+                    <div className="row mt-4">
+                    <p className='left'>Check your hotel status across the floors</p>
+
+                        <div className="col-sm-12 col-md-8">
+                            <div className="status-hint-bg gap-4">
+                                            <div className='gray'>Status Colors <i class="bi bi-caret-right-fill gray"></i></div>
+                                            <div><i class="bi bi-circle-fill occupied me-2"></i>OCCUPIED</div>
+                                            <div><i class="bi bi-circle-fill reserved me-2"></i>RESERVED</div>
+                                            <div><i class="bi bi-circle-fill vaccant me-2"></i>VACCANT</div>
+                                            <div><i class="bi bi-circle-fill clean me-2"></i>CLEAN</div>
+                                            <div><i class="bi bi-circle-fill dirty me-2"></i>DIRTY</div>
+
                                     {/* <div className="col-sm-2 p-3">
                                       <div className="row" >
                                         <div className="col-12 left" >SORT BY</div> 
@@ -125,9 +104,9 @@ function ReceptionHotelStatus() {
 
                             </div>
                         </div>
-                            <div className="col-sm-3">
-                                    <div className="m-3 ">
-                                        <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}><i className="bi bi-plus"></i>New Check-in</button></Link>
+                            <div className="col-sm-4">
+                                    <div className="p-3">
+                                        <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
                                     </div>
                             </div>
                     </div>
@@ -141,7 +120,7 @@ function ReceptionHotelStatus() {
                                 <Accordion.Body>
 
                         {/* <h4 className="left"></h4> */}
-                        <ul className="ulistmargin ">
+                        <ul className="ulistmargin">
                             {rooms.map(room => <li key={room.id} className="listItem">
                             {roomlist(room)}
                             </li>
@@ -152,7 +131,7 @@ function ReceptionHotelStatus() {
                             <Accordion.Item eventKey="1">
                                 <Accordion.Header><h5>FLOOR-02</h5></Accordion.Header>
                                 <Accordion.Body>
-                                <ul className="ulistmargin ">
+                                <ul className="ulistmargin">
                             {rooms.map(room => <li key={room.id} className="listItem">
                             {roomlist(room)}
                             </li>
@@ -164,7 +143,7 @@ function ReceptionHotelStatus() {
                             <Accordion.Item eventKey="2">
                                 <Accordion.Header><h5>FLOOR-03</h5></Accordion.Header>
                                 <Accordion.Body>
-                                <ul className="ulistmargin ">
+                                <ul className="ulistmargin">
                             {rooms.map(room => <li key={room.id} className="listItem">
                             {roomlist(room)}
                             </li>
@@ -176,7 +155,7 @@ function ReceptionHotelStatus() {
                             <Accordion.Item eventKey="3">
                                 <Accordion.Header><h5>FLOOR-04</h5></Accordion.Header>
                                 <Accordion.Body>
-                                <ul className="ulistmargin ">
+                                <ul className="ulistmargin">
                             {rooms.map(room => <li key={room.id} className="listItem">
                             {roomlist(room)}
                             </li>
@@ -188,7 +167,7 @@ function ReceptionHotelStatus() {
                             <Accordion.Item eventKey="4">
                                 <Accordion.Header><h5>FLOOR-05</h5></Accordion.Header>
                                 <Accordion.Body>
-                                <ul className="ulistmargin ">
+                                <ul className="ulistmargin">
                             {rooms.map(room => <li key={room.id} className="listItem">
                             {roomlist(room)}
                             </li>
@@ -201,76 +180,78 @@ function ReceptionHotelStatus() {
                     </Accordion>
                         </div>
 
-                        <div className="col-sm-12 col-md-4 p-3">
-                            <div className="row">
-                                <div className="col-sm-12">
-                                    <button className="btn btn-secondary w-100 text-white mb-2">Deposit</button>
-                                    <button className="btn btn-secondary w-100 text-white mb-2">Posting</button>
-                                    <button className="btn btn-secondary w-100 text-white mb-2">Bill Preview</button>
-                                    <button className="btn btn-secondary w-100 text-white mb-2">Sharer</button>
-                                    <button className="btn btn-info w-100 text-white mb-2">Deposit</button>
+                        <div className="col-sm-12 col-md-4">
+                            <div className="row mt-4">
+                                {/* <div className="col-sm-12"> */}
+                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2"><i class="bi bi-cash-coin me-2"></i>Deposit</button></div>
+                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2">Posting</button></div>
+                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2"><i class="bi bi-receipt me-2"></i>Bill Preview</button></div>
+                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2"><i class="bi bi-person-plus-fill me-2"></i>Sharer</button></div>
+                                    <div className='col-sm-12'><button className="btn btn-info w-100 text-white mb-2"><i class="bi bi-printer-fill me-2"></i>Deposit</button></div>
+                                    
+                                    
                                     <div className="form-group left mt-2">
                                         <label for="room"><b>Room Number</b></label>
                                         <input type="text" className="form-control" id="room" />
                                     </div>
+                                </div>
                                     <div className="row">
-                                        <div className="col-sm-12 col-md-6">
+                                        <div className="col-sm-12">
                                             <div className="left p-2 row" >
                                                     
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> Complementary BreakFast</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>Complementary BreakFast</div>
                                             </div>
                                             <div className="left p-2 row" >
                                                
                                                     
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> Television</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>Television</div>
                                             </div>
                                             <div className="left p-2 row" >
                                                 
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> Coffee Maker</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>Coffee Maker</div>
                                             </div>
                                             <div className="left p-2 row" >
                                                 
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> Pick & Drop</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>Pick & Drop</div>
                                             </div>
                                             <div className="left p-2 row" >
                                                
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> 24x7 Room Service</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>24x7 Room Service</div>
                                             </div>
                                             <div className="left p-2 row" >
                                                 
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> Mineral Water 500 ml</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>Mineral Water 500 ml</div>
                                             </div>
                                             
                                         </div>
-                                        <div className="col-sm-12 col-md-6">
+                                        <div className="col-sm-12">
                                         <div className="left p-2 row" >
                                            
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> Free WiFi</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>Free WiFi</div>
                                             </div>
                                             <div className="left p-2 row" >
                                                 
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> Light Music</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>Light Music</div>
                                             </div>
                                             <div className="left p-2 row" >
                                                
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> Iron Box & Iron Board</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>Iron Box & Iron Board</div>
                                             </div>
                                             <div className="left p-2 row" >
                                                
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> Self Laundry</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>Self Laundry</div>
                                             </div>
                                             <div className="left p-2 row" >
                                                 
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> 24x7 Hot/Cold Water</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>24x7 Hot/Cold Water</div>
                                             </div>
                                             <div className="left p-2 row" >
                                                 
-                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill"></i> 24x7 Help Desk</div>
+                                                <div className="col-sm-12"><i className="bi bi-arrow-right-circle-fill me-1"></i>24x7 Help Desk</div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                {/* </div> */}
                         </div>
 
                     </div>
