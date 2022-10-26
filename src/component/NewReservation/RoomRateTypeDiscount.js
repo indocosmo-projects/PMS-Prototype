@@ -45,10 +45,9 @@ function RoomRateTypeDiscount() {
     const tdata = () => {
         return(
             <tbody>
-            { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} >
-                
             {/* { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} > */}
-            {/* <tr> */}
+                
+            <tr>
                 <td>
                     <select className="form-control form-select text-center">
                         <option> DLX</option>
@@ -129,7 +128,7 @@ function RoomRateTypeDiscount() {
                 </td>
                     
                 </tr>
-                )}
+                {/* )} */}
         </tbody>
         );
     }
@@ -163,7 +162,7 @@ function RoomRateTypeDiscount() {
                                 </thead>
                                 
                                 {tdata()}
-                                {/* {tdata()} */}
+                                {tdata()}
 
                             </table>
                         {/* </div> */}
