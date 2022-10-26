@@ -54,7 +54,7 @@ function Reception() {
                                     </td>
                              
                                 <td>
-                                    <button className="btn btn-primary"><i class="bi bi-printer-fill me-2"></i>Reprint</button>
+                                    <button className="btn btn-primary"><i class="bi bi-printer-fill me-2"></i>Print</button>
                                     </td>
                         </tr>
                     )}
@@ -123,7 +123,7 @@ function Reception() {
                     id="justify-tab-example"
                     className="mt-4 mb-4 status-tab"
                     justify >
-                    <Tab className='tab-content-bg tab-bg' eventKey="inhouse" title={<span> <i class="bi bi-house-door-fill me-2"/>In House</span>}>
+                    <Tab className='tab-content-bg tab-bg' eventKey="inhouse" title={<span><i class="bi bi-house-door-fill me-2"/>In-House Customers</span>}>
                     
                     <div className="p-3">
                         <div className="row mt-4">
@@ -133,7 +133,7 @@ function Reception() {
                             <div className="input-group mb-3 ">
                                         <input type="text" className="form-control" placeholder="Search..." />
                                         <button className="btn btn-outline-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button>
-                                        <button className="btn btn-primary" title="Search" >Search</button>
+                                        <button className="btn btn-dark" title="Search" >Search</button>
                                 </div>
                             <div className="parentdpdown">
                                 <div className="ddw" >

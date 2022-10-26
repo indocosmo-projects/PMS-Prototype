@@ -102,7 +102,7 @@ function ReceptionExpectedArrivals() {
                             <div className="input-group mb-3 ">
                                         <input type="text" className="form-control" placeholder="Search..." />
                                         <button className="btn btn-outline-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button>
-                                        <button className="btn btn-primary" title="Search" >Search</button>
+                                        <button className="btn btn-dark" title="Search" >Search</button>
                                 </div>
                             <div className="parentdpdown">
                                 <div className="ddw" >

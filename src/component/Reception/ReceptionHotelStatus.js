@@ -29,8 +29,6 @@ function ReceptionHotelStatus() {
         {id: 16, name : '116', status: 'O' },
         {id: 17, name : '117', status: 'R' },
         {id: 18, name : '118', status: 'V' },
-        {id: 19, name : '119', status: 'C' },
-        {id: 19, name : '120', status: 'C' },
     ]
 
     const roomlist = (room) => {
@@ -80,7 +78,7 @@ function ReceptionHotelStatus() {
 
                         <div className="col-sm-12 col-md-8">
                             <div className="status-hint-bg gap-4">
-                                            <div className='gray'>Status Colors <i class="bi bi-caret-right-fill gray"></i></div>
+                                            <div className='gray'>Status Colors<i class="bi bi-caret-right-fill gray"></i></div>
                                             <div><i class="bi bi-circle-fill occupied me-2"></i>OCCUPIED</div>
                                             <div><i class="bi bi-circle-fill reserved me-2"></i>RESERVED</div>
                                             <div><i class="bi bi-circle-fill vaccant me-2"></i>VACCANT</div>
@@ -104,7 +102,7 @@ function ReceptionHotelStatus() {
 
                             </div>
                         </div>
-                            <div className="col-sm-4">
+                            <div className="col-sm-12 col-md-4">
                                     <div className="p-3">
                                         <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
                                     </div>
@@ -187,7 +185,7 @@ function ReceptionHotelStatus() {
                                     <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2">Posting</button></div>
                                     <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2"><i class="bi bi-receipt me-2"></i>Bill Preview</button></div>
                                     <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2"><i class="bi bi-person-plus-fill me-2"></i>Sharer</button></div>
-                                    <div className='col-sm-12'><button className="btn btn-info w-100 text-white mb-2"><i class="bi bi-printer-fill me-2"></i>Deposit</button></div>
+                                    <div className='col-sm-12'><button className="btn btn-primary w-100 text-white mb-2"><i class="bi bi-printer-fill me-2"></i>Print</button></div>
                                     
                                     
                                     <div className="form-group left mt-2">
