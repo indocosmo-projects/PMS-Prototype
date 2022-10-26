@@ -150,7 +150,7 @@ function Reservation() {
                                     {/* </span></div> */}
                                 {/* <div className="input-group-append p-0 ms-2"> */}
                                     {/* <span className="input-group-text p-0 br"> */}
-                                        <button className="btn btn-primary" title="Search" >Search</button>
+                                        <button className="btn btn-dark px-4" title="Search" ><i class="bi bi-search"></i></button>
                                  {/* </span></div> */}
                             </div>
                             <div className="parentdpdown">
@@ -162,7 +162,7 @@ function Reservation() {
                         <div className="col-sm-6 d-flex justify-content-end">
                                     <div className="mb-3 ">
                                         {/* <a href="/newreservation"><button className="btn btn-success" title="New Reservation">Add New <i className="bi bi-plus"></i></button></a> */}
-                                        <Link to="/newreservation"><button className="btn btn-success" title="New Reservation"><i className="bi bi-plus"></i>Add New</button></Link>
+                                        <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation"><i className="bi bi-plus"></i>Add New</button></Link>
                                     </div>
                         </div>
                         </div>

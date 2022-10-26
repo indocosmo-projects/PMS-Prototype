@@ -58,3 +58,7 @@ body{
 }
 
 
+.btn-primary{
+    background-color: #5b67d6 !important;
+    border: none !important;
+  }
