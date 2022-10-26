@@ -225,11 +225,14 @@
 
 .status-hint-bg{
     background-color: rgb(255, 255, 255);
-    padding: .5em 2em;
+    padding: 1em 2em;
     display: flex;
     flex-direction: row !important;
     border-radius: .5em;
+    overflow: auto;
 }
+
+
 
 .status-tab > li.nav-item{
     background-color: #f7f7f7 !important;
