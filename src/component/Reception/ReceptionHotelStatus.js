@@ -104,7 +104,7 @@ function ReceptionHotelStatus() {
                         </div>
                             <div className="col-sm-12 col-md-4">
                                     <div className="p-3">
-                                        <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
+                                        <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
                                     </div>
                             </div>
                     </div>

@@ -133,7 +133,7 @@ function Reception() {
                             <div className="input-group mb-3 ">
                                         <input type="text" className="form-control" placeholder="Search..." />
                                         <button className="btn btn-outline-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button>
-                                        <button className="btn btn-dark" title="Search" >Search</button>
+                                        <button className="btn btn-dark px-4" title="Search" ><i class="bi bi-search"></i></button>
                                 </div>
                             <div className="parentdpdown">
                                 <div className="ddw" >
@@ -145,7 +145,7 @@ function Reception() {
          
                                 <div className="col-sm-6">
                                     <div className="mb-3 ">
-                                    <Link to="/newreservation"><button className="btn btn-success" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>Add New</button></Link>
+                                    <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>Add New</button></Link>
                                     </div>
                                 </div>
                         </div>
