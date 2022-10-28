@@ -200,3 +200,10 @@ select.form-control.form-select.text-center {
     text-align: left;
     width : 100%;
 }
+
+.overflow-reservefor{
+    padding: .5em;
+    overflow-x: auto;
+    white-space: nowrap;
+    min-width: 100%;
+}
