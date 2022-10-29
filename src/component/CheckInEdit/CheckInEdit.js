@@ -2,7 +2,10 @@ import React from 'react';
 import RoomAvailability from './RoomAvailability';
 import RoomRateTypeDiscount from './RoomRateTypeDiscount';
 import './CheckInEdit.css';
-import { Link } from "react-router-dom";
+import CheckInEditDetails from './CheckInEditDetails';
+
+
+// import { Link } from "react-router-dom";
 
 function CheckInEdit(){
     return(
@@ -138,8 +141,11 @@ function CheckInEdit(){
 
                      {/* ----- Room Rate Type Discount ------ */}
                      <RoomRateTypeDiscount/>
+
+
+                     <CheckInEditDetails/>
                 
-                     <div >
+                     {/* <div >
                             <h5 className="roomheader mb-0">
                                <Link to="/checkInEdit" className="nlink"> GUEST DETAILS</Link>
                                <Link to="/checkInOtherDetails" className="nlink"> OTHER DETAILS</Link>
@@ -241,9 +247,9 @@ function CheckInEdit(){
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> */}
                             
-
+{/* 
                               <div >
                                     <h5 className="roomheader">
                                        MISC.DETAILS
@@ -284,7 +290,7 @@ function CheckInEdit(){
                                         </div>
                                     </div>
 
-                                </div>
+                                </div> */}
 
 
 
