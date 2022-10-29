@@ -6,7 +6,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 function RoomRateTypeDiscount() {
         return(
                 <div>
-                    <div className="padcolumn mt-1 total-bg" >
+                    <div className="padcolumn mt-1 checkdetails light-violet-bg" >
                         {/* <div className="table"> */}
 
                             <table className="table type-table">

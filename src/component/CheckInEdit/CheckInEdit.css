@@ -1,4 +1,9 @@
 
+:root{
+    --tab-bg : #f1f3fa;
+}
+
+
 .inputfieldpadding{
     padding : 5px;
     text-align : left;
@@ -195,10 +200,7 @@ select.form-control.form-select.text-center {
     min-width: max-content;
 }
 
-.bgblue{
-    padding : 2px;
-    background-color : lightblue;
-}
+
 
 .nlink{
     display : inline-block;
@@ -215,11 +217,14 @@ select.form-control.form-select.text-center {
 
 }
 
+.light-violet-bg{
+    background-color: var(--tab-bg);
+}
+
 .checkdetails{
     margin:2em 0em;
     border: solid 1px rgb(226, 226, 226);
     border-radius: .5em;
-    background-color: white !important ;
 }
 
 /* .flex-column.nav.nav-pills{
@@ -229,13 +234,14 @@ select.form-control.form-select.text-center {
 .nav-pills .nav-item{
     border: solid 1px rgb(226, 226, 226)  !important;
     border-radius: .5em;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
     margin: .2em 0;
 
 }
 
 .tab-pane{
     padding-top: 1em;
+    background-color: var(--tab-bg);
 }
 
 .nav-pills .nav-item .nav-link{
@@ -246,3 +252,36 @@ select.form-control.form-select.text-center {
 .nav-pills .nav-item .nav-link.active{
     color: #ffffff;
 }
+
+.dark-bg{
+    background-color: #115236 !important;
+    border-radius: 1em;
+    color: #f7f7f7;
+    padding: .1em .8em;
+    font-size: 18px;
+}
+.vr-line{
+    width: 1px !important;
+    background-color: #313131;
+}
+.extra-bed-icon{
+    color: green;
+    font-size: 24px;
+}
+.white-bg{
+    background-color: #ffffff !important;
+    border-radius: .5em;
+    margin: 1em;
+    padding-top: .7em;
+    padding-bottom: .5em;
+    box-shadow: 2px 2px 10px rgba(220, 204, 250, 0.375) ;
+}
+.vl {
+    border-right: 1px solid rgb(208, 208, 208);
+  }
+
+  @media screen and (max-width: 576px){
+    .vl {
+        border: none;
+      }
+  }

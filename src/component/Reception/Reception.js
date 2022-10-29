@@ -115,7 +115,7 @@ function Reception() {
                 <div className="container-fluid">
                     {/* ----- Heading ------ */}
                     <div>
-                        <h5 className="header">Reception</h5>
+                        <h3 className="header">Reception</h3>
                     </div>
                     
                 <Tabs
