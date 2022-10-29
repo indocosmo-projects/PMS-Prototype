@@ -9,14 +9,14 @@ import Tab from 'react-bootstrap/Tab';
 
 function CheckInEditDetails() {
     return(
-            <div className="section checkdetails">
-                <div className="container-fluid formcontent">
+            <div className="section checkdetails light-violet-bg">
+                <div className="container-fluid light-violet-bg">
                 
                      <h4 className='left mb-3'>Details</h4>
 
                             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                         <Row>
-                            <Col sm={2}>
+                            <Col md={2}>
                             <Nav variant="pills" className="flex-column">
                                 <Nav.Item>
                                 <Nav.Link eventKey="first">Guest Details <i class="bi bi-caret-right-fill"></i></Nav.Link>
@@ -35,23 +35,23 @@ function CheckInEditDetails() {
                                 </Nav.Item>
                             </Nav>
                             </Col>
-                            <Col sm={10}>
+                            <Col md={10}>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
                                 
                                 <div className="row mb-3">
                        
-                                     <div className="col-sm-4">
+                                     <div className="col-md-12 col-lg-4 mb-2">
                                         <div className="form-group">
                                                 <input type="text" className="form-control" placeholder="First Name" id="fname" />
                                             </div>
                                      </div>
-                                     <div className="col-sm-4">
+                                     <div className="col-md-12 col-lg-4 mb-2">
                                         <div className="form-group ">
                                                 <input type="text" className="form-control" placeholder="Phone Number" id="phone" />
                                             </div>
                                      </div>
-                                     <div className="col-sm-4">
+                                     <div className="col-md-12 col-lg-4 mb-2">
                                         <div className="form-group ">
                                                 <input type="text" className="form-control" placeholder="Email Address" id="emailaddress" />
                                             </div>

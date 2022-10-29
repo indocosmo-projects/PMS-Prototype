@@ -4,7 +4,7 @@ function RoomAvailability() {
    
     return (
         <div className="row p-3">
-        <div className="col-md-3 availability_check_bg">
+        <div className="col-md-3 ">
                 <div className="col-sm-12">
                     <div className="form-group">
                         <label className="text-left" htmlFor="arrival">Arrival:</label>

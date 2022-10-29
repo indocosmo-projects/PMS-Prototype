@@ -21,7 +21,7 @@ function NewReservation() {
                 <div className="container-fluid formcontent">
                     {/* ----- Heading ------ */}
                     <div>
-                        <h5 className="header"> New Reservation </h5>
+                        <h3 className="header"> New Reservation </h3>
                     </div>
 
                      {/* ----- Form   ------ */}
