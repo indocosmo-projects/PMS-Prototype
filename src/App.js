@@ -11,6 +11,8 @@ import Navigationbar from './component/Common/Navigationbar';
 // import NavigationbarMannual from './component/Common/NavigationbarMannual';
 import CheckInEdit from './component/CheckInEdit/CheckInEdit';
 import CheckInEditOtherDetails from './component/CheckInEdit/CheckInEditOtherDetails';
+import ShiftManagement from './component/Shift/ShiftManagement';
+
 
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
                 <Route exact path="/roomlist" component={RoomList}/>
                 <Route exact path="/checkInEdit" component={CheckInEdit}/>
                 <Route exact path="/checkInOtherDetails" component={CheckInEditOtherDetails}/>
+                <Route exact path="/shiftManagement" component={ShiftManagement}/>
             </Switch>
             <Footer/>
         </Router>
