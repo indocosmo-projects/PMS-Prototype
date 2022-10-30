@@ -45,13 +45,8 @@ function RoomRateTypeDiscount() {
     const tdata = () => {
         return(
             <tbody>
-<<<<<<< HEAD
             { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} >
                 
-=======
-            {/* { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} > */}
-            <tr>
->>>>>>> 4ec077d22309a4314e8fd58baf2e5a48cf6b62cd
                 <td>
                     <select className="form-control form-select text-center">
                         <option> DLX</option>
@@ -127,17 +122,13 @@ function RoomRateTypeDiscount() {
                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
                 </td>
                 <td>
-<<<<<<< HEAD
                     <button className="btn btn-danger btn-xs me-2" onClick={(e) => deleteEachRow(detail.id)}><i className="bi bi-trash "></i></button>
-=======
-                <button className="btn btn-danger btn-xs me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
->>>>>>> 4ec077d22309a4314e8fd58baf2e5a48cf6b62cd
                 </td>
                     
                 </tr>
-                {/* )} */}
-        </tbody>
-        );
+            )}
+            </tbody>
+            );
 }
 
 
@@ -167,7 +158,7 @@ function RoomRateTypeDiscount() {
                                     </tr>
                                 </thead>
                                 {tdata()}
-                                {tdata()}
+                            
 
                             </table>
                         {/* </div> */}
