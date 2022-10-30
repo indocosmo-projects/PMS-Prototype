@@ -23,7 +23,7 @@ function NavigationBar() {
               <Nav.Link><Link to="/reception" className='nlink'>Reception</Link></Nav.Link>
 
             <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="shiftManagement">Shift Management</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
@@ -32,7 +32,7 @@ function NavigationBar() {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link><Link to="/requests" className='nlink'>Requests</Link></Nav.Link>
+            <Nav.Link><Link to="/request" className='nlink'>Requests</Link></Nav.Link>
             <Nav.Link><Link to="/reports" className='nlink'>Reports</Link></Nav.Link>
 
 
