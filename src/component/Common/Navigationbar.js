@@ -32,7 +32,7 @@ function NavigationBar() {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link><Link to="/requests" className='nlink'>Requests</Link></Nav.Link>
+            <Nav.Link><Link to="/request" className='nlink'>Requests</Link></Nav.Link>
             <Nav.Link><Link to="/reports" className='nlink'>Reports</Link></Nav.Link>
 
 
