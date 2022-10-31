@@ -37,7 +37,7 @@ const display = (e) => {
         <div className="col-12">
 
 
-                        <Table responsive>
+                        <Table className='overflow-reservefor' responsive>
                         <thead>
                             <tr>
                             <th>No.</th>

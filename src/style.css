@@ -12,7 +12,9 @@ body{
    background-color : rgb(245, 247, 250) ;
 }
 
-
+.gray{
+    color: gray;
+}
 .container-fluid{
     border-radius:  3px;
     background-color: white ;
@@ -21,7 +23,7 @@ body{
 
 .header {
     /* padding : 10px; */
-    font-size: 22px;
+    /* font-size: 22px; */
     color : rgb(97, 97, 97);
     text-align : left;
     opacity : 1;
@@ -56,3 +58,7 @@ body{
 }
 
 
+.btn-primary{
+    background-color: #5b67d6 !important;
+    border: none !important;
+  }
