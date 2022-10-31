@@ -3,12 +3,43 @@ import Accordion from 'react-bootstrap/Accordion';
 import { Link } from "react-router-dom";
 import '../../style.css';
 import './Request.css';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function Request() {
 
+    const details =  
+    [
+    {id: 1, room:'112',name :'DELUXE',phone:'9999999999',facility:'First Class',datetime:'17-08-2022 13:08:50', addonstatus:'UnProccessed',currentstatus:'Proccessed'},
+    {id: 1, room:'112',name :'DELUXE',phone:'9999999999',facility:'First Class',datetime:'17-08-2022 13:08:50', addonstatus:'UnProccessed',currentstatus:'Proccessed'},
+   
+
+    
+    ];
+
     const [dropdown, setDropdown] = useState(0);
+
+    const tdata = () =>{
+        return(
+                <tbody >
+                    {
+                    details.map(detail => <tr key={detail.id} >
+                        <td className="left">{detail.room}</td>
+                        <td className="left">{detail.name}</td>
+                        <td className="left">{detail.phone}</td>
+                        <td className="left">{detail.facility}</td>
+                        <td className="left">{detail.datetime}</td>
+                        <td className="left">{detail.addonstatus}</td>
+                        <td className="left">{detail.currentstatus}</td>   
+                    </tr>
+                    )}
+                    
+                </tbody>
+        );
+    }
+
 
     const count = () =>{
 
@@ -95,6 +126,54 @@ function Request() {
                         </div>
                         
 
+                         <Tabs
+                    defaultActiveKey="unprocessed"
+                    id="justify-tab-example"
+                    className="mt-4 mb-4 status-tab"
+                    justify >
+                    <Tab className='tab-content-bg tab-bg' eventKey="unprocessed" title={<span><i class="bi bi-house-door-fill me-2"/>Unprocessed</span>}>
+              
+                        <div className="border">
+                        <table className="table ">
+                            <thead >
+                                <tr className="greyshade">
+                                    <th className="thstyle left">Room</th>
+                                    <th className="thstyle left">Name</th>
+                                    <th className="thstyle left">Phone</th>
+                                    <th className="thstyle left">Facility</th>
+                                    <th className="tdwidthguest left">Request Date & Time</th>
+                                    <th className="thstyle left">Addon Status</th>
+                                    <th className="thstyle left">Current Status</th>
+                                </tr>
+                            </thead>
+                            {tdata()}
+
+                        </table>
+                        </div>
+                        </Tab>
+
+                         <Tab className='tab-content-bg tab-bg' eventKey="allrequests" title={<span><i class="bi bi-house-door-fill me-2"/>All Requests</span>}>
+                            
+                            <div className="border">
+                            <table className="table ">
+                                <thead >
+                                    <tr className="greyshade">
+                                        <th className="thstyle left">Room</th>
+                                        <th className="thstyle left">Name</th>
+                                        <th className="thstyle left">Phone</th>
+                                        <th className="thstyle left">Facility</th>
+                                        <th className="tdwidthguest left">Request Date & Time</th>
+                                        <th className="thstyle left">Addon Status</th>
+                                        <th className="thstyle left">Current Status</th>
+                                    </tr>
+                                </thead>
+                                {tdata()}
+
+                            </table>
+                            </div>
+                            </Tab>
+
+                        </Tabs>
 
                     </div>
                 </div>
