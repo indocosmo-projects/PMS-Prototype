@@ -137,7 +137,7 @@ function Reservation() {
                     <div className="row search-area-bg">
 
                         <div className="col-sm-6 mb-2">
-                            <h5 className="header green"> Reservations </h5>
+                            <h3 className="header green"> Reservations </h3>
                         </div>
 
                         <div className="row d-flex justify-content-between">
