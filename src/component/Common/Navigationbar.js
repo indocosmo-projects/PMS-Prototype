@@ -23,7 +23,7 @@ function NavigationBar() {
               <Nav.Link><Link to="/reception" className='nlink'>Reception</Link></Nav.Link>
 
             <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink">
-              <NavDropdown.Item href="shiftManagement">Shift Management</NavDropdown.Item>
+              <NavDropdown.Item><Link to="/shiftmanagement" className='nlink-drop'>Shift Management</Link></NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
