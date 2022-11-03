@@ -86,14 +86,14 @@ function NewReservation() {
 
                      {/* ----- Room Availability ------ */}
                      <div className="availability_check_bg my-4">
-                        <h4 className='left mt-2 ps-3'>Check Availability</h4>
+                        <h5 className='left mt-2 ps-3 grey'>Check Availability</h5>
                      <RoomAvailability/>
                      </div>  
                     
 
                      {/* ----- Room Rate Type Discount ------ */}
                      <div className="availability_check_bg my-4">
-                        <h4 className='left mt-2 ps-3'>Room Details</h4>
+                        <h5 className='left mt-2 ps-3 grey'>Room Details</h5>
                      <RoomRateTypeDiscount/>
                      </div>  
                    
