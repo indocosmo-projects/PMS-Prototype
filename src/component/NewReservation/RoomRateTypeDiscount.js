@@ -7,7 +7,7 @@ function RoomRateTypeDiscount() {
 
     const [count, setCount] = useState(1);
     const [cn, setCn] = useState(5);
-    const [del, setDel] = useState(0);
+    // const [del, setDel] = useState(0);
     const details =
         [
             { id: 1, name: 'room1' },
@@ -27,27 +27,27 @@ function RoomRateTypeDiscount() {
             setCount((count - 1 ));
         }
 
-        const deleteEachRow = (e) => {
-            setDel(e);
-        }
+        // const deleteEachRow = (e) => {
+        //     setDel(e);
+        // }
         
-        const display = (e) => {
-            let classes = "left ";
-            if(del === e){
-                classes += "hide" 
-                return classes;
-            }
-            classes += e <= count ? "show " : "hide";
-            return classes;
-        }
+        // const display = (e) => {
+        //     let classes = "left ";
+        //     if(del === e){
+        //         classes += "hide" 
+        //         return classes;
+        //     }
+        //     classes += e <= count ? "show " : "hide";
+        //     return classes;
+        // }
         
 
     const tdata = () => {
         return(
             <tbody>
 
-            { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} >
-                       
+            {/* { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} > */}
+                       <tr>
                 <td>
                     <select className="form-control form-select text-center">
                         <option> DLX</option>
@@ -128,7 +128,7 @@ function RoomRateTypeDiscount() {
                 </td>
                     
                 </tr>
-                 )} 
+                 {/* )}  */}
         </tbody>
         );
     }
@@ -161,6 +161,7 @@ function RoomRateTypeDiscount() {
                                     </tr>
                                 </thead>
                                 
+                                {tdata()}
                                 {tdata()}
                             
 
