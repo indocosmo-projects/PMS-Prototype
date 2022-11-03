@@ -114,13 +114,13 @@ function RoomRateTypeDiscount() {
                 
                 </td>
                 <td>
-                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
+                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="1500" disabled/>
                 </td>
                 <td>
-                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
+                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="100" disabled/>
                 </td>
                 <td>
-                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="" />
+                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="1400" disabled/>
                 </td>
                 <td>
                     {/* <button className="btn btn-danger btn-xs me-2" onClick={(e) => deleteEachRow(detail.id)}><i className="bi bi-trash "></i></button> */}
@@ -140,10 +140,10 @@ function RoomRateTypeDiscount() {
                     <div className="padcolumn mt-1 total-bg" >
                         {/* <div className="table"> */}
                             <div className='d-flex justify-content-between'>
-                                <h4 className='left ms-2 mt-2'>Payment Details</h4>
+                                <h4 className='left ms-2 mt-2'>Room Details</h4>
                                 <div>
                                 {/* <button className="btn btn-danger btn-xs me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button> */}
-                                <button className="btn btn-primary btn-xs" onClick={handleIncrement}><i className="bi bi-plus" ></i> Add details</button>
+                                <button className="btn btn-primary btn-xs" onClick={handleIncrement}><i class="bi bi-plus-circle me-2"></i>Add Rooms</button>
                                 </div>
                             </div>
                             <table className="table type-table">
@@ -169,7 +169,7 @@ function RoomRateTypeDiscount() {
                         {/* </div> */}
                             <div className='row'>
                             <div className='col-lg-8 col-md-8 col-3 d-flex justify-content-end total-text'>TOTAL</div>
-                            <div className='col-lg-2 col-md-2 col-3 d-flex justify-content-center total-text'>50000</div>
+                            <div className='col-lg-2 col-md-2 col-3 d-flex justify-content-center total-text'>1500</div>
                             <div className='col-lg-2 col-md-2 col-6 d-flex justify-content-center'><button className="btn btn-outline-secondary">Download<i className="bi bi-download ms-2"></i></button></div>
                             </div>
                     </div>

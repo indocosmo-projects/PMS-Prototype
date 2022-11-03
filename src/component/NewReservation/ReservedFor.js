@@ -1,5 +1,7 @@
 import React, { useState} from 'react';
 import Table from 'react-bootstrap/Table';
+import Form from 'react-bootstrap/Form';
+
 
 function ReservedFor() {
 
@@ -93,7 +95,7 @@ const display = (e) => {
                                     </div>
 
                                     <div className="border-bottom">
-                                <div className="row">
+                                <div className="row my-3">
                                     <div className="col-sm-4">
                                         <div className="inputfieldpadding">
                                             <label className="text-left"></label>
@@ -114,42 +116,57 @@ const display = (e) => {
                                     </div>
                                 </div>
 
-                                <div className="row">
-                                    <div className="col-sm-4">
-                                        <div className="inputfieldpadding">
-                                            <label className="text-left"></label>
-                                            <textarea className="form-control" style={{ height: 60, }} placeholder="Address"></textarea>
-                                        </div>
-                                    </div>
+                                <div className="row my-3">
                                    
                                     <div className="col-sm-2">
                                         <div className="inputfieldpadding">
                                             <label className="text-left">Gender</label>
-                                            <select className="form-control m-bot15">
+                                            {/* <select className="form-control m-bot15 minimal">
                                                 <option>Male</option>
                                                 <option>Female</option>
-                                            </select>
+                                            </select> */}
+                                            <Form.Select aria-label="Default select example">
+                                                    <option>Select</option>
+                                                    <option value="1">Male</option>
+                                                    <option value="2">Female</option>
+                                            </Form.Select>
                                         </div>
                                     </div>
 
                                     <div className="col-sm-3">
                                         <div className="inputfieldpadding">
                                             <label className="text-left">Country</label>
-                                            <select className="form-control m-bot15">
+                                            {/* <select className="form-control m-bot15">
                                                 <option>Option 1</option>
                                                 <option>Option 2</option>
                                                 <option>Option 3</option>
-                                            </select>
+                                            </select> */}
+                                            <Form.Select aria-label="Default select example">
+                                                    <option>Select</option>
+                                                    <option value="1">India</option>
+                                                    <option value="2">Japan</option>
+                                            </Form.Select>
                                         </div>
                                     </div>
                                     <div className="col-sm-3">
                                         <div className="inputfieldpadding">
                                             <label className="text-left">State</label>
-                                            <select className="form-control m-bot15">
+                                            {/* <select className="form-control m-bot15">
                                                 <option>Option 1</option>
                                                 <option>Option 2</option>
                                                 <option>Option 3</option>
-                                            </select>
+                                            </select> */}
+                                            <Form.Select aria-label="Default select example">
+                                                    <option>Select</option>
+                                                    <option value="1">State 1</option>
+                                                    <option value="2">State 2</option>
+                                            </Form.Select>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-4">
+                                        <div className="inputfieldpadding">
+                                            <label className="text-left"></label>
+                                            <textarea className="form-control" style={{ height: 60, }} placeholder="Address"></textarea>
                                         </div>
                                     </div>
                                  
@@ -164,7 +181,7 @@ const display = (e) => {
                                             <h5 className="text-start">Reservation Details </h5>
                                         </div>
 
-                                                <div className="row">
+                                                <div className="row my-3">
                                                     <div className="col-sm-2">
                                                         <div className="inputfieldpadding">
                                                             <label className="text-left" htmlFor="arrivaldate">Date :</label>
@@ -191,7 +208,7 @@ const display = (e) => {
                                                     </div>
                                                 </div>
                                             
-                                                <div className="row">
+                                                <div className="row my-3">
 
                                                     <div className="col-sm-12">
                                                         <div className="inputfieldpadding">
