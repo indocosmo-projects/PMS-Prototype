@@ -26,7 +26,7 @@ function RoomAvailability() {
     return (
        
         <div className="row p-3" onMouseUp={nightcalculation}>
-        <div className="col-md-3 availability_check_bg">
+        <div className="col-md-3">
                 <div className="col-sm-12">
                     <div className="form-group">
                         <label className="text-left" htmlFor="arrival">Arrival:</label>
@@ -57,7 +57,6 @@ function RoomAvailability() {
                         </div>
                     </div>
                 </div>
-                <h1></h1>
                 <div className="form-group mt-3 d-flex justify-content-end" >
                     {/* <button type="button" className="btn btn-secondary btnstyle text-white" title="Calculate Nights" onClick={nightcalculation}>Check Nights</button> */}
                     {/* <button type="button" className="btn btn-secondary w-25 btnstyle">Edit</button> */}

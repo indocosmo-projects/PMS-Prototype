@@ -85,11 +85,17 @@ function NewReservation() {
 
 
                      {/* ----- Room Availability ------ */}
-                     <RoomAvailability/>  
+                     <div className="availability_check_bg my-4">
+                        <h5 className='left mt-2 ps-3 grey'>Check Availability</h5>
+                     <RoomAvailability/>
+                     </div>  
                     
 
                      {/* ----- Room Rate Type Discount ------ */}
+                     <div className="availability_check_bg my-4">
+                        <h5 className='left mt-2 ps-3 grey'>Room Details</h5>
                      <RoomRateTypeDiscount/>
+                     </div>  
                    
 
                      <Accordion className="my-4" defaultActiveKey="0" alwaysOpen>
