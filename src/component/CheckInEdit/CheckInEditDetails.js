@@ -12,7 +12,7 @@ function CheckInEditDetails() {
             <div className="section checkdetails light-violet-bg">
                 <div className="container-fluid light-violet-bg">
                 
-                     <h4 className='left mb-3'>Details</h4>
+                     <h4 className='left mb-3'>Guest 1</h4>
 
                             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                         <Row>
@@ -25,10 +25,10 @@ function CheckInEditDetails() {
                                 <Nav.Link eventKey="second">ID Proofs <i class="bi bi-caret-right-fill"></i></Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                <Nav.Link eventKey="third">Discounts <i class="bi bi-caret-right-fill"></i></Nav.Link>
+                                <Nav.Link eventKey="third" disabled>C-Form <i class="bi bi-caret-right-fill"></i></Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                <Nav.Link eventKey="four">Reserved for <i class="bi bi-caret-right-fill"></i></Nav.Link>
+                                <Nav.Link eventKey="four">Rooms <i class="bi bi-caret-right-fill"></i></Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                 <Nav.Link eventKey="five">Misc <i class="bi bi-caret-right-fill"></i></Nav.Link>
@@ -201,7 +201,7 @@ function CheckInEditDetails() {
 
                             <Tab.Pane eventKey="third">
 
-                            <div className="row">
+                            {/* <div className="row">
                                
                                                 <div className="row">
                                                     <div className="col-sm-6">
@@ -218,14 +218,14 @@ function CheckInEditDetails() {
                                                     </div>
                                                 </div>
 
-                             </div>
+                             </div> */}
 
 
                             </Tab.Pane>
 
                             <Tab.Pane eventKey="four">
 
-                                                <div className="row ">
+                                                {/* <div className="row ">
                                                     <div className="col-sm-3">
                                                         <div className="inputfieldpadding">
                                                             <label className="text-left" htmlFor="arrivaldate">Date :</label>
@@ -259,7 +259,7 @@ function CheckInEditDetails() {
                                                             <textarea type="text" className="form-control" placeholder="" />
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> */}
 
                             </Tab.Pane>
 

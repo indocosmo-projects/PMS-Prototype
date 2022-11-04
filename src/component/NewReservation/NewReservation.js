@@ -25,7 +25,7 @@ function NewReservation() {
                     </div>
 
                      {/* ----- Form   ------ */}
-                    <div className="mt-2">
+                    <div className="">
                         <form action="#">
                             <div className="row ">
                                 <div className="col-sm ">
@@ -127,8 +127,11 @@ function NewReservation() {
                                 
                                 <div className="row mb-3">
                                     <div className='col-12 d-flex justify-content-end'>
-                                        <button type="button" className="btn btn-secondary me-2 px-3" > Back</button>
-                                        <button type="button" className="btn btn-success px-3" > Update</button>
+                                            <button className="btn btn-outline-secondary">Download<i className="bi bi-download ms-2"></i></button>
+                                            <div>
+                                                <button type="button" className="btn btn-secondary me-2 px-3" > Back</button>
+                                                <button type="button" className="btn btn-success px-3" > Update</button>
+                                            </div>
                                         </div>
                                 </div>
                                 

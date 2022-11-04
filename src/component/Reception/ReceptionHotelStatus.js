@@ -180,14 +180,7 @@ function ReceptionHotelStatus() {
 
                         <div className="col-sm-12 col-md-4">
                             <div className="row mt-4">
-                                {/* <div className="col-sm-12"> */}
-                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2"><i class="bi bi-cash-coin me-2"></i>Deposit</button></div>
-                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2">Posting</button></div>
-                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2"><i class="bi bi-receipt me-2"></i>Bill Preview</button></div>
-                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2"><i class="bi bi-person-plus-fill me-2"></i>Sharer</button></div>
-                                    <div className='col-sm-12'><button className="btn btn-primary w-100 text-white mb-2"><i class="bi bi-printer-fill me-2"></i>Print</button></div>
-                                    
-                                    
+                                
                                     <div className="form-group left mt-2">
                                         <label for="room"><b>Room Number</b></label>
                                         <input type="text" className="form-control" id="room" />

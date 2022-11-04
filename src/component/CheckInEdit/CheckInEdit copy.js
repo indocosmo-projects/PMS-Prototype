@@ -4,8 +4,6 @@ import RoomRateTypeDiscount from './RoomRateTypeDiscount';
 import './CheckInEdit.css';
 import CheckInEditDetails from './CheckInEditDetails';
 import Form from 'react-bootstrap/Form';
-import Accordion from 'react-bootstrap/Accordion';
-import Table from 'react-bootstrap/Table';
 
 
 
@@ -157,78 +155,18 @@ function CheckInEdit(){
                      </div>  
 
 
-                     
-                     <Accordion className="my-4" defaultActiveKey="0" alwaysOpen>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header><h5>Guest Details</h5></Accordion.Header>
-                                <Accordion.Body>
 
-                                <Table className='overflow-reservefor' responsive>
-                                <thead>
-                                    <tr>
-                                    <th>No.</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Address</th>
-                                    <th>Gender</th>
-                                    <th>Country</th>
-                                    <th>State</th>
-                                    <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                    <td>1</td>
-                                    {Array.from({ length: 6 }).map((_, index) => (
-                                        <td key={index}>Table cell {index}</td>
-                                    ))}
-                                    <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
-                                    </tr>
-                                    <tr>
-                                    <td>2</td>
-                                    {Array.from({ length: 6 }).map((_, index) => (
-                                        <td key={index}>Table cell {index}</td>
-                                    ))}
-                                    <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
-                                    </tr>
-                                    <tr>
-                                    <td>3</td>
-                                    {Array.from({ length: 6 }).map((_, index) => (
-                                        <td key={index}>Table cell {index}</td>
-                                    ))}
-                                    <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
-                                    </tr>
-                                </tbody>
-                            </Table>
-
-                                <CheckInEditDetails/>
-
-                                <div className="row">
-                    
-                <div className='col-12 d-flex justify-content-center'>
-                   
-                        <button type="button" className="btn btn-primary px-4" ><i class="bi bi-plus-circle me-2"></i>Add</button>
-                        
-
-                  </div>
-                </div>
-
-                                </Accordion.Body>
-                            </Accordion.Item>
-                    </Accordion>
-
+                     <CheckInEditDetails/>
+                
 
                      {/* ----- Buttons ------ */}
                     
                                 
                                 
                                 <div className="row mb-3">
-                                    <div className='col-12 d-flex justify-content-between'>
-                                        <button className="btn btn-outline-secondary">Download<i className="bi bi-download ms-2"></i></button>
-                                            <div>
-                                                <button type="button" className="btn btn-secondary me-2 px-3" > Back</button>
-                                                <button type="button" className="btn btn-success px-3" > Update Check-in</button>
-                                            </div>
+                                    <div className='col-12 d-flex justify-content-end'>
+                                        <button type="button" className="btn btn-secondary me-2 px-3" > Back</button>
+                                        <button type="button" className="btn btn-success px-3" > Update</button>
                                         </div>
                                 </div>
                                 
