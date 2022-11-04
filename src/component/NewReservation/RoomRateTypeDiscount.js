@@ -153,9 +153,9 @@ function RoomRateTypeDiscount() {
                                         <th>SINGLE</th>
                                         <th>DOUBLE</th>
                                         <th>TRIPPLE</th>
-                                        <th>TOTAL</th>
-                                        <th>DISCOUNT</th>
                                         <th>SUB TOTAL</th>
+                                        <th>DISCOUNT</th>
+                                        <th>TOTAL</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -170,9 +170,8 @@ function RoomRateTypeDiscount() {
                                 <div>
                                          <button className="btn btn-primary btn-xs my-4" onClick={handleIncrement}><i class="bi bi-plus-circle me-2"></i>Add Rooms</button>
                                 </div>
-                            <div className='col-lg-8 col-md-8 col-3 d-flex justify-content-end total-text'>TOTAL</div>
+                            <div className='col-lg-10 col-md-10 col-3 d-flex justify-content-end total-text'>Grand Total</div>
                             <div className='col-lg-2 col-md-2 col-3 d-flex justify-content-center total-text'>1500</div>
-                            <div className='col-lg-2 col-md-2 col-6 d-flex justify-content-center'><button className="btn btn-outline-secondary">Download<i className="bi bi-download ms-2"></i></button></div>
                             </div>
                     </div>
                 </div>

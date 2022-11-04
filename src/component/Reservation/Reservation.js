@@ -133,12 +133,10 @@ function Reservation() {
             <div className="section ">
                 <div className="container-fluid ">
                     {/* ----- Heading ------ */}
-
-                    <div className="row search-area-bg">
-
-                        <div className="col-sm-6 mb-2">
+                    <div className="sticky-div mb-3">
                             <h3 className="header green"> Reservations </h3>
                         </div>
+                    <div className="row search-area-bg">
 
                         <div className="row d-flex justify-content-between">
                         <div className="col-sm-6">
