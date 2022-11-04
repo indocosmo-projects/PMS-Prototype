@@ -20,35 +20,35 @@ function NewReservation() {
             <div className="section">
                 <div className="container-fluid formcontent">
                     {/* ----- Heading ------ */}
-                    <div>
-                        <h3 className="header"> New Reservation </h3>
+                    <div className='sticky-div'>
+                        <h3 className="header"> New Reservation</h3>
                     </div>
 
                      {/* ----- Form   ------ */}
-                    <div className="">
+                    <div className="mt-2">
                         <form action="#">
                             <div className="row ">
                                 <div className="col-sm ">
                                     <div className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="reseNumber">Reservation Number :</label>
+                                        <label className="text-left" htmlFor="reseNumber">Reservation Number</label>
                                             <input type="number" className="form-control" id="reseNumber" defaultValue="100" name="reseNumber" disabled />
                                     </div>
                                 </div>
                                 <div className="col-sm">
                                     <div className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="arrivaldate">Date :</label>
+                                        <label className="text-left" htmlFor="arrivaldate">Date <b className='text-danger'>*</b></label>
                                             <input type="date" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                     </div>
                                 </div>
                                 <div className="col-sm">
                                     <div className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="departdate">Reserved By :</label>
+                                        <label className="text-left" htmlFor="departdate">Reserved By <b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" id="departdate" placeholder="Enter Reserved By" name="departdate" />
                                     </div>
                                 </div>
                                 <div className="col-sm">
                                     <div  className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="email">Source :</label>
+                                        <label className="text-left" htmlFor="email">Source <b className='text-danger'>*</b></label>
                                         <select className="form-select">
                                             <option>FIT/TA/CORPORATE</option>
                                             <option>FIT/TA/CORPORATE</option>
@@ -59,7 +59,7 @@ function NewReservation() {
                                 </div>
                                 <div className="col-sm">
                                     <div  className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="email">TA/Company Name : </label>
+                                        <label className="text-left" htmlFor="email">TA/Company Name <b className='text-danger'>*</b></label>
                                         <select className="form-select">
                                             <option>Option 1</option>
                                             <option>Option 2</option>
@@ -70,7 +70,7 @@ function NewReservation() {
                                 </div>
                                 <div className="col-sm">
                                     <div  className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="email">GST :</label>
+                                        <label className="text-left" htmlFor="email">GST <b className='text-danger'>*</b></label>
                                         <select className="form-select">
                                             <option>Option 1</option>
                                             <option>Option 2</option>

@@ -173,6 +173,14 @@ border-color: rgb(236, 236, 236);
     white-space: nowrap;
   }
 
+  @media only screen and (min-width: 1230px) {
+    .type-table{
+        /* width: 100%; */
+        display: inline-table;
+      }
+    }
+
+  
   /* .total-bg{
     background-color: rgb(255, 255, 255);
     padding: .5em;
@@ -206,4 +214,14 @@ select.form-control.form-select.text-center {
     overflow-x: auto;
     white-space: nowrap;
     min-width: 100%;
+}
+.sticky-div{
+    background-color: #ffffff;
+    position:-webkit-sticky;
+    position: sticky;
+    display: block;
+    top: 90px;
+    z-index: 99999;
+    padding:1em 0;
+    border-bottom: solid 1px #f0f0f0;
 }

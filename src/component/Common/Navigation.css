@@ -166,20 +166,14 @@
     color: rgb(58, 58, 58) !important;
     font-weight: 500;
     text-decoration: none;
-    /* background-color: black; */
-    padding: .5em;
+    padding: .5em 0;
     transition: 0.5s;
 }
 
 .nlink-drop:hover{
-    /* border-bottom: solid 1em rgb(173, 173, 173); */
     opacity: 1 ;
     color: rgb(17, 17, 17) !important;
-    background-color: rgb(235, 235, 235);
-    /* padding: .5em; */
-    /* border-bottom: 2px solid rgb(187, 187, 187); */
-    border-radius: .3em;
-    
+    /* background-color: rgb(235, 235, 235); */
 }
 
 

@@ -86,32 +86,29 @@ const display = (e) => {
                         <div>
                             <form >
                                 <div className="row my-5 grey-bg px-2 py-4">
-                                    <div className="col-sm-12 ">
-                                        <h4 className="text-start">Add Customer details
-                                                <label className="chkbox" >
-                                                <input type="checkbox" name="chkbox" /> Remember me
-                                                </label>
-                                        </h4>
+                                    <div className="col-sm-12 d-flex justify-content-between">
+                                            <h4 className="text-start">Add Customer details</h4>
+                                            <button type="button" onClick={handleDecrement} className="btn btn-outline-danger px-3 me-2"><i class="bi bi-x-circle me-2"></i>Close</button>
                                     </div>
 
                                     <div className="border-bottom">
                                 <div className="row my-3">
                                     <div className="col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left"></label>
-                                            <input type="text" className="form-control" placeholder="Full Name" />
+                                            <label className="text-left">Full Name <b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
                                     <div className="col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left"></label>
-                                            <input type="text" className="form-control" placeholder="Phone Number" />
+                                            <label className="text-left">Phone Number <b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
                                     <div className="col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left"></label>
-                                            <input type="text" className="form-control" placeholder="E-mail" />
+                                            <label className="text-left">E-mail <b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
                                 </div>
@@ -120,7 +117,7 @@ const display = (e) => {
                                    
                                     <div className="col-sm-2">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Gender</label>
+                                            <label className="text-left">Gender <b className='text-danger'>*</b></label>
                                             {/* <select className="form-control m-bot15 minimal">
                                                 <option>Male</option>
                                                 <option>Female</option>
@@ -135,7 +132,7 @@ const display = (e) => {
 
                                     <div className="col-sm-3">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Country</label>
+                                            <label className="text-left">Country <b className='text-danger'>*</b></label>
                                             {/* <select className="form-control m-bot15">
                                                 <option>Option 1</option>
                                                 <option>Option 2</option>
@@ -150,7 +147,7 @@ const display = (e) => {
                                     </div>
                                     <div className="col-sm-3">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">State</label>
+                                            <label className="text-left">State <b className='text-danger'>*</b></label>
                                             {/* <select className="form-control m-bot15">
                                                 <option>Option 1</option>
                                                 <option>Option 2</option>
@@ -184,25 +181,25 @@ const display = (e) => {
                                                 <div className="row my-3">
                                                     <div className="col-sm-2">
                                                         <div className="inputfieldpadding">
-                                                            <label className="text-left" htmlFor="arrivaldate">Date :</label>
+                                                            <label className="text-left" htmlFor="arrivaldate">Arrival Date <b className='text-danger'>*</b></label>
                                                             <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                                         </div>
                                                     </div>
                                                     <div className="col-sm-2">
                                                         <div className="inputfieldpadding">
-                                                            <label className="text-left" htmlFor="arrivaldate">Date :</label>
-                                                            <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
+                                                            <label className="text-left" htmlFor="arrivaldate">Departure Date <b className='text-danger'>*</b></label>
+                                                            <input type="datetime-local" className="form-control" id="departuredate" placeholder="Enter Departure Date" name="departuredate" />
                                                         </div>
                                                     </div>
                                                     <div className="col-sm-4">
                                                         <div className="inputfieldpadding">
-                                                            <label className="text-left">Location</label>
+                                                            <label className="text-left">Location <b className='text-danger'>*</b></label>
                                                             <input type="text" className="form-control" placeholder="" />
                                                         </div>
                                                     </div>
                                                     <div className="col-sm-4">
                                                         <div className="inputfieldpadding">
-                                                            <label className="text-left">Seats</label>
+                                                            <label className="text-left">Seats <b className='text-danger'>*</b></label>
                                                             <input type="text" className="form-control" placeholder="" />
                                                         </div>
                                                     </div>
@@ -216,12 +213,18 @@ const display = (e) => {
                                                             <textarea type="text" className="form-control" placeholder="" />
                                                         </div>
                                                     </div>
+
+                                                    <label className="chkbox left ms-2 mt-3" >
+                                                        <input type="checkbox" name="chkbox" /> Remember me
+                                                    </label>
+                                    
                                                 </div>
                                      </div>
 
 
                                 </div>
                             </form>
+                            
                         </div>
 
 
@@ -234,8 +237,7 @@ const display = (e) => {
                     
                 <div className='col-12 d-flex justify-content-center'>
                    
-                        <button type="button" onClick={handleDecrement} className="btn btn-danger px-3 me-2" >Close</button>
-                        <button type="button" onClick={handleIncrement} className="btn btn-primary px-4" >Add</button>
+                        <button type="button" onClick={handleIncrement} className="btn btn-primary px-4" ><i class="bi bi-plus-circle me-2"></i>Add</button>
                         
 
                   </div>

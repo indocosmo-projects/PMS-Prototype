@@ -124,7 +124,7 @@ function RoomRateTypeDiscount() {
                 </td>
                 <td>
                     {/* <button className="btn btn-danger btn-xs me-2" onClick={(e) => deleteEachRow(detail.id)}><i className="bi bi-trash "></i></button> */}
-                <button className="btn btn-danger btn-xs me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
+                <button className="btn btn-outline-danger btn-xs me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
                 </td>
                     
                 </tr>
