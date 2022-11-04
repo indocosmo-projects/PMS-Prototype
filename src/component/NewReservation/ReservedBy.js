@@ -13,20 +13,20 @@ function ReservedBy() {
                                 <div className="row my-3">
                                     <div className="col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left"></label>
-                                            <input type="text" className="form-control" placeholder="Full Name" />
+                                            <label className="text-left">Full Name <b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
                                     <div className="col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left"></label>
-                                            <input type="text" className="form-control" placeholder="Phone Number" />
+                                            <label className="text-left">Phone Number <b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
                                     <div className="col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left"></label>
-                                            <input type="text" className="form-control" placeholder="E-mail" />
+                                            <label className="text-left">E-mail <b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
                                 </div>
@@ -35,7 +35,7 @@ function ReservedBy() {
                                    
                                     <div className="col-sm-2">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Gender</label>
+                                            <label className="text-left">Gender <b className='text-danger'>*</b></label>
                                             {/* <select className="form-control m-bot15 minimal">
                                                 <option>Male</option>
                                                 <option>Female</option>
@@ -50,7 +50,7 @@ function ReservedBy() {
 
                                     <div className="col-sm-3">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Country</label>
+                                            <label className="text-left">Country <b className='text-danger'>*</b></label>
                                             {/* <select className="form-control m-bot15">
                                                 <option>Option 1</option>
                                                 <option>Option 2</option>
@@ -65,7 +65,7 @@ function ReservedBy() {
                                     </div>
                                     <div className="col-sm-3">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">State</label>
+                                            <label className="text-left">State <b className='text-danger'>*</b></label>
                                             {/* <select className="form-control m-bot15">
                                                 <option>Option 1</option>
                                                 <option>Option 2</option>
@@ -80,8 +80,8 @@ function ReservedBy() {
                                     </div>
                                     <div className="col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left"></label>
-                                            <textarea className="form-control" style={{ height: 60, }} placeholder="Address"></textarea>
+                                            <label className="text-left">Address</label>
+                                            <textarea className="form-control" style={{ height: 60, }} placeholder=""></textarea>
                                         </div>
                                     </div>
                                  
