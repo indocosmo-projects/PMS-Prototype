@@ -49,7 +49,7 @@ function CheckOut() {
                                             </tr>
                                         </table>
                                         <div >
-                                            <button className="btn btn-primary mt-3">Print Bill</button>
+                                            <button className="btn btn-primary mt-3"><i class="bi bi-printer"></i>  Print Bill </button>
                                         </div>
                                     </div>
                                    
@@ -69,7 +69,7 @@ function CheckOut() {
                                     </label>
                                 </div>
                                 <div >
-                                    <button type="button" className="btn btn-primary right">Check Out</button>
+                                    <button type="button" className="btn btn-primary right"><i class="bi bi-cart4"></i>  Check Out</button>
                                 </div>
                             </div>
                     </div>
