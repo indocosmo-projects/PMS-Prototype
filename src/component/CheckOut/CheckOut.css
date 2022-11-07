@@ -4,3 +4,40 @@
     border-top: 2px solid blue;
     border-bottom: 2px solid blue;
 }
+
+
+.box{
+    padding : 10px;
+    border : 2px solid grey;
+    margin-top : 20px;
+    width : 60vw;
+    height : 20vw;
+}
+
+.roomcol{
+    padding : 5px;
+}
+
+.thick{
+    border-left : 2px solid black;
+    height: 100%;
+    padding : 30px;
+    padding-top : 0px;
+}
+
+.tdwidth{
+    width : 180px;
+    text-align: left;
+}
+
+.roomno{
+    padding : 30px;
+}
+
+.roundcorner{
+    border-radius: 5px;
+}
+
+.hght{
+    height : 8vw;
+}
