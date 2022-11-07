@@ -44,7 +44,7 @@ function ReceptionExpectedArrivals() {
                         {/* <td><button className="btn btn-primary"><i class="bi bi-plus-circle me-2"></i>Check-in</button></td> */}
                         <td>
                                 <Dropdown as={ButtonGroup}>
-                                    <Button variant="primary"><i class="bi bi-plus-circle me-2"></i>Check-in</Button>
+                                <Link to="/checkinedit"><Button variant="primary right-br-none"><i class="bi bi-plus-circle me-2"></i>Check-in</Button></Link>
 
                                     <Dropdown.Toggle className='checkin-split' split variant="primary" id="dropdown-split-basic" />
 

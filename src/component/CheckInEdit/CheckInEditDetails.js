@@ -5,14 +5,31 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
+import Alert from 'react-bootstrap/Alert';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Button from 'react-bootstrap/Button';
+
 // import { Link } from "react-router-dom";
 
+const animatedComponents = makeAnimated();
+
+
 function CheckInEditDetails() {
+    const options = [
+        {value: "101", label:"FLR 1, ROOM 101"},
+        {value: "202", label:"FLR 2, ROOM 202"},
+        {value: "303", label:"FLR 3, ROOM 303"},
+        {value: "304", label:"FLR 3, ROOM 303"},
+        {value: "305", label:"FLR 3, ROOM 303"},
+        {value: "305", label:"FLR 3, ROOM 303"},
+    ];
     return(
             <div className="section checkdetails light-violet-bg">
                 <div className="container-fluid light-violet-bg">
                 
-                     <h4 className='left mb-3'>Guest 1</h4>
+                     <h4 className='left mb-3'><i class="bi bi-person-fill me-2"></i>Guest 1</h4>
 
                             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                         <Row>
@@ -40,30 +57,52 @@ function CheckInEditDetails() {
                                 <Tab.Pane eventKey="first">
                                 
                                 <div className="row mb-3">
-                       
+                                     <div className="col-md-12 col-lg-2 mb-2 d-flex flex-column">
+                                     <i class="bi bi-person-circle profile-img"></i>
+                                     <Button variant="secondary"><i class="bi bi-upload me-2"></i>Upload Image</Button>
+
+                                    </div>
+                                    <div className='col-10'>
+                                <div className="row mb-3">
+
                                      <div className="col-md-12 col-lg-4 mb-2">
                                         <div className="form-group">
-                                                <input type="text" className="form-control" placeholder="First Name" id="fname" />
+                                                <label className="text-left">Name<b className='text-danger'>*</b></label>
+                                                <input type="text" className="form-control" placeholder="" id="fname" />
                                             </div>
                                      </div>
                                      <div className="col-md-12 col-lg-4 mb-2">
                                         <div className="form-group ">
-                                                <input type="text" className="form-control" placeholder="Phone Number" id="phone" />
+                                                <label className="text-left">Phone Number<b className='text-danger'>*</b></label>
+                                                <input type="text" className="form-control" placeholder="" id="phone" />
                                             </div>
                                      </div>
                                      <div className="col-md-12 col-lg-4 mb-2">
                                         <div className="form-group ">
-                                                <input type="text" className="form-control" placeholder="Email Address" id="emailaddress" />
+                                                <label className="text-left">E mail<b className='text-danger'>*</b></label>
+                                                <input type="text" className="form-control" placeholder="" id="emailaddress" />
                                             </div>
+                                     </div>
+                                     </div>
+                                     <div className="row mb-3">
+                                    <div className="col-sm-12">
+                                            <Alert variant="primary">
+                                            <i class="bi bi-exclamation-circle"></i> <b>George</b> has already stayed with us <b>2</b> times before 
+                                                <Alert.Link href="#"></Alert.Link>
+                                                </Alert>
+                                                </div>
+                                    </div>
+
                                      </div>
                                     
                                     </div>
+                                    
 
 
                                     <div className="row mb-3">
 
                                     <div className="col-sm-4">
-                                    
+                                    <label className="text-left">Gender<b className='text-danger'>*</b></label>
                                     <Form.Select aria-label="Default select example">
                                         <option>Select Gender</option>
                                         <option value="1">Male</option>
@@ -72,18 +111,18 @@ function CheckInEditDetails() {
 
                                 </div>
                                 <div className="col-sm-4">
-                              
+                                        <label className="text-left">Country<b className='text-danger'>*</b></label>
                                         <Form.Select aria-label="Default select example">
-                                            <option>Country</option>
+                                            <option>Select Country</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             </Form.Select>
                                         </div>
 
                                     <div className="col-sm-4">
-                                       
+                                        <label className="text-left">State<b className='text-danger'>*</b></label>
                                         <Form.Select aria-label="Default select example">
-                                            <option>State</option>
+                                            <option>Select State</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             </Form.Select>
@@ -102,7 +141,17 @@ function CheckInEditDetails() {
                                
 
                                     </div>
-                               
+
+                                    <div className="row mb-3">
+
+                                    <div className="col-sm-12">
+                                    <InputGroup className="pt-1 d-flex justify-content-end">
+                                        <div className="pt-1 make-payer-bg">
+                                        <Form.Check type='checkbox' id='default-checkbox' label='Make Guest as Payer' className='mt-1'/>
+                                        </div>
+                                        </InputGroup>
+                                        </div>
+                                        </div>
 
 
                         </Tab.Pane>
@@ -224,6 +273,28 @@ function CheckInEditDetails() {
                             </Tab.Pane>
 
                             <Tab.Pane eventKey="four">
+                                <div className="row mt-4">
+                                    <div className="col-lg-12">
+                                    <p className='gray'>Select the Rooms assigned for this Guest<b className='text-danger'>*</b></p>
+                                </div>
+                                </div>
+                                <div className="row d-flex justify-content-center">
+                                <div className="col-lg-4">
+                                        {/* <label className="text-left" htmlFor="arrivaldate">Select Room</label> */}
+                                            <Select
+                                            closeMenuOnSelect={false}
+                                            components={animatedComponents}
+                                            // defaultValue={}
+                                            isMulti
+                                            options={options}
+                                            className="basic-multi-select"
+                                            classNamePrefix="select"
+                                            menuPlacement="auto"
+                                            menuPortalTarget={document.body}
+                                            menuPosition={'fixed'}
+                                            />
+                                </div>
+                                </div>
 
                                                 {/* <div className="row ">
                                                     <div className="col-sm-3">

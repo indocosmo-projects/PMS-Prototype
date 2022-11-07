@@ -6,6 +6,7 @@ import CheckInEditDetails from './CheckInEditDetails';
 import Form from 'react-bootstrap/Form';
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
+import CheckInEditBilling from './CheckInEditBilling';
 
 
 
@@ -25,21 +26,21 @@ function CheckInEdit(){
                      
                      <div className='checkdetails light-violet-bg'>
                         <div className="row p-4">
-                            <div className="col-md-2">
-                                {/* <div className="col-sm-12"> */}
-                                    <div className="form-group mb-3">
-                                        <label className="text-left" htmlFor="arrival">Arrival:</label>
-                                        <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival" />
-                                    </div>
-                                    <div className="form-group">
-                                        <label className="text-left" htmlFor="departure">Departure:</label>
-                                        <input type="datetime-local" className="form-control departure" name="departure" id="departure" />
-                                    </div>
-                                {/* </div> */}
+                            <div className="col-md-3">
+                                        <div className="form-group mb-3">
+                                            <label className="text-left" htmlFor="arrival">Arrival:</label>
+                                            <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival" />
+                                        </div>
+                                    
                             </div>
-
+                            <div className="col-md-3">
+                                        <div className="form-group">
+                                            <label className="text-left" htmlFor="departure">Departure:</label>
+                                            <input type="datetime-local" className="form-control departure" name="departure" id="departure" />
+                                        </div>
+                            </div>
                             
-                            <div className="col-md-2 vl">
+                            <div className="col-md-3">
                                 <div className="form-group mb-3">
                                     <label className="text-left" htmlFor="source">Source:</label>
                                     <Form.Select aria-label="Default select example">
@@ -49,14 +50,16 @@ function CheckInEdit(){
                                             </Form.Select>
                                  
                                 </div>
-
-                                <div className="form-group">
-                                    <label className="text-left" htmlFor="pwd">Name</label>
-                                    <input type="password" className="form-control" placeholder="Name" id="pwd" />
-                                </div>
+ 
                             </div>
+                            <div className="col-md-3">
+                                    <div className="form-group">
+                                        <label className="text-left" htmlFor="pwd">Name</label>
+                                        <input type="password" className="form-control" placeholder="Name" id="pwd" />
+                                    </div>
 
-                            <div className="col-md-4 vl">
+                             </div>
+                            {/* <div className="col-md-4 vl">
                                 <div className="row mb-4">
                                     <div className="col-md-6">
                                         <div className="form-group">
@@ -108,14 +111,13 @@ function CheckInEdit(){
                                     <div className="col-sm-6">
                                     <label  htmlFor="extrabed">Extra Bed:</label>
                                     <div className="form-group">
-                                            {/* <div className="bg-success" style={{height : 30 , width : 30}}></div> */}
                                             <i class="bi bi-check-circle-fill extra-bed-icon"></i>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
-                            <div className="col-md-4">
+                            {/* <div className="col-md-4">
                                 <div className="row mt-4 mb-2 white-bg">
                                     <div className="col-md-6 vl">
                                         <h5 className='mt-1'>Balance</h5>
@@ -138,7 +140,7 @@ function CheckInEdit(){
                                     </div>
                                 </div>
                                
-                            </div>
+                            </div> */}
 
                          </div>
                         </div>
@@ -147,12 +149,14 @@ function CheckInEdit(){
                      {/* ----- Room Availability ------ */}
                      <div className="availability_check_bg my-4">
                      <h5 className='left mt-2 ps-3 grey'>Check Availability</h5>
+                     <hr className='gray'/>
                      <RoomAvailability/>
                      </div>  
 
                      {/* ----- Room Rate Type Discount ------ */}
                      <div className="availability_check_bg my-4">
                         <h5 className='left mt-2 ps-3 grey'>Room Details</h5>
+                        <hr className='gray'/>
                      <RoomRateTypeDiscount/>
                      </div>  
 
@@ -219,15 +223,21 @@ function CheckInEdit(){
 
 
                      {/* ----- Buttons ------ */}
+
+                     <div className="availability_check_bg my-4">
+                     <h5 className='left mt-2 ps-3 grey'>Billing Details</h5>
+                     <hr className='gray'/>
+                     <CheckInEditBilling/>
+                     </div>  
                     
                                 
                                 
                                 <div className="row mb-3">
                                     <div className='col-12 d-flex justify-content-between'>
-                                        <button className="btn btn-outline-secondary">Download<i className="bi bi-download ms-2"></i></button>
+                                                <button type="button" className="btn btn-danger me-2 px-3" ><i class="bi bi-x-lg me-2"></i>Cancel</button>
                                             <div>
-                                                <button type="button" className="btn btn-secondary me-2 px-3" > Back</button>
-                                                <button type="button" className="btn btn-success px-3" > Update Check-in</button>
+                                                <button className="btn btn-outline-secondary me-3"><i className="bi bi-download me-2"></i>Download</button>
+                                                <button type="button" className="btn btn-success px-3" ><i class="bi bi-check-lg me-2"></i>Update Check-in</button>
                                             </div>
                                         </div>
                                 </div>

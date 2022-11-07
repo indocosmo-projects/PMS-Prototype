@@ -45,7 +45,7 @@ function ReceptionExpectedDepartures() {
                         </td> */}
                         <td>
                                 <Dropdown as={ButtonGroup}>
-                                    <Button variant="danger"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button>
+                                    <Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button>
 
                                     <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
 
