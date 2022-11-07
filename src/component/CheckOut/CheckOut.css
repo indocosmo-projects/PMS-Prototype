@@ -1,0 +1,6 @@
+.bordertopbottom{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 2px solid blue;
+    border-bottom: 2px solid blue;
+}
