@@ -23,7 +23,7 @@ function CheckOut() {
                         <div className="box">
                             <div className="row">
                                 <div className="col-sm-4">
-                                    <div className="bg-warning roomcol" >
+                                    <div className="bg-info roomcol text-white p-1" >
                                         <h3>CHECK-OUT</h3>
                                         <h2 className="roomno"><b>104</b></h2>
                                     </div>
