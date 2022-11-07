@@ -87,6 +87,7 @@ function NewReservation() {
                      {/* ----- Room Availability ------ */}
                      <div className="availability_check_bg my-4">
                         <h5 className='left mt-2 ps-3 grey'>Check Availability</h5>
+                        <hr className='gray'/>
                      <RoomAvailability/>
                      </div>  
                     
@@ -94,6 +95,7 @@ function NewReservation() {
                      {/* ----- Room Rate Type Discount ------ */}
                      <div className="availability_check_bg my-4">
                         <h5 className='left mt-2 ps-3 grey'>Room Details</h5>
+                        <hr className='gray'/>
                      <RoomRateTypeDiscount/>
                      </div>  
                    
@@ -126,11 +128,11 @@ function NewReservation() {
                                 
                                 
                                 <div className="row mb-3">
-                                    <div className='col-12 d-flex justify-content-end'>
-                                            <button className="btn btn-outline-secondary">Download<i className="bi bi-download ms-2"></i></button>
+                                    <div className='col-12 d-flex justify-content-between'>
+                                            <button type="button" className="btn btn-danger me-2 px-3" ><i class="bi bi-x-lg me-2"></i>Cancel</button>
                                             <div>
-                                                <button type="button" className="btn btn-secondary me-2 px-3" > Back</button>
-                                                <button type="button" className="btn btn-success px-3" > Update</button>
+                                                <button className="btn btn-outline-secondary me-3"><i className="bi bi-download me-2"></i>Download</button>
+                                                <button type="button" className="btn btn-success px-3" ><i class="bi bi-check-lg me-2"></i>Save</button>
                                             </div>
                                         </div>
                                 </div>

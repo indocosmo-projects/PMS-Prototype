@@ -167,8 +167,9 @@ function Reservation() {
 
                         <div className="mb-0">
 
-                            <div className="row mt-4">
-                                <div className="col-md-2 col-lg-1 col-3">
+                            <div className="row mt-4 d-flex justify-content-between">
+                                <div className="col-lg-2 col-3">
+                                        <label className="text-left" htmlFor="">Records per Page</label>
                                     <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/ >
                                         <option value="1">5</option>
                                         <option value="2">10</option>
@@ -177,10 +178,14 @@ function Reservation() {
                                     </Form.Select>
 
                                 </div>
-                                <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
+                                {/* <div className="col-md-6 col-5 col-lg-9 d-flex justify-content-start">
                                     <p className="text">Records per Page</p>
-                                </div>
+                                </div> */}
 
+                                <div className="col-6 col-lg-2 mb-2">
+                                        <label className="text-left" htmlFor="">Showing Records of</label>
+                                        <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival"/>
+                            </div>
                                
                             </div>
 

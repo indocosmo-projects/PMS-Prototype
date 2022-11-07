@@ -285,3 +285,17 @@ select.form-control.form-select.text-center {
         border: none;
       }
   }
+
+
+  .make-payer-bg{
+    background-color: #ffffff;
+    padding: .5em 1em;
+    border-radius: .5em;
+    box-shadow: 2px 2px 5px rgba(200, 201, 255, 0.336);
+    border:solid 1px rgb(221, 221, 221) ;
+  }
+
+  .profile-img{
+    font-size: 4em;
+    color: #5b67d6;
+  }
