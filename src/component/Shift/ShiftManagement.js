@@ -4,6 +4,7 @@ import '../../style.css';
 import './ShiftManagement.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import OpenShift from '../OpenShift/OpenShift';
 
 function ShiftManagement() {
      
@@ -50,7 +51,7 @@ return(
                     <div className="btnright">
                         <ul className="ullist">
                             <li><button className="btn btn-success m-1">Back</button></li>
-                            <li><button className="btn btn-warning  m-1">Open Shift </button></li>
+                            <li><button className="btn "><OpenShift/></button></li>
                         </ul>
                     </div>
 
