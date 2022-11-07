@@ -109,8 +109,12 @@ function Request() {
                             </div>
 
             
-                                    <div className="col-sm-6"> 
-                                    </div>
+
+                                    <div className="col-sm-6">
+                                        <div className="mb-3 ">
+                                        <Link to="/newrequest"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Request</button></Link>
+                                        </div>
+
                             </div>
 
                         <div className="row">

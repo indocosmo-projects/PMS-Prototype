@@ -4,6 +4,7 @@ import '../../style.css';
 import './ShiftManagement.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import OpenShift from '../OpenShift/OpenShift';
 
 function ShiftManagement() {
      
@@ -49,7 +50,12 @@ return(
                             <button className="btn btn-outline-dark m-1"><i class="bi bi-caret-left-fill"></i>Back</button>
                         </div>
                     <div className="btnright">
-                    <button className="btn btn-success  m-1 my-4"><i class="bi bi-door-open-fill me-2"></i>Open Shift </button>
+
+                        <ul className="ullist">
+                            <li><button className="btn btn-success m-1">Back</button></li>
+                            <li><button className="btn "><OpenShift/></button></li>
+                        </ul>
+
                     </div>
 
                      <table className="table table-bordered shift_table">
