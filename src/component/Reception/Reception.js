@@ -5,7 +5,11 @@ import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
 import ReceptionExpectedArrivals from '../Reception/ReceptionExpectedArrivals';
+import ReceptionDepartures from './ReceptionExpectedDepartures';
 import ReceptionHotelStatus from '../Reception/ReceptionHotelStatus';
 
 
@@ -36,7 +40,7 @@ function Reception() {
                         <td>{detail.arrival}</td>
                         <td>{detail.departure}</td>
                         <td>{detail.foliobalance}</td>
-                        <td className="bg-success text-white">CHECK-IN</td>
+                        {/* <td className="bg-success text-white">CHECK-IN</td> */}
                         <td>
                             <button className="btn btn-primary"><i class="bi bi-cash-coin me-2"></i>Deposit</button>
                         </td>
@@ -53,9 +57,22 @@ function Reception() {
                                     <button className="btn btn-primary"><i class="bi bi-person-plus-fill me-2"></i>Sharer</button>
                                     </td>
                              
+                                {/* <td>
+                                    <button className="btn btn-danger"><i class="bi bi-box-arrow-right me-2"></i>Check-out</button>
+                                </td> */}
                                 <td>
-                                    <button className="btn btn-primary"><i class="bi bi-printer-fill me-2"></i>Print</button>
-                                    </td>
+                                <Dropdown as={ButtonGroup}>
+                                    <Button variant="danger"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button>
+
+                                    <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
+
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item href="#/action-1">Extend</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                                </td>
                         </tr>
                     )}
                     
@@ -114,8 +131,8 @@ function Reception() {
             <div className="section">
                 <div className="container-fluid">
                     {/* ----- Heading ------ */}
-                    <div>
-                        <h5 className="header">Reception</h5>
+                    <div className='sticky-div'>
+                        <h3 className="header">Reception</h3>
                     </div>
                     
                 <Tabs
@@ -145,7 +162,7 @@ function Reception() {
          
                                 <div className="col-sm-6">
                                     <div className="mb-3 ">
-                                    <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>Add New</button></Link>
+                                    <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
                                     </div>
                                 </div>
                         </div>
@@ -175,12 +192,11 @@ function Reception() {
                                         <th>Arrival</th>
                                         <th>Departure</th>
                                         <th>Folio Balance</th>
-                                        <th>Status</th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
+                                        <th>Check Deposit</th>
+                                        <th>Check Posting</th>
+                                        <th>Bill Reviews</th>
+                                        <th>Add Sharer</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                         {tdata()}
@@ -208,6 +224,23 @@ function Reception() {
                     </Tab>
                     <Tab className='tab-content-bg tab-bg' eventKey="expectedarrivals" title={<span> <i class="bi bi-arrow-down-right-square-fill me-2"/>Expected Arrivals</span>}>
                         <ReceptionExpectedArrivals />
+                        <div className="row m-3">
+                                {/* <div className="col-3 " >Showing 1 to {recordno} of {details.length} entries</div> */}
+                                <div className="col-12 d-flex justify-content-end" >
+                                    <div>
+                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-left"></i></button>
+                                    <button className="btn btn-outline-dark m-1">1</button>
+                                    <button className="btn btn-outline-dark m-1">2</button>
+                                    <button className="btn btn-outline-dark m-1">3</button>
+                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                    </div>
+
+                        
+                    </Tab>
+                    <Tab className='tab-content-bg tab-bg' eventKey="departures" title={<span> <i class="bi bi-arrow-up-right-square-fill me-2"/>Expected Departures</span>}>
+                        <ReceptionDepartures />
                         <div className="row m-3">
                                 {/* <div className="col-3 " >Showing 1 to {recordno} of {details.length} entries</div> */}
                                 <div className="col-12 d-flex justify-content-end" >

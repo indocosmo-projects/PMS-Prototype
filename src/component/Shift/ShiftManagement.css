@@ -5,3 +5,16 @@
 .ullist{
     list-style-type: none;
 }
+
+.shift_table{
+    padding: .5em;
+    overflow-x: auto;
+    white-space: nowrap;
+    min-width: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+    .shift_table{
+        display: block;
+    }
+    }

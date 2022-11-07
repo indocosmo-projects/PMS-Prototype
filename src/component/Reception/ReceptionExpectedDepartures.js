@@ -1,7 +1,7 @@
 import React,{ useState } from 'react';
 import './Reception.css';
 import '../../style.css';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -9,17 +9,17 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 
 
-function ReceptionExpectedArrivals() {
+function ReceptionExpectedDepartures() {
 
 
     const details =  
-        [{id: 1, rese:'104',arrival :'22-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 2, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'2',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 3, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 4, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 5, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 6, rese:'104',arrival :'16-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 7, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        [{id: 1, rese:'104',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        {id: 2, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'2',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        {id: 3, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
+        {id: 4, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
+        {id: 5, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
+        {id: 6, rese:'104',arrival :'16-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        {id: 7, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
         ];
         const [dropdown, setDropdown] = useState(0);
         // const [recordno, setRecordno] = useState(5); 
@@ -40,13 +40,14 @@ function ReceptionExpectedArrivals() {
                         <td >{detail.bookedby}</td>
                         <td >{detail.bookedfor}</td>
                         <td >{detail.bookedon}</td>
-                        {/* <td className="bg-success text-white" >CHECK-IN</td> */}
-                        {/* <td><button className="btn btn-primary"><i class="bi bi-plus-circle me-2"></i>Check-in</button></td> */}
+                        {/* <td>
+                            <button className="btn btn-danger"><i class="bi bi-box-arrow-right me-2"></i>Check-out</button>
+                        </td> */}
                         <td>
                                 <Dropdown as={ButtonGroup}>
-                                <Link to="/checkinedit"><Button variant="primary right-br-none"><i class="bi bi-plus-circle me-2"></i>Check-in</Button></Link>
+                                    <Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button>
 
-                                    <Dropdown.Toggle className='checkin-split' split variant="primary" id="dropdown-split-basic" />
+                                    <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
 
                                     <Dropdown.Menu>
                                         <Dropdown.Item href="#/action-1">Extend</Dropdown.Item>
@@ -129,9 +130,9 @@ function ReceptionExpectedArrivals() {
                         </div>
                        
                         <div className="col-sm-6">
-                            <div className="mb-3 ">
+                            {/* <div className="mb-3 ">
                             <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="row mt-4">
@@ -145,7 +146,7 @@ function ReceptionExpectedArrivals() {
 
                                 </div>
                                 <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
-                                    <p className="text-left">Records per page</p>
+                                    <p className="text-left">records per page</p>
                                 </div>
 
                                
@@ -162,7 +163,7 @@ function ReceptionExpectedArrivals() {
                                 <th className="thstyle">BOOKED BY</th>
                                 <th className="tdwidth">BOOKED FOR</th>
                                 <th className="tdwidth">BOOKED ON</th>
-                                <th className="tdwidth">Actions</th>
+                                <th className="tdwidth">STATUS</th>
                             </tr>							
                         </thead>
                                 {tdata()}
@@ -176,4 +177,4 @@ function ReceptionExpectedArrivals() {
     
 }
  
-export default ReceptionExpectedArrivals;
+export default ReceptionExpectedDepartures;

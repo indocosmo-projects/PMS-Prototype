@@ -1,6 +1,6 @@
 import React,{ useState } from 'react';
-import Accordion from 'react-bootstrap/Accordion';
 import { Link } from "react-router-dom";
+import Form from 'react-bootstrap/Form';
 import '../../style.css';
 import './Request.css';
 import Tab from 'react-bootstrap/Tab';
@@ -14,16 +14,16 @@ function Request() {
     [
     {id: 1, room:'112',name :'DELUXE',phone:'9999999999',facility:'First Class',datetime:'17-08-2022 13:08:50', addonstatus:'UnProccessed',currentstatus:'Proccessed'},
     {id: 1, room:'112',name :'DELUXE',phone:'9999999999',facility:'First Class',datetime:'17-08-2022 13:08:50', addonstatus:'UnProccessed',currentstatus:'Proccessed'},
-   
-
-    
+    {id: 1, room:'112',name :'DELUXE',phone:'9999999999',facility:'First Class',datetime:'17-08-2022 13:08:50', addonstatus:'UnProccessed',currentstatus:'Proccessed'},
+    {id: 1, room:'112',name :'DELUXE',phone:'9999999999',facility:'First Class',datetime:'17-08-2022 13:08:50', addonstatus:'UnProccessed',currentstatus:'Proccessed'},
+    {id: 1, room:'112',name :'DELUXE',phone:'9999999999',facility:'First Class',datetime:'17-08-2022 13:08:50', addonstatus:'UnProccessed',currentstatus:'Proccessed'}
     ];
 
     const [dropdown, setDropdown] = useState(0);
 
     const tdata = () =>{
         return(
-                <tbody >
+                <tbody>
                     {
                     details.map(detail => <tr key={detail.id} >
                         <td className="left">{detail.room}</td>
@@ -90,15 +90,10 @@ function Request() {
                  <div className="section">
                     <div className="container-fluid formcontent">
                         {/* ----- Heading ------ */}
-                        <div>
+                        <div className='d-flex justify-content-between mb-4'>
                             <h5 className="header"> Requests </h5>
+                            <button className="btn btn-outline-dark m-1"><i class="bi bi-caret-left-fill"></i>Back</button>
                         </div>
-                        <div className="btnright">
-                            <ul className="ullist">
-                                <li><button className="btn btn-success m-1">Back</button></li>
-                            </ul>
-                        </div>
-
                         <div className="row">
                             <div className="col-sm-6">
                                 <div className="input-group mb-3 ">
@@ -114,29 +109,53 @@ function Request() {
                             </div>
 
             
+
                                     <div className="col-sm-6">
                                         <div className="mb-3 ">
                                         <Link to="/newrequest"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Request</button></Link>
                                         </div>
-                                    </div>
+
                             </div>
 
-                        <div className="subhead">
-                            <h5 className="header"> In-House Request-List </h5>
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <h4 className='header mt-3'> In-House Request-List </h4>
+                            </div>
+                            <div className="col-sm-6">
+                            
+                            {/* <div className="mb-3 "> */}
+                                        <Link to=""><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Request</button></Link>
+                            </div>
                         </div>
                         
 
-                         <Tabs
-                    defaultActiveKey="unprocessed"
-                    id="justify-tab-example"
-                    className="mt-4 mb-4 status-tab"
-                    justify >
+                    <Tabs
+                        defaultActiveKey="unprocessed"
+                        id="justify-tab-example"
+                        className="mt-4 mb-4 status-tab"
+                        justify >
                     <Tab className='tab-content-bg tab-bg' eventKey="unprocessed" title={<span><i class="bi bi-house-door-fill me-2"/>Unprocessed</span>}>
               
-                        <div className="border">
-                        <table className="table ">
+                        <div className="">
+                        <div className="row ms-2 mt-4">
+                                <div className="col-md-2 col-lg-1 col-3">
+                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/ >
+                                        <option value="1">5</option>
+                                        <option value="2">10</option>
+                                        <option value="3">15</option>
+                                        <option value="3">All</option>
+                                    </Form.Select>
+
+                                </div>
+                                <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
+                                    <p className="text">Records per Page</p>
+                                </div>
+
+                               
+                            </div>
+                        <table className="table request_table table-bordered">
                             <thead >
-                                <tr className="greyshade">
+                                <tr>
                                     <th className="thstyle left">Room</th>
                                     <th className="thstyle left">Name</th>
                                     <th className="thstyle left">Phone</th>
@@ -149,15 +168,46 @@ function Request() {
                             {tdata()}
 
                         </table>
+
+                            <div className="row m-3 d-flex justify-content-between">
+                                    
+                                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                                {/* <div className="col-6"></div> */}
+                                                <div className="col-12 d-flex justify-content-end">
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-arrow-left"></i><span class="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">1</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border active">2</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i className="bi bi-arrow-right"></i></button>
+                                                    
+                                                </div>
+                                            </div>
+
                         </div>
                         </Tab>
 
                          <Tab className='tab-content-bg tab-bg' eventKey="allrequests" title={<span><i class="bi bi-house-door-fill me-2"/>All Requests</span>}>
                             
-                            <div className="border">
-                            <table className="table ">
+                            <div className="">
+                            <div className="row ms-2 mt-4">
+                                <div className="col-md-2 col-lg-1 col-3">
+                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/ >
+                                        <option value="1">5</option>
+                                        <option value="2">10</option>
+                                        <option value="3">15</option>
+                                        <option value="3">All</option>
+                                    </Form.Select>
+
+                                </div>
+                                <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
+                                    <p className="text">Records per Page</p>
+                                </div>
+
+                               
+                            </div>
+                            <table className="table request_table table-bordered">
                                 <thead >
-                                    <tr className="greyshade">
+                                    <tr className="">
                                         <th className="thstyle left">Room</th>
                                         <th className="thstyle left">Name</th>
                                         <th className="thstyle left">Phone</th>
@@ -170,6 +220,19 @@ function Request() {
                                 {tdata()}
 
                             </table>
+                            <div className="row m-3 d-flex justify-content-between">
+                                    
+                                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                                {/* <div className="col-6"></div> */}
+                                                <div className="col-12 d-flex justify-content-end">
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-arrow-left"></i><span class="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">1</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border active">2</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i className="bi bi-arrow-right"></i></button>
+                                                    
+                                                </div>
+                                            </div>
                             </div>
                             </Tab>
 

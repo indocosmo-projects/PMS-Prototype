@@ -23,7 +23,7 @@ body{
 
 .header {
     /* padding : 10px; */
-    font-size: 22px;
+    /* font-size: 22px; */
     color : rgb(97, 97, 97);
     text-align : left;
     opacity : 1;
@@ -62,3 +62,34 @@ body{
     background-color: #5b67d6 !important;
     border: none !important;
   }
+
+  .btn-primary:hover{
+    background-color: #38419e !important;
+    /* border: none !important; */
+  }
+
+
+  .btn-dark{
+    background-color: rgb(97, 97, 97) !important;
+    border-color: rgb(88, 88, 88) !important;
+  }
+
+  .btn-dark:hover{
+    background-color: rgb(65, 65, 65) !important;
+    border-color: rgb(82, 82, 82) !important;
+  }
+  .sticky-div{
+    background-color: #ffffff;
+    position:-webkit-sticky;
+    position: sticky;
+    display: block;
+    top: 90px;
+    z-index: 99999;
+    padding:.5em 0;
+    margin-bottom: 1em;
+    border-bottom: solid 1px #f0f0f0;
+}
+
+.right-br-none{
+  border-radius: .3em 0em 0em .3em  !important;
+}

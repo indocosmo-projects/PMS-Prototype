@@ -1,5 +1,5 @@
 import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
+// import Accordion from 'react-bootstrap/Accordion';
 import '../../style.css';
 import './ShiftManagement.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -31,7 +31,7 @@ function ShiftManagement() {
                         <td className="left">{detail.shiftopeningdatetime}</td>
                         <td className="left">{detail.date}</td>
                         <td className="left">{detail.closingdatetime}</td>   
-                        <td className="left"><button className="btn btn-danger">Close Shift</button></td>   
+                        <td className="left"><button className="btn btn-danger"><i class="bi bi-door-closed-fill me-2"></i>Close Shift</button></td>   
                     </tr>
                     )}
                     
@@ -45,19 +45,22 @@ return(
          <div className="section">
                 <div className="container-fluid formcontent">
                      {/* ----- Heading ------ */}
-                     <div>
-                        <h5 className="header"> Shift Management </h5>
-                    </div>
+                     <div className='d-flex justify-content-between mb-4'>
+                            <h3 className="header"> Shift Management </h3>
+                            <button className="btn btn-outline-dark m-1"><i class="bi bi-caret-left-fill"></i>Back</button>
+                        </div>
                     <div className="btnright">
+
                         <ul className="ullist">
                             <li><button className="btn btn-success m-1">Back</button></li>
                             <li><button className="btn "><OpenShift/></button></li>
                         </ul>
+
                     </div>
 
-                     <table className="table table-bordered">
+                     <table className="table table-bordered shift_table">
                             <thead >
-                                <tr className="greyshade">
+                                <tr className="">
                                     <th className="thstyle left">ShiftNo</th>
                                     <th className="thstyle left">User</th>
                                     <th className="thstyle left">Shift</th>

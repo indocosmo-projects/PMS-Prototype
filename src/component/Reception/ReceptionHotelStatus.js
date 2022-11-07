@@ -3,6 +3,7 @@ import './Reception.css';
 import '../../style.css';
 // import Form from 'react-bootstrap/Form';
 import Accordion from 'react-bootstrap/Accordion';
+import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from "react-router-dom";
 
 
@@ -34,37 +35,98 @@ function ReceptionHotelStatus() {
     const roomlist = (room) => {
         
         if(room.status === 'O')return (
-                <div className="room row border-occupied mx-1">
-                    <div className="col-12 rmnum">{room.name}</div>
-                    <div className="col-12 br-bg-occupied"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                <div>
+                        <Dropdown className="room row border-occupied br-bg-occupied">
+                        <Dropdown.Toggle variant="" id="dropdown-basic" className='text-white'>
+                            <div className="col-12 rmnum">{room.name}</div>
+                            <hr/>
+                            <div className="col-12"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        </Dropdown.Menu>
+                        </Dropdown>
+                    
                 </div>    
             );
 
             if(room.status === 'R')return (
-                <div className="room row border-reserved mx-1">
-                    <div className="col-12 rmnum">{room.name}</div>
-                    <div className="col-12 br-bg-reserved"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                <div>
+                    <Dropdown className="room row border-reserved br-bg-reserved">
+                        <Dropdown.Toggle variant="" id="dropdown-basic" className='text-white'>
+                        <div className="col-12 rmnum">{room.name}</div>
+                        <hr/>
+                        <div className="col-12"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        </Dropdown.Menu>
+                        </Dropdown>
+                    
                 </div>    
             );
         
             if(room.status === 'V')return (
-                <div className="room row border-vaccant mx-1">
-                    <div className="col-12 rmnum">{room.name}</div>
-                    <div className="col-12 br-bg-vacant"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                <div>
+                    <Dropdown className="room row border-vaccant br-bg-vacant">
+                        <Dropdown.Toggle variant="" id="dropdown-basic" className='text-white'>
+                            <div className="col-12 rmnum">{room.name}</div>
+                            <hr/>
+                            <div className="col-12"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        </Dropdown.Menu>
+                        </Dropdown>
+                    
                 </div>    
             );
 
             if(room.status === 'C')return (
-                <div className="room row border-clean  mx-1">
-                    <div className="col-12 rmnum">{room.name}</div>
-                    <div className="col-12 br-bg-clean"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                <div>
+                    <Dropdown className="room row border-clean br-bg-clean">
+                        <Dropdown.Toggle variant="" id="dropdown-basic" className='text-white'>
+                            <div className="col-12 rmnum">{room.name}</div>
+                            <hr/>
+                            <div className="col-12"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        </Dropdown.Menu>
+                        </Dropdown>
+
+                    
                 </div>    
             );
 
             if(room.status === 'D')return (
-                <div className="room row border-dirty mx-1">
-                    <div className="col-12 rmnum">{room.name}</div>
-                    <div className="col-12 br-bg-dirty"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                <div>
+                    <Dropdown className="room row border-dirty br-bg-dirty">
+                        <Dropdown.Toggle variant="" id="dropdown-basic" className='text-white'>
+                            <div className="col-12 rmnum">{room.name}</div>
+                            <hr/>
+                            <div className="col-12"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        </Dropdown.Menu>
+                        </Dropdown>
+                    
                 </div>    
             );
 
@@ -180,14 +242,7 @@ function ReceptionHotelStatus() {
 
                         <div className="col-sm-12 col-md-4">
                             <div className="row mt-4">
-                                {/* <div className="col-sm-12"> */}
-                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2"><i class="bi bi-cash-coin me-2"></i>Deposit</button></div>
-                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2">Posting</button></div>
-                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2"><i class="bi bi-receipt me-2"></i>Bill Preview</button></div>
-                                    <div className='col-sm-12 col-lg-6'><button className="btn btn-secondary w-100 text-white mb-2"><i class="bi bi-person-plus-fill me-2"></i>Sharer</button></div>
-                                    <div className='col-sm-12'><button className="btn btn-primary w-100 text-white mb-2"><i class="bi bi-printer-fill me-2"></i>Print</button></div>
-                                    
-                                    
+                                
                                     <div className="form-group left mt-2">
                                         <label for="room"><b>Room Number</b></label>
                                         <input type="text" className="form-control" id="room" />

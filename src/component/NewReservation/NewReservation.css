@@ -11,10 +11,6 @@
 }
 
 .formcontent{
-    /* padding : 5px;
-    padding-bottom : 20px;
-    margin-left: 1px; 
-    margin-right: 1px;  */
     background-color: rgb(255, 255, 255);
     border-radius:.5em;
     box-shadow: 5px 5px 20px rgba(124, 130, 138, 0.053);
@@ -38,10 +34,6 @@
 .roomavailability tr{
 border-color: rgb(236, 236, 236);    
 }
-
-/* .tabhead{
-    background-color: rgb(247, 247, 247);
-} */
 
 .btnstyle{
     float : left;
@@ -159,9 +151,6 @@ border-color: rgb(236, 236, 236);
     background-color: #ffffff;
   }
   
-  /* .room-discount-table{
-    background-color: #ffffff;
-  } */
   .grey-bg{
     background-color: #f7f7f7 !important;
     border-radius: .5em;
@@ -173,20 +162,20 @@ border-color: rgb(236, 236, 236);
     white-space: nowrap;
   }
 
-  .total-bg{
-    background-color: rgb(255, 255, 255);
-    padding: .5em;
-    border-radius: .5em;
-    box-shadow: 3px 3px 10px rgba(129, 141, 163, 0.134);
-    border: .5px solid rgb(235, 235, 235);
-  }
+  @media only screen and (min-width: 1230px) {
+    .type-table{
+        /* width: 100%; */
+        display: inline-table;
+      }
+    }
+
+
 
  .total-text{
     align-items: center;
  }
  .type-table .input-group{
     flex-wrap: unset;
-    /* min-width: max-content; */
  }
 
  .type-table input.text-center.form-control {
@@ -200,3 +189,36 @@ select.form-control.form-select.text-center {
     text-align: left;
     width : 100%;
 }
+
+.overflow-reservefor{
+    padding: .5em;
+    overflow-x: auto;
+    white-space: nowrap;
+    min-width: 100%;
+}
+
+.highlight-bg{
+    background-color: rgb(240, 240, 240);
+    border-radius: .5em;
+    padding: .5em 0;
+}
+
+.room-rate-col{
+    min-width: 230px;
+}
+.rate-col{
+    min-width: 100px !important;
+}
+
+.type-table th:last-child{
+    position: sticky;
+    right: 0;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+  .type-tbody td:last-child{
+    position: sticky;
+    right: 0;
+    z-index: 2;
+    background-color: #ffffff;
+  }

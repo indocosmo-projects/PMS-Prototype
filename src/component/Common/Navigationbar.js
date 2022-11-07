@@ -22,8 +22,8 @@ function NavigationBar() {
               <Nav.Link><Link to="/reservation" className='nlink'>Reservation</Link></Nav.Link>
               <Nav.Link><Link to="/reception" className='nlink'>Reception</Link></Nav.Link>
 
-            <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink">
-              <NavDropdown.Item href="shiftManagement">Shift Management</NavDropdown.Item>
+            <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink-drop">
+              <NavDropdown.Item><Link to="/shiftmanagement" className="nlink-drop">Shift Management</Link></NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
@@ -36,7 +36,7 @@ function NavigationBar() {
             <Nav.Link><Link to="/reports" className='nlink'>Reports</Link></Nav.Link>
 
 
-            <NavDropdown title="Tools" id="basic-nav-dropdown" className="nlink">
+            <NavDropdown title="Tools" id="basic-nav-dropdown" className="nlink-drop">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
@@ -46,7 +46,7 @@ function NavigationBar() {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="Setup" id="basic-nav-dropdown" className="nlink">
+            <NavDropdown title="Setup" id="basic-nav-dropdown" className="nlink-drop">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>

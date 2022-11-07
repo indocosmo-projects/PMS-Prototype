@@ -162,6 +162,21 @@
     
 }
 
+.nlink-drop{
+    color: rgb(58, 58, 58) !important;
+    font-weight: 500;
+    text-decoration: none;
+    padding: .5em 0;
+    transition: 0.5s;
+}
+
+.nlink-drop:hover{
+    opacity: 1 ;
+    color: rgb(17, 17, 17) !important;
+    /* background-color: rgb(235, 235, 235); */
+}
+
+
 
 .marginzero{
     margin: 0px;

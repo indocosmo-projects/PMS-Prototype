@@ -20,8 +20,8 @@ function NewReservation() {
             <div className="section">
                 <div className="container-fluid formcontent">
                     {/* ----- Heading ------ */}
-                    <div>
-                        <h5 className="header"> New Reservation </h5>
+                    <div className='sticky-div'>
+                        <h3 className="header"> New Reservation</h3>
                     </div>
 
                      {/* ----- Form   ------ */}
@@ -30,25 +30,25 @@ function NewReservation() {
                             <div className="row ">
                                 <div className="col-sm ">
                                     <div className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="reseNumber">Reservation Number :</label>
+                                        <label className="text-left" htmlFor="reseNumber">Reservation Number</label>
                                             <input type="number" className="form-control" id="reseNumber" defaultValue="100" name="reseNumber" disabled />
                                     </div>
                                 </div>
                                 <div className="col-sm">
                                     <div className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="arrivaldate">Date :</label>
+                                        <label className="text-left" htmlFor="arrivaldate">Date <b className='text-danger'>*</b></label>
                                             <input type="date" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                     </div>
                                 </div>
                                 <div className="col-sm">
                                     <div className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="departdate">Reserved By :</label>
+                                        <label className="text-left" htmlFor="departdate">Reserved By <b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" id="departdate" placeholder="Enter Reserved By" name="departdate" />
                                     </div>
                                 </div>
                                 <div className="col-sm">
                                     <div  className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="email">Source :</label>
+                                        <label className="text-left" htmlFor="email">Source <b className='text-danger'>*</b></label>
                                         <select className="form-select">
                                             <option>FIT/TA/CORPORATE</option>
                                             <option>FIT/TA/CORPORATE</option>
@@ -59,7 +59,7 @@ function NewReservation() {
                                 </div>
                                 <div className="col-sm">
                                     <div  className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="email">TA/Company Name : </label>
+                                        <label className="text-left" htmlFor="email">TA/Company Name <b className='text-danger'>*</b></label>
                                         <select className="form-select">
                                             <option>Option 1</option>
                                             <option>Option 2</option>
@@ -70,7 +70,7 @@ function NewReservation() {
                                 </div>
                                 <div className="col-sm">
                                     <div  className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="email">GST :</label>
+                                        <label className="text-left" htmlFor="email">GST <b className='text-danger'>*</b></label>
                                         <select className="form-select">
                                             <option>Option 1</option>
                                             <option>Option 2</option>
@@ -85,11 +85,19 @@ function NewReservation() {
 
 
                      {/* ----- Room Availability ------ */}
-                     <RoomAvailability/>  
+                     <div className="availability_check_bg my-4">
+                        <h5 className='left mt-2 ps-3 grey'>Check Availability</h5>
+                        <hr className='gray'/>
+                     <RoomAvailability/>
+                     </div>  
                     
 
                      {/* ----- Room Rate Type Discount ------ */}
+                     <div className="availability_check_bg my-4">
+                        <h5 className='left mt-2 ps-3 grey'>Room Details</h5>
+                        <hr className='gray'/>
                      <RoomRateTypeDiscount/>
+                     </div>  
                    
 
                      <Accordion className="my-4" defaultActiveKey="0" alwaysOpen>
@@ -120,9 +128,12 @@ function NewReservation() {
                                 
                                 
                                 <div className="row mb-3">
-                                    <div className='col-12 d-flex justify-content-end'>
-                                        <button type="button" className="btn btn-secondary me-2 px-3" > Back</button>
-                                        <button type="button" className="btn btn-success px-3" > Update</button>
+                                    <div className='col-12 d-flex justify-content-between'>
+                                            <button type="button" className="btn btn-danger me-2 px-3" ><i class="bi bi-x-lg me-2"></i>Cancel</button>
+                                            <div>
+                                                <button className="btn btn-outline-secondary me-3"><i className="bi bi-download me-2"></i>Download</button>
+                                                <button type="button" className="btn btn-success px-3" ><i class="bi bi-check-lg me-2"></i>Save</button>
+                                            </div>
                                         </div>
                                 </div>
                                 
