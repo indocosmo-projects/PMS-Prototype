@@ -91,7 +91,7 @@ function Request() {
                     <div className="container-fluid formcontent">
                         {/* ----- Heading ------ */}
                         <div className='d-flex justify-content-between mb-4'>
-                            <h5 className="header"> Requests </h5>
+                            <h3 className="header"> Requests </h3>
                             <button className="btn btn-outline-dark m-1"><i class="bi bi-caret-left-fill"></i>Back</button>
                         </div>
                         <div className="row">
