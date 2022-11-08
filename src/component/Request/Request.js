@@ -86,7 +86,6 @@ function Request() {
     }
 
         return(
-            <div>
                  <div className="section">
                     <div className="container-fluid formcontent">
                         {/* ----- Heading ------ */}
