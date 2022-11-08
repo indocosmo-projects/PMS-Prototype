@@ -12,7 +12,7 @@ import Navigationbar from './component/Common/Navigationbar';
 import CheckInEdit from './component/CheckInEdit/CheckInEdit';
 import CheckInEditOtherDetails from './component/CheckInEdit/CheckInEditOtherDetails';
 import ShiftManagement from './component/Shift/ShiftManagement';
-// import Request from './component/Request/Request';
+import Request from './component/Request/Request';
 import NewRequest from './component/NewRequest/NewRequest';
 import CheckOut from './component/CheckOut/CheckOut';
 
@@ -37,7 +37,7 @@ function App() {
                 <Route exact path="/checkInEdit" component={CheckInEdit}/>
                 <Route exact path="/checkInOtherDetails" component={CheckInEditOtherDetails}/>
                 <Route exact path="/shiftManagement" component={ShiftManagement}/>
-                {/* <Route exact path="/request" component={Request}/> */}
+                <Route exact path="/request" component={Request}/>
                 <Route exact path="/newrequest" component={NewRequest}/>
                 <Route exact path="/checkOut" component={CheckOut}/>
             </Switch>
