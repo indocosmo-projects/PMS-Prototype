@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import './CheckInEdit.css';
 import Form from 'react-bootstrap/Form';
 import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+import './CheckOut.css';
 
 
-function CheckInEditBilling() {
+function CheckOutBilling() {
     
     const [selected, setSelected] = useState("");
     const changeHandler = e => {
@@ -137,4 +137,4 @@ function CheckInEditBilling() {
 
 }
  
-export default CheckInEditBilling;
+export default CheckOutBilling;

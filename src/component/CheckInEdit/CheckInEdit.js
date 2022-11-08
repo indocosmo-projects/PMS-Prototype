@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import RoomAvailability from './RoomAvailability';
 import RoomRateTypeDiscount from './RoomRateTypeDiscount';
 import './CheckInEdit.css';
 import CheckInEditDetails from './CheckInEditDetails';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
 import CheckInEditBilling from './CheckInEditBilling';
@@ -18,8 +20,9 @@ function CheckInEdit(){
             <div className="section">
                 <div className="container-fluid formcontent">
                     {/* ----- Heading ------ */}
-                    <div className='sticky-div'>
-                        <h3 className="header"> Check In <span className="dark-bg">Edit</span></h3>
+                    <div className='sticky-div d-flex justify-content-between'>
+                        <h3 className="header">Check In <span className="dark-bg">Edit</span></h3>
+                        <Link to="/reception"><Button variant="outline-secondary" size="sm"><i class="bi bi-arrow-left me-2"></i>Back</Button></Link>
                     </div>
 
                      {/* ----- Form   ------ */}
@@ -28,21 +31,21 @@ function CheckInEdit(){
                         <div className="row p-4">
                             <div className="col-md-3">
                                         <div className="form-group mb-3">
-                                            <label className="text-left" htmlFor="arrival">Arrival:</label>
+                                            <label className="text-left" htmlFor="arrival">Arrival</label>
                                             <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival" />
                                         </div>
                                     
                             </div>
                             <div className="col-md-3">
                                         <div className="form-group">
-                                            <label className="text-left" htmlFor="departure">Departure:</label>
+                                            <label className="text-left" htmlFor="departure">Departure</label>
                                             <input type="datetime-local" className="form-control departure" name="departure" id="departure" />
                                         </div>
                             </div>
                             
                             <div className="col-md-3">
                                 <div className="form-group mb-3">
-                                    <label className="text-left" htmlFor="source">Source:</label>
+                                    <label className="text-left" htmlFor="source">Source</label>
                                     <Form.Select aria-label="Default select example">
                                             <option>FIT/TA/CORPORATE</option>
                                             <option value="1">1</option>
@@ -59,6 +62,8 @@ function CheckInEdit(){
                                     </div>
 
                              </div>
+
+
                             {/* <div className="col-md-4 vl">
                                 <div className="row mb-4">
                                     <div className="col-md-6">
@@ -222,7 +227,7 @@ function CheckInEdit(){
                     </Accordion>
 
 
-                     {/* ----- Buttons ------ */}
+                     {/* ----- Billing ------ */}
 
                      <div className="availability_check_bg my-4">
                      <h5 className='left mt-2 ps-3 grey'>Billing Details</h5>

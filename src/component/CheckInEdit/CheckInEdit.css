@@ -306,10 +306,11 @@ select.form-control.form-select.text-center {
 
   .grp-bill-padding{
     padding: 0 6em;
+    padding-bottom: 2em;
   }
 
   .border-right{
-    border-right: solid 1px rgb(231, 231, 231);
+    border-right: solid 1px rgb(218, 218, 218);
   }
 
   .ind-billing-badge{
@@ -340,3 +341,4 @@ select.form-control.form-select.text-center {
   .f-light{
     font-weight: 300;
   }
+  
