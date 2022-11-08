@@ -15,6 +15,10 @@
     float: left;
 }
 
+[aria-hidden="true"] {
+    display: none;
+  }
+
 .formcontent{
     /* padding : 5px;
     padding-bottom : 20px;
@@ -291,11 +295,48 @@ select.form-control.form-select.text-center {
     background-color: #ffffff;
     padding: .5em 1em;
     border-radius: .5em;
-    box-shadow: 2px 2px 5px rgba(200, 201, 255, 0.336);
+    box-shadow: 2px 2px 5px rgba(219, 220, 255, 0.336);
     border:solid 1px rgb(221, 221, 221) ;
   }
 
   .profile-img{
     font-size: 4em;
     color: #5b67d6;
+  }
+
+  .grp-bill-padding{
+    padding: 0 6em;
+  }
+
+  .border-right{
+    border-right: solid 1px rgb(231, 231, 231);
+  }
+
+  .ind-billing-badge{
+    color: #5b67d6;
+    font-size: 1em;
+  }
+
+  .pro-img-bg{
+    background-color: #eaeaff;
+    padding: .8em;
+    border-radius: 1em;
+    border: solid 1px rgb(221, 221, 221);
+  }
+
+  .bg-dissabled{
+    background-color: #d5d7e7 !important;
+    color: #a3a3a3 !important;
+  }
+
+  .sharer-bg{
+    background-color: #eaeaff;
+    padding: .5em 1em;
+    padding-top: 2em;
+    border-radius: 1em;
+    border: solid 1px rgb(221, 221, 221);
+  }
+
+  .f-light{
+    font-weight: 300;
   }

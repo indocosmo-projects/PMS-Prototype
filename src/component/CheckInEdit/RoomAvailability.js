@@ -62,7 +62,7 @@ function RoomAvailability() {
                     <label className="grey mb-1" htmlFor="rooms">Click <b>Go</b> to check availability</label>
                     </div>
                     <div className='row justify-content-center'>
-                        <button type="button" className="btn btn-success w-50">Go</button>
+                        <button type="button" className="btn btn-primary w-50">Go</button>
                         </div>
                     </div>
                 </div>
