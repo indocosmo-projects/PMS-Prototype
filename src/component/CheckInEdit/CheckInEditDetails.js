@@ -147,14 +147,7 @@ function CheckInEditDetails() {
                                         <label className="text-left left ps-3 mb-2">Sharers Details</label>
                                     <div className='d-flex flex-row gap-4 sharer-bg'>
                                     <div className="col-md-6 col-lg-3">
-                                            {/* <div className="form-group">
-                                                <Form.Select aria-label="Default select example">
-                                                    <option>Category</option>
-                                                    <option value="1">Adults</option>
-                                                    <option value="2">Child</option>
-                                                </Form.Select>
-                                            </div> */}
-
+                                           
                                             <p className='f-light'>Number of Adults</p>
                                             <InputGroup className="mb-3">
                                             <Button variant="btn btn-secondary" id="button-addon2">

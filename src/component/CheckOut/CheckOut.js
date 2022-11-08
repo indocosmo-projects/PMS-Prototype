@@ -1,5 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import './CheckOut.css';
+import CheckOutDetails from './CheckOutDetails';
+import CheckOutBilling from './CheckOutBilling';
+import CheckOutConfirm from './CheckOutConfirm';
+
 
 function CheckOut() {
         return(
@@ -7,72 +14,78 @@ function CheckOut() {
                 <div className="section">
                     <div className="container-fluid formcontent">
                         {/* ----- Heading ------ */}
-                        <div>
-                            <h5 className="header"> Check Out </h5>
-                        </div>
-                        <div className="btnright">
-                            <ul className="ullist">
-                                <li><button className="btn btn-success m-1">Back</button></li>
-                            </ul>
+                        <div className='sticky-div d-flex justify-content-between'>
+                            <h3 className="header">Check Out</h3>
+                            <Link to="/reception"><Button variant="outline-secondary" size="sm"><i class="bi bi-arrow-left me-2"></i>Back</Button></Link>
                         </div>
 
-                         <div className="bordertopbottom">
-                            <h6 className="header"> Room / Guest </h6>
-                        </div>
-
-                        <div className="box">
-                            <div className="row">
-                                <div className="col-sm-4">
-                                    <div className="bg-info roomcol text-white p-1" >
-                                        <h3>CHECK-OUT</h3>
-                                        <h2 className="roomno"><b>104</b></h2>
-                                    </div>
-                                </div>
-                                <div className="col-sm-8">
-                                    <div className="thick">
-                                        <table>
-                                            <tr>
-                                                <th className="tdwidth"><h4>Name:</h4></th>
-                                                <th className="tdwidth"><h4>Paulose</h4></th>
-                                            </tr>
-                                            <tr>
-                                                <td className="tdwidth"><h5>Balance:</h5></td>
-                                                <td className="tdwidth"><h5>₹ 0</h5></td>
-                                            </tr>
-                                            <tr>
-                                                <td className="tdwidth"><h5>Departure:</h5></td>
-                                                <td className="tdwidth"><h5>22-05-2022</h5></td>
-                                            </tr>
-                                            <tr>
-                                                <td className="tdwidth"><h5>Status:</h5></td>
-                                                <td className="tdwidth"></td>
-                                            </tr>
-                                        </table>
-                                        <div >
-                                            <button className="btn btn-primary mt-3"><i class="bi bi-printer"></i>  Print Bill </button>
+                        <div className='checkdetails light-violet-bg'>
+                        <div className="row p-4">
+                            <div className="col-md-3">
+                                        <div className="form-group mb-3">
+                                            <label className="text-left" htmlFor="arrival">Arrival</label>
+                                            <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival" disabled/>
                                         </div>
-                                    </div>
-                                   
-                                </div>
+                                    
                             </div>
+                            <div className="col-md-3">
+                                        <div className="form-group">
+                                            <label className="text-left" htmlFor="departure">Departure</label>
+                                            <input type="datetime-local" className="form-control departure" name="departure" id="departure" disabled/>
+                                        </div>
+                            </div>
+                            
+                            <div className="col-md-3">
+                                <div className="form-group mb-3">
+                                    <label className="text-left" htmlFor="source">Source</label>
+                                    <Form.Select aria-label="Default select example" disabled>
+                                            <option>FIT/TA/CORPORATE</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            </Form.Select>
+                                 
+                                </div>
+ 
+                            </div>
+                            <div className="col-md-3">
+                                    <div className="form-group">
+                                        <label className="text-left" htmlFor="pwd">Name</label>
+                                        <input type="password" className="form-control" placeholder="Name" id="pwd" />
+                                    </div>
+
+                             </div>
+   
+
+                         </div>
                         </div>
 
+
+
+                            {/* ----- room/guest-checkout ------ */}
+                            <div className="availability_check_bg my-4">
+                                    <h5 className='left mt-2 ps-3 grey'>Room Details</h5>
+                                    <hr className='gray'/>
+                                <CheckOutDetails/>
+                            </div>  
+
+                            {/* ----- Billing ------ */}
+
+                            <div className="availability_check_bg my-4">
+                                    <h5 className='left mt-2 ps-3 grey'>Billing Details</h5>
+                                    <hr className='gray'/>
+                                <CheckOutBilling/>
+                            </div>  
+                         {/* ----- checkout confirm ------ */}
+
+                            <div className="availability_check_bg my-4">
+                                    <h5 className='left mt-2 ps-3 grey'>Confirmation</h5>
+                                    <hr className='gray'/>
+                                <CheckOutConfirm/>
+                            </div>  
+
                     </div>
 
-                    <div className="container-fluid formcontent mt-3 ">
-                            <div className="hght">
-                                <h5 className="left p-2 bg-primary roundcorner text-white">Confirm</h5>
-                                <div class="form-check left">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="" />
-                                        I'm sure to check-out the selected rooms
-                                    </label>
-                                </div>
-                                <div >
-                                    <button type="button" className="btn btn-primary right"><i class="bi bi-cart4"></i>  Check Out</button>
-                                </div>
-                            </div>
-                    </div>
+                    
 
                 </div>
             </div>
