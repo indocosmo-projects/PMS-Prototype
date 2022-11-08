@@ -1,4 +1,5 @@
 import React,{ useState } from 'react';
+import { Link } from "react-router-dom";
 import './Reception.css';
 import '../../style.css';
 // import { Link } from "react-router-dom";
@@ -45,7 +46,7 @@ function ReceptionExpectedDepartures() {
                         </td> */}
                         <td>
                                 <Dropdown as={ButtonGroup}>
-                                    <Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button>
+                                <Link to="/checkout"><Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
 
                                     <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
 
@@ -155,15 +156,15 @@ function ReceptionExpectedDepartures() {
                      <table className="table table-bordered reception-table">
                         <thead >
                             <tr>
-                                <th className="thstyle">RESV.#</th>
-                                <th className="tdwidthguest">ARRIVAL</th>
-                                <th className="thstyle">NIGHTS</th>
-                                <th className="thstyle">ROOMS</th>
-                                <th className="thstyle">DEPARTURE</th>
-                                <th className="thstyle">BOOKED BY</th>
-                                <th className="tdwidth">BOOKED FOR</th>
-                                <th className="tdwidth">BOOKED ON</th>
-                                <th className="tdwidth">STATUS</th>
+                                <th>RESV.#</th>
+                                <th>ARRIVAL</th>
+                                <th>NIGHTS</th>
+                                <th>ROOMS</th>
+                                <th>DEPARTURE</th>
+                                <th>BOOKED BY</th>
+                                <th>BOOKED FOR</th>
+                                <th>BOOKED ON</th>
+                                <th>ACTIONS</th>
                             </tr>							
                         </thead>
                                 {tdata()}

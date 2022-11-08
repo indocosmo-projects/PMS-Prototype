@@ -154,15 +154,15 @@ function ReceptionExpectedArrivals() {
                      <table className="table table-bordered reception-table">
                         <thead >
                             <tr>
-                                <th className="thstyle">RESV.#</th>
-                                <th className="tdwidthguest">ARRIVAL</th>
-                                <th className="thstyle">NIGHTS</th>
-                                <th className="thstyle">ROOMS</th>
-                                <th className="thstyle">DEPARTURE</th>
-                                <th className="thstyle">BOOKED BY</th>
-                                <th className="tdwidth">BOOKED FOR</th>
-                                <th className="tdwidth">BOOKED ON</th>
-                                <th className="tdwidth">Actions</th>
+                                <th>RESV.#</th>
+                                <th>ARRIVAL</th>
+                                <th>NIGHTS</th>
+                                <th>ROOMS</th>
+                                <th>DEPARTURE</th>
+                                <th>BOOKED BY</th>
+                                <th>BOOKED FOR</th>
+                                <th>BOOKED ON</th>
+                                <th>Actions</th>
                             </tr>							
                         </thead>
                                 {tdata()}

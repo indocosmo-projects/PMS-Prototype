@@ -46,7 +46,7 @@ function Reception() {
                         </td>
                                 
                                 <td>
-                                    <button className="btn btn-primary">Posting</button>
+                                    <button className="btn btn-primary"><i class="bi bi-clipboard2-check me-2"></i>Posting</button>
                                     </td>
                             
                                 <td>
@@ -62,7 +62,7 @@ function Reception() {
                                 </td> */}
                                 <td>
                                 <Dropdown as={ButtonGroup}>
-                                    <Button variant="danger"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button>
+                                <Link to="/checkout"><Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
 
                                     <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
 
