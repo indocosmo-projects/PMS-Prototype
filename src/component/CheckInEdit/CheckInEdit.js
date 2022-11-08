@@ -211,7 +211,7 @@ function CheckInEdit(){
                     
                 <div className='col-12 d-flex justify-content-center'>
                    
-                        <button type="button" className="btn btn-primary px-4" ><i class="bi bi-plus-circle me-2"></i>Add</button>
+                        <button type="button" className="btn btn-primary px-4" ><i class="bi bi-plus-circle me-2"></i>Add Guest</button>
                         
 
                   </div>

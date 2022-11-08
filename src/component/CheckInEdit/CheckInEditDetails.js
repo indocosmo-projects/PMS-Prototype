@@ -42,7 +42,7 @@ function CheckInEditDetails() {
                                 <Nav.Link eventKey="second">ID Proofs <i class="bi bi-caret-right-fill"></i></Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                <Nav.Link eventKey="third" disabled>C-Form <i class="bi bi-caret-right-fill"></i></Nav.Link>
+                                <Nav.Link eventKey="third" disabled className='bg-dissabled'>C-Form <i class="bi bi-caret-right-fill"></i></Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                 <Nav.Link eventKey="four">Rooms <i class="bi bi-caret-right-fill"></i></Nav.Link>
@@ -58,9 +58,10 @@ function CheckInEditDetails() {
                                 
                                 <div className="row mb-3">
                                      <div className="col-md-12 col-lg-2 mb-2 d-flex flex-column">
-                                     <i class="bi bi-person-circle profile-img"></i>
-                                     <Button variant="secondary"><i class="bi bi-upload me-2"></i>Upload Image</Button>
-
+                                        <div className='pro-img-bg'>
+                                            <i class="bi bi-person-circle profile-img"></i>
+                                            <Button variant="secondary" size="sm"><i class="bi bi-upload me-2"></i>Upload Image</Button>
+                                        </div>
                                     </div>
                                     <div className='col-10'>
                                 <div className="row mb-3">
@@ -87,7 +88,7 @@ function CheckInEditDetails() {
                                      <div className="row mb-3">
                                     <div className="col-sm-12">
                                             <Alert variant="primary">
-                                            <i class="bi bi-exclamation-circle"></i> <b>George</b> has already stayed with us <b>2</b> times before 
+                                            <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2</b> times before 
                                                 <Alert.Link href="#"></Alert.Link>
                                                 </Alert>
                                                 </div>
@@ -143,8 +144,56 @@ function CheckInEditDetails() {
                                     </div>
 
                                     <div className="row mb-3">
+                                        <label className="text-left left ps-3 mb-2">Sharers Details</label>
+                                    <div className='d-flex flex-row gap-4 sharer-bg'>
+                                    <div className="col-md-6 col-lg-3">
+                                            {/* <div className="form-group">
+                                                <Form.Select aria-label="Default select example">
+                                                    <option>Category</option>
+                                                    <option value="1">Adults</option>
+                                                    <option value="2">Child</option>
+                                                </Form.Select>
+                                            </div> */}
 
-                                    <div className="col-sm-12">
+                                            <p className='f-light'>Number of Adults</p>
+                                            <InputGroup className="mb-3">
+                                            <Button variant="btn btn-secondary" id="button-addon2">
+                                            <i className="bi bi-dash"></i>
+                                            </Button>
+                                            <Form.Control className='text-center'
+                                                placeholder="1"
+                                                aria-label="1"
+                                                aria-describedby="basic-addon2"
+                                            />
+                                            <Button variant="btn btn-secondary" id="button-addon2">
+                                            <i className="bi bi-plus-lg"></i>
+                                            </Button>
+                                        </InputGroup>
+                                        </div>
+
+                                        <div className="col-md-6 col-lg-3">
+                                        <p className='f-light'>Number of Children</p>
+                                            <InputGroup className="mb-3">
+                                            <Button variant="btn btn-secondary" id="button-addon2">
+                                            <i className="bi bi-dash"></i>
+                                            </Button>
+                                            <Form.Control className='text-center'
+                                                placeholder="1"
+                                                aria-label="1"
+                                                aria-describedby="basic-addon2"
+                                            />
+                                            <Button variant="btn btn-secondary" id="button-addon2">
+                                            <i className="bi bi-plus-lg"></i>
+                                            </Button>
+                                        </InputGroup>
+                                        </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="row">
+
+                                    <div className="col-sm-12 mt-3">
                                     <InputGroup className="pt-1 d-flex justify-content-end">
                                         <div className="pt-1 make-payer-bg">
                                         <Form.Check type='checkbox' id='default-checkbox' label='Make Guest as Payer' className='mt-1'/>
@@ -157,92 +206,137 @@ function CheckInEditDetails() {
                         </Tab.Pane>
                         <Tab.Pane eventKey="second">
 
-                                <div className="row mb-3">
+                                <div className="row mb-3 left">
 
-                                     <div className="col-sm-2">
+                                     <div className="col-md-2">
                                         <Form>
-                                                {['checkbox'].map((type) => (
-                                                    <div key={`default-${type}`} className='left'>
+                                                
+                                                    <div className='left'>
                                                     <Form.Check 
-                                                        type={type}
-                                                        id={`default-${type}`}
-                                                        label={`Passport`}
+                                                        type="checkbox"
+                                                        id="checkbox"
+                                                        label="Passport"
                                                     />
 
                                                     </div>
-                                                ))}
+                                              
                                         </Form>
+                                            </div>
+                                     <div className="col-md-10">
+
+                                        <div className="row mb-3 left">
+
+                                                        <div className="col-md-2">
+                                                            <div className="form-group ">
+                                                            <label for="adults">option</label>
+                                                            <select className="form-control" id="options">
+                                                                <option>option 1</option>
+                                                                <option>option 2</option>
+                                                                <option>option 3</option>
+                                                            </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="col-md-4">
+                                                            <div className="form-group ">
+                                                                    <label for="passportnumber">Passport Number</label>
+                                                                    <input type="text" className="form-control" placeholder="" id="passportnumber" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="col-md-3">
+                                                            <div className="form-group ">
+                                                                    <label for="issueon">Issued</label>
+                                                                    {/* <input type="text" className="form-control" placeholder="Issued On" id="issueon" /> */}
+                                                                    <input type="datetime-local" className="form-control" name="issued" id="issued"/>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="col-md-3">
+                                                            <div className="form-group ">
+                                                                    <label for="expon">Expiry</label>
+                                                                    {/* <input type="text" className="form-control" placeholder="Expiry Date" id="expon" /> */}
+                                                                    <input type="datetime-local" className="form-control" name="expiry" id="expiry"/>
+
+                                                            </div>
+                                                        </div>
+
+                                                </div>
+
+                                            <div className="row mb-3 right">
+
+                                            <div className="col-md-12">
+                                            <Button variant="light me-3" size="sm"><i class="bi bi-eye-fill me-2"></i>View Passport</Button>
+                                            <Button variant="secondary" size="sm"><i class="bi bi-upload me-2"></i>Upload Image</Button>
+                                            </div>
+                                            
+                                            
                                             </div>
 
 
-                                                <div className="col-sm-2">
-                                                    <div className="form-group ">
-                                                    {/* <label for="adults">Adults:</label> */}
-                                                    <select className="form-control" id="adults">
-                                                        <option>option 1</option>
-                                                        <option>option 2</option>
-                                                        <option>option 3</option>
-                                                    </select>
-                                                    </div>
-                                                </div>
 
-                                                <div className="col-sm-4">
-                                                    <div className="form-group ">
-                                                            {/* <label for="passportnumber">Passport Number:</label> */}
-                                                            <input type="text" className="form-control" placeholder="Passport Number" id="passportnumber" />
-                                                    </div>
-                                                </div>
 
-                                                <div className="col-sm-2">
-                                                    <div className="form-group ">
-                                                            {/* <label for="issueon">Issued On:</label> */}
-                                                            <input type="text" className="form-control" placeholder="Issued On" id="issueon" />
-                                                    </div>
-                                                </div>
-
-                                                <div className="col-sm-2">
-                                                    <div className="form-group ">
-                                                            {/* <label for="expon">Expiry On:</label> */}
-                                                            <input type="text" className="form-control" placeholder="Expiry Date" id="expon" />
-                                                    </div>
-                                                </div>
+                                            </div>
 
                                         </div>
-                                        <div className="row mb-3">
 
-                                     <div className="col-sm-2">
+
+                                        
+                                        <div className="row mb-3 left">
+
+                                     <div className="col-md-2">
                                         <Form>
-                                                {['checkbox'].map((type) => (
-                                                    <div key={`default-${type}`} className='left'>
+                                                
+                                                    <div className='left'>
                                                     <Form.Check 
-                                                        type={type}
-                                                        id={`default-${type}`}
-                                                        label={`PAN`}
+                                                        type="checkbox"
+                                                        id="checkbox"
+                                                        label="PAN"
                                                     />
 
                                                     </div>
-                                                ))}
+                                              
                                         </Form>
+                                            </div>
+                                     <div className="col-md-10">
+
+                                        <div className="row mb-3 left">
+
+                                                        <div className="col-md-2">
+                                                            <div className="form-group ">
+                                                            <label for="adults">option</label>
+                                                            <select className="form-control" id="options">
+                                                                <option>option 1</option>
+                                                                <option>option 2</option>
+                                                                <option>option 3</option>
+                                                            </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="col-md-10">
+                                                            <div className="form-group ">
+                                                                    <label for="passportnumber">PAN Number</label>
+                                                                    <input type="text" className="form-control" placeholder="" id="passportnumber" />
+                                                            </div>
+                                                        </div>
+
+                                                </div>
+
+                                            <div className="row mb-3 right">
+
+                                            <div className="col-md-12">
+                                            <Button variant="light me-3" size="sm"><i class="bi bi-eye-fill me-2"></i>View PAN</Button>
+                                            <Button variant="secondary" size="sm"><i class="bi bi-upload me-2"></i>Upload Image</Button>
+                                            </div>
+                                            
+                                            
                                             </div>
 
 
-                                                <div className="col-sm-2">
-                                                    <div className="form-group ">
-                                                    {/* <label for="adults">Adults:</label> */}
-                                                    <select className="form-control" id="adults">
-                                                        <option>option 1</option>
-                                                        <option>option 2</option>
-                                                        <option>option 3</option>
-                                                    </select>
-                                                    </div>
-                                                </div>
 
-                                                <div className="col-sm-8">
-                                                    <div className="form-group ">
-                                                            {/* <label for="passportnumber">Passport Number:</label> */}
-                                                            <input type="text" className="form-control" placeholder="PAN Number" id="passportnumber" />
-                                                    </div>
-                                                </div>  
+
+                                            </div>
 
                                         </div>
                                
@@ -250,24 +344,7 @@ function CheckInEditDetails() {
 
                             <Tab.Pane eventKey="third">
 
-                            {/* <div className="row">
-                               
-                                                <div className="row">
-                                                    <div className="col-sm-6">
-                                                        <label className="text-left">Available Discounts</label>
-                                                        <Form.Select aria-label="Default select example">
-                                                            <option>Select</option>
-                                                            <option value="1">GENERAL</option>
-                                                            <option value="2">HOTREL50</option>
-                                                        </Form.Select>
-                                                    </div>
-                                                    <div className="col-sm-6">
-                                                        <label className="text-left">Discount Amount</label>
-                                                        <input type="text" className="form-control shw_dsct_rgt" defaultValue="100 RS" />
-                                                    </div>
-                                                </div>
-
-                             </div> */}
+                           
 
 
                             </Tab.Pane>
@@ -296,41 +373,7 @@ function CheckInEditDetails() {
                                 </div>
                                 </div>
 
-                                                {/* <div className="row ">
-                                                    <div className="col-sm-3">
-                                                        <div className="inputfieldpadding">
-                                                            <label className="text-left" htmlFor="arrivaldate">Date :</label>
-                                                            <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-sm-3">
-                                                        <div className="inputfieldpadding">
-                                                            <label className="text-left" htmlFor="arrivaldate">Date :</label>
-                                                            <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-sm-3">
-                                                        <div className="inputfieldpadding">
-                                                            <label className="text-left">Location</label>
-                                                            <input type="text" className="form-control" placeholder="" />
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-sm-3">
-                                                        <div className="inputfieldpadding">
-                                                            <label className="text-left">Seats</label>
-                                                            <input type="text" className="form-control" placeholder="" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div className="row">
-                                                    <div className="col-sm-12">
-                                                        <div className="inputfieldpadding">
-                                                            <label className="text-left">Remarks</label>
-                                                            <textarea type="text" className="form-control" placeholder="" />
-                                                        </div>
-                                                    </div>
-                                                </div> */}
+                                               
 
                             </Tab.Pane>
 
