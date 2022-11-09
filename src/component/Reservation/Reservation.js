@@ -134,7 +134,7 @@ function Reservation() {
                 <div className="container-fluid ">
                     {/* ----- Heading ------ */}
                     <div className="sticky-div mb-3">
-                            <h3 className="header green"> Reservations </h3>
+                            <h3 className="header green"><i class="bi bi-calendar-range-fill me-2"></i>Reservations</h3>
                         </div>
                     <div className="row search-area-bg">
 

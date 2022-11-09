@@ -15,7 +15,7 @@ function CheckOut() {
                     <div className="container-fluid formcontent">
                         {/* ----- Heading ------ */}
                         <div className='sticky-div d-flex justify-content-between'>
-                            <h3 className="header">Check Out</h3>
+                            <h3 className="header"><i class="bi bi-dash-circle-fill me-2"></i>Check Out</h3>
                             <Link to="/reception"><Button variant="outline-secondary" size="sm"><i class="bi bi-arrow-left me-2"></i>Back</Button></Link>
                         </div>
 
@@ -65,7 +65,17 @@ function CheckOut() {
                             <div className="availability_check_bg my-4">
                                     <h5 className='left mt-2 ps-3 grey'>Room Details</h5>
                                     <hr className='gray'/>
-                                <CheckOutDetails/>
+                                    <div className='row'>
+                                        <div className='col-md-6 col-lg-4'>
+                                            <CheckOutDetails/>
+                                        </div>
+                                        <div className='col-md-6 col-lg-4'>
+                                            <CheckOutDetails/>
+                                        </div>
+                                        <div className='col-md-6 col-lg-4'>
+                                            <CheckOutDetails/>
+                                        </div>
+                                    </div>
                             </div>  
 
                             {/* ----- Billing ------ */}

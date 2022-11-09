@@ -1,6 +1,8 @@
 import React, { useState} from 'react';
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
+import Alert from 'react-bootstrap/Alert';
+
 
 
 function ReservedFor() {
@@ -112,7 +114,14 @@ const display = (e) => {
                                         </div>
                                     </div>
                                 </div>
-
+                                <div className='row'>
+                                    <div className='col-12 px-3'>
+                                            <Alert variant="primary">
+                                                <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2</b> times before 
+                                                <Alert.Link href="#"></Alert.Link>
+                                            </Alert>
+                                    </div>
+                                </div>
                                 <div className="row my-3">
                                    
                                     <div className="col-sm-2">
