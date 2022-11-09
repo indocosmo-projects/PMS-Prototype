@@ -50,7 +50,7 @@ function CheckOut() {
                             <div className="col-md-3">
                                     <div className="form-group">
                                         <label className="text-left" htmlFor="pwd">Name</label>
-                                        <input type="password" className="form-control" placeholder="Name" id="pwd" />
+                                        <input type="password" className="form-control" placeholder="Name" id="pwd" disabled/>
                                     </div>
 
                              </div>

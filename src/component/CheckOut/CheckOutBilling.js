@@ -4,10 +4,20 @@ import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
 import './CheckOut.css';
+
+const animatedComponents = makeAnimated();
 
 
 function CheckOutBilling() {
+
+
+    const options = [
+        {value: "102", label:"FLR 1, ROOM 102 / Jack"},
+        {value: "103", label:"FLR 1, ROOM 103 / Pam"},
+    ];
     
     const [selected, setSelected] = useState("");
     const changeHandler = e => {
@@ -48,7 +58,7 @@ function CheckOutBilling() {
                                         >
                                             <div className="ms-2 me-auto left">
                                             <div className="fw-bold">Tom</div>
-                                            Cras justo odio
+                                            FLR 1, ROOM 101
                                             </div>
                                             <Badge bg="light" className="ind-billing-badge">
                                             <i class="bi bi-check-circle-fill"></i>
@@ -60,7 +70,7 @@ function CheckOutBilling() {
                                         >
                                             <div className="ms-2 me-auto left">
                                             <div className="fw-bold">Jack</div>
-                                            Cras justo odio
+                                            FLR 1, ROOM 102
                                             </div>
                                             <Badge bg="light" className="ind-billing-badge">
                                             <i class="bi bi-check-circle-fill"></i>
@@ -72,13 +82,15 @@ function CheckOutBilling() {
                                         >
                                             <div className="ms-2 me-auto left">
                                             <div className="fw-bold">Pam</div>
-                                            Cras justo odio
+                                            FLR 1, ROOM 103
                                             </div>
                                             <Badge bg="light" className="ind-billing-badge">
                                             <i class="bi bi-check-circle-fill"></i>
                                             </Badge>
                                         </ListGroup.Item>
                                         </ListGroup>
+                                        <Button variant="primary mb-2"><i class="bi bi-arrow-clockwise me-1"></i>Update</Button>
+
                                     </div>
 
                         </div>
@@ -106,15 +118,33 @@ function CheckOutBilling() {
                                             <div className="grp-bill-padding">
                                             <p className="left gray mt-4">Select the Guest to be Group billed</p>
                                             <Form.Select aria-label="Default select example">
-                                                <option>Select the Guest</option>
-                                                <option value="1">Tom</option>
-                                                <option value="2">Jack</option>
-                                                <option value="3">Pam</option>
+                                                <option>Select the Room/Guest</option>
+                                                <option value="1">FLR 1, ROOM 101 / Tom</option>
+                                                <option value="2">FLR 1, ROOM 102 / Jack</option>
+                                                <option value="3">FLR 1, ROOM 103 / Pam</option>
                                             </Form.Select>
+
+                                            <p className="left gray mt-4">Select the Guests to be Transferred</p>
+
+                                                <Select
+                                                    closeMenuOnSelect={false}
+                                                    components={animatedComponents}
+                                                    // defaultValue={}
+                                                    isMulti
+                                                    options={options}
+                                                    className="basic-multi-select"
+                                                    classNamePrefix="select"
+                                                    menuPlacement="auto"
+                                                    menuPortalTarget={document.body}
+                                                    menuPosition={'fixed'}
+                                                />
+
+                                                <Button variant="primary mb-2 mt-4"><i class="bi bi-check-lg me-1"></i>Transfer</Button>
+
                                             </div>
                                     </div>
-
                             </div>
+                            
 
                         </Form>
 

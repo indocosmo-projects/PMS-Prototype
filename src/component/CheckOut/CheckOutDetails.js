@@ -2,6 +2,7 @@ import React from 'react';
 import './CheckOut.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Badge from 'react-bootstrap/Badge';
 import CheckOutPayment from './CheckOutPayment';
 
 
@@ -15,9 +16,9 @@ function CheckOutDetails() {
                             {/* <div className='col-md-6 col-lg-4'> */}
                             <div className='col-12'>
                                     <Card className='left'>
-                                        <Card.Header><h4 className='mt-1'><i class="bi bi-door-closed-fill me-2"></i>ROOM 108</h4></Card.Header>
+                                        <Card.Header className='d-flex flex-row'><h4 className='mt-1 me-2 header'><i class="bi bi-door-closed-fill me-1"></i>FLR-1, ROOM</h4><h2><Badge bg="dark">108</Badge></h2></Card.Header>
                                         <Card.Body>
-                                            <Card.Title><i class="bi bi-person-fill me-2"></i>Tom Hollend</Card.Title>
+                                            <Card.Title className='gray'><i class="bi bi-person-fill me-2"></i>Tom Hollend</Card.Title>
                                             <Card.Text className='gray mb-4'>
                                         <div className='row'>
                                         <div className='col-lg-6'>
@@ -40,13 +41,13 @@ function CheckOutDetails() {
                                         <div className='col-lg-6'>
 
                                                     <label className="text-left" htmlFor="balance">Balance</label>
-                                                    <input type="" className="form-control" name="balance" id="balance" disabled/>
+                                                    <input type="" className="form-control" name="balance" id="balance" value="₹ 1500" disabled/>
                                                 
                                         </div>
                                         <div className='col-lg-6'>
                                                 
                                                     <label className="text-left" htmlFor="status">Status</label>
-                                                    <input type="" className="form-control" name="status" id="status" disabled/>
+                                                    <input type="" className="form-control" name="status" id="status" value="Unpaid" disabled/>
                                                 
                                         </div>
                                         </div>
