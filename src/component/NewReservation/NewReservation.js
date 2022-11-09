@@ -21,7 +21,7 @@ function NewReservation() {
                 <div className="container-fluid formcontent">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div'>
-                        <h3 className="header"> New Reservation</h3>
+                        <h3 className="header"><i class="bi bi-calendar2-plus-fill me-2"></i>New Reservation</h3>
                     </div>
 
                      {/* ----- Form   ------ */}

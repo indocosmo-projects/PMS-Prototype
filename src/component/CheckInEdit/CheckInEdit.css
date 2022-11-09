@@ -258,11 +258,11 @@ select.form-control.form-select.text-center {
 }
 
 .dark-bg{
-    background-color: #3d3061 !important;
+    background-color: #584a7e !important;
     border-radius: 1em;
     color: #f7f7f7;
     padding: .1em .8em;
-    font-size: 18px;
+    font-size: 16px;
 }
 .vr-line{
     width: 1px !important;

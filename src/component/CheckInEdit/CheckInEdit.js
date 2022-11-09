@@ -21,7 +21,7 @@ function CheckInEdit(){
                 <div className="container-fluid formcontent">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div d-flex justify-content-between'>
-                        <h3 className="header">Check In <span className="dark-bg">Edit</span></h3>
+                        <h3 className="header">Check In <span className="dark-bg"><i class="bi bi-pencil-square me-1"></i>Edit</span></h3>
                         <Link to="/reception"><Button variant="outline-secondary" size="sm"><i class="bi bi-arrow-left me-2"></i>Back</Button></Link>
                     </div>
 

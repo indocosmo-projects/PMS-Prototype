@@ -132,7 +132,7 @@ function Reception() {
                 <div className="container-fluid">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div'>
-                        <h3 className="header">Reception</h3>
+                        <h3 className="header"><i class="bi bi-person-workspace me-2"></i>Reception</h3>
                     </div>
                     
                 <Tabs

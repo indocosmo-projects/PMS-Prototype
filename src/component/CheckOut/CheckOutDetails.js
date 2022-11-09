@@ -1,18 +1,8 @@
 import React from 'react';
 import './CheckOut.css';
-// import Form from 'react-bootstrap/Form';
-// import Col from 'react-bootstrap/Col';
-// import Nav from 'react-bootstrap/Nav';
-// import Row from 'react-bootstrap/Row';
-// import Tab from 'react-bootstrap/Tab';
-// import Alert from 'react-bootstrap/Alert';
-// import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
-
-
-
+import CheckOutPayment from './CheckOutPayment';
 
 
 function CheckOutDetails() {
@@ -21,10 +11,9 @@ function CheckOutDetails() {
             <div>
                 <div className="container-fluid">
                 
-                     
-
                         <div className='row'>
-                            <div className='col-md-6 col-lg-4'>
+                            {/* <div className='col-md-6 col-lg-4'> */}
+                            <div className='col-12'>
                                     <Card className='left'>
                                         <Card.Header><h4 className='mt-1'><i class="bi bi-door-closed-fill me-2"></i>ROOM 108</h4></Card.Header>
                                         <Card.Body>
@@ -62,9 +51,9 @@ function CheckOutDetails() {
                                         </div>
                                         </div>
                                             </Card.Text>
-                                            <Button variant="success me-2 mb-2"><i class="bi bi-credit-card-fill me-1"></i>Payment</Button>
-                                            <Button variant="warning me-2 mb-2"><i class="bi bi-percent me-1"></i>Discount</Button>
-                                            <Button variant="secondary me-2 mb-2"><i class="bi bi-receipt me-1"></i>In-voice</Button>
+                                           {/*.......Payment Button........ */}  <CheckOutPayment/> 
+                                            <Button variant="warning me-2"><i class="bi bi-percent me-1"></i>Discount</Button>
+                                            <Button variant="secondary me-2"><i class="bi bi-receipt me-1"></i>In-voice</Button>
                                         </Card.Body>
                                     </Card>
                             </div>
