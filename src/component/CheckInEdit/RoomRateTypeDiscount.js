@@ -192,7 +192,7 @@ function RoomRateTypeDiscount() {
                                     <tr>
                                         <th>ROOM TYPE</th>
                                         <th>OCCUPANCY</th>
-                                        <th>RATE</th>
+                                        <th>ROOM RATE</th>
                                         <th>RATE CODE</th>
                                         <th>COUNT</th>
                                         <th>ROOMS</th>
