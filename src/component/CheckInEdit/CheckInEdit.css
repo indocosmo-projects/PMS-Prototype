@@ -342,3 +342,8 @@ select.form-control.form-select.text-center {
     font-weight: 300;
   }
   
+  .group-input-width{
+    min-width: 130px;
+    max-width: 130px;
+    flex-wrap: nowrap;
+  }

@@ -120,7 +120,7 @@ function RoomRateTypeDiscount() {
                 
                 </td> */}
                 <td>
-                <InputGroup className="mb-3">
+                <InputGroup className="mb-3 group-input-width">
                         <Button variant="btn btn-secondary" id="button-addon2">
                         <i className="bi bi-dash"></i>
                         </Button>
