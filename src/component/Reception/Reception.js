@@ -190,8 +190,8 @@ function Reception() {
                                     <tr>
                                         <th>Room No.</th>
                                         <th>Guest</th>
-                                        <th>Arrival</th>
-                                        <th>Departure</th>
+                                        <th>Check In Date</th>
+                                        <th>Check Out Date</th>
                                         <th>Folio Balance</th>
                                         <th>Check Deposit</th>
                                         <th>Check Posting</th>
