@@ -155,7 +155,7 @@ function ReceptionExpectedArrivals() {
                      <table className="table table-bordered reception-table">
                         <thead >
                             <tr>
-                                <th>RESV.#</th>
+                                <th>RESV ID</th>
                                 <th>ARRIVAL DATE</th>
                                 <th>DEPARTURE DATE</th>
                                 <th>NIGHTS</th>

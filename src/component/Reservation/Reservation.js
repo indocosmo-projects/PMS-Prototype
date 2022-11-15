@@ -10,14 +10,14 @@ function Reservation() {
     
  
     const details =  
-        [   {id: 0, rese:'R-000001',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'GRANTED'},
-            {id: 1, rese:'R-000001',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Clark Kent', bookedon:'10-Oct-2022',status:'CANCELLED'},
-            {id: 2, rese:'R-000002',arrival :'10-Oct-2022',nights:'4',rooms:'2',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'GRANTED'},
-            {id: 3, rese:'R-000003',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
-            {id: 4, rese:'R-000003',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Peter Parker', bookedon:'10-Oct-2022',status:'GRANTED'},
-            {id: 5, rese:'R-000003',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
-            {id: 6, rese:'R-000007',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Peter Parker', bookedon:'10-Oct-2022',status:'GRANTED'},
-            {id: 7, rese:'R-000008',arrival :'10-Oct-2022',nights:'4',rooms:'1',departure:'10-Oct-2022', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
+        [   {id: 0, rese:'R-000001',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CONFIRMED'},
+            {id: 1, rese:'R-000001',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Clark Kent', bookedon:'10-Oct-2022',status:'CANCELLED'},
+            {id: 2, rese:'R-000002',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'2', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CONFIRMED'},
+            {id: 3, rese:'R-000003',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
+            {id: 4, rese:'R-000003',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Peter Parker', bookedon:'10-Oct-2022',status:'CONFIRMED'},
+            {id: 5, rese:'R-000003',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
+            {id: 6, rese:'R-000007',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Peter Parker', bookedon:'10-Oct-2022',status:'CONFIRMED'},
+            {id: 7, rese:'R-000008',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
         ];
     
     
@@ -66,9 +66,9 @@ function Reservation() {
                     details.map(detail =>  <tr className="center" key={detail.id} >
                         <td style={{color : 'blue'}} >{detail.rese}</td>
                         <td>{detail.arrival}</td>
+                        <td>{detail.departure}</td>
                         <td>{detail.nights}</td>
                         <td>{detail.rooms}</td>
-                        <td>{detail.departure}</td>
                         <td>{detail.bookedby}</td>
                         <td>{detail.bookedfor}</td>
                         <td>{detail.bookedon}</td>
@@ -196,11 +196,11 @@ function Reservation() {
                                     <table className="table table-striped table-bordered" >
                                         <thead >
                                             <tr className='center'>
-                                                <th className="">Booking Id</th>
+                                                <th className="">Resv Id</th>
                                                 <th className="">Arrival Date<i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">Departure Date<i className="bi bi-arrow-down-up sort-btn"></i></th>
                                                 <th className="">Nights<i className="bi bi-arrow-down-up sort-btn"></i> </th>
                                                 <th className="">No of Rooms<i className="bi bi-arrow-down-up sort-btn"></i></th>
-                                                <th className="">Departure Date<i className="bi bi-arrow-down-up sort-btn"></i></th>
                                                 <th className="">Booked By<i className="bi bi-arrow-down-up sort-btn"></i></th>
                                                 <th className="">Booked For<i className="bi bi-arrow-down-up sort-btn"></i></th>
                                                 <th className="">Booked On<i className="bi bi-arrow-down-up sort-btn"></i></th>
