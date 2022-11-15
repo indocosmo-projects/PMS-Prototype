@@ -53,8 +53,8 @@ function CheckOutDetails() {
                                         </div>
                                             </Card.Text>
                                            {/*.......Payment Button........ */}  <CheckOutPayment/> 
-                                            <Button variant="warning me-2"><i class="bi bi-percent me-1"></i>Discount</Button>
-                                            <Button variant="secondary me-2"><i class="bi bi-receipt me-1"></i>Invoice</Button>
+                                            {/* <Button variant="warning me-2"><i class="bi bi-percent me-1"></i>Discount</Button> */}
+                                            <Button variant="danger me-2"><i class="bi bi-box-arrow-right me-1"></i>Checkout</Button>
                                         </Card.Body>
                                     </Card>
                             </div>

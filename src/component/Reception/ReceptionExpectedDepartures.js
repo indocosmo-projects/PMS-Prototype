@@ -14,13 +14,13 @@ function ReceptionExpectedDepartures() {
 
 
     const details =  
-        [{id: 1, rese:'104',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 2, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'2',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 3, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 4, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 5, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 6, rese:'104',arrival :'16-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 7, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        [{id: 1, rese:'104',arrival :'22-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018, 10:00 AM', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 2, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'2',departure:'27-DEC-2018, 10:00 AM', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 3, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018, 10:00 AM', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 4, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018, 10:00 AM', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 5, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018, 10:00 AM', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 6, rese:'104',arrival :'16-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018, 10:00 AM', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 7, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018, 10:00 AM', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
         ];
         const [dropdown, setDropdown] = useState(0);
         // const [recordno, setRecordno] = useState(5); 

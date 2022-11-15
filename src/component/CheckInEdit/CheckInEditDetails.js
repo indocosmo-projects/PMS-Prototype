@@ -45,7 +45,7 @@ function CheckInEditDetails() {
                                 <Nav.Link eventKey="third" disabled className='bg-dissabled'>C-Form <i class="bi bi-caret-right-fill"></i></Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                <Nav.Link eventKey="four">Rooms <i class="bi bi-caret-right-fill"></i></Nav.Link>
+                                <Nav.Link eventKey="four">Rooms (Optional)<i class="bi bi-caret-right-fill"></i></Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                 <Nav.Link eventKey="five">Misc <i class="bi bi-caret-right-fill"></i></Nav.Link>
@@ -344,7 +344,7 @@ function CheckInEditDetails() {
                             <Tab.Pane eventKey="four">
                                 <div className="row mt-4">
                                     <div className="col-lg-12">
-                                    <p className='gray'>Select the Rooms assigned for this Guest<b className='text-danger'>*</b></p>
+                                    <p className='gray'>Assign a room manually for this Guest (Optional)</p>
                                 </div>
                                 </div>
                                 <div className="row d-flex justify-content-center">

@@ -8,13 +8,23 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
+import Select from 'react-select';
+import isClearable from 'react-select';
+import makeAnimated from 'react-select/animated';
 import CheckInEditBilling from './CheckInEditBilling';
 
+const animatedComponents = makeAnimated();
 
-
-// import { Link } from "react-router-dom";
 
 function CheckInEdit(){
+    const options = [
+        {value: "101", label:"FLR 1, ROOM 101"},
+        {value: "202", label:"FLR 2, ROOM 202"},
+        {value: "303", label:"FLR 3, ROOM 303"},
+        {value: "304", label:"FLR 3, ROOM 303"},
+        {value: "305", label:"FLR 3, ROOM 303"},
+        {value: "305", label:"FLR 3, ROOM 303"},
+    ];
     return(
         <div>
             <div className="section">
@@ -178,33 +188,66 @@ function CheckInEdit(){
                                     <th>No.</th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Address</th>
+                                    <th>Phone</th>
                                     <th>Gender</th>
                                     <th>Country</th>
-                                    <th>State</th>
+                                    <th>Room</th>
                                     <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                     <td>1</td>
-                                    {Array.from({ length: 6 }).map((_, index) => (
-                                        <td key={index}>Table cell {index}</td>
+                                    {Array.from({ length: 5 }).map((_, index) => (
+                                        <td key={index}>Table cell {index} </td>
                                     ))}
+                                    <td><Select
+                                            closeMenuOnSelect={false}
+                                            components={animatedComponents}
+                                            isClearable
+                                            options={options}
+                                            className="basic-single"
+                                            classNamePrefix="select"
+                                            menuPlacement="auto"
+                                            menuPortalTarget={document.body}
+                                            menuPosition={'fixed'}
+                                            /></td>
                                     <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                                     </tr>
                                     <tr>
                                     <td>2</td>
-                                    {Array.from({ length: 6 }).map((_, index) => (
+                                    {Array.from({ length: 5 }).map((_, index) => (
                                         <td key={index}>Table cell {index}</td>
                                     ))}
+                                    <td><Select
+                                            closeMenuOnSelect={false}
+                                            components={animatedComponents}
+                                            isClearable
+                                            options={options}
+                                            className="basic-single"
+                                            classNamePrefix="select"
+                                            menuPlacement="auto"
+                                            menuPortalTarget={document.body}
+                                            menuPosition={'fixed'}
+                                            /></td>
                                     <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                                     </tr>
                                     <tr>
                                     <td>3</td>
-                                    {Array.from({ length: 6 }).map((_, index) => (
+                                    {Array.from({ length: 5 }).map((_, index) => (
                                         <td key={index}>Table cell {index}</td>
                                     ))}
+                                    <td><Select
+                                            closeMenuOnSelect={false}
+                                            components={animatedComponents}
+                                            options={options}
+                                            isClearable
+                                            className="basic-single"
+                                            classNamePrefix="select"
+                                            menuPlacement="auto"
+                                            menuPortalTarget={document.body}
+                                            menuPosition={'fixed'}
+                                            /></td>
                                     <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                                     </tr>
                                 </tbody>
