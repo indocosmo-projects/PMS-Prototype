@@ -49,9 +49,10 @@ function ReceptionExpectedArrivals() {
                                     <Dropdown.Toggle className='checkin-split' split variant="primary" id="dropdown-split-basic" />
 
                                     <Dropdown.Menu>
-                                        <Dropdown.Item href="#/action-1">Extend</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Confirm</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">No Show</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Cancel</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                                 </td>

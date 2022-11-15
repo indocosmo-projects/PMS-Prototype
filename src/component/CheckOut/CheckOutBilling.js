@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Form from 'react-bootstrap/Form';
-import Badge from 'react-bootstrap/Badge';
-import ListGroup from 'react-bootstrap/ListGroup';
+// import Badge from 'react-bootstrap/Badge';
+// import ListGroup from 'react-bootstrap/ListGroup';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Select from 'react-select';
@@ -31,7 +31,7 @@ function CheckOutBilling() {
                 <h6 className='left mt-2 ps-3 grey'>Billing Type</h6>
                      <hr className='gray mb-4'/>
                    
-                        <Form className='row py-3 sharer-bg mx-2'>
+                        <Form className='row py-3  mx-2'>
                             <div className="col-lg-6 border-right">
                         <Form.Check
                             inline
@@ -44,13 +44,14 @@ function CheckOutBilling() {
                             onChange={changeHandler}
                         />
 
-                                    <div aria-hidden={selected !== "ind" ? true : false} className="total-bg mt-3">
+                                    <div aria-hidden={selected !== "ind" ? true : false} className=" mt-3">
                                         
                                          <Alert key="primary" variant="primary" className="mx-4 mt-3">
                                          <i class="bi bi-person-fill me-2"></i><b>Individual Billing</b> is Selected
                                         </Alert>
+                                        <p className="fade-color mt-2"><i class="bi bi-exclamation-circle me-2"></i>Check out the eligible individuals below</p>
 
-                                    <ListGroup as="ol" numbered className="mt-4 p-4">
+                                    {/* <ListGroup as="ol" numbered className="mt-4 p-4">
                                     <p className="left gray">Guests will be billed listed down</p>
                                         <ListGroup.Item
                                             as="li"
@@ -88,8 +89,8 @@ function CheckOutBilling() {
                                             <i class="bi bi-check-circle-fill"></i>
                                             </Badge>
                                         </ListGroup.Item>
-                                        </ListGroup>
-                                        <Button variant="primary mb-2"><i class="bi bi-arrow-clockwise me-1"></i>Update</Button>
+                                        </ListGroup> */}
+                                        {/* <Button variant="primary mb-2"><i class="bi bi-arrow-clockwise me-1"></i>Update</Button> */}
 
                                     </div>
 
@@ -109,9 +110,9 @@ function CheckOutBilling() {
 
                         />
 
-                                    <div aria-hidden={selected !== "grp" ? true : false} className="total-bg mt-3">
+                                    <div aria-hidden={selected !== "grp" ? true : false} className="mt-3">
 
-                                            <Alert key="warning" variant="warning" className="mx-4 mt-3">
+                                            <Alert key="primary" variant="primary" className="mx-4 mt-3">
                                             <i class="bi bi-people-fill me-2"></i><b>Group Billing</b> is Selected
                                             </Alert>
 
@@ -148,7 +149,7 @@ function CheckOutBilling() {
 
                         </Form>
 
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="col-12">
                                 <h6 className='left mt-4 ps-3 grey'>Deposit details</h6>
                                 <hr className='gray mb-4'/>
@@ -156,7 +157,7 @@ function CheckOutBilling() {
                                 <Button variant="primary"><i class="bi bi-piggy-bank-fill me-2"></i>Deposit</Button>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         
 
 

@@ -9,7 +9,6 @@ import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
 import Select from 'react-select';
-import isClearable from 'react-select';
 import makeAnimated from 'react-select/animated';
 import CheckInEditBilling from './CheckInEditBilling';
 
