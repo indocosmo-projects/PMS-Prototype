@@ -44,9 +44,9 @@ function ReceptionHotelStatus() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">Check Out</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">House Keeping</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">Edit</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                     
@@ -63,9 +63,10 @@ function ReceptionHotelStatus() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">Check In</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Cancel</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">No Show</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">Edit</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                     
@@ -82,9 +83,7 @@ function ReceptionHotelStatus() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">Clean</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                     
@@ -101,9 +100,8 @@ function ReceptionHotelStatus() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">Check In</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Mark as Vacant</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
 
@@ -121,9 +119,7 @@ function ReceptionHotelStatus() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">Clean</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                     

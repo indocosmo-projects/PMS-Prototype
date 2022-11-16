@@ -21,7 +21,7 @@ function CheckInEditBilling() {
                 <h6 className='left mt-2 ps-3 grey'>Billing Type</h6>
                      <hr className='gray mb-4'/>
                    
-                        <Form className='row py-3 sharer-bg mx-2'>
+                        <Form className='row py-3 mx-2'>
                             <div className="col-lg-6 border-right">
                         <Form.Check
                             inline

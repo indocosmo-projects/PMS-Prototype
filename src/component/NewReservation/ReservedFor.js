@@ -117,7 +117,7 @@ const display = (e) => {
                                 <div className='row'>
                                     <div className='col-12 px-3'>
                                             <Alert variant="primary">
-                                                <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2</b> times before 
+                                                <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2 Nights</b> before 
                                                 <Alert.Link href="#"></Alert.Link>
                                             </Alert>
                                     </div>

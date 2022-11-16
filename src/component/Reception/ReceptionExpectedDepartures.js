@@ -14,13 +14,13 @@ function ReceptionExpectedDepartures() {
 
 
     const details =  
-        [{id: 1, rese:'104',arrival :'22-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 2, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'2',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 3, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 4, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 5, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 6, rese:'104',arrival :'16-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 7, rese:'104',arrival :'27-DEC-2018',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        [{id: 1, rese:'104',arrival :'22-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 2, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'2', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 3, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 4, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 5, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 6, rese:'104',arrival :'16-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 7, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
         ];
         const [dropdown, setDropdown] = useState(0);
         // const [recordno, setRecordno] = useState(5); 
@@ -35,9 +35,9 @@ function ReceptionExpectedDepartures() {
                      details.map(detail =>  <tr key={detail.id} >
                         <td  style={{color : 'blue'}} >{detail.rese}</td>
                         <td >{detail.arrival}</td>
+                        <td >{detail.departure}</td>
                         <td >{detail.nights}</td>
                         <td >{detail.rooms}</td>
-                        <td >{detail.departure}</td>
                         <td >{detail.bookedby}</td>
                         <td >{detail.bookedfor}</td>
                         <td >{detail.bookedon}</td>
@@ -51,9 +51,10 @@ function ReceptionExpectedDepartures() {
                                     <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
 
                                     <Dropdown.Menu>
-                                        <Dropdown.Item href="#/action-1">Extend</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">GRC</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Bill preview</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Invoice</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                                 </td>
@@ -156,11 +157,11 @@ function ReceptionExpectedDepartures() {
                      <table className="table table-bordered reception-table">
                         <thead >
                             <tr>
-                                <th>RESV.#</th>
-                                <th>ARRIVAL</th>
+                                <th>Room No.</th>
+                                <th>CHECK IN DATE</th>
+                                <th>DEPARTURE</th>
                                 <th>NIGHTS</th>
                                 <th>ROOMS</th>
-                                <th>DEPARTURE</th>
                                 <th>BOOKED BY</th>
                                 <th>BOOKED FOR</th>
                                 <th>BOOKED ON</th>

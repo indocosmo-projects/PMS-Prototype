@@ -18,11 +18,11 @@ function Reception() {
   
 
     const details =
-                [{id: 1, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 2, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 3, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 4, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 5, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
+                [{id: 1, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 2, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 3, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 4, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 5, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
                 ];
 
     const [dropdown, setDropdown] = useState(0);
@@ -67,9 +67,10 @@ function Reception() {
                                     <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
 
                                     <Dropdown.Menu>
-                                        <Dropdown.Item href="#/action-1">Extend</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">GRC</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Bill preview</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Invoice</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                                 </td>
@@ -189,8 +190,8 @@ function Reception() {
                                     <tr>
                                         <th>Room No.</th>
                                         <th>Guest</th>
-                                        <th>Arrival</th>
-                                        <th>Departure</th>
+                                        <th>Check In Date</th>
+                                        <th>Check Out Date</th>
                                         <th>Folio Balance</th>
                                         <th>Check Deposit</th>
                                         <th>Check Posting</th>

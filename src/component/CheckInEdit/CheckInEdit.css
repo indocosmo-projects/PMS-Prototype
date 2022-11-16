@@ -330,15 +330,29 @@ select.form-control.form-select.text-center {
     color: #a3a3a3 !important;
   }
 
-  .sharer-bg{
+  /* .sharer-bg{
     background-color: #eaeaff;
     padding: .5em 1em;
     padding-top: 2em;
     border-radius: 1em;
     border: solid 1px rgb(221, 221, 221);
-  }
+  } */
 
   .f-light{
     font-weight: 300;
   }
   
+  .group-input-width{
+    min-width: 130px;
+    max-width: 130px;
+    flex-wrap: nowrap;
+  }
+
+  .form-check{
+    background-color: rgb(255, 255, 255);
+    padding: .5em 1em;
+    padding-left: 2.2em;
+    border-radius: .5em;
+    border: solid 1px rgb(233, 233, 233);
+    box-shadow: 1px 1px 10px rgb(231, 236, 247);
+}
