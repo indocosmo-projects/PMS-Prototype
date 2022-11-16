@@ -118,7 +118,7 @@ function MyVerticallyCenteredModal(props) {
         <hr className='gray'/>
       <div className="row">
           <div className="col-md-8">
-          <label className="mb-2 gray ps-1">Available Discounts</label>
+          <label className="mb-2 gray ps-1">Select/Specify Discounts</label>
 
               <InputGroup className="mb-3">
                 <Form.Control aria-label="Text input with dropdown button" />
@@ -179,14 +179,18 @@ function MyVerticallyCenteredModal(props) {
                 <td>
                     <select className="form-control form-select text-center">
                         <option>PAID-IN</option>
-                        <option>OPTION-2</option>
+                        <option>COMPLEMENTARY</option>
                     </select>
                 </td>
                 <td>
                     <select className="form-control form-select text-center">
+                        <option>COMPANY</option>
                         <option>CASH</option>
                         <option>CARD</option>
                         <option>UPI</option>
+                        <option>DD</option>
+                        <option>ONLINE</option>
+                        <option>COMPLEMENTARY</option>
                     </select>
                 </td>
                 <td>
@@ -216,9 +220,6 @@ function MyVerticallyCenteredModal(props) {
     <Button variant="success" size="sm"><i class="bi bi-plus-circle me-1"></i>Add Payment</Button>
     </div>
     </div>
-
-
-
 
       </Modal.Body>
       <Modal.Footer>

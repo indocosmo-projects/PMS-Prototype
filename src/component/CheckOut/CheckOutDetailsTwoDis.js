@@ -3,7 +3,7 @@ import './CheckOut.css';
 // import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
-import CheckOutPaymentDis from './CheckOutPaymentDis';
+// import CheckOutPaymentDis from './CheckOutPaymentDis';
 
 
 function CheckOutDetailsTwoDis() {

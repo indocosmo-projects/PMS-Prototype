@@ -96,3 +96,12 @@ body{
 .right-br-none{
   border-radius: .3em 0em 0em .3em  !important;
 }
+
+.form-check-bg{
+    background-color: rgb(255, 255, 255);
+    padding: .5em 1em !important;
+    padding-left: 2.2em !important;
+    border-radius: .5em !important;
+    border: solid 1px rgb(233, 233, 233);
+    box-shadow: 1px 1px 10px rgb(231, 236, 247);
+}

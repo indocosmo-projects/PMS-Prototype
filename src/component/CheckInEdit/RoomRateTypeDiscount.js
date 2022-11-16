@@ -196,8 +196,6 @@ function RoomRateTypeDiscount() {
                                         <th>RATE CODE</th>
                                         <th>COUNT</th>
                                         <th>ROOMS</th>
-                                        {/* <th>DOUBLE</th> */}
-                                        {/* <th>TRIPPLE</th> */}
                                         <th>EXTRAS</th>
                                         <th>SUB TOTAL</th>
                                         <th>DISCOUNT</th>

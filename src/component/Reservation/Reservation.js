@@ -160,7 +160,7 @@ function Reservation() {
                         <div className="col-sm-6 d-flex justify-content-end">
                                     <div className="mb-3 ">
                                         {/* <a href="/newreservation"><button className="btn btn-success" title="New Reservation">Add New <i className="bi bi-plus"></i></button></a> */}
-                                        <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation"><i class="bi bi-plus-circle me-2"></i>Add New</button></Link>
+                                        <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation"><i class="bi bi-plus-circle me-2"></i>New Reservation</button></Link>
                                     </div>
                         </div>
                         </div>

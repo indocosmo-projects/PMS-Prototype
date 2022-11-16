@@ -234,11 +234,11 @@
 
 
 .status-hint-bg{
-    background-color: rgb(255, 255, 255);
-    padding: 1em 2em;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: var(--tab-bg);
+    padding: .5em 0;
     display: flex;
     flex-direction: row !important;
-    border-radius: .5em;
     overflow: auto;
 }
 
@@ -280,3 +280,11 @@
     background-color: #2b63b8 !important;
 }
 
+.sticky-div-hotel-status{
+    position:-webkit-sticky;
+    position: sticky;
+    display: block;
+    top: 143px;
+    z-index: 998;
+    border-bottom: solid 1px #e6e8ef;
+  }

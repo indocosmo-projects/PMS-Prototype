@@ -50,30 +50,44 @@ const display = (e) => {
                             <th>Address</th>
                             <th>Gender</th>
                             <th>Country</th>
-                            <th>State</th>
-                            <th></th>
+                            <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                             <td>1</td>
-                            {Array.from({ length: 6 }).map((_, index) => (
+                            {/* {Array.from({ length: 6 }).map((_, index) => (
                                 <td key={index}>Table cell {index}</td>
-                            ))}
+                            ))} */}
+                                    <td>Tom</td>
+                                    <td>tom@mail.com</td>
+                                    <td>917786676757</td>
+                                    <td>Male</td>
+                                    <td>India</td>
                             <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                             <tr>
                             <td>2</td>
-                            {Array.from({ length: 6 }).map((_, index) => (
+                            {/* {Array.from({ length: 6 }).map((_, index) => (
                                 <td key={index}>Table cell {index}</td>
-                            ))}
+                            ))} */}
+                                    <td>Jack</td>
+                                    <td>jack@mail.com</td>
+                                    <td>918787867554</td>
+                                    <td>Male</td>
+                                    <td>India</td>
                             <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                             <tr>
                             <td>3</td>
-                            {Array.from({ length: 6 }).map((_, index) => (
+                            {/* {Array.from({ length: 6 }).map((_, index) => (
                                 <td key={index}>Table cell {index}</td>
-                            ))}
+                            ))} */}
+                                    <td>Pam</td>
+                                    <td>pam@mail.com</td>
+                                    <td>912544678907</td>
+                                    <td>Female</td>
+                                    <td>India</td>
                             <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                         </tbody>

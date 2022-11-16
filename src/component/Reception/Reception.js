@@ -50,7 +50,7 @@ function Reception() {
                                     </td>
                             
                                 <td>
-                                    <button className="btn btn-primary"><i class="bi bi-receipt me-2"></i>Bill Review</button>
+                                    <button className="btn btn-primary"><i class="bi bi-receipt me-2"></i>Bill Preview</button>
                                     </td>
                                 
                                 <td>
@@ -70,8 +70,6 @@ function Reception() {
                                         <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
                                         <Dropdown.Divider />
                                         <Dropdown.Item href="#/action-2">GRC</Dropdown.Item>
-                                        <Dropdown.Divider />
-                                        <Dropdown.Item href="#/action-3">Bill preview</Dropdown.Item>
                                         <Dropdown.Divider />
                                         <Dropdown.Item href="#/action-3">Invoice</Dropdown.Item>
                                     </Dropdown.Menu>
@@ -196,9 +194,9 @@ function Reception() {
                                         <th>Check In Date</th>
                                         <th>Check Out Date</th>
                                         <th>Folio Balance</th>
-                                        <th>Check Deposit</th>
-                                        <th>Check Posting</th>
-                                        <th>Bill Reviews</th>
+                                        <th>Deposit</th>
+                                        <th>Posting</th>
+                                        <th>Bill Previews</th>
                                         <th>Add Sharer</th>
                                         <th>Actions</th>
                                     </tr>

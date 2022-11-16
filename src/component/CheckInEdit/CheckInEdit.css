@@ -346,12 +346,3 @@ select.form-control.form-select.text-center {
     max-width: 130px;
     flex-wrap: nowrap;
   }
-
-  .form-check{
-    background-color: rgb(255, 255, 255);
-    padding: .5em 1em;
-    padding-left: 2.2em;
-    border-radius: .5em;
-    border: solid 1px rgb(221, 221, 221);
-    box-shadow: 1px 1px 10px rgba(231, 236, 247, 0.37);
-}

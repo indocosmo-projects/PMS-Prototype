@@ -34,6 +34,7 @@ function CheckOutBilling() {
                         <Form className='row py-3  mx-2'>
                             <div className="col-lg-6 border-right">
                         <Form.Check
+                            className="form-check-bg"
                             inline
                             label="Individual Billing"
                             name="group1"
@@ -99,6 +100,7 @@ function CheckOutBilling() {
 
                         <div className="col-lg-6">
                         <Form.Check
+                            className="form-check-bg"
                             inline
                             label="Group Billing"
                             name="group1"
