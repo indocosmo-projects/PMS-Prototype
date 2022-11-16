@@ -1,6 +1,6 @@
 import React from 'react';
 import './CheckOut.css';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 import CheckOutPayment from './CheckOutPayment';
@@ -45,15 +45,15 @@ function CheckOutDetailsTwo() {
                                         </div>
                                         <div className='col-lg-6'>
                                                 
-                                                    <label className="text-left" htmlFor="status">Status</label>
-                                                    <input type="" className="form-control" name="status" id="status" value="Unpaid" disabled/>
+                                                    <label className="text-left" htmlFor="status">Paymnet Status</label>
+                                                    <input type="" className="form-control status-bg-unpaid" name="status" id="status" value="Unpaid" disabled/>
                                                 
                                         </div>
                                         </div>
                                             </Card.Text>
                                            {/*.......Payment Button........ */}  <CheckOutPayment/> 
-                                            <Button variant="danger me-2"><i class="bi bi-box-arrow-right me-1"></i>Checkout</Button>
-                                            <Button variant="warning me-2" disabled><i class="bi bi-receipt me-1"></i>Invoice</Button>
+                                            {/* <Button variant="danger me-2 mb-2"><i class="bi bi-box-arrow-right me-1"></i>Checkout</Button>
+                                            <Button variant="warning me-2 mb-2" disabled><i class="bi bi-receipt me-1"></i>Invoice</Button> */}
 
                                         </Card.Body>
                                     </Card>

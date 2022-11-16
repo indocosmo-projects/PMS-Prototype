@@ -1,9 +1,9 @@
 import React from 'react';
 import './CheckOut.css';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
-import CheckOutPayment from './CheckOutPayment';
+// import CheckOutPaymentDis from './CheckOutPaymentDis';
 
 
 function CheckOutDetailsThreeDis() {
@@ -45,16 +45,17 @@ function CheckOutDetailsThreeDis() {
                                         </div>
                                         <div className='col-lg-6'>
                                                 
-                                                    <label className="text-left" htmlFor="status">Status</label>
+                                                    <label className="text-left" htmlFor="status">Payment Status</label>
                                                     <input type="" className="form-control" name="status" id="status" value="Unpaid" disabled/>
                                                 
                                         </div>
                                         </div>
                                             </Card.Text>
-                                           {/*.......Payment Button........ */}  <CheckOutPayment/> 
-                                            <Button variant="danger me-2" disabled><i class="bi bi-box-arrow-right me-1"></i>Checkout</Button>
-                                            <Button variant="warning me-2" disabled><i class="bi bi-receipt me-1"></i>Invoice</Button>
-
+                                           {/*.......Payment Button........ */} 
+                                            {/* <CheckOutPaymentDis/>  */}
+                                            {/* <Button variant="danger me-2 mb-2" disabled><i class="bi bi-box-arrow-right me-1"></i>Checkout</Button>
+                                            <Button variant="secondary me-2 mb-2" disabled><i class="bi bi-receipt me-1"></i>Invoice</Button> */}
+                                            <p className='gray pt-1'><i class="bi bi-exclamation-circle me-1"></i>Payment Grouped</p>
                                         </Card.Body>
                                     </Card>
                             </div>

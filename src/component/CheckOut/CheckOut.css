@@ -39,14 +39,6 @@
     color: rgb(129, 162, 197);
 }
 
-.form-check{
-    background-color: rgb(255, 255, 255);
-    padding: .5em 1em;
-    padding-left: 2.2em;
-    border-radius: .5em;
-    border: solid 1px rgb(233, 233, 233);
-    box-shadow: 1px 1px 10px rgb(231, 236, 247);
-}
 
 label.form-check-label {
     cursor: pointer;
@@ -59,4 +51,13 @@ label.form-check-label {
 
 .disabled-bg{
     background-color: rgba(48, 48, 48, 0.199);
+}
+
+.status-bg-success{
+    background-color: rgb(226, 255, 235) !important;
+    color: green;
+}
+.status-bg-unpaid{
+    background-color: rgb(255, 212, 212) !important;
+    color: rgb(153, 0, 0);
 }

@@ -13,15 +13,13 @@ import Dropdown from 'react-bootstrap/Dropdown';
 function ReceptionExpectedDepartures() {
 
 
-    const details =  
-        [{id: 1, rese:'104',arrival :'22-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
-        {id: 2, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'2', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
-        {id: 3, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
-        {id: 4, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
-        {id: 5, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
-        {id: 6, rese:'104',arrival :'16-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
-        {id: 7, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
-        ];
+    const details =
+                [{id: 1, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 2, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 3, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 4, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 5, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                ];
         const [dropdown, setDropdown] = useState(0);
         // const [recordno, setRecordno] = useState(5); 
 
@@ -30,38 +28,53 @@ function ReceptionExpectedDepartures() {
     const tdata = () =>{
         
         return( 
-                <tbody>
-                    {
-                     details.map(detail =>  <tr key={detail.id} >
-                        <td  style={{color : 'blue'}} >{detail.rese}</td>
-                        <td >{detail.arrival}</td>
-                        <td >{detail.departure}</td>
-                        <td >{detail.nights}</td>
-                        <td >{detail.rooms}</td>
-                        <td >{detail.bookedby}</td>
-                        <td >{detail.bookedfor}</td>
-                        <td >{detail.bookedon}</td>
+            <tbody>
+            {
+            details.map(detail => <tr key={detail.id} >
+                <td>{detail.roomno}</td>
+                <td>{detail.guest}</td>
+                <td>{detail.arrival}</td>
+                <td>{detail.departure}</td>
+                <td>{detail.foliobalance}</td>
+                {/* <td className="bg-success text-white">CHECK-IN</td> */}
+                <td>
+                    <button className="btn btn-primary"><i class="bi bi-cash-coin me-2"></i>Deposit</button>
+                </td>
+                        
+                        <td>
+                            <button className="btn btn-primary"><i class="bi bi-clipboard2-check me-2"></i>Posting</button>
+                            </td>
+                    
+                        <td>
+                            <button className="btn btn-primary"><i class="bi bi-receipt me-2"></i>Bill Preview</button>
+                            </td>
+                        
+                        <td>
+                            <button className="btn btn-primary"><i class="bi bi-person-plus-fill me-2"></i>Sharer</button>
+                            </td>
+                     
                         {/* <td>
                             <button className="btn btn-danger"><i class="bi bi-box-arrow-right me-2"></i>Check-out</button>
                         </td> */}
                         <td>
-                                <Dropdown as={ButtonGroup}>
-                                <Link to="/checkout"><Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
+                        <Dropdown as={ButtonGroup}>
+                        <Link to="/checkout"><Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
 
-                                    <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
+                            <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
 
-                                    <Dropdown.Menu>
-                                        <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2">GRC</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Bill preview</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Invoice</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown>
-                                </td>
-                    </tr>
-                    )}
-                    
-                </tbody>
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item href="#/action-2">GRC</Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item href="#/action-3">Invoice</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                        </td>
+                </tr>
+            )}
+            
+        </tbody>
         );
 
     }
@@ -115,10 +128,8 @@ function ReceptionExpectedDepartures() {
 
         return (
                 <div className="container-fluid tab-bg">
-               
-                    <div className="p-3">
-                    <div className="row mt-4">
-                    <div className="col-sm-6">
+                        <div className="row mt-4">
+                        <div className="col-sm-6">
                             <div className="input-group mb-3 ">
                                         <input type="text" className="form-control" placeholder="Search..." />
                                         <button className="btn btn-outline-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button>
@@ -130,14 +141,16 @@ function ReceptionExpectedDepartures() {
                                 </div>
                             </div>
                         </div>
-                       
-                        <div className="col-sm-6">
-                            {/* <div className="mb-3 ">
-                            <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
-                            </div> */}
+
+         
+                                <div className="col-sm-6">
+                                    <div className="mb-3 ">
+                                    <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
+                                    </div>
+                                </div>
                         </div>
-                    </div>
-                    <div className="row mt-4">
+ 
+                     <div className="row mt-4">
                                 <div className="col-md-2 col-lg-1 col-3">
                                     <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/>
                                         <option value="1">5</option>
@@ -148,31 +161,31 @@ function ReceptionExpectedDepartures() {
 
                                 </div>
                                 <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
-                                    <p className="text-left">records per page</p>
+                                    <p className="text-">Records per page</p>
                                 </div>
 
                                
-                        </div> 
+                        </div>  
+                        <div>
+                            <table className="table table-bordered reception-table">
+                                <thead>
+                                    <tr>
+                                        <th>Room No.</th>
+                                        <th>Guest</th>
+                                        <th>Check In Date</th>
+                                        <th>Check Out Date</th>
+                                        <th>Folio Balance</th>
+                                        <th>Deposit</th>
+                                        <th>Posting</th>
+                                        <th>Bill Previews</th>
+                                        <th>Add Sharer</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                        {tdata()}
 
-                     <table className="table table-bordered reception-table">
-                        <thead >
-                            <tr>
-                                <th>Room No.</th>
-                                <th>CHECK IN DATE</th>
-                                <th>DEPARTURE</th>
-                                <th>NIGHTS</th>
-                                <th>ROOMS</th>
-                                <th>BOOKED BY</th>
-                                <th>BOOKED FOR</th>
-                                <th>BOOKED ON</th>
-                                <th>ACTIONS</th>
-                            </tr>							
-                        </thead>
-                                {tdata()}
-
-                    </table>
-                    
-                    </div>
+                            </table>
+                        </div>
                 </div>
                 
         );

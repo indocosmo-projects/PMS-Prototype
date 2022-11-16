@@ -8,6 +8,8 @@ import RoomAvailability from './RoomAvailability';
 import RoomRateTypeDiscount from './RoomRateTypeDiscount';
 import ReservedBy from './ReservedBy';
 import ReservedFor from './ReservedFor';
+import Deposit from './Desposit';
+import Pickup from './Pickup';
 
 
 
@@ -116,6 +118,24 @@ function NewReservation() {
                                     
                     {/* -------- Reserved For----------- */}
                               <ReservedFor />  
+
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="2">
+                                <Accordion.Header><h5>Deposit Details</h5></Accordion.Header>
+                                <Accordion.Body>
+                                    
+                    {/* -------- Reserved For----------- */}
+                              <Deposit /> 
+
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="3">
+                                <Accordion.Header><h5>Pick Up Details</h5></Accordion.Header>
+                                <Accordion.Body>
+                                    
+                    {/* -------- Reserved For----------- */}
+                              <Pickup />
 
                                 </Accordion.Body>
                             </Accordion.Item>

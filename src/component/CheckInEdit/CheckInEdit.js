@@ -197,9 +197,14 @@ function CheckInEdit(){
                                 <tbody>
                                     <tr>
                                     <td>1</td>
-                                    {Array.from({ length: 5 }).map((_, index) => (
+                                    {/* {Array.from({ length: 5 }).map((_, index) => (
                                         <td key={index}>Table cell {index} </td>
-                                    ))}
+                                    ))} */}
+                                    <td>Tom</td>
+                                    <td>tom@mail.com</td>
+                                    <td>917786676757</td>
+                                    <td>Male</td>
+                                    <td>India</td>
                                     <td><Select
                                             closeMenuOnSelect={false}
                                             components={animatedComponents}
@@ -215,9 +220,14 @@ function CheckInEdit(){
                                     </tr>
                                     <tr>
                                     <td>2</td>
-                                    {Array.from({ length: 5 }).map((_, index) => (
+                                    {/* {Array.from({ length: 5 }).map((_, index) => (
                                         <td key={index}>Table cell {index}</td>
-                                    ))}
+                                    ))} */}
+                                    <td>Jack</td>
+                                    <td>jack@mail.com</td>
+                                    <td>918787867554</td>
+                                    <td>Male</td>
+                                    <td>India</td>
                                     <td><Select
                                             closeMenuOnSelect={false}
                                             components={animatedComponents}
@@ -233,9 +243,14 @@ function CheckInEdit(){
                                     </tr>
                                     <tr>
                                     <td>3</td>
-                                    {Array.from({ length: 5 }).map((_, index) => (
+                                    {/* {Array.from({ length: 5 }).map((_, index) => (
                                         <td key={index}>Table cell {index}</td>
-                                    ))}
+                                    ))} */}
+                                    <td>Pam</td>
+                                    <td>pam@mail.com</td>
+                                    <td>912544678907</td>
+                                    <td>Female</td>
+                                    <td>India</td>
                                     <td><Select
                                             closeMenuOnSelect={false}
                                             components={animatedComponents}

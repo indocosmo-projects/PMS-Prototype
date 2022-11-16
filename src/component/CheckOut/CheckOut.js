@@ -64,7 +64,10 @@ function CheckOut() {
                             {/* ----- Billing ------ */}
 
                             <div className="availability_check_bg my-4">
-                                    <h5 className='left mt-2 ps-3 grey'>Billing Details</h5>* Valid only for Group checkout
+                                <div className='d-flex flex-row justify-content-between'>
+                                    <h5 className='left mt-2 ps-3 grey'>Billing Details</h5>
+                                    <p className='pe-3'>* Valid only for Group checkout</p>
+                              </div>
                                     <hr className='gray'/>
                                 <CheckOutBilling/>
                             </div>  
@@ -90,8 +93,8 @@ function CheckOut() {
                          {/* ----- checkout confirm ------ */}
 
                             <div className="availability_check_bg my-4">
-                                    <h5 className='left mt-2 ps-3 grey'>Confirmation</h5>
-                                    <hr className='gray'/>
+                                    {/* <h5 className='left mt-2 ps-3 grey'>Confirmation</h5> */}
+                                    {/* <hr className='gray'/> */}
                                 <CheckOutConfirm/>
                             </div>  
 

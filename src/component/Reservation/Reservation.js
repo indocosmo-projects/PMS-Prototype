@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import '../../style.css';
 import './Reservation.css';
 import { useState } from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from "react-router-dom";
 //import ReservationService from '../../service/ReservationService';
 
@@ -10,14 +11,14 @@ function Reservation() {
     
  
     const details =  
-        [   {id: 0, rese:'R-000001',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CONFIRMED'},
-            {id: 1, rese:'R-000001',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Clark Kent', bookedon:'10-Oct-2022',status:'CANCELLED'},
-            {id: 2, rese:'R-000002',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'2', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CONFIRMED'},
-            {id: 3, rese:'R-000003',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
-            {id: 4, rese:'R-000003',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Peter Parker', bookedon:'10-Oct-2022',status:'CONFIRMED'},
-            {id: 5, rese:'R-000003',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
-            {id: 6, rese:'R-000007',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Peter Parker', bookedon:'10-Oct-2022',status:'CONFIRMED'},
-            {id: 7, rese:'R-000008',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',status:'CANCELLED'},
+        [   {id: 0, rese:'R-000001',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',left:'1',status:'CONFIRMED'},
+            {id: 1, rese:'R-000001',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Clark Kent', bookedon:'10-Oct-2022',left:'2',status:'CANCELLED'},
+            {id: 2, rese:'R-000002',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'2', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',left:'5',status:'CONFIRMED'},
+            {id: 3, rese:'R-000003',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',left:'7',status:'CANCELLED'},
+            {id: 4, rese:'R-000003',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Peter Parker', bookedon:'10-Oct-2022',left:'8',status:'CONFIRMED'},
+            {id: 5, rese:'R-000003',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',left:'10',status:'CANCELLED'},
+            {id: 6, rese:'R-000007',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Peter Parker', bookedon:'10-Oct-2022',left:'11',status:'CONFIRMED'},
+            {id: 7, rese:'R-000008',arrival :'10-Oct-2022',departure:'10-Oct-2022',nights:'4',rooms:'1', bookedby:'Booking.com',bookedfor:'Bruce Wayne', bookedon:'10-Oct-2022',left:'13',status:'CANCELLED'},
         ];
     
     
@@ -72,7 +73,23 @@ function Reservation() {
                         <td>{detail.bookedby}</td>
                         <td>{detail.bookedfor}</td>
                         <td>{detail.bookedon}</td>
+                        <td>{detail.left}</td>
                         <td className="status-clr">{detail.status}</td>
+                        <td>
+                                <Dropdown>
+                                <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                                    Actions
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Check In</Dropdown.Item>
+                                    <Dropdown.Divider />
+                                    <Dropdown.Item href="#/action-3">GRC</Dropdown.Item>
+                                    <Dropdown.Divider />
+                                    <Dropdown.Item href="#/action-2">Cancel</Dropdown.Item>
+                                </Dropdown.Menu>
+                                </Dropdown>
+                        </td>
                     </tr>
                     )}
                     
@@ -160,7 +177,7 @@ function Reservation() {
                         <div className="col-sm-6 d-flex justify-content-end">
                                     <div className="mb-3 ">
                                         {/* <a href="/newreservation"><button className="btn btn-success" title="New Reservation">Add New <i className="bi bi-plus"></i></button></a> */}
-                                        <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation"><i class="bi bi-plus-circle me-2"></i>Add New</button></Link>
+                                        <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation"><i class="bi bi-plus-circle me-2"></i>New Reservation</button></Link>
                                     </div>
                         </div>
                         </div>
@@ -204,6 +221,7 @@ function Reservation() {
                                                 <th className="">Booked By<i className="bi bi-arrow-down-up sort-btn"></i></th>
                                                 <th className="">Booked For<i className="bi bi-arrow-down-up sort-btn"></i></th>
                                                 <th className="">Booked On<i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th className="">Days Left<i className="bi bi-arrow-down-up sort-btn"></i></th>
                                                 <th className="">Status<i className="bi bi-arrow-down-up sort-btn"></i></th>
                                             </tr>
                                         </thead>

@@ -17,13 +17,18 @@ function CheckInEditBilling() {
     return(
         <div className="CheckInEditBilling">
             {/* <div className="section"> */}
-                <div className="container-fluid light-violet-bg">
-                <h6 className='left mt-2 ps-3 grey'>Billing Type</h6>
-                     <hr className='gray mb-4'/>
+                <div className="container-fluid">
+                    <div className="availability_check_bg light-violet-bg">
+                <div className='d-flex flex-row justify-content-between pt-2'>
+                <h6 className='left ps-3 grey'>Billing Type</h6>
+                <p className='pe-3'>* Visible only for group</p>
+                </div>
+                     <hr className='gray mb-4 mt-0'/>
                    
                         <Form className='row py-3 mx-2'>
                             <div className="col-lg-6 border-right">
                         <Form.Check
+                            className="form-check-bg"
                             inline
                             label="Individual Billing"
                             name="group1"
@@ -86,6 +91,7 @@ function CheckInEditBilling() {
 
                         <div className="col-lg-6">
                         <Form.Check
+                        className="form-check-bg"
                             inline
                             label="Group Billing"
                             name="group1"
@@ -117,21 +123,23 @@ function CheckInEditBilling() {
                             </div>
 
                         </Form>
+                        </div>
 
+                        <div className="availability_check_bg mt-3">
                         <div className="row">
                             <div className="col-12">
-                                <h6 className='left mt-4 ps-3 grey'>Deposit details</h6>
-                                <hr className='gray mb-4'/>
+                                <h6 className='left ps-3 grey py-2'>Deposit details</h6>
+                                <hr className='gray mb-4 mt-0'/>
                                 <div className="sharer-bg pb-4 mx-2">
                                 <Button variant="primary"><i class="bi bi-piggy-bank-fill me-2"></i>Deposit</Button>
                                 </div>
                             </div>
                         </div>
+                        </div>
                         
 
 
                 </div>
-            {/* </div> */}
         </div>
     );
 

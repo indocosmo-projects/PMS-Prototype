@@ -50,8 +50,17 @@ function ReceptionExpectedArrivals() {
 
                                     <Dropdown.Menu>
                                         <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-3">Deposit</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-3">Pick up</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-3">GRC</Dropdown.Item>
+                                        <Dropdown.Divider />
                                         <Dropdown.Item href="#/action-3">Confirm</Dropdown.Item>
+                                        <Dropdown.Divider />
                                         <Dropdown.Item href="#/action-3">No Show</Dropdown.Item>
+                                        <Dropdown.Divider />
                                         <Dropdown.Item href="#/action-2">Cancel</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
@@ -114,7 +123,7 @@ function ReceptionExpectedArrivals() {
         return (
                 <div className="container-fluid tab-bg">
                
-                    <div className="p-3">
+                    {/* <div className="p-3"> */}
                     <div className="row mt-4">
                     <div className="col-sm-6">
                             <div className="input-group mb-3 ">
@@ -155,14 +164,14 @@ function ReceptionExpectedArrivals() {
                      <table className="table table-bordered reception-table">
                         <thead >
                             <tr>
-                                <th>RESV ID</th>
-                                <th>ARRIVAL DATE</th>
-                                <th>DEPARTURE DATE</th>
-                                <th>NIGHTS</th>
-                                <th>ROOMS</th>
-                                <th>BOOKED BY</th>
-                                <th>BOOKED FOR</th>
-                                <th>BOOKED ON</th>
+                                <th>Resv No</th>
+                                <th>Arrival Date</th>
+                                <th>Departure Date</th>
+                                <th>Nights</th>
+                                <th>Rooms</th>
+                                <th>Booked By</th>
+                                <th>Booked For</th>
+                                <th>Booked On</th>
                                 <th>Actions</th>
                             </tr>							
                         </thead>
@@ -170,7 +179,7 @@ function ReceptionExpectedArrivals() {
 
                     </table>
                     
-                    </div>
+                    {/* </div> */}
                 </div>
                 
         );

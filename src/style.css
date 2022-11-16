@@ -11,8 +11,15 @@ body{
    background-color : rgb(245, 247, 250) ;
 }
 
+.white{
+  color: white;
+}
 .gray{
     color: gray;
+}
+
+.font-light{
+  font-weight: 300;
 }
 .container-fluid{
     border-radius:  3px;
@@ -50,11 +57,20 @@ body{
     background-color: #5b67d6 !important;
     border: none !important;
   }
-
   .btn-primary:hover{
     background-color: #38419e !important;
   }
 
+
+  .btn-outline-primary{
+    border-color: #5b67d6 !important;
+    color: #5b67d6 !important;
+  }
+  .btn-outline-primary:hover{
+    color: white !important;
+    background-color: #5b67d6 !important;
+  }
+  
 
   .btn-dark{
     background-color: rgb(97, 97, 97) !important;
@@ -71,7 +87,7 @@ body{
     position: sticky;
     display: block;
     top: 90px;
-    z-index: 999;
+    z-index: 998;
     padding:.5em 0;
     margin-bottom: 1em;
     border-bottom: solid 1px #f0f0f0;
@@ -79,4 +95,13 @@ body{
 
 .right-br-none{
   border-radius: .3em 0em 0em .3em  !important;
+}
+
+.form-check-bg{
+    background-color: rgb(255, 255, 255);
+    padding: .5em 1em !important;
+    padding-left: 2.2em !important;
+    border-radius: .5em !important;
+    border: solid 1px rgb(233, 233, 233);
+    box-shadow: 1px 1px 10px rgb(231, 236, 247);
 }
