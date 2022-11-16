@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Reports.css';
+import ModalOne from './ModalOne';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 function Reports() {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const receptiondetails =  
     [
@@ -72,8 +80,8 @@ function Reports() {
         return(
             <ul className="liststyle">
                { receptiondetails.map(receptiondetail => <li key={receptiondetail.id} className="listyle">
-                    <div className="col-sm-12">
-                        <h5><i class="bi bi-file-earmark "></i> {receptiondetail.name} </h5>
+                    <div className="col-sm-12" >
+                        {modal(receptiondetail)}
                     </div>
                </li>
                )}
@@ -86,7 +94,7 @@ function Reports() {
             <ul className="liststyle">
                { reservationdetails.map(reservationdetail => <li key={reservationdetail.id} className="listyle">
                     <div className="col-sm-12">
-                        <h5><i class="bi bi-file-earmark "></i> {reservationdetail.name} </h5>
+                        <h5><i className="bi bi-file-earmark "></i> {reservationdetail.name} </h5>
                     </div>
                </li>
                )}
@@ -99,7 +107,7 @@ function Reports() {
             <ul className="liststyle">
                { transactionaldetails.map(transactionaldetail => <li key={transactionaldetail.id} className="listyle">
                     <div className="col-sm-12">
-                        <h5><i class="bi bi-file-earmark "></i> {transactionaldetail.name} </h5>
+                        <h5><i className="bi bi-file-earmark "></i> {transactionaldetail.name} </h5>
                     </div>
                </li>
                )}
@@ -112,7 +120,7 @@ function Reports() {
             <ul className="liststyle">
                {  foliobalancedetails.map(foliobalancedetail => <li key={foliobalancedetail.id} className="listyle">
                     <div className="col-sm-12">
-                        <h5><i class="bi bi-file-earmark "></i> {foliobalancedetail.name} </h5>
+                        <h5><i className="bi bi-file-earmark "></i> {foliobalancedetail.name} </h5>
                     </div>
                </li>
                )}
@@ -125,7 +133,7 @@ function Reports() {
             <ul className="liststyle">
                {shiftdetails.map(shiftdetail => <li key={shiftdetail.id} className="listyle">
                     <div className="col-sm-12">
-                        <h5><i class="bi bi-file-earmark "></i> {shiftdetail.name} </h5>
+                        <h5><i className="bi bi-file-earmark "></i> {shiftdetail.name} </h5>
                     </div>
                </li>
                )}
@@ -138,11 +146,42 @@ function Reports() {
             <ul className="liststyle">
                { creditordetails.map(creditordetail => <li key={creditordetail.id} className="listyle">
                     <div className="col-sm-12">
-                        <h5><i class="bi bi-file-earmark "></i> {creditordetail.name} </h5>
+                        <h5><i className="bi bi-file-earmark "></i> {creditordetail.name} </h5>
                     </div>
                </li>
                )}
             </ul>
+        );
+    }
+
+    const modal = (receptiondetail) =>{
+
+        return (
+            <>
+            <button type="button" className="btn w-100 left" onClick={handleShow}><h5><i className="bi bi-file-earmark " ></i> {receptiondetail.name}  </h5>
+            </button>
+            <Modal
+                show={show}
+                onHide={handleClose}
+                backdrop=""
+                keyboard={true}
+                style={{marginTop: 100, opacity: 0.6}}
+            >
+                <Modal.Header closeButton>
+                <Modal.Title>Modal title</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                I will not close if you click outside me. Don't even try to press
+                escape key.
+                </Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose} closeButton>
+                    Close
+                </Button>
+                <Button variant="primary" closeButton >Understood</Button>
+                </Modal.Footer>
+            </Modal>
+            </>
         );
     }
 

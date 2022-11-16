@@ -75,7 +75,7 @@ function NewRequest() {
             <div className="section">
                 <div className="container-fluid formcontent">
                     <div>
-                        <h3 className="header"> New Requests </h3>
+                        <h3 className="header">New Requests </h3>
                     </div>
                     <div className="row left bg-secondary text-white p-5 mt-3"> 
                         <div className="col-sm-3"><h5>Room Number * </h5></div>
