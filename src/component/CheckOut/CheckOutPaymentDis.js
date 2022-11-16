@@ -172,19 +172,23 @@ function MyVerticallyCenteredModal(props) {
     <tbody className='type-tbody'>
 
                      <tr>
-              <td>
-                  <select className="form-control form-select text-center">
-                      <option>PAID-IN</option>
-                      <option>OPTION-2</option>
-                  </select>
-              </td>
-              <td>
-                  <select className="form-control form-select text-center">
-                      <option>CASH</option>
-                      <option>CARD</option>
-                      <option>UPI</option>
-                  </select>
-              </td>
+                     <td>
+                    <select className="form-control form-select text-center">
+                        <option>PAID-IN</option>
+                        <option>COMPLEMENTARY</option>
+                    </select>
+                </td>
+                <td>
+                    <select className="form-control form-select text-center">
+                        <option>COMPANY</option>
+                        <option>CASH</option>
+                        <option>CARD</option>
+                        <option>UPI</option>
+                        <option>DD</option>
+                        <option>ONLINE</option>
+                        <option>COMPLEMENTARY</option>
+                    </select>
+                </td>
               <td>
                   <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="Bank Name" disabled/>
               </td>
