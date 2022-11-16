@@ -3,7 +3,6 @@
     --tab-bg : #f1f3fa;
 }
 
-
 .inputfieldpadding{
     padding : 5px;
     text-align : left;
@@ -353,6 +352,6 @@ select.form-control.form-select.text-center {
     padding: .5em 1em;
     padding-left: 2.2em;
     border-radius: .5em;
-    border: solid 1px rgb(233, 233, 233);
-    box-shadow: 1px 1px 10px rgb(231, 236, 247);
+    border: solid 1px rgb(221, 221, 221);
+    box-shadow: 1px 1px 10px rgba(231, 236, 247, 0.37);
 }

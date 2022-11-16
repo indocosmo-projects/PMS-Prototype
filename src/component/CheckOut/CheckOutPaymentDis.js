@@ -1,44 +1,48 @@
 import React, { useState } from "react";
-import './CheckInEdit.css';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Alert from 'react-bootstrap/Alert';
 import Form from 'react-bootstrap/Form';
 import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Alert from 'react-bootstrap/Alert';
-import Button from 'react-bootstrap/Button';
 
 
-function CheckInEditBilling() {
-    
+function MyVerticallyCenteredModal(props) {
     const [selected, setSelected] = useState("");
     const changeHandler = e => {
       setSelected(e.target.value);
     };
-
-    return(
-        <div className="CheckInEditBilling">
-            {/* <div className="section"> */}
-                <div className="container-fluid">
-                    <div className="availability_check_bg light-violet-bg">
-                <div className='d-flex flex-row justify-content-between pt-2'>
-                <h6 className='left ps-3 grey'>Billing Type</h6>
-                <p className='pe-3'>* Visible only for group</p>
-                </div>
-                     <hr className='gray mb-4 mt-0'/>
-                   
-                        <Form className='row py-3 mx-2'>
-                            <div className="col-lg-6 border-right">
-                        <Form.Check
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Payment Methods
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h5>Available payment methods</h5>
+        <p>
+          
+        </p>
+        <Form className='row py-3 mx-2'>
+            <div className="col-lg-12 mb-4">
+        <Form.Check
                             inline
-                            label="Individual Billing"
-                            name="group1"
+                            label="Card Payment"
+                            name="group2"
                             type="radio"
-                            id="ind"
-                            value="ind"
-                            checked={selected === "ind"}
+                            id="cardpay"
+                            value="cardpay"
+                            checked={selected === "cardpay"}
                             onChange={changeHandler}
                         />
 
-                                    <div aria-hidden={selected !== "ind" ? true : false} className="total-bg mt-3">
+                                    <div aria-hidden={selected !== "cardpay" ? true : false} className="total-bg mt-3">
                                         
                                          <Alert key="primary" variant="primary" className="mx-4 mt-3">
                                          <i class="bi bi-person-fill me-2"></i><b>Individual Billing</b> is Selected
@@ -88,20 +92,20 @@ function CheckInEditBilling() {
                         </div>
 
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-12">
                         <Form.Check
                             inline
-                            label="Group Billing"
-                            name="group1"
+                            label="Internet Banking"
+                            name="group2"
                             type="radio"
-                            id="grp"
-                            value="grp"
-                            checked={selected === "grp"}
+                            id="internetbank"
+                            value="internetbank"
+                            checked={selected === "internetbank"}
                             onChange={changeHandler}
 
                         />
 
-                                    <div aria-hidden={selected !== "grp" ? true : false} className="total-bg mt-3">
+                                    <div aria-hidden={selected !== "internetbank" ? true : false} className="total-bg mt-3">
 
                                             <Alert key="warning" variant="warning" className="mx-4 mt-3">
                                             <i class="bi bi-people-fill me-2"></i><b>Group Billing</b> is Selected
@@ -121,26 +125,32 @@ function CheckInEditBilling() {
                             </div>
 
                         </Form>
-                        </div>
-
-                        <div className="availability_check_bg mt-3">
-                        <div className="row">
-                            <div className="col-12">
-                                <h6 className='left ps-3 grey py-2'>Deposit details</h6>
-                                <hr className='gray mb-4 mt-0'/>
-                                <div className="sharer-bg pb-4 mx-2">
-                                <Button variant="primary"><i class="bi bi-piggy-bank-fill me-2"></i>Deposit</Button>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        
 
 
-                </div>
-        </div>
-    );
 
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
 }
- 
-export default CheckInEditBilling;
+
+function CheckOutPaymentDis() {
+  const [modalShow, setModalShow] = React.useState(false);
+
+  return (
+    <>
+      <Button variant="success" className='me-2 mb-2' onClick={() => setModalShow(true)} disabled>
+      <i class="bi bi-credit-card-fill me-1"></i>Payment
+      </Button>
+
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+    </>
+  );
+}
+
+export default CheckOutPaymentDis;

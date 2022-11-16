@@ -183,16 +183,16 @@ function CheckInEditDetails() {
 
                                     </div>
 
-                                    <div className="row">
+                                    {/* <div className="row">
 
                                     <div className="col-sm-12 mt-3">
-                                    <InputGroup className="pt-1 d-flex justify-content-end">
-                                        <div className="pt-1 make-payer-bg">
-                                        <Form.Check type='checkbox' id='default-checkbox' label='Make Guest as Payer' className='mt-1'/>
-                                        </div>
+                                        <InputGroup className="pt-1 d-flex justify-content-end">
+                                            <div className="pt-1">
+                                            <Form.Check type='checkbox' id='default-checkbox' label='Make Guest as Payer' className='mt-1'/>
+                                            </div>
                                         </InputGroup>
                                         </div>
-                                        </div>
+                                        </div> */}
 
 
                         </Tab.Pane>
@@ -390,6 +390,15 @@ function CheckInEditDetails() {
                             
                                 
                 </div>
+                <div className="row">
+                    <hr className='gray mt-0'/>
+
+                    <div className="col-12 d-flex justify-content-end">
+                <Button variant="outline-primary px-3 py-1 me-3" size="sm"><i class="bi bi-file-earmark-arrow-up me-2"></i>Copy for all</Button>
+                <Button variant="primary px-3 py-1" size="sm"><i class="bi bi-file-earmark-arrow-up me-2"></i>Save</Button>
+                </div>
+                </div>
+
             </div>
     );
 

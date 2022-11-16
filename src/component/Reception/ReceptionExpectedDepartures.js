@@ -52,8 +52,11 @@ function ReceptionExpectedDepartures() {
 
                                     <Dropdown.Menu>
                                         <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                                        <Dropdown.Divider />
                                         <Dropdown.Item href="#/action-2">GRC</Dropdown.Item>
+                                        <Dropdown.Divider />
                                         <Dropdown.Item href="#/action-3">Bill preview</Dropdown.Item>
+                                        <Dropdown.Divider />
                                         <Dropdown.Item href="#/action-3">Invoice</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>

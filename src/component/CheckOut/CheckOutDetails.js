@@ -46,16 +46,16 @@ function CheckOutDetails() {
                                         </div>
                                         <div className='col-lg-6'>
                                                 
-                                                    <label className="text-left" htmlFor="status">Status</label>
-                                                    <input type="" className="form-control" name="status" id="status" value="Unpaid" disabled/>
+                                                    <label className="text-left" htmlFor="status">Payment Status</label>
+                                                    <input type="" className="form-control status-bg-success" name="status" id="status" value="Completed" disabled/>
                                                 
                                         </div>
                                         </div>
                                             </Card.Text>
                                            {/*.......Payment Button........ */}  <CheckOutPayment/> 
                                             {/* <Button variant="warning me-2"><i class="bi bi-percent me-1"></i>Discount</Button> */}
-                                            <Button variant="danger me-2"><i class="bi bi-box-arrow-right me-1"></i>Checkout</Button>
-                                            <Button variant="warning me-2" disabled><i class="bi bi-receipt me-1"></i>Invoice</Button>
+                                            <Button variant="danger me-2 mb-2"><i class="bi bi-box-arrow-right me-1"></i>Checkout</Button>
+                                            <Button variant="warning me-2 mb-2"><i class="bi bi-receipt me-1"></i>Invoice</Button>
                                         </Card.Body>
                                     </Card>
                             </div>

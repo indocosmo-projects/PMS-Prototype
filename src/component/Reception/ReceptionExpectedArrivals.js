@@ -50,8 +50,11 @@ function ReceptionExpectedArrivals() {
 
                                     <Dropdown.Menu>
                                         <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                                        <Dropdown.Divider />
                                         <Dropdown.Item href="#/action-3">Confirm</Dropdown.Item>
+                                        <Dropdown.Divider />
                                         <Dropdown.Item href="#/action-3">No Show</Dropdown.Item>
+                                        <Dropdown.Divider />
                                         <Dropdown.Item href="#/action-2">Cancel</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>

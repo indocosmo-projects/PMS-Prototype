@@ -45,7 +45,9 @@ function ReceptionHotelStatus() {
 
                         <Dropdown.Menu>
                             <Dropdown.Item href="#/action-1">Check Out</Dropdown.Item>
+                            <Dropdown.Divider />
                             <Dropdown.Item href="#/action-2">House Keeping</Dropdown.Item>
+                            <Dropdown.Divider />
                             <Dropdown.Item href="#/action-3">Edit</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
@@ -64,8 +66,11 @@ function ReceptionHotelStatus() {
 
                         <Dropdown.Menu>
                             <Dropdown.Item href="#/action-1">Check In</Dropdown.Item>
+                            <Dropdown.Divider />
                             <Dropdown.Item href="#/action-2">Cancel</Dropdown.Item>
+                            <Dropdown.Divider />
                             <Dropdown.Item href="#/action-3">No Show</Dropdown.Item>
+                            <Dropdown.Divider />
                             <Dropdown.Item href="#/action-3">Edit</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
@@ -101,6 +106,7 @@ function ReceptionHotelStatus() {
 
                         <Dropdown.Menu>
                             <Dropdown.Item href="#/action-1">Check In</Dropdown.Item>
+                            <Dropdown.Divider />
                             <Dropdown.Item href="#/action-2">Mark as Vacant</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>

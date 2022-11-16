@@ -60,3 +60,12 @@ label.form-check-label {
 .disabled-bg{
     background-color: rgba(48, 48, 48, 0.199);
 }
+
+.status-bg-success{
+    background-color: rgb(226, 255, 235) !important;
+    color: green;
+}
+.status-bg-unpaid{
+    background-color: rgb(255, 212, 212) !important;
+    color: rgb(153, 0, 0);
+}
