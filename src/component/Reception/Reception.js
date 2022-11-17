@@ -11,6 +11,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import ReceptionExpectedArrivals from '../Reception/ReceptionExpectedArrivals';
 import ReceptionDepartures from './ReceptionExpectedDepartures';
 import ReceptionHotelStatus from '../Reception/ReceptionHotelStatus';
+import Posting from '../Reception/Posting';
 
 
 
@@ -46,7 +47,8 @@ function Reception() {
                         </td>
                                 
                                 <td>
-                                    <button className="btn btn-primary"><i class="bi bi-clipboard2-check me-2"></i>Posting</button>
+                                    {/* <button className="btn btn-primary"><i class="bi bi-clipboard2-check me-2"></i>Posting</button> */}
+                                    <Posting />
                                     </td>
                             
                                 <td>
