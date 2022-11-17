@@ -30,11 +30,14 @@ function MyVerticallyCenteredModal(props) {
       </Modal.Header>
       <Modal.Body>
         
+          <div className="row">
+            <div className="col-lg-6">
         <div className="availability_check_bg">
+
         <h5 className="mb-2 mt-1 font-light">Guest/Room Details</h5>
         <hr className='gray'/>
        <div className="row">
-       <div className="col-md-2">
+       <div className="col-md-3">
             <label className="mb-2 gray ps-1">Id</label>
             <InputGroup className="mb-3">
             {/* <InputGroup.Text id="basic-addon1"><i class="bi bi-person-fill"></i></InputGroup.Text> */}
@@ -47,34 +50,6 @@ function MyVerticallyCenteredModal(props) {
           </InputGroup>
           </div>
           <div className="col-md-5">
-            <label className="mb-2 gray ps-1">Guest Name</label>
-            <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon1"><i class="bi bi-person-fill"></i></InputGroup.Text>
-            <Form.Control
-              placeholder="Tom Hollend"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
-              disabled
-            />
-          </InputGroup>
-          </div>
-          <div className="col-md-5">
-            <label className="mb-2 gray ps-1">Phone Number</label>
-            <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon1"><i class="bi bi-telephone-fill"></i></InputGroup.Text>
-            <Form.Control
-              placeholder="916766757575"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
-              disabled
-            />
-          </InputGroup>
-          </div>
-          
-      </div>
-
-      <div className="row">
-      <div className="col-md-4">
           <label className="mb-2 gray ps-1">Room Number</label>
             <InputGroup className="mb-3">
             <InputGroup.Text id="basic-addon1"><i class="bi bi-door-closed-fill"></i></InputGroup.Text>
@@ -98,7 +73,45 @@ function MyVerticallyCenteredModal(props) {
             />
           </InputGroup>
           </div>
-          <div className="col-md-4">
+      </div>
+
+          <div className="col-md-12">
+            <label className="mb-2 gray ps-1">Guest Name</label>
+            <InputGroup className="mb-3">
+            <InputGroup.Text id="basic-addon1"><i class="bi bi-person-fill"></i></InputGroup.Text>
+            <Form.Control
+              placeholder="Tom Hollend"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+              disabled
+            />
+          </InputGroup>
+          </div>
+          <div className="col-md-12">
+            <label className="mb-2 gray ps-1">Phone Number</label>
+            <InputGroup className="mb-3">
+            <InputGroup.Text id="basic-addon1"><i class="bi bi-telephone-fill"></i></InputGroup.Text>
+            <Form.Control
+              placeholder="916766757575"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+              disabled
+            />
+          </InputGroup>
+          </div>
+          
+      </div>
+      </div>
+
+
+
+      <div className="col-lg-6">
+
+      <div className="availability_check_bg">
+      <h5 className="mb-2 mt-1 font-light">Discount Details</h5>
+        <hr className='gray'/>
+      <div className="row">
+         <div className="col-md-12">
           <label className="mb-2 gray ps-1">Payable Amount</label>
             <InputGroup className="mb-3">
             <InputGroup.Text id="basic-addon1"><i class="bi bi-cash-stack"></i></InputGroup.Text>
@@ -110,14 +123,7 @@ function MyVerticallyCenteredModal(props) {
             />
           </InputGroup>
           </div>
-      </div>
-      </div>
-
-      <div className="availability_check_bg mt-3">
-      <h5 className="mb-2 mt-1 font-light">Discount Details</h5>
-        <hr className='gray'/>
-      <div className="row">
-          <div className="col-md-8">
+          <div className="col-md-12">
           <label className="mb-2 gray ps-1">Select/Specify Discounts</label>
 
               <InputGroup className="mb-3">
@@ -138,7 +144,7 @@ function MyVerticallyCenteredModal(props) {
           </div>
 
 
-          <div className="col-md-4">
+          <div className="col-md-12">
           <label className="mb-2 gray ps-1">Amount after Discount</label>
             <InputGroup className="mb-3">
             <InputGroup.Text id="basic-addon1"><i class="bi bi-percent"></i></InputGroup.Text>
@@ -152,6 +158,10 @@ function MyVerticallyCenteredModal(props) {
           </div>
       </div>
       </div>
+      </div>
+      </div>
+
+
 
       <div className="availability_check_bg mt-3">
       <h5 className="mb-2 mt-1 font-light">Payment Details</h5>
