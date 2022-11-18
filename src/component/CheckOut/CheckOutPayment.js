@@ -187,13 +187,13 @@ function MyVerticallyCenteredModal(props) {
 
                        <tr>
                 <td>
-                    <select className="form-control form-select text-center">
+                    <select className="form-control form-select">
                         <option>PAID-IN</option>
                         <option>COMPLEMENTARY</option>
                     </select>
                 </td>
                 <td>
-                    <select className="form-control form-select text-center">
+                    <select className="form-control form-select">
                         <option>COMPANY</option>
                         <option>CASH</option>
                         <option>CARD</option>

@@ -46,17 +46,14 @@ function ReceptionExpectedDepartures() {
                             <Posting />
                             </td>
                     
-                        <td>
+                        {/* <td>
                             <button className="btn btn-primary"><i class="bi bi-receipt me-2"></i>Bill Preview</button>
                             </td>
                         
                         <td>
                             <button className="btn btn-primary"><i class="bi bi-person-plus-fill me-2"></i>Sharer</button>
-                            </td>
-                     
-                        {/* <td>
-                            <button className="btn btn-danger"><i class="bi bi-box-arrow-right me-2"></i>Check-out</button>
                         </td> */}
+                     
                         <td>
                         <Dropdown as={ButtonGroup}>
                         <Link to="/checkout"><Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
@@ -65,6 +62,10 @@ function ReceptionExpectedDepartures() {
 
                             <Dropdown.Menu>
                                 <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item href="#/action-1">Bill Previews</Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item href="#/action-1">Add Sharer</Dropdown.Item>
                                 <Dropdown.Divider />
                                 <Dropdown.Item href="#/action-2">GRC</Dropdown.Item>
                                 <Dropdown.Divider />
@@ -183,8 +184,8 @@ function ReceptionExpectedDepartures() {
                                         <th>Folio Balance</th>
                                         <th>Deposit</th>
                                         <th>Posting</th>
-                                        <th>Bill Previews</th>
-                                        <th>Add Sharer</th>
+                                        {/* <th>Bill Previews</th>
+                                        <th>Add Sharer</th> */}
                                         <th>Actions</th>
                                     </tr>
                                 </thead>

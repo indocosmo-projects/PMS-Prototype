@@ -103,16 +103,19 @@ function MyVerticallyCenteredModal(props) {
       <h5 className="mb-2 mt-1 font-light">Add New Posting</h5>
         <hr className='gray'/>
       <div className="row">
-         <div className="col-md-12">
+         <div className="col-md-12 mb-2">
           <label className="mb-2 gray ps-1">Date</label>
               <input type="date" className="form-control" name="date" id="date" />
           </div>
           <div className="col-md-6">
           <label className="mb-2 mt-1 gray ps-1">TXN Code</label>
 
-          <select className="form-control form-select text-center">
-                        <option>COMPANY</option>
-                       
+                  <select className="form-control form-select">
+                        <option>R-C</option>
+                        <option>REFUND</option>
+                        <option>E-B</option>
+                        <option>POST AS-net amount/Base Amount</option>
+                        <option>POS</option>
                     </select>
           
           </div>
@@ -121,13 +124,13 @@ function MyVerticallyCenteredModal(props) {
           <div className="col-md-6">
           <label className="mb-2 mt-1 gray ps-1">Post As</label>
 
-          <select className="form-control form-select text-center">
-                        <option>COMPANY</option>
-                        <option>CASH</option>
+          <select className="form-control form-select">
+                        <option>Net Amount</option>
+                        <option>Base Amount</option>
                 
                     </select>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-12">
           <label className="mb-2 mt-1 gray ps-1">Amount<b className='text-danger'>*</b></label>
           <InputGroup className="mb-3">
           <InputGroup.Text id="basic-addon1">₹</InputGroup.Text>
@@ -138,7 +141,7 @@ function MyVerticallyCenteredModal(props) {
             />
           </InputGroup>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-12">
           <label className="mb-2 mt-1 gray ps-1">Base Amount</label>
           <InputGroup className="mb-3">
           <InputGroup.Text id="basic-addon1">₹</InputGroup.Text>
@@ -146,6 +149,7 @@ function MyVerticallyCenteredModal(props) {
               placeholder="0.00"
               aria-label=""
               aria-describedby="basic-addon1"
+              disabled
             />
           </InputGroup>
           </div>
@@ -156,6 +160,7 @@ function MyVerticallyCenteredModal(props) {
               placeholder="0.00"
               aria-label=""
               aria-describedby="basic-addon1"
+              disabled
             />
             <InputGroup.Text id="basic-addon1">%</InputGroup.Text>
           </InputGroup>
@@ -167,6 +172,7 @@ function MyVerticallyCenteredModal(props) {
               placeholder="0.00"
               aria-label=""
               aria-describedby="basic-addon1"
+              disabled
             />
             <InputGroup.Text id="basic-addon1">%</InputGroup.Text>
           </InputGroup>
@@ -178,6 +184,7 @@ function MyVerticallyCenteredModal(props) {
               placeholder="0.00"
               aria-label=""
               aria-describedby="basic-addon1"
+              disabled
             />
             <InputGroup.Text id="basic-addon1">%</InputGroup.Text>
           </InputGroup>
@@ -190,6 +197,7 @@ function MyVerticallyCenteredModal(props) {
               placeholder="0.00"
               aria-label=""
               aria-describedby="basic-addon1"
+              disabled
             />
           </InputGroup>
           </div>
