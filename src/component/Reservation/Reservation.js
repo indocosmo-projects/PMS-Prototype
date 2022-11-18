@@ -151,7 +151,7 @@ function Reservation() {
                 <div className="container-fluid ">
                     {/* ----- Heading ------ */}
                     <div className="sticky-div mb-3">
-                            <h3 className="header green"><i class="bi bi-calendar-week-fill me-2"></i>Reservations</h3>
+                            <h3 className="header"><i class="bi bi-calendar-week-fill me-2"></i>Reservations</h3>
                         </div>
                     <div className="row search-area-bg">
 
@@ -185,23 +185,23 @@ function Reservation() {
                         <div className="mb-0">
 
                             <div className="row mt-4 d-flex justify-content-between">
-                                <div className="col-lg-2 col-3">
-                                        <label className="text-left" htmlFor="">Records per Page</label>
-                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/ >
+                                <div className="col-6 col-lg-6 d-flex justify-content-start">
+                                    <Form.Select className='records-fixed-size' size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/ >
                                         <option value="1">5</option>
                                         <option value="2">10</option>
                                         <option value="3">15</option>
                                         <option value="3">All</option>
                                     </Form.Select>
+                                    <label className="text-left" htmlFor="">Records per Page</label>
 
                                 </div>
                                 {/* <div className="col-md-6 col-5 col-lg-9 d-flex justify-content-start">
                                     <p className="text">Records per Page</p>
                                 </div> */}
 
-                                <div className="col-6 col-lg-2 mb-2">
+                                <div className="col-6 col-lg-6 mb-2 d-flex justify-content-end">
                                         <label className="text-left" htmlFor="">Showing Records of</label>
-                                        <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival"/>
+                                        <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
                             </div>
                                
                             </div>
@@ -234,19 +234,21 @@ function Reservation() {
                             </div>
 
 
-                            <div className="row m-3 d-flex justify-content-between">
+                            <div className="row d-flex justify-content-between">
                                     
-                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
-                                {/* <div className="col-6"></div> */}
-                                <div className="col-12 d-flex justify-content-end">
-                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-arrow-left"></i><span class="hide-element"></span></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border">1</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border active">2</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i className="bi bi-arrow-right"></i></button>
-                                    
-                                </div>
-                            </div>
+                                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                                {/* <div className="col-6"></div> */}
+                                                <div className="col-12 d-flex justify-content-end">
+                                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                                    
+                                                </div>
+                                            </div>
 
 
                         </div>

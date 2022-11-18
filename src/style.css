@@ -105,3 +105,15 @@ body{
     border: solid 1px rgb(233, 233, 233);
     box-shadow: 1px 1px 10px rgb(231, 236, 247);
 }
+
+.date-fixed-size{
+  min-width: 160px !important;
+  max-width: 160px !important;
+  height: 36px;
+}
+
+.records-fixed-size{
+  min-width: 80px !important;
+  max-width: 80px !important;
+  height: 36px;
+}
