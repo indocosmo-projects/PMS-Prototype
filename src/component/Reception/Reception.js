@@ -1,7 +1,7 @@
 import React,{ useState } from 'react';
 import './Reception.css';
 import '../../style.css';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
@@ -171,9 +171,9 @@ function Reception() {
                                 </div>
                         </div>
  
-                     <div className="row mt-4">
+                     {/* <div className="row mt-4">
                                 <div className="col-md-2 col-lg-1 col-3">
-                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/>
+                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" >
                                         <option value="1">5</option>
                                         <option value="2">10</option>
                                         <option value="3">15</option>
@@ -186,9 +186,9 @@ function Reception() {
                                 </div>
 
                                
-                        </div>  
+                        </div>   */}
                         <div>
-                            <table className="table table-bordered reception-table">
+                            <table className="table table-bordered reception-table mt-4">
                                 <thead>
                                     <tr>
                                         <th>Room No.</th>
@@ -212,51 +212,60 @@ function Reception() {
                     </div>
    
 
-                     <div className="row m-3">
-                                {/* <div className="col-3 " >Showing 1 to {recordno} of {details.length} entries</div> */}
-                                <div className="col-12 d-flex justify-content-end" >
-                                    <div>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-left"></i></button>
-                                    <button className="btn btn-outline-dark m-1">1</button>
-                                    <button className="btn btn-outline-dark m-1">2</button>
-                                    <button className="btn btn-outline-dark m-1">3</button>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-right"></i></button>
-                                    </div>
-                                </div>
-                    </div>
+                    <div className="row me-1 d-flex justify-content-between">
+                                    
+                                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                                {/* <div className="col-6"></div> */}
+                                                <div className="col-12 d-flex justify-content-end">
+                                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                                    
+                                                </div>
+                                            </div>
 
                     </Tab>
                     <Tab className='tab-content-bg tab-bg' eventKey="expectedarrivals" title={<span> <i class="bi bi-arrow-down-right-square-fill me-2"/>Expected Arrivals</span>}>
                         <ReceptionExpectedArrivals />
-                        <div className="row m-3">
-                                {/* <div className="col-3 " >Showing 1 to {recordno} of {details.length} entries</div> */}
-                                <div className="col-12 d-flex justify-content-end" >
-                                    <div>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-left"></i></button>
-                                    <button className="btn btn-outline-dark m-1">1</button>
-                                    <button className="btn btn-outline-dark m-1">2</button>
-                                    <button className="btn btn-outline-dark m-1">3</button>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-right"></i></button>
-                                    </div>
+                        <div className="row me-1 d-flex justify-content-between">
+                                    
+                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                {/* <div className="col-6"></div> */}
+                                <div className="col-12 d-flex justify-content-end">
+                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                    
                                 </div>
-                    </div>
+                            </div>
 
                         
                     </Tab>
                     <Tab className='tab-content-bg tab-bg' eventKey="departures" title={<span> <i class="bi bi-arrow-up-right-square-fill me-2"/>Expected Departures</span>}>
                         <ReceptionDepartures />
-                        <div className="row m-3">
-                                {/* <div className="col-3 " >Showing 1 to {recordno} of {details.length} entries</div> */}
-                                <div className="col-12 d-flex justify-content-end" >
-                                    <div>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-left"></i></button>
-                                    <button className="btn btn-outline-dark m-1">1</button>
-                                    <button className="btn btn-outline-dark m-1">2</button>
-                                    <button className="btn btn-outline-dark m-1">3</button>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-right"></i></button>
-                                    </div>
+                        <div className="row me-1 d-flex justify-content-between">
+                                    
+                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                {/* <div className="col-6"></div> */}
+                                <div className="col-12 d-flex justify-content-end">
+                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                    
                                 </div>
-                    </div>
+                            </div>
 
                         
                     </Tab>

@@ -37,10 +37,10 @@ function MyVerticallyCenteredModal(props) {
         <h5 className="mb-2 mt-1 font-light">Guest/Room Details</h5>
         <hr className='gray'/>
        <div className="row">
-       <div className="col-md-3">
+       <div className="col-md-12">
             <label className="mb-2 gray ps-1">Id</label>
             <InputGroup className="mb-3">
-            {/* <InputGroup.Text id="basic-addon1"><i class="bi bi-person-fill"></i></InputGroup.Text> */}
+            <InputGroup.Text id="basic-addon1"><i class="bi bi-hash gray"></i></InputGroup.Text>
             <Form.Control
               placeholder="123"
               aria-label="Username"
@@ -49,10 +49,10 @@ function MyVerticallyCenteredModal(props) {
             />
           </InputGroup>
           </div>
-          <div className="col-md-5">
-          <label className="mb-2 gray ps-1">Room Number</label>
+          <div className="col-md-12">
+          <label className="mb-2 gray ps-1">Room Number & Type</label>
             <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon1"><i class="bi bi-door-closed-fill"></i></InputGroup.Text>
+            <InputGroup.Text id="basic-addon1"><i class="bi bi-door-closed-fill gray"></i></InputGroup.Text>
             <Form.Control
               placeholder="FLR 1, ROOM 108"
               aria-label="Username"
@@ -61,7 +61,7 @@ function MyVerticallyCenteredModal(props) {
             />
           </InputGroup>
           </div>
-          <div className="col-md-4">
+          {/* <div className="col-md-4">
           <label className="mb-2 gray ps-1">Room Type</label>
             <InputGroup className="mb-3">
             <InputGroup.Text id="basic-addon1"><i class="bi bi-list-ul"></i></InputGroup.Text>
@@ -72,13 +72,13 @@ function MyVerticallyCenteredModal(props) {
               disabled
             />
           </InputGroup>
-          </div>
+          </div> */}
       </div>
 
           <div className="col-md-12">
             <label className="mb-2 gray ps-1">Guest Name</label>
             <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon1"><i class="bi bi-person-fill"></i></InputGroup.Text>
+            <InputGroup.Text id="basic-addon1"><i class="bi bi-person-fill gray"></i></InputGroup.Text>
             <Form.Control
               placeholder="Tom Hollend"
               aria-label="Username"
@@ -90,7 +90,7 @@ function MyVerticallyCenteredModal(props) {
           <div className="col-md-12">
             <label className="mb-2 gray ps-1">Phone Number</label>
             <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon1"><i class="bi bi-telephone-fill"></i></InputGroup.Text>
+            <InputGroup.Text id="basic-addon1"><i class="bi bi-telephone-fill gray"></i></InputGroup.Text>
             <Form.Control
               placeholder="916766757575"
               aria-label="Username"
@@ -232,8 +232,9 @@ function MyVerticallyCenteredModal(props) {
     </div>
 
       </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Update</Button>
+      <Modal.Footer className="d-flex justify-content-between">
+        <Button variant="secondary" onClick={props.onHide}><i class="bi bi-caret-left-fill me-1"></i>Back</Button>
+        <Button onClick={props.onHide}><i class="bi bi-arrow-repeat me-1"></i>Update</Button>
       </Modal.Footer>
     </Modal>
   );

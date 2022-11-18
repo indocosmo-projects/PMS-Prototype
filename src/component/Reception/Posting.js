@@ -3,9 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-// import Dropdown from 'react-bootstrap/Dropdown';
 import Table from 'react-bootstrap/Table';
-// import DropdownButton from 'react-bootstrap/DropdownButton';
 
 
 
@@ -20,7 +18,7 @@ function MyVerticallyCenteredModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Posting
+          Posting Details
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -32,9 +30,10 @@ function MyVerticallyCenteredModal(props) {
         <h5 className="mb-2 mt-1 font-light">Guest/Room Details</h5>
         <hr className='gray'/>
        <div className="row">
-       <div className="col-md-3">
+       <div className="col-md-12">
             <label className="mb-2 gray ps-1">Id</label>
             <InputGroup className="mb-3">
+            <InputGroup.Text id="basic-addon1"><i class="bi bi-hash gray"></i></InputGroup.Text>
             <Form.Control
               placeholder="123"
               aria-label="Username"
@@ -43,10 +42,10 @@ function MyVerticallyCenteredModal(props) {
             />
           </InputGroup>
           </div>
-          <div className="col-md-5">
-          <label className="mb-2 gray ps-1">Room Number</label>
+          <div className="col-md-12">
+          <label className="mb-2 gray ps-1">Room Number & Type</label>
             <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon1"><i class="bi bi-door-closed-fill"></i></InputGroup.Text>
+            <InputGroup.Text id="basic-addon1"><i class="bi bi-door-closed-fill gray"></i></InputGroup.Text>
             <Form.Control
               placeholder="FLR 1, ROOM 108"
               aria-label="Username"
@@ -55,7 +54,7 @@ function MyVerticallyCenteredModal(props) {
             />
           </InputGroup>
           </div>
-          <div className="col-md-4">
+          {/* <div className="col-md-4">
           <label className="mb-2 gray ps-1">Room Type</label>
             <InputGroup className="mb-3">
             <InputGroup.Text id="basic-addon1"><i class="bi bi-list-ul"></i></InputGroup.Text>
@@ -66,13 +65,13 @@ function MyVerticallyCenteredModal(props) {
               disabled
             />
           </InputGroup>
-          </div>
+          </div> */}
       </div>
 
           <div className="col-md-12">
             <label className="mb-2 gray ps-1">Guest Name</label>
             <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon1"><i class="bi bi-person-fill"></i></InputGroup.Text>
+            <InputGroup.Text id="basic-addon1"><i class="bi bi-person-fill gray"></i></InputGroup.Text>
             <Form.Control
               placeholder="Tom Hollend"
               aria-label="Username"
@@ -84,7 +83,7 @@ function MyVerticallyCenteredModal(props) {
           <div className="col-md-12">
             <label className="mb-2 gray ps-1">Phone Number</label>
             <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon1"><i class="bi bi-telephone-fill"></i></InputGroup.Text>
+            <InputGroup.Text id="basic-addon1"><i class="bi bi-telephone-fill gray"></i></InputGroup.Text>
             <Form.Control
               placeholder="916766757575"
               aria-label="Username"
@@ -128,7 +127,7 @@ function MyVerticallyCenteredModal(props) {
                 
                     </select>
           </div>
-          <div className="col-md-12">
+          <div className="col-md-6">
           <label className="mb-2 mt-1 gray ps-1">Amount<b className='text-danger'>*</b></label>
           <InputGroup className="mb-3">
           <InputGroup.Text id="basic-addon1">₹</InputGroup.Text>
@@ -139,7 +138,7 @@ function MyVerticallyCenteredModal(props) {
             />
           </InputGroup>
           </div>
-          <div className="col-md-12">
+          <div className="col-md-6">
           <label className="mb-2 mt-1 gray ps-1">Base Amount</label>
           <InputGroup className="mb-3">
           <InputGroup.Text id="basic-addon1">₹</InputGroup.Text>
@@ -183,7 +182,7 @@ function MyVerticallyCenteredModal(props) {
             <InputGroup.Text id="basic-addon1">%</InputGroup.Text>
           </InputGroup>
           </div>
-          <div className="col-md-12">
+          <div className="col-md-6">
           <label className="mb-2 mt-1 gray ps-1">Net Amount</label>
           <InputGroup className="mb-3">
           <InputGroup.Text id="basic-addon1">₹</InputGroup.Text>
@@ -194,7 +193,7 @@ function MyVerticallyCenteredModal(props) {
             />
           </InputGroup>
           </div>
-          <div className="col-md-12">
+          <div className="col-md-6">
           <label className="mb-2 mt-1 gray ps-1">Is Adjust</label>
 
           <select className="form-control form-select text-center">
@@ -223,17 +222,17 @@ function MyVerticallyCenteredModal(props) {
 
 
       <div className="availability_check_bg mt-3">
-      <h5 className="mb-2 mt-1 font-light">Active Postings</h5>
+      <h5 className="mb-2 mt-1 font-light">Postings</h5>
         <hr className='gray'/>
       <div className="row">
           <div className="col-md-12">
 
 
-          <Table responsive="sm">
+          <Table variant="table table-bordered" responsive="sm">
                                 <thead className="">
                                     <tr>
-                                        <th>Txn Date</th>
-                                        <th>Txn ID</th>
+                                        <th>Txn Date <i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                        <th>Txn ID <i className="bi bi-arrow-down-up sort-btn"></i></th>
                                         <th>Transaction Type</th>
                                         <th>Amount</th>
                                         <th>Status</th>
@@ -256,23 +255,40 @@ function MyVerticallyCenteredModal(props) {
                 <td>
                     5000
                 </td>
-                <td>
-                  dsrfgdgdf
+                <td className="green">
+                  ACTIVE
                 </td>
                 </tr>
         </tbody>
         </Table>
+          
+    </div>
+    </div>
+    <div className="row d-flex justify-content-between">
+                                    
+                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                {/* <div className="col-6"></div> */}
+                                <div className="col-12 d-flex justify-content-end">
+                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                    
+                                </div>
+                            </div>
 
-    </div>
-    </div>
     {/* <div className="d-flex justify-content-center">
     <Button variant="success" size="sm"><i class="bi bi-plus-circle me-1"></i>Add Payment</Button>
     </div> */}
     </div>
 
       </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Update</Button>
+      <Modal.Footer className="d-flex justify-content-between">
+        <Button variant="secondary" onClick={props.onHide}><i class="bi bi-caret-left-fill me-1"></i>Back</Button>
+        <Button onClick={props.onHide}><i class="bi bi-arrow-repeat me-1"></i>Update</Button>
       </Modal.Footer>
     </Modal>
   );
@@ -284,7 +300,7 @@ function Posting() {
   return (
     <>
       <Button variant="primary" className='me-2 mb-2' onClick={() => setModalShow(true)}>
-      <i class="bi bi-send me-2"></i>Posting
+      <i class="bi bi-clipboard2-check me-2"></i>Posting
       </Button>
 
       <MyVerticallyCenteredModal

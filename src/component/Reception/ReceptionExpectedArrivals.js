@@ -2,7 +2,7 @@ import React,{ useState } from 'react';
 import './Reception.css';
 import '../../style.css';
 import { Link } from "react-router-dom";
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -18,8 +18,6 @@ function ReceptionExpectedArrivals() {
         {id: 3, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
         {id: 4, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
         {id: 5, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
-        {id: 6, rese:'104',arrival :'16-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
-        {id: 7, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
         ];
         const [dropdown, setDropdown] = useState(0);
         // const [recordno, setRecordno] = useState(5); 
@@ -144,22 +142,28 @@ function ReceptionExpectedArrivals() {
                             </div>
                         </div>
                     </div>
-                    <div className="row mt-4">
-                                <div className="col-md-2 col-lg-1 col-3">
-                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/>
+                  
+                    <div className="row mt-4 d-flex justify-content-between">
+                                {/* <div className="col-6 col-lg-6 d-flex justify-content-start">
+                                    <Form.Select className='records-fixed-size' size='sm' aria-label="No of Records" name="rec" id="rec" >
                                         <option value="1">5</option>
                                         <option value="2">10</option>
                                         <option value="3">15</option>
                                         <option value="3">All</option>
                                     </Form.Select>
+                                    <label className="text-left" htmlFor="">Records per Page</label>
 
-                                </div>
-                                <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
-                                    <p className="text-left">Records per page</p>
-                                </div>
+                                </div> */}
+                              
+                                <div className="col-lg-12 mb-2 d-flex justify-content-end">
+                                        <label className="text-left" htmlFor="">Showing Records of</label>
+                                        <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
+                            </div>
+                               
+                            </div>
 
                                
-                        </div> 
+                     
 
                      <table className="table table-bordered reception-table">
                         <thead >
