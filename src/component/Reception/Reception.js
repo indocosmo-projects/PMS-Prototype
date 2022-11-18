@@ -1,10 +1,10 @@
 import React,{ useState } from 'react';
 import './Reception.css';
 import '../../style.css';
-// import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -188,7 +188,7 @@ function Reception() {
                                
                         </div>   */}
                         <div>
-                            <table className="table table-bordered reception-table mt-4">
+                            <Table className="table table-bordered reception-table reception-table-btn-stick mt-4" responsive>
                                 <thead>
                                     <tr>
                                         <th>Room No.</th>
@@ -205,7 +205,7 @@ function Reception() {
                                 </thead>
                                         {tdata()}
 
-                            </table>
+                            </Table>
                         </div>
                         
                     

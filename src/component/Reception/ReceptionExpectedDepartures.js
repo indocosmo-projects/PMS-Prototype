@@ -2,11 +2,11 @@ import React,{ useState } from 'react';
 import { Link } from "react-router-dom";
 import './Reception.css';
 import '../../style.css';
-// import { Link } from "react-router-dom";
-// import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Posting from '../Reception/Posting';
 
 
 
@@ -42,7 +42,8 @@ function ReceptionExpectedDepartures() {
                 </td>
                         
                         <td>
-                            <button className="btn btn-primary"><i class="bi bi-clipboard2-check me-2"></i>Posting</button>
+                            {/* <button className="btn btn-primary"><i class="bi bi-clipboard2-check me-2"></i>Posting</button> */}
+                            <Posting />
                             </td>
                     
                         <td>
@@ -172,7 +173,7 @@ function ReceptionExpectedDepartures() {
                                
                          
                         <div>
-                            <table className="table table-bordered reception-table">
+                            <Table className="table table-bordered reception-table" responsive>
                                 <thead>
                                     <tr>
                                         <th>Room No.</th>
@@ -189,7 +190,7 @@ function ReceptionExpectedDepartures() {
                                 </thead>
                                         {tdata()}
 
-                            </table>
+                            </Table>
                         </div>
                 </div>
                 
