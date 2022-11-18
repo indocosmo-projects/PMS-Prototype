@@ -203,7 +203,6 @@ div[role='menu'].visible {
 
 .active-link{
     color: rgb(0, 88, 189) !important;
-    /* font-weight: 400 !important; */
     padding: .3em 0em;
     border-bottom: solid 1px #d4d4d4 ;
 }
@@ -215,7 +214,7 @@ div[role='menu'].visible {
     display: unset;
 }
 
-.nav li {
+.nav-main li {
     padding: 0 .8em;
 }
 .nav a {

@@ -16,7 +16,7 @@ function NavigationBarNew() {
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto gap-2">
+          <Nav className="me-auto gap-2 nav-main">
 
                   <div>
               <ul className="nav"> 
