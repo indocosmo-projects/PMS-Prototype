@@ -21,6 +21,9 @@ body{
 .font-light{
   font-weight: 300;
 }
+.font-light-2{
+  font-weight: 400;
+}
 .container-fluid{
     border-radius:  3px;
     background-color: white ;
