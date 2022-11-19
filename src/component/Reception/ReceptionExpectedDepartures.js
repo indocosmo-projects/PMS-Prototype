@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Badge from 'react-bootstrap/Badge';
 import Posting from '../Reception/Posting';
 
 
@@ -14,12 +15,12 @@ function ReceptionExpectedDepartures() {
 
 
     const details =
-                [{id: 1, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
-                {id: 2, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
-                {id: 3, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
-                {id: 4, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
-                {id: 5, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
-                ];
+                    [{id: 1, roomno:'104',guest:'Tom Hardy', badge:'2',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                    {id: 2, roomno:'104',guest:'John Wick', badge:'8', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                    {id: 3, roomno:'104',guest:'Peter Parker', badge:'1', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                    {id: 4, roomno:'104',guest:'Harry Potter', badge:'2', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                    {id: 5, roomno:'104',guest:'Peter Pan', badge:'5', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                    ];
         const [dropdown, setDropdown] = useState(0);
         // const [recordno, setRecordno] = useState(5); 
 
@@ -32,7 +33,7 @@ function ReceptionExpectedDepartures() {
             {
             details.map(detail => <tr key={detail.id} >
                 <td>{detail.roomno}</td>
-                <td>{detail.guest}</td>
+                <td><h6>{detail.guest}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
                 <td>{detail.arrival}</td>
                 <td>{detail.departure}</td>
                 <td>{detail.foliobalance}</td>
@@ -46,17 +47,14 @@ function ReceptionExpectedDepartures() {
                             <Posting />
                             </td>
                     
-                        <td>
+                        {/* <td>
                             <button className="btn btn-primary"><i class="bi bi-receipt me-2"></i>Bill Preview</button>
                             </td>
                         
                         <td>
                             <button className="btn btn-primary"><i class="bi bi-person-plus-fill me-2"></i>Sharer</button>
-                            </td>
-                     
-                        {/* <td>
-                            <button className="btn btn-danger"><i class="bi bi-box-arrow-right me-2"></i>Check-out</button>
                         </td> */}
+                     
                         <td>
                         <Dropdown as={ButtonGroup}>
                         <Link to="/checkout"><Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
@@ -65,6 +63,10 @@ function ReceptionExpectedDepartures() {
 
                             <Dropdown.Menu>
                                 <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item href="#/action-1">Bill Previews</Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item href="#/action-1">Add Sharer</Dropdown.Item>
                                 <Dropdown.Divider />
                                 <Dropdown.Item href="#/action-2">GRC</Dropdown.Item>
                                 <Dropdown.Divider />
@@ -183,8 +185,8 @@ function ReceptionExpectedDepartures() {
                                         <th>Folio Balance</th>
                                         <th>Deposit</th>
                                         <th>Posting</th>
-                                        <th>Bill Previews</th>
-                                        <th>Add Sharer</th>
+                                        {/* <th>Bill Previews</th>
+                                        <th>Add Sharer</th> */}
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
