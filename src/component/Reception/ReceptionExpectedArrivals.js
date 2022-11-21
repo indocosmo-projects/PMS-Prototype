@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Badge from 'react-bootstrap/Badge';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 
@@ -13,11 +14,11 @@ function ReceptionExpectedArrivals() {
 
 
     const details =  
-        [{id: 1, rese:'104',arrival :'22-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
-        {id: 2, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'2', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
-        {id: 3, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
-        {id: 4, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
-        {id: 5, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        [{id: 1, rese:'104',arrival :'22-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'Joseph Dwayne',badge:'0', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 2, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'2', bookedby:'BOOKING.COM',bookedfor:'Casey Goodman',badge:'5', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 3, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'George Selensky',badge:'2', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 4, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'Chloe Carmen',badge:'0', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 5, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'Bob Downey',badge:'1', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
         ];
         const [dropdown, setDropdown] = useState(0);
         // const [recordno, setRecordno] = useState(5); 
@@ -36,7 +37,8 @@ function ReceptionExpectedArrivals() {
                         <td >{detail.nights}</td>
                         <td >{detail.rooms}</td>
                         <td >{detail.bookedby}</td>
-                        <td >{detail.bookedfor}</td>
+                        {/* <td >{detail.bookedfor}</td> */}
+                        <td><h6>{detail.bookedfor}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
                         <td >{detail.bookedon}</td>
                         {/* <td className="bg-success text-white" >CHECK-IN</td> */}
                         {/* <td><button className="btn btn-primary"><i class="bi bi-plus-circle me-2"></i>Check-in</button></td> */}
