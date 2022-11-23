@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import './Reports.css';
-import ModalOne from './ModalOne';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function Reports() {
 
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const [modalid, setModalid] = useState(0);
+    const [modalname, setModalname] = useState("");
+    const [dropdownreceptiondetailslist, setDropdownreceptiondetailslist] = useState(0);
+    const [dropdownreservationdetailslist, setDropdownreservationdetailslist] = useState(0);
+    const [dropdowntransactionaldetailslist, setDropdowntransactionaldetailslist] = useState(0);
+    const [dropdownfoliobalancedetails, setDropdownfoliobalancedetails] = useState(0);
+    const [dropdownshiftdetails, setDropdownshiftdetails] = useState(0);
+    const [dropdowncreditordetails, setDropdowncreditordetails] = useState(0);
+    
+    
 
     const receptiondetails =  
     [
@@ -75,78 +80,735 @@ function Reports() {
     [
     {id: 1, name:'Customer Outstanding Report'},
     ];
-    
+
+
+
+    const countreceptiondetailslist = (id, name) =>{
+
+        setModalid(( id ));
+        setModalname(( name ));
+        if(dropdownreceptiondetailslist === 1) {
+            setDropdownreceptiondetailslist(( 0 ));
+        }
+
+        if(dropdownreceptiondetailslist === 0) {
+            setDropdownreceptiondetailslist(( 1 ));
+        }
+    }
+
+    const modalreceptiondetailslist = () =>{
+
+        if(dropdownreceptiondetailslist === 0) return "";
+
+        if(dropdownreceptiondetailslist === 1) 
+        return (
+            <div className="modaldisp"  >
+                <div className="bg-info left p-2">
+                    <div className="row"> 
+                        <div className="col-sm-6">
+                            <h3> {modalname}</h3>
+                        </div>
+                        <div className="col-sm-6">
+                            <button type="button" className="btn btn-danger btn-float" onClick = {()=> setDropdownreceptiondetailslist(( 0 ))}>&times;</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div className="mdbody">
+                   
+                    <div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
+                                    </div>
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio1">Today</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
+                                    </div> 
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" for="radio2">On Date</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control ondate" id="ondate" />
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className ="form-check-input" id="radio3" name="optradio" value="datebetween" />
+                                    </div>
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" for="radio2">Date Between</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control fromdate" id="fromdate" />
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control todate" id="todate" />
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <hr/> 
+                    <div className="row">
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">PDF</button>
+                        </div>
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">EXCEL</button>
+                        </div>
+                        <div className="col-sm-4"></div>
+                        <div className="col-sm-4">
+                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdownreceptiondetailslist(( 0 ))}>Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+
     const  receptiondetailslist = () =>{
         return(
             <ul className="liststyle">
                { receptiondetails.map(receptiondetail => <li key={receptiondetail.id} className="listyle">
                     <div className="col-sm-12" >
-                        {modal(receptiondetail)}
+                        <button type="button" className="btn w-100 left" 
+                        onClick={() =>countreceptiondetailslist(receptiondetail.id,receptiondetail.name)}  ><h5><i className="bi bi-file-earmark " ></i> {receptiondetail.name}  </h5>
+                        </button>
                     </div>
                </li>
                )}
             </ul>
         );
     }
+
+
+    const countreservationdetailslist = (id, name) =>{
+       
+        setModalid(( id ));
+        setModalname(( name ));
+        if(dropdownreservationdetailslist === 1) {
+            setDropdownreservationdetailslist(( 0 ));
+        }
+
+        if(dropdownreservationdetailslist === 0) {
+            setDropdownreservationdetailslist(( 1 ));
+        }
+    }
+
+
+    const modalreservationdetailslist = () =>{
+
+        if(dropdownreservationdetailslist === 0) return "";
+
+        if(dropdownreservationdetailslist === 1)
+        return (
+            <div className="modaldisp"  >
+                <div className="bg-info left p-2">
+                    <div className="row"> 
+                        <div className="col-sm-6">
+                            <h3> {modalname}</h3>
+                        </div>
+                        <div className="col-sm-6">
+                            <button type="button" className="btn btn-danger btn-float" onClick = {()=> setDropdownreservationdetailslist(( 0 ))}>&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="mdbody">
+                   
+                    <div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
+                                    </div>
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio1">Today</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
+                                    </div> 
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio2">On Date</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control ondate" id="ondate" />
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className ="form-check-input" id="radio3" name="optradio" value="datebetween" />
+                                    </div>
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio2">Date Between</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control fromdate" id="fromdate" />
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control todate" id="todate" />
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <hr/> 
+                    <div className="row">
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">PDF</button>
+                        </div>
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">EXCEL</button>
+                        </div>
+                        <div className="col-sm-4"></div>
+                        <div className="col-sm-4">
+                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdownreservationdetailslist(( 0 ))}>Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
 
     const  reservationdetailslist = () =>{
         return(
             <ul className="liststyle">
                { reservationdetails.map(reservationdetail => <li key={reservationdetail.id} className="listyle">
                     <div className="col-sm-12">
-                        <h5><i className="bi bi-file-earmark "></i> {reservationdetail.name} </h5>
+                        <button type="button" className="btn w-100 left"  onClick={() =>countreservationdetailslist(reservationdetail.id,reservationdetail.name)} 
+                        ><h5><i className="bi bi-file-earmark " ></i> {reservationdetail.name}  </h5>
+                        </button>
                     </div>
                </li>
                )}
             </ul>
         );
     }
+
+
+
+
+    const counttransactionaldetailslist = (id, name) =>{
+       
+        setModalid(( id ));
+        setModalname(( name ));
+        if(dropdowntransactionaldetailslist === 1) {
+            setDropdowntransactionaldetailslist(( 0 ));
+        }
+
+        if(dropdowntransactionaldetailslist === 0) {
+            setDropdowntransactionaldetailslist(( 1 ));
+        }
+    }
+
+
+    const modaltransactionaldetailslist = () =>{
+
+        if(dropdowntransactionaldetailslist === 0) return "";
+
+        if(dropdowntransactionaldetailslist === 1)
+        return (
+            <div className="modaldisp"  >
+                <div className="bg-info left p-2">
+                    <div className="row"> 
+                        <div className="col-sm-6">
+                            <h3> {modalname}</h3>
+                        </div>
+                        <div className="col-sm-6">
+                            <button type="button" className="btn btn-danger btn-float" onClick = {()=> setDropdowntransactionaldetailslist(( 0 ))}>&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="mdbody">
+                   
+                    <div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
+                                    </div>
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio1">Today</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
+                                    </div> 
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio2">On Date</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control ondate" id="ondate" />
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className ="form-check-input" id="radio3" name="optradio" value="datebetween" />
+                                    </div>
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio2">Date Between</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control fromdate" id="fromdate" />
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control todate" id="todate" />
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <hr/> 
+                    <div className="row">
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">PDF</button>
+                        </div>
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">EXCEL</button>
+                        </div>
+                        <div className="col-sm-4"></div>
+                        <div className="col-sm-4">
+                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdowntransactionaldetailslist(( 0 ))}>Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+
 
     const  transactionaldetailslist = () =>{
         return(
             <ul className="liststyle">
                { transactionaldetails.map(transactionaldetail => <li key={transactionaldetail.id} className="listyle">
                     <div className="col-sm-12">
-                        <h5><i className="bi bi-file-earmark "></i> {transactionaldetail.name} </h5>
+                    <button type="button" className="btn w-100 left"  onClick={() =>counttransactionaldetailslist(transactionaldetail.id,transactionaldetail.name)} 
+                        ><h5><i className="bi bi-file-earmark " ></i> {transactionaldetail.name}  </h5>
+                        </button>
                     </div>
                </li>
                )}
             </ul>
         );
     }
+
+
+
+    const countfoliobalancedetailslist = (id, name) =>{
+       
+        setModalid(( id ));
+        setModalname(( name ));
+        if(dropdownfoliobalancedetails === 1) {
+            setDropdownfoliobalancedetails(( 0 ));
+        }
+
+        if(dropdownfoliobalancedetails === 0) {
+            setDropdownfoliobalancedetails(( 1 ));
+        }
+    }
+
+
+    const modalfoliobalancedetailslist = () =>{
+
+        if(dropdownfoliobalancedetails === 0) return "";
+
+        if(dropdownfoliobalancedetails === 1)
+        return (
+            <div className="modaldisp"  >
+                <div className="bg-info left p-2">
+                    <div className="row"> 
+                        <div className="col-sm-6">
+                            <h3> {modalname}</h3>
+                        </div>
+                        <div className="col-sm-6">
+                            <button type="button" className="btn btn-danger btn-float" onClick = {()=> setDropdownfoliobalancedetails(( 0 ))}>&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="mdbody1">
+                   
+                    <div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
+                                    </div>
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio1">IN-HOUSE</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
+                                    </div> 
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio2">Room Number</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="text" className="form-control text" id="text" />
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        
+                   </div>
+                   <hr/> 
+                    <div className="row">
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">PDF</button>
+                        </div>
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">EXCEL</button>
+                        </div>
+                        <div className="col-sm-4"></div>
+                        <div className="col-sm-4">
+                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdownfoliobalancedetails(( 0 ))}>Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+
 
     const  foliobalancedetailslist = () =>{
         return(
             <ul className="liststyle">
                {  foliobalancedetails.map(foliobalancedetail => <li key={foliobalancedetail.id} className="listyle">
                     <div className="col-sm-12">
-                        <h5><i className="bi bi-file-earmark "></i> {foliobalancedetail.name} </h5>
+                        <button type="button" className="btn w-100 left"  onClick={() =>countfoliobalancedetailslist(foliobalancedetail.id,foliobalancedetail.name)} 
+                        ><h5><i className="bi bi-file-earmark " ></i> {foliobalancedetail.name}  </h5>
+                        </button>
                     </div>
                </li>
                )}
             </ul>
         );
     }
+
+
+
+    const countshiftdetailslist = (id, name) =>{
+       
+        setModalid(( id ));
+        setModalname(( name ));
+        if(dropdownshiftdetails === 1) {
+            setDropdownshiftdetails(( 0 ));
+        }
+
+        if(dropdownshiftdetails === 0) {
+            setDropdownshiftdetails(( 1 ));
+        }
+    }
+
+
+    const modalshiftdetailslist = () =>{
+
+        if(dropdownshiftdetails === 0) return "";
+
+        if(dropdownshiftdetails === 1)
+        return (
+            <div className="modaldisp"  >
+                <div className="bg-info left p-2">
+                    <div className="row"> 
+                        <div className="col-sm-6">
+                            <h3> {modalname}</h3>
+                        </div>
+                        <div className="col-sm-6">
+                            <button type="button" className="btn btn-danger btn-float" onClick = {()=> setDropdownshiftdetails(( 0 ))}>&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="mdbody">
+                   
+                    <div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <label className="form-check-label" htmlFor="tdate">Date</label>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control tdate" id="tdate" />
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <label className="form-check-label" htmlFor="shift">Shift</label>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                <select className ="form-control" id="shift">
+                                    <option>All</option>
+                                    <option>Shift 1</option>
+                                    <option>Shift 3</option>
+                                    <option>Shift 4</option>
+                                    <option>Taxi</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <label className="form-check-label" htmlFor="cashier">Shift</label>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <select className ="form-control" id="cashier">
+                                        <option>All</option>
+                                        <option>Admin</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                   </div>
+                   <hr/> 
+                    <div className="row">
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">PDF</button>
+                        </div>
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">EXCEL</button>
+                        </div>
+                        <div className="col-sm-4"></div>
+                        <div className="col-sm-4">
+                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdownshiftdetails(( 0 ))}>Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
 
     const  shiftdetailslist = () =>{
         return(
             <ul className="liststyle">
                {shiftdetails.map(shiftdetail => <li key={shiftdetail.id} className="listyle">
                     <div className="col-sm-12">
-                        <h5><i className="bi bi-file-earmark "></i> {shiftdetail.name} </h5>
+                        <button type="button" className="btn w-100 left"  onClick={() =>countshiftdetailslist(shiftdetail.id,shiftdetail.name)} 
+                        ><h5><i className="bi bi-file-earmark " ></i> {shiftdetail.name}  </h5>
+                        </button>
                     </div>
                </li>
                )}
             </ul>
         );
     }
+
+
+
+    
+    const countcreditordetailslist= (id, name) =>{
+       
+        setModalid(( id ));
+        setModalname(( name ));
+        if(dropdowncreditordetails === 1) {
+            setDropdowncreditordetails(( 0 ));
+        }
+
+        if(dropdowncreditordetails === 0) {
+            setDropdowncreditordetails(( 1 ));
+        }
+    }
+
+
+    const modalcreditordetailslist = () =>{
+
+        if(dropdowncreditordetails === 0) return "";
+
+        if(dropdowncreditordetails === 1)
+        return (
+            <div className="modaldisp"  >
+                <div className="bg-info left p-2">
+                    <div className="row"> 
+                        <div className="col-sm-6">
+                            <h3> {modalname}</h3>
+                        </div>
+                        <div className="col-sm-6">
+                            <button type="button" className="btn btn-danger btn-float" onClick = {()=> setDropdowncreditordetails(( 0 ))}>&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <div className="mdbody2">
+                   
+                    <div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
+                                    </div>
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio1">Today</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
+                                    </div> 
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio2">On Date</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control ondate" id="ondate" />
+                                </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <div className="row">
+                                    <div className="col-sm-3">
+                                        <input type="radio" className ="form-check-input" id="radio3" name="optradio" value="datebetween" />
+                                    </div>
+                                    <div className="col-sm-9 left">
+                                        <label className="form-check-label" htmlFor="radio2">Date Between</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control fromdate" id="fromdate" />
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="form-group">
+                                    <input type="date" className="form-control todate" id="todate" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <label className="form-check-label" htmlFor="corporate">Corporate</label>
+                            </div>
+                            <div className="col-sm-8">
+                            <div className="form-group">
+                                    <select className ="form-control" id="corporate">
+                                        <option>All</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <hr/> 
+                    <div className="row">
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">PDF</button>
+                        </div>
+                        <div className="col-sm-2">
+                            <button type="button" className="btn btn-primary">EXCEL</button>
+                        </div>
+                        <div className="col-sm-4"></div>
+                        <div className="col-sm-4">
+                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdowncreditordetails(( 0 ))}>Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+
+
+
 
     const  creditordetailslist = () =>{
         return(
             <ul className="liststyle">
                { creditordetails.map(creditordetail => <li key={creditordetail.id} className="listyle">
                     <div className="col-sm-12">
-                        <h5><i className="bi bi-file-earmark "></i> {creditordetail.name} </h5>
+                        <button type="button" className="btn w-100 left"  onClick={() =>countcreditordetailslist(creditordetail.id,creditordetail.name)} 
+                        ><h5><i className="bi bi-file-earmark " ></i> {creditordetail.name}  </h5>
+                        </button>
                     </div>
                </li>
                )}
@@ -154,44 +816,25 @@ function Reports() {
         );
     }
 
-    const modal = (receptiondetail) =>{
+   
 
-        return (
-            <>
-            <button type="button" className="btn w-100 left" onClick={handleShow}><h5><i className="bi bi-file-earmark " ></i> {receptiondetail.name}  </h5>
-            </button>
-            <Modal
-                show={show}
-                onHide={handleClose}
-                backdrop=""
-                keyboard={true}
-                style={{marginTop: 100, opacity: 0.6}}
-            >
-                <Modal.Header closeButton>
-                <Modal.Title>Modal title</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                I will not close if you click outside me. Don't even try to press
-                escape key.
-                </Modal.Body>
-                <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose} closeButton>
-                    Close
-                </Button>
-                <Button variant="primary" closeButton >Understood</Button>
-                </Modal.Footer>
-            </Modal>
-            </>
-        );
-    }
+
+   
+
 
         return(
             <div>
                 <div className="section">
-                    <div className="container-fluid formcontent">
+                    <div className="container-fluid formcontent" style={{position : 'relative'}}>
                         <div>
                             <h3 className="header"> Reports </h3>
                         </div>
+                        {modalreceptiondetailslist()}
+                        {modalreservationdetailslist()}
+                        {modaltransactionaldetailslist()}
+                        {modalfoliobalancedetailslist()}
+                        {modalshiftdetailslist()}
+                        {modalcreditordetailslist()}
                         <hr/>
                         <div className="left gray">
                             <h4 className="bg-info roundedcorner text-white"> Reception </h4>

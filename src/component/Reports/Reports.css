@@ -21,3 +21,30 @@
     margin : 2px;
     width : 400px;
 }
+
+.modaldisp{
+    position : fixed;
+    display : block;
+    width : 60vw;
+    margin : auto;
+    z-index: 100;
+    border : 2px solid black;
+    border-radius : 5px;
+    background-color: white;
+    top : 20vh;
+    left: 20vw;
+}
+
+.mdbody{
+    height : 40vh;
+}
+.mdbody1{
+    height : 30vh;
+}
+.mdbody2{
+    height : 45vh; 
+}
+
+.btn-float{
+    margin-left: 85%;
+}

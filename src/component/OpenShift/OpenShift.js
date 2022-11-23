@@ -51,13 +51,13 @@ function OpenShift() {
                 <tr>
                     <td className="thwidth left">Password</td>
                     <td className="thwidth left">
-                          <input type="text" class="form-control" id="text" id="text" />
+                          <input type="text" class="form-control" id="pwd"  />
                     </td>
                 </tr>
                 <tr>
                     <td className="thwidth left">Floating Amount</td>
                     <td className="thwidth left">
-                          <input type="text" class="form-control" id="text" id="text" />
+                          <input type="text" class="form-control" id="amt"  />
                     </td>
                 </tr>
             </table>
