@@ -1,16 +1,18 @@
 import React,{ useState } from 'react';
 import './Reception.css';
 import '../../style.css';
-import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Badge from 'react-bootstrap/Badge';
 import ReceptionExpectedArrivals from '../Reception/ReceptionExpectedArrivals';
 import ReceptionDepartures from './ReceptionExpectedDepartures';
 import ReceptionHotelStatus from '../Reception/ReceptionHotelStatus';
+import Posting from '../Reception/Posting';
 
 
 
@@ -18,11 +20,11 @@ function Reception() {
   
 
     const details =
-                [{id: 1, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 2, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 3, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 4, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
-                {id: 5, roomno:'104',guest:'Ameen Ajwad, India, Mumbai',  arrival: '20-07-2018', departure: '20-07-2018', foliobalance:'2780' },  
+                [{id: 1, roomno:'104',guest:'Tom Hardy', badge:'2',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 2, roomno:'104',guest:'John Wick', badge:'8', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 3, roomno:'104',guest:'Peter Parker', badge:'1', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 4, roomno:'104',guest:'Harry Potter', badge:'2', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                {id: 5, roomno:'104',guest:'Peter Pan', badge:'5', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
                 ];
 
     const [dropdown, setDropdown] = useState(0);
@@ -36,7 +38,7 @@ function Reception() {
                     {
                     details.map(detail => <tr key={detail.id} >
                         <td>{detail.roomno}</td>
-                        <td>{detail.guest}</td>
+                        <td><h6>{detail.guest}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
                         <td>{detail.arrival}</td>
                         <td>{detail.departure}</td>
                         <td>{detail.foliobalance}</td>
@@ -46,30 +48,34 @@ function Reception() {
                         </td>
                                 
                                 <td>
-                                    <button className="btn btn-primary">Posting</button>
+                                    {/* <button className="btn btn-primary"><i class="bi bi-clipboard2-check me-2"></i>Posting</button> */}
+                                    <Posting />
                                     </td>
                             
-                                <td>
-                                    <button className="btn btn-primary"><i class="bi bi-receipt me-2"></i>Bill Review</button>
+                                {/* <td>
+                                    <button className="btn btn-primary"><i class="bi bi-receipt me-2"></i>Bill Preview</button>
                                     </td>
                                 
                                 <td>
                                     <button className="btn btn-primary"><i class="bi bi-person-plus-fill me-2"></i>Sharer</button>
-                                    </td>
+                                    </td> */}
                              
-                                {/* <td>
-                                    <button className="btn btn-danger"><i class="bi bi-box-arrow-right me-2"></i>Check-out</button>
-                                </td> */}
                                 <td>
                                 <Dropdown as={ButtonGroup}>
-                                    <Button variant="danger"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button>
+                                <Link to="/checkout"><Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
 
                                     <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
 
                                     <Dropdown.Menu>
-                                        <Dropdown.Item href="#/action-1">Extend</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-1">Bill Previews</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-1">Add Sharer</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-2">GRC</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-3">Invoice</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                                 </td>
@@ -132,7 +138,7 @@ function Reception() {
                 <div className="container-fluid">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div'>
-                        <h3 className="header">Reception</h3>
+                        <h3 className="header"><i class="bi bi-person-workspace me-2"></i>Reception</h3>
                     </div>
                     
                 <Tabs
@@ -167,9 +173,9 @@ function Reception() {
                                 </div>
                         </div>
  
-                     <div className="row mt-4">
+                     {/* <div className="row mt-4">
                                 <div className="col-md-2 col-lg-1 col-3">
-                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/>
+                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" >
                                         <option value="1">5</option>
                                         <option value="2">10</option>
                                         <option value="3">15</option>
@@ -182,77 +188,86 @@ function Reception() {
                                 </div>
 
                                
-                        </div>  
+                        </div>   */}
                         <div>
-                            <table className="table table-bordered reception-table">
+                            <Table className="table table-bordered reception-table reception-table-btn-stick mt-4" responsive>
                                 <thead>
                                     <tr>
                                         <th>Room No.</th>
                                         <th>Guest</th>
-                                        <th>Arrival</th>
-                                        <th>Departure</th>
+                                        <th>Check In Date</th>
+                                        <th>Check Out Date</th>
                                         <th>Folio Balance</th>
-                                        <th>Check Deposit</th>
-                                        <th>Check Posting</th>
-                                        <th>Bill Reviews</th>
-                                        <th>Add Sharer</th>
+                                        <th>Deposit</th>
+                                        <th>Posting</th>
+                                        {/* <th>Bill Previews</th>
+                                        <th>Add Sharer</th> */}
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                         {tdata()}
 
-                            </table>
+                            </Table>
                         </div>
                         
                     
                     </div>
    
 
-                     <div className="row m-3">
-                                {/* <div className="col-3 " >Showing 1 to {recordno} of {details.length} entries</div> */}
-                                <div className="col-12 d-flex justify-content-end" >
-                                    <div>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-left"></i></button>
-                                    <button className="btn btn-outline-dark m-1">1</button>
-                                    <button className="btn btn-outline-dark m-1">2</button>
-                                    <button className="btn btn-outline-dark m-1">3</button>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-right"></i></button>
-                                    </div>
-                                </div>
-                    </div>
+                    <div className="row me-1 d-flex justify-content-between">
+                                    
+                                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                                {/* <div className="col-6"></div> */}
+                                                <div className="col-12 d-flex justify-content-end">
+                                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                                    
+                                                </div>
+                                            </div>
 
                     </Tab>
                     <Tab className='tab-content-bg tab-bg' eventKey="expectedarrivals" title={<span> <i class="bi bi-arrow-down-right-square-fill me-2"/>Expected Arrivals</span>}>
                         <ReceptionExpectedArrivals />
-                        <div className="row m-3">
-                                {/* <div className="col-3 " >Showing 1 to {recordno} of {details.length} entries</div> */}
-                                <div className="col-12 d-flex justify-content-end" >
-                                    <div>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-left"></i></button>
-                                    <button className="btn btn-outline-dark m-1">1</button>
-                                    <button className="btn btn-outline-dark m-1">2</button>
-                                    <button className="btn btn-outline-dark m-1">3</button>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-right"></i></button>
-                                    </div>
+                        <div className="row me-1 d-flex justify-content-between">
+                                    
+                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                {/* <div className="col-6"></div> */}
+                                <div className="col-12 d-flex justify-content-end">
+                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                    
                                 </div>
-                    </div>
+                            </div>
 
                         
                     </Tab>
                     <Tab className='tab-content-bg tab-bg' eventKey="departures" title={<span> <i class="bi bi-arrow-up-right-square-fill me-2"/>Expected Departures</span>}>
                         <ReceptionDepartures />
-                        <div className="row m-3">
-                                {/* <div className="col-3 " >Showing 1 to {recordno} of {details.length} entries</div> */}
-                                <div className="col-12 d-flex justify-content-end" >
-                                    <div>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-left"></i></button>
-                                    <button className="btn btn-outline-dark m-1">1</button>
-                                    <button className="btn btn-outline-dark m-1">2</button>
-                                    <button className="btn btn-outline-dark m-1">3</button>
-                                    <button className="btn btn-outline-dark m-1"><i className="bi bi-arrow-right"></i></button>
-                                    </div>
+                        <div className="row me-1 d-flex justify-content-between">
+                                    
+                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                {/* <div className="col-6"></div> */}
+                                <div className="col-12 d-flex justify-content-end">
+                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                    
                                 </div>
-                    </div>
+                            </div>
 
                         
                     </Tab>

@@ -4,7 +4,7 @@ import '../../style.css';
 // import Form from 'react-bootstrap/Form';
 import Accordion from 'react-bootstrap/Accordion';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 function ReceptionHotelStatus() {
@@ -44,9 +44,15 @@ function ReceptionHotelStatus() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">Check Out</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#/action-2">House Keeping</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#/action-3">Deposit</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#/action-2">Posting</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#/action-4">Edit</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                     
@@ -63,9 +69,19 @@ function ReceptionHotelStatus() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">Check In</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#/action-2">Cancel</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#/action-3">No Show</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#/action-2">Deposit</Dropdown.Item>    
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#/action-2">GRC</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#/action-2">Pick Up</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#/action-3">Edit</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                     
@@ -82,9 +98,7 @@ function ReceptionHotelStatus() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">Clean</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                     
@@ -101,9 +115,9 @@ function ReceptionHotelStatus() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">New Check In</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#/action-2">Mark as Vacant</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
 
@@ -121,9 +135,7 @@ function ReceptionHotelStatus() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="#/action-1">Clean</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                     
@@ -135,10 +147,10 @@ function ReceptionHotelStatus() {
         return(
                 <div className="container-fluid tab-bg">
                 
-                    <div className="row mt-4">
-                    <p className='left'>Check your hotel status across the floors</p>
+                    <div className="row mt-4 sticky-div-hotel-status">
+                    {/* <p className='left'>Check your hotel status across the floors</p> */}
 
-                        <div className="col-sm-12 col-md-8">
+                        <div className="col-sm-12 col-md-12">
                             <div className="status-hint-bg gap-4">
                                             <div className='gray'>Status Colors<i class="bi bi-caret-right-fill gray"></i></div>
                                             <div><i class="bi bi-circle-fill occupied me-2"></i>OCCUPIED</div>
@@ -146,29 +158,13 @@ function ReceptionHotelStatus() {
                                             <div><i class="bi bi-circle-fill vaccant me-2"></i>VACCANT</div>
                                             <div><i class="bi bi-circle-fill clean me-2"></i>CLEAN</div>
                                             <div><i class="bi bi-circle-fill dirty me-2"></i>DIRTY</div>
-
-                                    {/* <div className="col-sm-2 p-3">
-                                      <div className="row" >
-                                        <div className="col-12 left" >SORT BY</div> 
-                                            <div className="col-12">
-                                                <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" onChange={(e) => setRecordno((e.target.value))}>
-                                                    <option value="1">5</option>
-                                                    <option value="2">10</option>
-                                                    <option value="3">15</option>
-                                                    <option value="3">All</option>
-                                                </Form.Select>
-                                            </div>
-                                        </div> 
-                                            
-                                    </div> */}
-
                             </div>
                         </div>
-                            <div className="col-sm-12 col-md-4">
+                            {/* <div className="col-sm-12 col-md-4">
                                     <div className="p-3">
                                         <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
                                     </div>
-                            </div>
+                            </div> */}
                     </div>
 
 

@@ -121,7 +121,7 @@ function RoomRateTypeDiscount() {
                 
                 </td> */}
                 <td>
-                <InputGroup className="mb-3">
+                <InputGroup className="mb-3 group-input-width">
                         <Button variant="btn btn-secondary" id="button-addon2">
                         <i className="bi bi-dash"></i>
                         </Button>
@@ -193,8 +193,8 @@ function RoomRateTypeDiscount() {
                                     <tr>
                                         <th>ROOM TYPE</th>
                                         <th>OCCUPANCY</th>
+                                        <th>ROOM RATE</th>
                                         <th>RATE CODE</th>
-                                        <th>RATE</th>
                                         <th>COUNT</th>
                                         <th>ROOMS</th>
                                         {/* <th>DOUBLE</th> */}

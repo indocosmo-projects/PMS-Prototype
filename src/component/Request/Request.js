@@ -86,7 +86,6 @@ function Request() {
     }
 
         return(
-            <div>
                  <div className="section">
                     <div className="container-fluid formcontent">
                         {/* ----- Heading ------ */}
@@ -169,16 +168,18 @@ function Request() {
 
                         </table>
 
-                            <div className="row m-3 d-flex justify-content-between">
+                        <div className="row m-3 d-flex justify-content-between">
                                     
                                     {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
                                                 {/* <div className="col-6"></div> */}
                                                 <div className="col-12 d-flex justify-content-end">
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-arrow-left"></i><span class="hide-element"></span></button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border">1</button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border active">2</button>
+                                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
                                                     <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i className="bi bi-arrow-right"></i></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
                                                     
                                                 </div>
                                             </div>
@@ -222,17 +223,19 @@ function Request() {
                             </table>
                             <div className="row m-3 d-flex justify-content-between">
                                     
-                                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
-                                                {/* <div className="col-6"></div> */}
-                                                <div className="col-12 d-flex justify-content-end">
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-arrow-left"></i><span class="hide-element"></span></button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border">1</button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border active">2</button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i className="bi bi-arrow-right"></i></button>
-                                                    
-                                                </div>
-                                            </div>
+                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                {/* <div className="col-6"></div> */}
+                                <div className="col-12 d-flex justify-content-end">
+                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                    
+                                </div>
+                            </div>
                             </div>
                             </Tab>
 

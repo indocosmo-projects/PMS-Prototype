@@ -2,7 +2,7 @@ import React,{ useState } from 'react';
 import './Reception.css';
 import '../../style.css';
 import { Link } from "react-router-dom";
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -13,13 +13,11 @@ function ReceptionExpectedArrivals() {
 
 
     const details =  
-        [{id: 1, rese:'104',arrival :'22-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 2, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'2',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 3, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 4, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 5, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'CANCELLED'},
-        {id: 6, rese:'104',arrival :'16-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
-        {id: 7, rese:'104',arrival :'27-DEC-2018, 10:00 AM',nights:'4',rooms:'1',departure:'27-DEC-2018', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018',	status:'GRANTED'},
+        [{id: 1, rese:'104',arrival :'22-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 2, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'2', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 3, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 4, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 5, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
         ];
         const [dropdown, setDropdown] = useState(0);
         // const [recordno, setRecordno] = useState(5); 
@@ -34,9 +32,9 @@ function ReceptionExpectedArrivals() {
                      details.map(detail =>  <tr key={detail.id} >
                         <td  style={{color : 'blue'}} >{detail.rese}</td>
                         <td >{detail.arrival}</td>
+                        <td >{detail.departure}</td>
                         <td >{detail.nights}</td>
                         <td >{detail.rooms}</td>
-                        <td >{detail.departure}</td>
                         <td >{detail.bookedby}</td>
                         <td >{detail.bookedfor}</td>
                         <td >{detail.bookedon}</td>
@@ -49,9 +47,19 @@ function ReceptionExpectedArrivals() {
                                     <Dropdown.Toggle className='checkin-split' split variant="primary" id="dropdown-split-basic" />
 
                                     <Dropdown.Menu>
-                                        <Dropdown.Item href="#/action-1">Extend</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-3">Deposit</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-3">Pick up</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-3">GRC</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-3">Confirm</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-3">No Show</Dropdown.Item>
+                                        <Dropdown.Divider />
+                                        <Dropdown.Item href="#/action-2">Cancel</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                                 </td>
@@ -113,7 +121,7 @@ function ReceptionExpectedArrivals() {
         return (
                 <div className="container-fluid tab-bg">
                
-                    <div className="p-3">
+                    {/* <div className="p-3"> */}
                     <div className="row mt-4">
                     <div className="col-sm-6">
                             <div className="input-group mb-3 ">
@@ -134,42 +142,48 @@ function ReceptionExpectedArrivals() {
                             </div>
                         </div>
                     </div>
-                    <div className="row mt-4">
-                                <div className="col-md-2 col-lg-1 col-3">
-                                    <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/>
+                  
+                    <div className="row mt-4 d-flex justify-content-between">
+                                {/* <div className="col-6 col-lg-6 d-flex justify-content-start">
+                                    <Form.Select className='records-fixed-size' size='sm' aria-label="No of Records" name="rec" id="rec" >
                                         <option value="1">5</option>
                                         <option value="2">10</option>
                                         <option value="3">15</option>
                                         <option value="3">All</option>
                                     </Form.Select>
+                                    <label className="text-left" htmlFor="">Records per Page</label>
 
-                                </div>
-                                <div className="col-md-6 col-5 col-lg-7 d-flex justify-content-start">
-                                    <p className="text-left">Records per page</p>
-                                </div>
+                                </div> */}
+                              
+                                <div className="col-lg-12 mb-2 d-flex justify-content-end">
+                                        <label className="text-left" htmlFor="">Showing Records of</label>
+                                        <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
+                            </div>
+                               
+                            </div>
 
                                
-                        </div> 
+                     
 
                      <table className="table table-bordered reception-table">
                         <thead >
                             <tr>
-                                <th className="thstyle">RESV.#</th>
-                                <th className="tdwidthguest">ARRIVAL</th>
-                                <th className="thstyle">NIGHTS</th>
-                                <th className="thstyle">ROOMS</th>
-                                <th className="thstyle">DEPARTURE</th>
-                                <th className="thstyle">BOOKED BY</th>
-                                <th className="tdwidth">BOOKED FOR</th>
-                                <th className="tdwidth">BOOKED ON</th>
-                                <th className="tdwidth">Actions</th>
+                                <th>Resv No</th>
+                                <th>Arrival Date</th>
+                                <th>Departure Date</th>
+                                <th>Nights</th>
+                                <th>Rooms</th>
+                                <th>Booked By</th>
+                                <th>Booked For</th>
+                                <th>Booked On</th>
+                                <th>Actions</th>
                             </tr>							
                         </thead>
                                 {tdata()}
 
                     </table>
                     
-                    </div>
+                    {/* </div> */}
                 </div>
                 
         );

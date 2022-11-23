@@ -45,7 +45,7 @@ function CheckInEditDetails() {
                                 <Nav.Link eventKey="third" disabled className='bg-dissabled'>C-Form <i class="bi bi-caret-right-fill"></i></Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                <Nav.Link eventKey="four">Rooms <i class="bi bi-caret-right-fill"></i></Nav.Link>
+                                <Nav.Link eventKey="four">Rooms (Optional)<i class="bi bi-caret-right-fill"></i></Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                 <Nav.Link eventKey="five">Misc <i class="bi bi-caret-right-fill"></i></Nav.Link>
@@ -57,13 +57,13 @@ function CheckInEditDetails() {
                                 <Tab.Pane eventKey="first">
                                 
                                 <div className="row mb-3">
-                                     <div className="col-md-12 col-lg-2 mb-2 d-flex flex-column">
+                                     <div className="col-lg-2 mb-2 d-flex flex-column">
                                         <div className='pro-img-bg'>
                                             <i class="bi bi-person-circle profile-img"></i>
                                             <Button variant="secondary" size="sm"><i class="bi bi-upload me-2"></i>Upload Image</Button>
                                         </div>
                                     </div>
-                                    <div className='col-10'>
+                                    <div className='col-lg-10'>
                                 <div className="row mb-3">
 
                                      <div className="col-md-12 col-lg-4 mb-2">
@@ -88,7 +88,7 @@ function CheckInEditDetails() {
                                      <div className="row mb-3">
                                     <div className="col-sm-12">
                                             <Alert variant="primary">
-                                            <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2</b> times before 
+                                            <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2 Nights</b> before 
                                                 <Alert.Link href="#"></Alert.Link>
                                                 </Alert>
                                                 </div>
@@ -144,63 +144,55 @@ function CheckInEditDetails() {
                                     </div>
 
                                     <div className="row mb-3">
-                                        <label className="text-left left ps-3 mb-2">Sharers Details</label>
-                                    <div className='d-flex flex-row gap-4 sharer-bg'>
-                                    <div className="col-md-6 col-lg-3">
-                                            {/* <div className="form-group">
-                                                <Form.Select aria-label="Default select example">
-                                                    <option>Category</option>
-                                                    <option value="1">Adults</option>
-                                                    <option value="2">Child</option>
-                                                </Form.Select>
-                                            </div> */}
+                                    <label className="text-left left mb-2">Sharers Details</label>
+                                    <div className="col-lg-12 d-flex flex-row gap-3 sharer-bg">
+                                            <div>
+                                                <p className='f-light'>Number of Adults</p>
+                                                <InputGroup className="mb-3 group-input-width">
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-dash"></i>
+                                                </Button>
+                                                <Form.Control className='text-center'
+                                                    placeholder="1"
+                                                    aria-label="1"
+                                                    aria-describedby="basic-addon2"
+                                                />
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-plus-lg"></i>
+                                                </Button>
+                                                </InputGroup>
+                                                </div>
 
-                                            <p className='f-light'>Number of Adults</p>
-                                            <InputGroup className="mb-3">
-                                            <Button variant="btn btn-secondary" id="button-addon2">
-                                            <i className="bi bi-dash"></i>
-                                            </Button>
-                                            <Form.Control className='text-center'
-                                                placeholder="1"
-                                                aria-label="1"
-                                                aria-describedby="basic-addon2"
-                                            />
-                                            <Button variant="btn btn-secondary" id="button-addon2">
-                                            <i className="bi bi-plus-lg"></i>
-                                            </Button>
-                                        </InputGroup>
-                                        </div>
+                                                <div>
+                                                <p className='f-light'>Number of Children</p>
+                                                    <InputGroup className="mb-3 group-input-width">
+                                                    <Button variant="btn btn-secondary" id="button-addon2">
+                                                    <i className="bi bi-dash"></i>
+                                                    </Button>
+                                                    <Form.Control className='text-center'
+                                                        placeholder="1"
+                                                        aria-label="1"
+                                                        aria-describedby="basic-addon2"
+                                                    />
+                                                    <Button variant="btn btn-secondary" id="button-addon2">
+                                                    <i className="bi bi-plus-lg"></i>
+                                                    </Button>
+                                                </InputGroup>
+                                                </div>
+                                                </div>
 
-                                        <div className="col-md-6 col-lg-3">
-                                        <p className='f-light'>Number of Children</p>
-                                            <InputGroup className="mb-3">
-                                            <Button variant="btn btn-secondary" id="button-addon2">
-                                            <i className="bi bi-dash"></i>
-                                            </Button>
-                                            <Form.Control className='text-center'
-                                                placeholder="1"
-                                                aria-label="1"
-                                                aria-describedby="basic-addon2"
-                                            />
-                                            <Button variant="btn btn-secondary" id="button-addon2">
-                                            <i className="bi bi-plus-lg"></i>
-                                            </Button>
-                                        </InputGroup>
-                                        </div>
-
-                                        </div>
                                     </div>
 
-                                    <div className="row">
+                                    {/* <div className="row">
 
                                     <div className="col-sm-12 mt-3">
-                                    <InputGroup className="pt-1 d-flex justify-content-end">
-                                        <div className="pt-1 make-payer-bg">
-                                        <Form.Check type='checkbox' id='default-checkbox' label='Make Guest as Payer' className='mt-1'/>
-                                        </div>
+                                        <InputGroup className="pt-1 d-flex justify-content-end">
+                                            <div className="pt-1">
+                                            <Form.Check type='checkbox' id='default-checkbox' label='Make Guest as Payer' className='mt-1'/>
+                                            </div>
                                         </InputGroup>
                                         </div>
-                                        </div>
+                                        </div> */}
 
 
                         </Tab.Pane>
@@ -352,7 +344,7 @@ function CheckInEditDetails() {
                             <Tab.Pane eventKey="four">
                                 <div className="row mt-4">
                                     <div className="col-lg-12">
-                                    <p className='gray'>Select the Rooms assigned for this Guest<b className='text-danger'>*</b></p>
+                                    <p className='gray'>Assign a room manually for this Guest (Optional)</p>
                                 </div>
                                 </div>
                                 <div className="row d-flex justify-content-center">
@@ -398,6 +390,15 @@ function CheckInEditDetails() {
                             
                                 
                 </div>
+                <div className="row">
+                    <hr className='gray mt-0'/>
+
+                    <div className="col-12 d-flex justify-content-end">
+                <Button variant="outline-primary px-3 py-1 me-3" size="sm"><i class="bi bi-file-earmark-arrow-up me-2"></i>Copy for all</Button>
+                <Button variant="primary px-3 py-1" size="sm"><i class="bi bi-file-earmark-arrow-up me-2"></i>Save</Button>
+                </div>
+                </div>
+
             </div>
     );
 

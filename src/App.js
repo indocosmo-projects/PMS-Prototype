@@ -7,7 +7,7 @@ import Reception from './component/Reception/Reception';
 import ReceptionExpectedArrivals from './component/Reception/ReceptionExpectedArrivals';
 import ReceptionHotelStatus from './component/Reception/ReceptionHotelStatus';
 import RoomList from './component/RoomList/RoomList';
-import Navigationbar from './component/Common/Navigationbar';
+import NavigationbarNew from './component/Common/NavigationbarNew';
 // import NavigationbarMannual from './component/Common/NavigationbarMannual';
 import CheckInEdit from './component/CheckInEdit/CheckInEdit';
 import CheckInEditOtherDetails from './component/CheckInEdit/CheckInEditOtherDetails';
@@ -16,6 +16,7 @@ import Request from './component/Request/Request';
 import NewRequest from './component/NewRequest/NewRequest';
 import CheckOut from './component/CheckOut/CheckOut';
 import Reports from './component/Reports/Reports';
+import CheckOutGrp from './component/CheckOut/CheckOutGrp';
 
 
 
@@ -24,7 +25,7 @@ function App() {
     <div className="App">
         <Router>
 
-           <Navigationbar/>  
+           <NavigationbarNew/>  
            {/* <NavigationbarMannual/> */}
 
             <Switch>
@@ -42,6 +43,7 @@ function App() {
                 <Route exact path="/newrequest" component={NewRequest}/>
                 <Route exact path="/checkOut" component={CheckOut}/>
                 <Route exact path="/reports" component={Reports}/>
+                <Route exact path="/checkOutGrp" component={CheckOutGrp}/>
             </Switch>
             <Footer/>
         </Router>

@@ -1,25 +1,37 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import RoomAvailability from './RoomAvailability';
 import RoomRateTypeDiscount from './RoomRateTypeDiscount';
 import './CheckInEdit.css';
 import CheckInEditDetails from './CheckInEditDetails';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
 import CheckInEditBilling from './CheckInEditBilling';
 
+const animatedComponents = makeAnimated();
 
-
-// import { Link } from "react-router-dom";
 
 function CheckInEdit(){
+    const options = [
+        {value: "101", label:"FLR 1, ROOM 101"},
+        {value: "202", label:"FLR 2, ROOM 202"},
+        {value: "303", label:"FLR 3, ROOM 303"},
+        {value: "304", label:"FLR 3, ROOM 303"},
+        {value: "305", label:"FLR 3, ROOM 303"},
+        {value: "305", label:"FLR 3, ROOM 303"},
+    ];
     return(
         <div>
             <div className="section">
                 <div className="container-fluid formcontent">
                     {/* ----- Heading ------ */}
-                    <div className='sticky-div'>
-                        <h3 className="header"> Check In <span className="dark-bg">Edit</span></h3>
+                    <div className='sticky-div d-flex justify-content-between'>
+                        <h3 className="header">Check In <span className="dark-bg"><i class="bi bi-pencil-square me-1"></i>Edit</span></h3>
+                        <Link to="/reception"><Button variant="outline-secondary" size="sm"><i class="bi bi-arrow-left me-2"></i>Back</Button></Link>
                     </div>
 
                      {/* ----- Form   ------ */}
@@ -28,21 +40,21 @@ function CheckInEdit(){
                         <div className="row p-4">
                             <div className="col-md-3">
                                         <div className="form-group mb-3">
-                                            <label className="text-left" htmlFor="arrival">Arrival:</label>
+                                            <label className="text-left" htmlFor="arrival">Arrival</label>
                                             <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival" />
                                         </div>
                                     
                             </div>
                             <div className="col-md-3">
                                         <div className="form-group">
-                                            <label className="text-left" htmlFor="departure">Departure:</label>
+                                            <label className="text-left" htmlFor="departure">Departure</label>
                                             <input type="datetime-local" className="form-control departure" name="departure" id="departure" />
                                         </div>
                             </div>
                             
                             <div className="col-md-3">
                                 <div className="form-group mb-3">
-                                    <label className="text-left" htmlFor="source">Source:</label>
+                                    <label className="text-left" htmlFor="source">Source</label>
                                     <Form.Select aria-label="Default select example">
                                             <option>FIT/TA/CORPORATE</option>
                                             <option value="1">1</option>
@@ -59,6 +71,8 @@ function CheckInEdit(){
                                     </div>
 
                              </div>
+
+
                             {/* <div className="col-md-4 vl">
                                 <div className="row mb-4">
                                     <div className="col-md-6">
@@ -173,33 +187,81 @@ function CheckInEdit(){
                                     <th>No.</th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Address</th>
+                                    <th>Phone</th>
                                     <th>Gender</th>
                                     <th>Country</th>
-                                    <th>State</th>
+                                    <th>Room</th>
                                     <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                     <td>1</td>
-                                    {Array.from({ length: 6 }).map((_, index) => (
-                                        <td key={index}>Table cell {index}</td>
-                                    ))}
+                                    {/* {Array.from({ length: 5 }).map((_, index) => (
+                                        <td key={index}>Table cell {index} </td>
+                                    ))} */}
+                                    <td>Tom</td>
+                                    <td>tom@mail.com</td>
+                                    <td>917786676757</td>
+                                    <td>Male</td>
+                                    <td>India</td>
+                                    <td><Select
+                                            closeMenuOnSelect={false}
+                                            components={animatedComponents}
+                                            isClearable
+                                            options={options}
+                                            className="basic-single"
+                                            classNamePrefix="select"
+                                            menuPlacement="auto"
+                                            menuPortalTarget={document.body}
+                                            menuPosition={'fixed'}
+                                            /></td>
                                     <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                                     </tr>
                                     <tr>
                                     <td>2</td>
-                                    {Array.from({ length: 6 }).map((_, index) => (
+                                    {/* {Array.from({ length: 5 }).map((_, index) => (
                                         <td key={index}>Table cell {index}</td>
-                                    ))}
+                                    ))} */}
+                                    <td>Jack</td>
+                                    <td>jack@mail.com</td>
+                                    <td>918787867554</td>
+                                    <td>Male</td>
+                                    <td>India</td>
+                                    <td><Select
+                                            closeMenuOnSelect={false}
+                                            components={animatedComponents}
+                                            isClearable
+                                            options={options}
+                                            className="basic-single"
+                                            classNamePrefix="select"
+                                            menuPlacement="auto"
+                                            menuPortalTarget={document.body}
+                                            menuPosition={'fixed'}
+                                            /></td>
                                     <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                                     </tr>
                                     <tr>
                                     <td>3</td>
-                                    {Array.from({ length: 6 }).map((_, index) => (
+                                    {/* {Array.from({ length: 5 }).map((_, index) => (
                                         <td key={index}>Table cell {index}</td>
-                                    ))}
+                                    ))} */}
+                                    <td>Pam</td>
+                                    <td>pam@mail.com</td>
+                                    <td>912544678907</td>
+                                    <td>Female</td>
+                                    <td>India</td>
+                                    <td><Select
+                                            closeMenuOnSelect={false}
+                                            components={animatedComponents}
+                                            options={options}
+                                            isClearable
+                                            className="basic-single"
+                                            classNamePrefix="select"
+                                            menuPlacement="auto"
+                                            menuPortalTarget={document.body}
+                                            menuPosition={'fixed'}
+                                            /></td>
                                     <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                                     </tr>
                                 </tbody>
@@ -222,7 +284,7 @@ function CheckInEdit(){
                     </Accordion>
 
 
-                     {/* ----- Buttons ------ */}
+                     {/* ----- Billing ------ */}
 
                      <div className="availability_check_bg my-4">
                      <h5 className='left mt-2 ps-3 grey'>Billing Details</h5>

@@ -1,13 +1,23 @@
 import React, { useState } from "react";
-import './CheckInEdit.css';
 import Form from 'react-bootstrap/Form';
-import Badge from 'react-bootstrap/Badge';
-import ListGroup from 'react-bootstrap/ListGroup';
+// import Badge from 'react-bootstrap/Badge';
+// import ListGroup from 'react-bootstrap/ListGroup';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
+import './CheckOut.css';
+
+const animatedComponents = makeAnimated();
 
 
-function CheckInEditBilling() {
+function CheckOutBilling() {
+
+
+    const options = [
+        {value: "102", label:"FLR 1, ROOM 102 / Jack"},
+        {value: "103", label:"FLR 1, ROOM 103 / Pam"},
+    ];
     
     const [selected, setSelected] = useState("");
     const changeHandler = e => {
@@ -17,15 +27,11 @@ function CheckInEditBilling() {
     return(
         <div className="CheckInEditBilling">
             {/* <div className="section"> */}
-                <div className="container-fluid">
-                    <div className="availability_check_bg light-violet-bg">
-                <div className='d-flex flex-row justify-content-between pt-2'>
-                <h6 className='left ps-3 grey'>Billing Type</h6>
-                <p className='pe-3'>* Visible only for group</p>
-                </div>
-                     <hr className='gray mb-4 mt-0'/>
+                <div className="container-fluid light-violet-bg">
+                <h6 className='left mt-2 ps-3 grey'>Billing Type</h6>
+                     <hr className='gray mb-4'/>
                    
-                        <Form className='row py-3 mx-2'>
+                        <Form className='row py-3  mx-2'>
                             <div className="col-lg-6 border-right">
                         <Form.Check
                             className="form-check-bg"
@@ -39,13 +45,14 @@ function CheckInEditBilling() {
                             onChange={changeHandler}
                         />
 
-                                    <div aria-hidden={selected !== "ind" ? true : false} className="total-bg mt-3">
+                                    <div aria-hidden={selected !== "ind" ? true : false} className=" mt-3">
                                         
                                          <Alert key="primary" variant="primary" className="mx-4 mt-3">
                                          <i class="bi bi-person-fill me-2"></i><b>Individual Billing</b> is Selected
                                         </Alert>
+                                        <p className="fade-color mt-2"><i class="bi bi-exclamation-circle me-2"></i>Check out the eligible individuals below</p>
 
-                                    <ListGroup as="ol" numbered className="mt-4 p-4">
+                                    {/* <ListGroup as="ol" numbered className="mt-4 p-4">
                                     <p className="left gray">Guests will be billed listed down</p>
                                         <ListGroup.Item
                                             as="li"
@@ -53,7 +60,7 @@ function CheckInEditBilling() {
                                         >
                                             <div className="ms-2 me-auto left">
                                             <div className="fw-bold">Tom</div>
-                                            Cras justo odio
+                                            FLR 1, ROOM 101
                                             </div>
                                             <Badge bg="light" className="ind-billing-badge">
                                             <i class="bi bi-check-circle-fill"></i>
@@ -65,7 +72,7 @@ function CheckInEditBilling() {
                                         >
                                             <div className="ms-2 me-auto left">
                                             <div className="fw-bold">Jack</div>
-                                            Cras justo odio
+                                            FLR 1, ROOM 102
                                             </div>
                                             <Badge bg="light" className="ind-billing-badge">
                                             <i class="bi bi-check-circle-fill"></i>
@@ -77,13 +84,15 @@ function CheckInEditBilling() {
                                         >
                                             <div className="ms-2 me-auto left">
                                             <div className="fw-bold">Pam</div>
-                                            Cras justo odio
+                                            FLR 1, ROOM 103
                                             </div>
                                             <Badge bg="light" className="ind-billing-badge">
                                             <i class="bi bi-check-circle-fill"></i>
                                             </Badge>
                                         </ListGroup.Item>
-                                        </ListGroup>
+                                        </ListGroup> */}
+                                        {/* <Button variant="primary mb-2"><i class="bi bi-arrow-clockwise me-1"></i>Update</Button> */}
+
                                     </div>
 
                         </div>
@@ -91,7 +100,7 @@ function CheckInEditBilling() {
 
                         <div className="col-lg-6">
                         <Form.Check
-                        className="form-check-bg"
+                            className="form-check-bg"
                             inline
                             label="Group Billing"
                             name="group1"
@@ -103,46 +112,62 @@ function CheckInEditBilling() {
 
                         />
 
-                                    <div aria-hidden={selected !== "grp" ? true : false} className="total-bg mt-3">
+                                    <div aria-hidden={selected !== "grp" ? true : false} className="mt-3">
 
-                                            <Alert key="warning" variant="warning" className="mx-4 mt-3">
+                                            <Alert key="primary" variant="primary" className="mx-4 mt-3">
                                             <i class="bi bi-people-fill me-2"></i><b>Group Billing</b> is Selected
                                             </Alert>
 
                                             <div className="grp-bill-padding">
                                             <p className="left gray mt-4">Select the Guest to be Group billed</p>
                                             <Form.Select aria-label="Default select example">
-                                                <option>Select the Guest</option>
-                                                <option value="1">Tom</option>
-                                                <option value="2">Jack</option>
-                                                <option value="3">Pam</option>
+                                                <option>Select the Room/Guest</option>
+                                                <option value="1">FLR 1, ROOM 101 / Tom</option>
+                                                <option value="2">FLR 1, ROOM 102 / Jack</option>
+                                                <option value="3">FLR 1, ROOM 103 / Pam</option>
                                             </Form.Select>
+
+                                            <p className="left gray mt-4">Select the Guests to be Transferred</p>
+
+                                                <Select
+                                                    closeMenuOnSelect={false}
+                                                    components={animatedComponents}
+                                                    // defaultValue={}
+                                                    isMulti
+                                                    options={options}
+                                                    className="basic-multi-select"
+                                                    classNamePrefix="select"
+                                                    menuPlacement="auto"
+                                                    menuPortalTarget={document.body}
+                                                    menuPosition={'fixed'}
+                                                />
+
+                                                <Button variant="primary mb-2 mt-4"><i class="bi bi-check-lg me-1"></i>Transfer</Button>
+
                                             </div>
                                     </div>
-
                             </div>
+                            
 
                         </Form>
-                        </div>
 
-                        <div className="availability_check_bg mt-3">
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="col-12">
-                                <h6 className='left ps-3 grey py-2'>Deposit details</h6>
-                                <hr className='gray mb-4 mt-0'/>
+                                <h6 className='left mt-4 ps-3 grey'>Deposit details</h6>
+                                <hr className='gray mb-4'/>
                                 <div className="sharer-bg pb-4 mx-2">
                                 <Button variant="primary"><i class="bi bi-piggy-bank-fill me-2"></i>Deposit</Button>
                                 </div>
                             </div>
-                        </div>
-                        </div>
+                        </div> */}
                         
 
 
                 </div>
+            {/* </div> */}
         </div>
     );
 
 }
  
-export default CheckInEditBilling;
+export default CheckOutBilling;

@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import './CheckOut.css';
 import CheckOutDetails from './CheckOutDetails';
-import CheckOutDetailsTwo from './CheckOutDetailsTwo';
-import CheckOutDetailsThree from './CheckOutDetailsThree';
+import CheckOutDetailsTwoDis from './CheckOutDetailsTwoDis';
+import CheckOutDetailsThreeDis from './CheckOutDetailsThreeDis';
 import CheckOutBilling from './CheckOutBilling';
 import CheckOutConfirm from './CheckOutConfirm';
 
 
-function CheckOut() {
+function CheckOutGrp() {
         return(
             <div>
                 <div className="section">
@@ -64,7 +64,7 @@ function CheckOut() {
                             {/* ----- Billing ------ */}
 
                             <div className="availability_check_bg my-4">
-                                <div className='d-flex flex-row justify-content-between'>
+                            <div className='d-flex flex-row justify-content-between'>
                                     <h5 className='left mt-2 ps-3 grey'>Billing Details</h5>
                                     <p className='pe-3'>* Valid only for Group checkout</p>
                               </div>
@@ -81,10 +81,10 @@ function CheckOut() {
                                             <CheckOutDetails/>
                                         </div>
                                         <div className='col-md-6 col-lg-4'>
-                                            <CheckOutDetailsTwo/>
+                                            <CheckOutDetailsTwoDis/>
                                         </div>
                                         <div className='col-md-6 col-lg-4'>
-                                            <CheckOutDetailsThree/>
+                                            <CheckOutDetailsThreeDis/>
                                         </div>
                                     </div>
                             </div>  
@@ -93,8 +93,8 @@ function CheckOut() {
                          {/* ----- checkout confirm ------ */}
 
                             <div className="availability_check_bg my-4">
-                                    {/* <h5 className='left mt-2 ps-3 grey'>Confirmation</h5> */}
-                                    {/* <hr className='gray'/> */}
+                                    {/* <h5 className='left mt-2 ps-3 grey'>Confirmation</h5>
+                                    <hr className='gray'/> */}
                                 <CheckOutConfirm/>
                             </div>  
 
@@ -107,4 +107,4 @@ function CheckOut() {
         );
 }
  
-export default CheckOut;
+export default CheckOutGrp;

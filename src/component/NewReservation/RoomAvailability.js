@@ -25,16 +25,17 @@ function RoomAvailability() {
     
     return (
        
-        <div className="row p-3" onMouseUp={nightcalculation}>
-        <div className="row">
-                <div className="col-lg-2 mb-2">
+        <div onMouseUp={nightcalculation}>
+        <div className="container-fluid">
+        <div className="row light-violet-bg rounded p-4">
+                <div className="col-lg-3 mb-2">
                         <div className="form-group">
                             <label className="text-left" htmlFor="arrival">Arrival Time <b className='text-danger'>*</b></label>
                             <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival" onChange={(e) => setArrdate((e.target.value))}/>
                         </div>
                 </div>
 
-                <div className="col-lg-2 mb-2">
+                <div className="col-lg-3 mb-2">
                         <div className="form-group">
                             <label className="text-left" htmlFor="departure">Departure Time <b className='text-danger'>*</b></label>
                             <input type="datetime-local" className="form-control departure" name="departure" onChange={(e) => setDeptdate((e.target.value))} id="departure" />
@@ -56,13 +57,13 @@ function RoomAvailability() {
                         </div>
                 </div>
 
-                <div className="col-lg-5 mb-2  mt-1">   
+                <div className="col-lg-3 mb-2  mt-1">   
                     <div className="form-group" >
-                        <div className='row'>
+                        {/* <div className='row'>
                     <label className="grey mb-1" htmlFor="rooms">Click <b>Go</b> to check availability</label>
-                    </div>
-                    <div className='row justify-content-center'>
-                        <button type="button" className="btn btn-primary w-50">Go</button>
+                    </div> */}
+                    <div className='row justify-content-center pt-4'>
+                        <button type="button" className="btn btn-primary w-50"><i class="bi bi-search me-2"></i>Check Availability</button>
                         </div>
                     </div>
                 </div>
@@ -71,7 +72,7 @@ function RoomAvailability() {
         <div className="row">
         <div className="col-md-12">
         <div className= "roomavailability">
-            <div className='m-2'>
+            <div className='m-1'>
             <table className="table avail-table" style={{marginBottom: 0,}}>
                 <thead className="tabhead head-bg">
                     <tr>
@@ -225,6 +226,7 @@ function RoomAvailability() {
             </div>
         </div>
         </div>
+    </div>
     </div>
     );
 }
