@@ -490,7 +490,7 @@ function Reports() {
                         </div>
                     </div>
                 </div>
-                <div className="mdbody">
+                <div className="mdbody1">
                    
                     <div>
                         <div className="row p-2">
@@ -500,7 +500,7 @@ function Reports() {
                                         <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
                                     </div>
                                     <div className="col-sm-9 left">
-                                        <label className="form-check-label" htmlFor="radio1">Today</label>
+                                        <label className="form-check-label" htmlFor="radio1">IN-HOUSE</label>
                                     </div>
                                 </div>
                             </div>
@@ -514,39 +514,18 @@ function Reports() {
                                         <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
                                     </div> 
                                     <div className="col-sm-9 left">
-                                        <label className="form-check-label" htmlFor="radio2">On Date</label>
+                                        <label className="form-check-label" htmlFor="radio2">Room Number</label>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-sm-4">
                                 <div className="form-group">
-                                    <input type="date" className="form-control ondate" id="ondate" />
+                                    <input type="text" className="form-control text" id="text" />
                                 </div>
                             </div>
                             <div className="col-sm-4"></div>
                         </div>
-                        <div className="row p-2">
-                            <div className="col-sm-4 ">
-                                <div className="row">
-                                    <div className="col-sm-3">
-                                        <input type="radio" className ="form-check-input" id="radio3" name="optradio" value="datebetween" />
-                                    </div>
-                                    <div className="col-sm-9 left">
-                                        <label className="form-check-label" htmlFor="radio2">Date Between</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-4">
-                                <div className="form-group">
-                                    <input type="date" className="form-control fromdate" id="fromdate" />
-                                </div>
-                            </div>
-                            <div className="col-sm-4">
-                                <div className="form-group">
-                                    <input type="date" className="form-control todate" id="todate" />
-                                </div>
-                            </div>
-                        </div>
+                        
                    </div>
                    <hr/> 
                     <div className="row">
@@ -621,57 +600,45 @@ function Reports() {
                     <div>
                         <div className="row p-2">
                             <div className="col-sm-4 ">
-                                <div className="row">
-                                    <div className="col-sm-3">
-                                        <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
-                                    </div>
-                                    <div className="col-sm-9 left">
-                                        <label className="form-check-label" htmlFor="radio1">Today</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-4"></div>
-                            <div className="col-sm-4"></div>
-                        </div>
-                        <div className="row p-2">
-                            <div className="col-sm-4 ">
-                                <div className="row">
-                                    <div className="col-sm-3">
-                                        <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
-                                    </div> 
-                                    <div className="col-sm-9 left">
-                                        <label className="form-check-label" htmlFor="radio2">On Date</label>
-                                    </div>
-                                </div>
+                                <label className="form-check-label" htmlFor="tdate">Date</label>
                             </div>
                             <div className="col-sm-4">
                                 <div className="form-group">
-                                    <input type="date" className="form-control ondate" id="ondate" />
+                                    <input type="date" className="form-control tdate" id="tdate" />
                                 </div>
                             </div>
                             <div className="col-sm-4"></div>
                         </div>
                         <div className="row p-2">
                             <div className="col-sm-4 ">
-                                <div className="row">
-                                    <div className="col-sm-3">
-                                        <input type="radio" className ="form-check-input" id="radio3" name="optradio" value="datebetween" />
-                                    </div>
-                                    <div className="col-sm-9 left">
-                                        <label className="form-check-label" htmlFor="radio2">Date Between</label>
-                                    </div>
-                                </div>
+                                <label className="form-check-label" htmlFor="shift">Shift</label>
                             </div>
                             <div className="col-sm-4">
                                 <div className="form-group">
-                                    <input type="date" className="form-control fromdate" id="fromdate" />
+                                <select className ="form-control" id="shift">
+                                    <option>All</option>
+                                    <option>Shift 1</option>
+                                    <option>Shift 3</option>
+                                    <option>Shift 4</option>
+                                    <option>Taxi</option>
+                                </select>
                                 </div>
+                            </div>
+                            <div className="col-sm-4"></div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <label className="form-check-label" htmlFor="cashier">Shift</label>
                             </div>
                             <div className="col-sm-4">
                                 <div className="form-group">
-                                    <input type="date" className="form-control todate" id="todate" />
+                                    <select className ="form-control" id="cashier">
+                                        <option>All</option>
+                                        <option>Admin</option>
+                                    </select>
                                 </div>
                             </div>
+                            <div className="col-sm-4"></div>
                         </div>
                    </div>
                    <hr/> 
@@ -742,7 +709,7 @@ function Reports() {
                         </div>
                     </div>
                 </div>
-                <div className="mdbody">
+                <div className="mdbody2">
                    
                     <div>
                         <div className="row p-2">
@@ -796,6 +763,18 @@ function Reports() {
                             <div className="col-sm-4">
                                 <div className="form-group">
                                     <input type="date" className="form-control todate" id="todate" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row p-2">
+                            <div className="col-sm-4 ">
+                                <label className="form-check-label" htmlFor="corporate">Corporate</label>
+                            </div>
+                            <div className="col-sm-8">
+                            <div className="form-group">
+                                    <select className ="form-control" id="corporate">
+                                        <option>All</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>

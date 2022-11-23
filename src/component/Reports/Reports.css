@@ -38,6 +38,12 @@
 .mdbody{
     height : 40vh;
 }
+.mdbody1{
+    height : 30vh;
+}
+.mdbody2{
+    height : 45vh; 
+}
 
 .btn-float{
     margin-left: 85%;
