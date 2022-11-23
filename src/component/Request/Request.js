@@ -91,14 +91,14 @@ function Request() {
                         {/* ----- Heading ------ */}
                         <div className='d-flex justify-content-between mb-4'>
                             <h3 className="header"> Requests </h3>
-                            <button className="btn btn-outline-dark m-1"><i class="bi bi-caret-left-fill"></i>Back</button>
+                            <button className="btn btn-outline-dark m-1"><i className ="bi bi-caret-left-fill"></i>Back</button>
                         </div>
                         <div className="row">
                             <div className="col-sm-6">
                                 <div className="input-group mb-3 ">
                                             <input type="text" className="form-control" placeholder="Search..." />
                                             <button className="btn btn-outline-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button>
-                                            <button className="btn btn-dark px-4" title="Search" ><i class="bi bi-search"></i></button>
+                                            <button className="btn btn-dark px-4" title="Search" ><i className ="bi bi-search"></i></button>
                                     </div>
                                 <div className="parentdpdown">
                                     <div className="ddw" >
@@ -111,7 +111,7 @@ function Request() {
 
                                     <div className="col-sm-6">
                                         <div className="mb-3 ">
-                                        <Link to="/newrequest"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Request</button></Link>
+                                        <Link to="/newrequest"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i>New Request</button></Link>
                                         </div>
 
                             </div>
@@ -133,7 +133,7 @@ function Request() {
                         id="justify-tab-example"
                         className="mt-4 mb-4 status-tab"
                         justify >
-                    <Tab className='tab-content-bg tab-bg' eventKey="unprocessed" title={<span><i class="bi bi-house-door-fill me-2"/>Unprocessed</span>}>
+                    <Tab className='tab-content-bg tab-bg' eventKey="unprocessed" title={<span><i className ="bi bi-house-door-fill me-2"/>Unprocessed</span>}>
               
                         <div className="">
                         <div className="row ms-2 mt-4">
@@ -170,16 +170,16 @@ function Request() {
 
                         <div className="row m-3 d-flex justify-content-between">
                                     
-                                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                    {/*}                <div className="col-4 d-flex justify-content-start" ><i className="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
                                                 {/* <div className="col-6"></div> */}
                                                 <div className="col-12 d-flex justify-content-end">
-                                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                                <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-left"></i><span className="hide-element"></span></button>
                                                     <button className="btn btn-outline-dark m-1 grey-border active">1</button>
                                                     <button className="btn btn-outline-dark m-1 grey-border">2</button>
                                                     <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-right"></i></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button>
                                                     
                                                 </div>
                                             </div>
@@ -187,7 +187,7 @@ function Request() {
                         </div>
                         </Tab>
 
-                         <Tab className='tab-content-bg tab-bg' eventKey="allrequests" title={<span><i class="bi bi-house-door-fill me-2"/>All Requests</span>}>
+                         <Tab className='tab-content-bg tab-bg' eventKey="allrequests" title={<span><i className="bi bi-house-door-fill me-2"/>All Requests</span>}>
                             
                             <div className="">
                             <div className="row ms-2 mt-4">
@@ -226,13 +226,13 @@ function Request() {
                     {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
                                 {/* <div className="col-6"></div> */}
                                 <div className="col-12 d-flex justify-content-end">
-                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-left"></i><span className="hide-element"></span></button>
                                     <button className="btn btn-outline-dark m-1 grey-border active">1</button>
                                     <button className="btn btn-outline-dark m-1 grey-border">2</button>
                                     <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button>
                                     
                                 </div>
                             </div>
