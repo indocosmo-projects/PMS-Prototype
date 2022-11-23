@@ -1,0 +1,23 @@
+.roundedcorner{
+    border-radius: 5px;
+    padding : 3px;
+    padding-left: 12px;
+}
+
+.gray{
+    background-color: white;
+}
+
+.liststyle{
+    list-style-type: none;
+}
+
+.listyle{
+    display : inline-block;
+    padding : 5px;
+    background-color: rgb(236, 234, 230);
+    border-radius : 10px;
+    padding-right : 40px;
+    margin : 2px;
+    width : 400px;
+}

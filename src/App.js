@@ -15,6 +15,7 @@ import ShiftManagement from './component/Shift/ShiftManagement';
 import Request from './component/Request/Request';
 import NewRequest from './component/NewRequest/NewRequest';
 import CheckOut from './component/CheckOut/CheckOut';
+import Reports from './component/Reports/Reports';
 import CheckOutGrp from './component/CheckOut/CheckOutGrp';
 
 
@@ -41,6 +42,7 @@ function App() {
                 <Route exact path="/request" component={Request}/>
                 <Route exact path="/newrequest" component={NewRequest}/>
                 <Route exact path="/checkOut" component={CheckOut}/>
+                <Route exact path="/reports" component={Reports}/>
                 <Route exact path="/checkOutGrp" component={CheckOutGrp}/>
             </Switch>
             <Footer/>

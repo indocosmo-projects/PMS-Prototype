@@ -90,7 +90,7 @@ function Request() {
                     <div className="container-fluid formcontent">
                         {/* ----- Heading ------ */}
                         <div className='d-flex justify-content-between mb-4'>
-                            <h5 className="header"> Requests </h5>
+                            <h3 className="header"> Requests </h3>
                             <button className="btn btn-outline-dark m-1"><i class="bi bi-caret-left-fill"></i>Back</button>
                         </div>
                         <div className="row">
@@ -123,7 +123,7 @@ function Request() {
                             <div className="col-sm-6">
                             
                             {/* <div className="mb-3 "> */}
-                                        <Link to=""><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Request</button></Link>
+                                      
                             </div>
                         </div>
                         
@@ -244,6 +244,7 @@ function Request() {
                     </div>
                 </div>
             </div>
+        </div>
         );
 }
  
