@@ -31,7 +31,7 @@
     border : 2px solid black;
     border-radius : 5px;
     background-color: white;
-    top : 20vh;
+    top : 15vh;
     left: 20vw;
 }
 
@@ -45,6 +45,30 @@
     height : 45vh; 
 }
 
+@media screen and (max-width: 576px) {
+    .mdbody {
+        height : 65vh;
+    }
+    .mdbody1{
+        height : 55vh;
+    }
+    .mdbody2{
+        height : 90vh; 
+        overflow: auto;
+    }
+    .btn-w{
+        width : 40vw;
+        margin: 2px;
+    }
+    .form-control{
+        margin : 2px;
+    }
+    .listyle{
+        width : 220px;
+    }
+    
+}
+
 .btn-float{
-    margin-left: 85%;
+    margin-left: 80%;
 }
