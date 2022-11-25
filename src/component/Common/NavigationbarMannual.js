@@ -68,6 +68,7 @@ function NavigationbarMannual(){
                                     <Link className="nlink" to="/shift">Shift <i className="bi bi-caret-down"></i></Link>
                                     <Link className="nlink" to="/requests">Requests</Link>
                                     <Link className="nlink" to="/reports">Reports</Link>
+                                    <Link to="/hkstatus" className='nlink'>HK Status</Link>
                                     <Link className="nlink" to="/tools">Tools <i className="bi bi-caret-down"></i></Link>
                                     <Link className="nlink" to="/setup">Setup <i className="bi bi-caret-down"></i></Link>
                                 </Nav>

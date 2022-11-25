@@ -55,6 +55,11 @@ function NavigationBarNew() {
                   </NavLink>
                 </li>
                 <li>
+                  <NavLink activeClassName="active-link" to="/hkstatus">
+                    HK Status
+                  </NavLink>
+                </li>
+                <li>
                     <NavDropdown title="Tools" id="basic-nav-dropdown" className="nlink-drop">
                             <NavDropdown.Item>Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
