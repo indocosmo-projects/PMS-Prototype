@@ -17,6 +17,7 @@ import NewRequest from './component/NewRequest/NewRequest';
 import CheckOut from './component/CheckOut/CheckOut';
 import Reports from './component/Reports/Reports';
 import CheckOutGrp from './component/CheckOut/CheckOutGrp';
+import HKStatus from './component/HKStatus/HKStatus';
 
 
 
@@ -44,6 +45,7 @@ function App() {
                 <Route exact path="/checkOut" component={CheckOut}/>
                 <Route exact path="/reports" component={Reports}/>
                 <Route exact path="/checkOutGrp" component={CheckOutGrp}/>
+                <Route exact path="/hkstatus" component={HKStatus}/>
             </Switch>
             <Footer/>
         </Router>

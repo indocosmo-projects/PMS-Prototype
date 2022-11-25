@@ -120,10 +120,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
                                     </div>
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio1">Today</label>
                                     </div>
                                 </div>
@@ -134,10 +134,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
                                     </div> 
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" for="radio2">On Date</label>
                                     </div>
                                 </div>
@@ -152,10 +152,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className ="form-check-input" id="radio3" name="optradio" value="datebetween" />
                                     </div>
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" for="radio2">Date Between</label>
                                     </div>
                                 </div>
@@ -175,14 +175,14 @@ function Reports() {
                    <hr/> 
                     <div className="row">
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">PDF</button>
+                            <button type="button" className="btn btn-primary btn-w">PDF</button>
                         </div>
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">EXCEL</button>
+                            <button type="button" className="btn btn-primary btn-w">EXCEL</button>
                         </div>
                         <div className="col-sm-4"></div>
                         <div className="col-sm-4">
-                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdownreceptiondetailslist(( 0 ))}>Cancel</button>
+                        <button type="button" className="btn btn-secondary btn-w" onClick = {()=> setDropdownreceptiondetailslist(( 0 ))}>Cancel</button>
                         </div>
                     </div>
                 </div>
@@ -244,10 +244,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
                                     </div>
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio1">Today</label>
                                     </div>
                                 </div>
@@ -258,10 +258,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
                                     </div> 
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio2">On Date</label>
                                     </div>
                                 </div>
@@ -276,10 +276,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className ="form-check-input" id="radio3" name="optradio" value="datebetween" />
                                     </div>
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio2">Date Between</label>
                                     </div>
                                 </div>
@@ -299,14 +299,14 @@ function Reports() {
                    <hr/> 
                     <div className="row">
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">PDF</button>
+                            <button type="button" className="btn btn-primary btn-w">PDF</button>
                         </div>
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">EXCEL</button>
+                            <button type="button" className="btn btn-primary btn-w">EXCEL</button>
                         </div>
                         <div className="col-sm-4"></div>
                         <div className="col-sm-4">
-                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdownreservationdetailslist(( 0 ))}>Cancel</button>
+                        <button type="button" className="btn btn-secondary btn-w" onClick = {()=> setDropdownreservationdetailslist(( 0 ))}>Cancel</button>
                         </div>
                     </div>
                 </div>
@@ -370,10 +370,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
                                     </div>
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio1">Today</label>
                                     </div>
                                 </div>
@@ -384,10 +384,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
                                     </div> 
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio2">On Date</label>
                                     </div>
                                 </div>
@@ -402,10 +402,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className ="form-check-input" id="radio3" name="optradio" value="datebetween" />
                                     </div>
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio2">Date Between</label>
                                     </div>
                                 </div>
@@ -425,14 +425,14 @@ function Reports() {
                    <hr/> 
                     <div className="row">
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">PDF</button>
+                            <button type="button" className="btn btn-primary btn-w">PDF</button>
                         </div>
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">EXCEL</button>
+                            <button type="button" className="btn btn-primary btn-w">EXCEL</button>
                         </div>
                         <div className="col-sm-4"></div>
                         <div className="col-sm-4">
-                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdowntransactionaldetailslist(( 0 ))}>Cancel</button>
+                        <button type="button" className="btn btn-secondary btn-w" onClick = {()=> setDropdowntransactionaldetailslist(( 0 ))}>Cancel</button>
                         </div>
                     </div>
                 </div>
@@ -496,10 +496,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
                                     </div>
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio1">IN-HOUSE</label>
                                     </div>
                                 </div>
@@ -510,10 +510,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
                                     </div> 
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio2">Room Number</label>
                                     </div>
                                 </div>
@@ -530,14 +530,14 @@ function Reports() {
                    <hr/> 
                     <div className="row">
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">PDF</button>
+                            <button type="button" className="btn btn-primary btn-w">PDF</button>
                         </div>
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">EXCEL</button>
+                            <button type="button" className="btn btn-primary btn-w">EXCEL</button>
                         </div>
                         <div className="col-sm-4"></div>
                         <div className="col-sm-4">
-                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdownfoliobalancedetails(( 0 ))}>Cancel</button>
+                        <button type="button" className="btn btn-secondary btn-w" onClick = {()=> setDropdownfoliobalancedetails(( 0 ))}>Cancel</button>
                         </div>
                     </div>
                 </div>
@@ -599,8 +599,8 @@ function Reports() {
                    
                     <div>
                         <div className="row p-2">
-                            <div className="col-sm-4 ">
-                                <label className="form-check-label" htmlFor="tdate">Date</label>
+                            <div className="col-sm-4 left">
+                                <label className="form-check-label " htmlFor="tdate">Date</label>
                             </div>
                             <div className="col-sm-4">
                                 <div className="form-group">
@@ -610,8 +610,8 @@ function Reports() {
                             <div className="col-sm-4"></div>
                         </div>
                         <div className="row p-2">
-                            <div className="col-sm-4 ">
-                                <label className="form-check-label" htmlFor="shift">Shift</label>
+                            <div className="col-sm-4 left">
+                                <label className="form-check-label " htmlFor="shift">Shift</label>
                             </div>
                             <div className="col-sm-4">
                                 <div className="form-group">
@@ -627,8 +627,8 @@ function Reports() {
                             <div className="col-sm-4"></div>
                         </div>
                         <div className="row p-2">
-                            <div className="col-sm-4 ">
-                                <label className="form-check-label" htmlFor="cashier">Shift</label>
+                            <div className="col-sm-4 left">
+                                <label className="form-check-label " htmlFor="cashier">Cashier</label>
                             </div>
                             <div className="col-sm-4">
                                 <div className="form-group">
@@ -644,14 +644,14 @@ function Reports() {
                    <hr/> 
                     <div className="row">
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">PDF</button>
+                            <button type="button" className="btn btn-primary btn-w">PDF</button>
                         </div>
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">EXCEL</button>
+                            <button type="button" className="btn btn-primary btn-w">EXCEL</button>
                         </div>
                         <div className="col-sm-4"></div>
                         <div className="col-sm-4">
-                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdownshiftdetails(( 0 ))}>Cancel</button>
+                        <button type="button" className="btn btn-secondary btn-w" onClick = {()=> setDropdownshiftdetails(( 0 ))}>Cancel</button>
                         </div>
                     </div>
                 </div>
@@ -715,10 +715,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className="form-check-input" id="radio1" name="optradio" value="today"  />
                                     </div>
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio1">Today</label>
                                     </div>
                                 </div>
@@ -729,10 +729,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className="form-check-input" id="radio2" name="optradio" value="ondate" /> 
                                     </div> 
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio2">On Date</label>
                                     </div>
                                 </div>
@@ -747,10 +747,10 @@ function Reports() {
                         <div className="row p-2">
                             <div className="col-sm-4 ">
                                 <div className="row">
-                                    <div className="col-sm-3">
+                                    <div className="col-3">
                                         <input type="radio" className ="form-check-input" id="radio3" name="optradio" value="datebetween" />
                                     </div>
-                                    <div className="col-sm-9 left">
+                                    <div className="col-9 left">
                                         <label className="form-check-label" htmlFor="radio2">Date Between</label>
                                     </div>
                                 </div>
@@ -767,7 +767,7 @@ function Reports() {
                             </div>
                         </div>
                         <div className="row p-2">
-                            <div className="col-sm-4 ">
+                            <div className="col-sm-4 left">
                                 <label className="form-check-label" htmlFor="corporate">Corporate</label>
                             </div>
                             <div className="col-sm-8">
@@ -779,17 +779,16 @@ function Reports() {
                             </div>
                         </div>
                    </div>
-                   <hr/> 
                     <div className="row">
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">PDF</button>
+                            <button type="button" className="btn btn-primary btn-w">PDF</button>
                         </div>
                         <div className="col-sm-2">
-                            <button type="button" className="btn btn-primary">EXCEL</button>
+                            <button type="button" className="btn btn-primary btn-w">EXCEL</button>
                         </div>
                         <div className="col-sm-4"></div>
                         <div className="col-sm-4">
-                        <button type="button" className="btn btn-secondary" onClick = {()=> setDropdowncreditordetails(( 0 ))}>Cancel</button>
+                        <button type="button" className="btn btn-secondary btn-w" onClick = {()=> setDropdowncreditordetails(( 0 ))}>Cancel</button>
                         </div>
                     </div>
                 </div>
