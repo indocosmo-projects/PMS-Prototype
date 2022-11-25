@@ -33,13 +33,13 @@ function ReceptionExpectedDepartures() {
             {
             details.map(detail => <tr key={detail.id} >
                 <td>{detail.roomno}</td>
-                <td><h6>{detail.guest}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
+                <td><h6 className='d-flex justify-content-between'>{detail.guest}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
                 <td>{detail.arrival}</td>
                 <td>{detail.departure}</td>
                 <td>{detail.foliobalance}</td>
                 {/* <td className="bg-success text-white">CHECK-IN</td> */}
                 <td>
-                    <button className="btn btn-primary"><i class="bi bi-cash-coin me-2"></i>Deposit</button>
+                    <button className="btn btn-primary btn-sm"><i class="bi bi-cash-coin me-2"></i>Deposit</button>
                 </td>
                         
                         <td>
@@ -57,9 +57,9 @@ function ReceptionExpectedDepartures() {
                      
                         <td>
                         <Dropdown as={ButtonGroup}>
-                        <Link to="/checkout"><Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
+                        <Link to="/checkout"><Button variant="danger right-br-none btn-sm"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
 
-                            <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
+                            <Dropdown.Toggle className='checkout-split' split variant="danger btn-sm" id="dropdown-split-basic" />
 
                             <Dropdown.Menu>
                                 <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
@@ -131,7 +131,7 @@ function ReceptionExpectedDepartures() {
 
         return (
                 <div className="container-fluid tab-bg">
-                        <div className="row mt-4">
+                        <div className="row">
                         <div className="col-sm-6">
                             <div className="input-group mb-3 ">
                                         <input type="text" className="form-control" placeholder="Search..." />
@@ -148,7 +148,7 @@ function ReceptionExpectedDepartures() {
          
                                 <div className="col-sm-6">
                                     <div className="mb-3 ">
-                                    <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
+                                    <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New check-in</button></Link>
                                     </div>
                                 </div>
                         </div>
