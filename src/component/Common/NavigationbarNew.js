@@ -36,12 +36,7 @@ function NavigationBarNew() {
                 <li>
                     <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink-drop">
                             <NavDropdown.Item><NavLink activeClassName="active-link" to="/shiftmanagement">Shift Management</NavLink></NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                              Separated link
-                            </NavDropdown.Item>
+                    
                       </NavDropdown>
                 </li>
                 <li>
@@ -61,13 +56,20 @@ function NavigationBarNew() {
                 </li>
                 <li>
                     <NavDropdown title="Tools" id="basic-nav-dropdown" className="nlink-drop">
-                            <NavDropdown.Item>Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                              Separated link
-                            </NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/nightaudit">Night Audit</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/mergeroom">Merge Room</NavLink></NavDropdown.Item>
+                          <NavDropdown.Divider />
+                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="#action/3.2" disabled>User Management</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="#action/3.3">Users</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="#action/3.4">User Groups</NavLink></NavDropdown.Item>
+                          <NavDropdown.Divider />
+                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="#action/3.5" disabled>Facility</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="#action/3.6">Facilities</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="#action/3.7">Facility Provider</NavLink></NavDropdown.Item>
+                          <NavDropdown.Divider />
+                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="#action/3.8" disabled>Petty Cash</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="#action/3.9">Petty Cash</NavLink></NavDropdown.Item>
+        
                       </NavDropdown>
                 </li>
                 <li>
