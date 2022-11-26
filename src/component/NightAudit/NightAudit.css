@@ -21,3 +21,9 @@
         display: block;
     }
     }
+
+.div-border{
+    border : 3px solid black;
+    margin: 2px;
+    color: white;
+}
