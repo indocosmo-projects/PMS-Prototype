@@ -2,15 +2,13 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import '../../style.css';
-import './Users.css';
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
-import UsrModal from '../Users/UsrModal';
+import './Facility.css';
 
 
-function Users() {
-  
-    const details =  
+function Facility() {
+   
+
+const details =  
     [
     {id: 1, loginId:'112',name :'Peter',email:'abc@gmail.com',usergroup:'First Class',active:'X'},
     {id: 2, loginId:'112',name :'Lewis',email:'abc@gmail.com',usergroup:'First Class',active:'X'},
@@ -57,7 +55,7 @@ function Users() {
                             <div className="col-sm-6">
                             
                                         <div className="mb-3 ">
-                                        <Link><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i><UsrModal/></button></Link>
+                                        <Link><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i></button></Link>
                                         </div>
                                       
                             </div>
@@ -101,11 +99,12 @@ function Users() {
                         <div className="right">
                            <button type="button" className="btn btn-secondary" >Cancel</button>
                         </div>
-
+                        
                     </div>
                 </div>
             </div>
         );
-}
+
+    }
  
-export default Users;
+    export default Facility;

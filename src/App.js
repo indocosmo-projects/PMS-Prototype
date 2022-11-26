@@ -22,6 +22,9 @@ import NightAudit from './component/NightAudit/NightAudit';
 import MergeRoom from './component/MergeRoom/MergeRoom';
 import Users from './component/Users/Users';
 import UserGroups from './component/UserGroups/UserGroups';
+import Facility from './component/Facility/Facility';
+import PettyCash from './component/PettyCash/PettyCash';
+import FacilityProvider from './component/FacilityProvider/FacilityProvider';
 
 
 
@@ -54,6 +57,9 @@ function App() {
                 <Route exact path="/mergeroom" component={MergeRoom}/>
                 <Route exact path="/users" component={Users}/>
                 <Route exact path="/usergroup" component={UserGroups}/>
+                <Route exact path="/facility" component={Facility}/>
+                <Route exact path="/facilityprovider" component={FacilityProvider}/>
+                <Route exact path="/pettycash" component={PettyCash}/>
             </Switch>
             <Footer/>
         </Router>

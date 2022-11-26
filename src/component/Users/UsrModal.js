@@ -61,11 +61,7 @@ return (
               <tr>
                   <td className="thwidth left">Is Cashier </td>
                   <td className="thwidth left"> 
-                  <div class="form-check">
-                    <label class="form-check-label">
                       <SwitchTog/>
-                    </label>
-                  </div>
                   </td>
               </tr>
           </table>
