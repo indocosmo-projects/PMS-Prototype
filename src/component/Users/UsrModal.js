@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import './Users.css';
+import SwitchTog from '../Common/SwitchTog';
 
 function UsrModal() {
 
@@ -22,25 +23,49 @@ return (
       onHide={handleClose}
       backdrop="static"
       keyboard={false}
-      style={{marginTop: 100}}
+      style={{marginTop: 0}}
     >
       <Modal.Header className="bg-info" closeButton>
-        <Modal.Title >New User Group</Modal.Title>
+        <Modal.Title >New User </Modal.Title>
       </Modal.Header>
       <Modal.Body>
           <table>
               <tr>
-                  <td className="thwidth left">Code <span className="asterik">*</span></td>
+                  <td className="thwidth left">Login Id <span className="asterik">*</span></td>
                   <td className="thwidth left"> <input type="text" class="form-control" id="pwd"  /></td>
+              </tr>
+              <tr>
+                  <td className="thwidth left">Password <span className="asterik">*</span></td>
+                  <td className="thwidth left"> <input type="text" class="form-control" id="pwd"  /></td>
+              </tr>
+              <tr>
+                  <td className="thwidth left">User Group <span className="asterik">*</span></td>
+                  <td className="thwidth left"> 
+                    <input type="text" class="form-control" id="pwd"  />
+                  </td>
+              </tr>
+              <tr>
+                  <td className="thwidth left">Status </td>
+                  <td className="thwidth left"> 
+                    <SwitchTog/>
+                  </td>
               </tr>
               <tr>
                   <td className="thwidth left">Name <span className="asterik">*</span></td>
-                  <td className="thwidth left"> <input type="text" class="form-control" id="pwd"  /></td>
+                  <td className="thwidth left"> <input type="text" class="form-control" id="name"  /></td>
               </tr>
               <tr>
-                  <td className="thwidth left">Description <span className="asterik">*</span></td>
+                  <td className="thwidth left">Email <span className="asterik">*</span></td>
+                  <td className="thwidth left"> <input type="text" class="form-control" id="email"  /></td>
+              </tr>
+              <tr>
+                  <td className="thwidth left">Is Cashier </td>
                   <td className="thwidth left"> 
-                    <input type="text" class="form-control" id="pwd"  />
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <SwitchTog/>
+                    </label>
+                  </div>
                   </td>
               </tr>
           </table>
