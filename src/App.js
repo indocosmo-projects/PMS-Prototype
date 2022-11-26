@@ -20,6 +20,8 @@ import CheckOutGrp from './component/CheckOut/CheckOutGrp';
 import HKStatus from './component/HKStatus/HKStatus';
 import NightAudit from './component/NightAudit/NightAudit';
 import MergeRoom from './component/MergeRoom/MergeRoom';
+import Users from './component/Users/Users';
+import UserGroups from './component/UserGroups/UserGroups';
 
 
 
@@ -50,6 +52,8 @@ function App() {
                 <Route exact path="/hkstatus" component={HKStatus}/>
                 <Route exact path="/nightaudit" component={NightAudit}/>
                 <Route exact path="/mergeroom" component={MergeRoom}/>
+                <Route exact path="/users" component={Users}/>
+                <Route exact path="/usergroup" component={UserGroups}/>
             </Switch>
             <Footer/>
         </Router>

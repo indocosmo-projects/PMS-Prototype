@@ -249,10 +249,12 @@ div[role='menu'].visible {
 
 .headerink{
     color: var(--black) !important;
+    width: 100vw;
 } 
 
 .dplink{
     text-decoration: none;
     color : var(--grey);
+    width: 100vw;
 }
     

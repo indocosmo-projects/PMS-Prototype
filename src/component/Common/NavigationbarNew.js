@@ -60,8 +60,8 @@ function NavigationBarNew() {
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/mergeroom">Merge Room</NavLink></NavDropdown.Item>
                           <NavDropdown.Divider />
                           <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="#action/3.2" disabled>User Management</NavLink></NavDropdown.Item>
-                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="#action/3.3">Users</NavLink></NavDropdown.Item>
-                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="#action/3.4">User Groups</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/users">Users</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/usergroup">User Groups</NavLink></NavDropdown.Item>
                           <NavDropdown.Divider />
                           <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="#action/3.5" disabled>Facility</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="#action/3.6">Facilities</NavLink></NavDropdown.Item>
