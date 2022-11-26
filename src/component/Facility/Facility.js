@@ -3,17 +3,16 @@ import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import '../../style.css';
 import './Facility.css';
-
+import FacilityModal from "./FacilityModal";
 
 function Facility() {
    
-
 const details =  
     [
-    {id: 1, loginId:'112',name :'Peter',email:'abc@gmail.com',usergroup:'First Class',active:'X'},
-    {id: 2, loginId:'112',name :'Lewis',email:'abc@gmail.com',usergroup:'First Class',active:'X'},
-    {id: 3, loginId:'112',name :'Peter',email:'abc@gmail.com',usergroup:'First Class',active:'X'},
-    {id: 4, loginId:'112',name :'Lewis',email:'abc@gmail.com',usergroup:'First Class',active:'X'},
+    {id: 1, code:'112',name :'Peter',facility:'abc@gmail.com',payment:'First Class',active:'X'},
+    {id: 2, code:'112',name :'Lewis',facility:'abc@gmail.com',payment:'First Class',active:'X'},
+    {id: 3, code:'112',name :'Peter',facility:'abc@gmail.com',payment:'First Class',active:'X'},
+    {id: 4, code:'112',name :'Lewis',facility:'abc@gmail.com',payment:'First Class',active:'X'},
    ];
 
     const tdata = () =>{
@@ -21,11 +20,10 @@ const details =
                 <tbody>
                     {
                     details.map(detail => <tr key={detail.id} >
-                        <td className="left">{detail.loginId}</td>
+                        <td className="left">{detail.code}</td>
                         <td className="left">{detail.name}</td>
-                        <td className="left">{detail.email}</td>
-                        <td className="left">{detail.usergroup}</td>
-                        <td className="left"><span className="asterik">{detail.active}</span></td>
+                        <td className="left">{detail.facility}</td>
+                        <td className="left">{detail.payment}</td>
                     </tr>
                     )}
                     
@@ -39,7 +37,7 @@ const details =
                     <div className="container-fluid formcontent">
                         {/* ----- Heading ------ */}
                         <div className='d-flex justify-content-between mb-4'>
-                            <h3 className="header">Users </h3>
+                            <h3 className="header">Facilities </h3>
                             <button className="btn btn-outline-dark m-1"><i className ="bi bi-caret-left-fill"></i>Back</button>
                         </div>
                        
@@ -55,7 +53,7 @@ const details =
                             <div className="col-sm-6">
                             
                                         <div className="mb-3 ">
-                                        <Link><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i></button></Link>
+                                        <Link><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i><FacilityModal/></button></Link>
                                         </div>
                                       
                             </div>
@@ -83,11 +81,10 @@ const details =
                         <table className="table table-striped request_table table-bordered">
                             <thead >
                                 <tr>
-                                    <th className="thstyle left">Login Id</th>
+                                    <th className="thstyle left">Code</th>
                                     <th className="thstyle left">Name</th>
-                                    <th className="thstyle left">Email</th>
-                                    <th className="thstyle left">User Group</th>
-                                    <th className="thstyle left">Active</th>
+                                    <th className="thstyle left">Facility</th>
+                                    <th className="thstyle left">Payment</th>
                                 </tr>
                             </thead>
                             {tdata()}
