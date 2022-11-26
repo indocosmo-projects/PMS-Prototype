@@ -55,6 +55,13 @@ body{
     text-align: left;
 }
 
+.right{
+  text-align: right;
+}
+
+.asterik{
+  color: crimson;
+}
 
 .btn-primary{
     background-color: #5b67d6 !important;

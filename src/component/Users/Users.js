@@ -5,6 +5,7 @@ import '../../style.css';
 import './Users.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import UsrModal from '../Users/UsrModal';
 
 function Users() {
   
@@ -55,7 +56,7 @@ function Users() {
                             <div className="col-sm-6">
                             
                                         <div className="mb-3 ">
-                                        <Link to="/addUser"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i>Add Users</button></Link>
+                                        <Link><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i><UsrModal/></button></Link>
                                         </div>
                                       
                             </div>

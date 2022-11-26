@@ -1,0 +1,30 @@
+.subhead{
+    margin-top : 10px;
+    border-top : 2px solid grey;
+    border-bottom : 2px solid grey;
+    padding : 10px;
+}
+
+.border{
+    height : 245px;
+}
+
+.request_table{
+    padding: .5em;
+    overflow-x: auto;
+    white-space: nowrap;
+    min-width: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+    .request_table{
+        display: block;
+    }
+    }
+
+.div-border{
+    border : 3px solid black;
+    margin: 2px;
+    color: white;
+}
+
