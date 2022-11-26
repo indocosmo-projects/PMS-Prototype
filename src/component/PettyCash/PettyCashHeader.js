@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import '../../style.css';
 import './PettyCash.css';
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
+import PettyCashModal from './PettyCashModal';
 
 
-function PettyCash() {
+
+function PettyCashHeader() {
     const details =  
     [
     {id: 1, datetime:'7-08-2022',opening :'0.00',contra:'2000.00',payment:'0.00',balance:'2000.00'},
@@ -42,7 +42,7 @@ function PettyCash() {
                         {/* ----- Heading ------ */}
                         <div className='d-flex justify-content-between mb-4'>
                             <h3 className="header"> Petty Expense Head </h3>
-                            <button className="btn btn-outline-dark m-1"><i className ="bi bi-caret-left-fill"></i>Back</button>
+                            <Link to="/pettycash"><button className="btn btn-outline-dark m-1"><i className ="bi bi-caret-left-fill"></i>Back</button></Link>
                         </div>
                         <div className="row">
                             <div className="col-sm-6">
@@ -56,7 +56,8 @@ function PettyCash() {
 
                                     <div className="col-sm-6">
                                         <div className="mb-3 ">
-                                        <Link to="/pettycashheader"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i>New Request</button></Link>
+                                        <Link to="/newrequest"><button className="btn btn-primary" title="New Reservation" style={{float : 'right', height: 50}}><i className ="bi bi-plus-circle me-2"></i>New Request</button></Link>
+                                        <Link ><button className="btn btn-danger" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i><PettyCashModal/></button></Link>
                                         </div>
                                     </div>
 
@@ -105,4 +106,4 @@ function PettyCash() {
         );
 }
  
-export default PettyCash;
+export default PettyCashHeader;

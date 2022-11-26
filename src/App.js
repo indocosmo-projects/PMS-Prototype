@@ -25,6 +25,7 @@ import UserGroups from './component/UserGroups/UserGroups';
 import Facility from './component/Facility/Facility';
 import PettyCash from './component/PettyCash/PettyCash';
 import FacilityProvider from './component/FacilityProvider/FacilityProvider';
+import PettyCashHeader from './component/PettyCash/PettyCashHeader';
 
 
 
@@ -60,6 +61,7 @@ function App() {
                 <Route exact path="/facility" component={Facility}/>
                 <Route exact path="/facilityprovider" component={FacilityProvider}/>
                 <Route exact path="/pettycash" component={PettyCash}/>
+                <Route exact path="/pettycashheader" component={PettyCashHeader}/>
             </Switch>
             <Footer/>
         </Router>
