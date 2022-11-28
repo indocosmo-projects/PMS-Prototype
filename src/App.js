@@ -18,6 +18,14 @@ import CheckOut from './component/CheckOut/CheckOut';
 import Reports from './component/Reports/Reports';
 import CheckOutGrp from './component/CheckOut/CheckOutGrp';
 import HKStatus from './component/HKStatus/HKStatus';
+import NightAudit from './component/NightAudit/NightAudit';
+import MergeRoom from './component/MergeRoom/MergeRoom';
+import Users from './component/Users/Users';
+import UserGroups from './component/UserGroups/UserGroups';
+import Facility from './component/Facility/Facility';
+import PettyCash from './component/PettyCash/PettyCash';
+import FacilityProvider from './component/FacilityProvider/FacilityProvider';
+import PettyCashHeader from './component/PettyCash/PettyCashHeader';
 
 
 
@@ -46,6 +54,14 @@ function App() {
                 <Route exact path="/reports" component={Reports}/>
                 <Route exact path="/checkOutGrp" component={CheckOutGrp}/>
                 <Route exact path="/hkstatus" component={HKStatus}/>
+                <Route exact path="/nightaudit" component={NightAudit}/>
+                <Route exact path="/mergeroom" component={MergeRoom}/>
+                <Route exact path="/users" component={Users}/>
+                <Route exact path="/usergroup" component={UserGroups}/>
+                <Route exact path="/facility" component={Facility}/>
+                <Route exact path="/facilityprovider" component={FacilityProvider}/>
+                <Route exact path="/pettycash" component={PettyCash}/>
+                <Route exact path="/pettycashheader" component={PettyCashHeader}/>
             </Switch>
             <Footer/>
         </Router>
