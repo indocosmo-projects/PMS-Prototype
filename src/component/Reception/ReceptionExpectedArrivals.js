@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Badge from 'react-bootstrap/Badge';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 
@@ -13,11 +14,11 @@ function ReceptionExpectedArrivals() {
 
 
     const details =  
-        [{id: 1, rese:'104',arrival :'22-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
-        {id: 2, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'2', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
-        {id: 3, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
-        {id: 4, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
-        {id: 5, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'MR. SURESH', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        [{id: 1, rese:'104',arrival :'22-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'Joseph Dwayne',badge:'0', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 2, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'2', bookedby:'BOOKING.COM',bookedfor:'Casey Goodman',badge:'5', bookedon:'27-DEC-2018, 10:00 AM',	status:'GRANTED'},
+        {id: 3, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'George Selensky',badge:'2', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 4, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'Chloe Carmen',badge:'0', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
+        {id: 5, rese:'104',arrival :'27-DEC-2018, 10:00 AM',departure:'27-DEC-2018, 10:00 AM', nights:'4',rooms:'1', bookedby:'BOOKING.COM',bookedfor:'Bob Downey',badge:'1', bookedon:'27-DEC-2018, 10:00 AM',	status:'CANCELLED'},
         ];
         const [dropdown, setDropdown] = useState(0);
         // const [recordno, setRecordno] = useState(5); 
@@ -36,15 +37,16 @@ function ReceptionExpectedArrivals() {
                         <td >{detail.nights}</td>
                         <td >{detail.rooms}</td>
                         <td >{detail.bookedby}</td>
-                        <td >{detail.bookedfor}</td>
+                        {/* <td >{detail.bookedfor}</td> */}
+                        <td><h6 className='d-flex justify-content-between'>{detail.bookedfor}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
                         <td >{detail.bookedon}</td>
                         {/* <td className="bg-success text-white" >CHECK-IN</td> */}
                         {/* <td><button className="btn btn-primary"><i class="bi bi-plus-circle me-2"></i>Check-in</button></td> */}
                         <td>
                                 <Dropdown as={ButtonGroup}>
-                                <Link to="/checkinedit"><Button variant="primary right-br-none"><i class="bi bi-plus-circle me-2"></i>Check-in</Button></Link>
+                                <Link to="/checkinedit"><Button variant="primary right-br-none btn-sm"><i class="bi bi-plus-circle me-2"></i>Check-in</Button></Link>
 
-                                    <Dropdown.Toggle className='checkin-split' split variant="primary" id="dropdown-split-basic" />
+                                    <Dropdown.Toggle className='checkin-split' split variant="primary btn-sm" id="dropdown-split-basic" />
 
                                     <Dropdown.Menu>
                                         <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
@@ -122,7 +124,7 @@ function ReceptionExpectedArrivals() {
                 <div className="container-fluid tab-bg">
                
                     {/* <div className="p-3"> */}
-                    <div className="row mt-4">
+                    <div className="row">
                     <div className="col-sm-6">
                             <div className="input-group mb-3 ">
                                         <input type="text" className="form-control" placeholder="Search..." />
@@ -138,7 +140,7 @@ function ReceptionExpectedArrivals() {
                        
                         <div className="col-sm-6">
                             <div className="mb-3 ">
-                            <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
+                            <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New check-in</button></Link>
                             </div>
                         </div>
                     </div>

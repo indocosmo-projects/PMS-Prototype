@@ -38,33 +38,33 @@ function Reception() {
                     {
                     details.map(detail => <tr key={detail.id} >
                         <td>{detail.roomno}</td>
-                        <td><h6>{detail.guest}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
+                        <td><h6 className='d-flex justify-content-between'>{detail.guest}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
                         <td>{detail.arrival}</td>
                         <td>{detail.departure}</td>
                         <td>{detail.foliobalance}</td>
                         {/* <td className="bg-success text-white">CHECK-IN</td> */}
                         <td>
-                            <button className="btn btn-primary"><i class="bi bi-cash-coin me-2"></i>Deposit</button>
+                            <button className="btn btn-primary btn-sm"><i className="bi bi-cash-coin me-2"></i>Deposit</button>
                         </td>
                                 
                                 <td>
-                                    {/* <button className="btn btn-primary"><i class="bi bi-clipboard2-check me-2"></i>Posting</button> */}
+                                    {/* <button className="btn btn-primary"><i className="bi bi-clipboard2-check me-2"></i>Posting</button> */}
                                     <Posting />
                                     </td>
                             
                                 {/* <td>
-                                    <button className="btn btn-primary"><i class="bi bi-receipt me-2"></i>Bill Preview</button>
+                                    <button className="btn btn-primary"><i className="bi bi-receipt me-2"></i>Bill Preview</button>
                                     </td>
                                 
                                 <td>
-                                    <button className="btn btn-primary"><i class="bi bi-person-plus-fill me-2"></i>Sharer</button>
+                                    <button className="btn btn-primary"><i className="bi bi-person-plus-fill me-2"></i>Sharer</button>
                                     </td> */}
                              
                                 <td>
                                 <Dropdown as={ButtonGroup}>
-                                <Link to="/checkout"><Button variant="danger right-br-none"><i class="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
+                                <Link to="/checkout"><Button variant="danger right-br-none btn-sm"><i className="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
 
-                                    <Dropdown.Toggle className='checkout-split' split variant="danger" id="dropdown-split-basic" />
+                                    <Dropdown.Toggle className='checkout-split' split variant="danger btn-sm" id="dropdown-split-basic" />
 
                                     <Dropdown.Menu>
                                         <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
@@ -135,10 +135,10 @@ function Reception() {
   
         return (
             <div className="section">
-                <div className="container-fluid">
+                <div className="container-fluid py-0">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div'>
-                        <h3 className="header"><i class="bi bi-person-workspace me-2"></i>Reception</h3>
+                        <h3 className="header"><i className="bi bi-person-workspace me-2"></i>Reception</h3>
                     </div>
                     
                 <Tabs
@@ -146,17 +146,17 @@ function Reception() {
                     id="justify-tab-example"
                     className="mt-4 mb-4 status-tab"
                     justify >
-                    <Tab className='tab-content-bg tab-bg' eventKey="inhouse" title={<span><i class="bi bi-house-door-fill me-2"/>In-House Customers</span>}>
+                    <Tab className='tab-content-bg tab-bg' eventKey="inhouse" title={<span><i className="bi bi-house-door-fill me-2"/>In-House Customers</span>}>
                     
-                    <div className="p-3">
-                        <div className="row mt-4">
+                    <div className="px-3 mt-3">
+                        <div className="row">
                                
 
                         <div className="col-sm-6">
                             <div className="input-group mb-3 ">
                                         <input type="text" className="form-control" placeholder="Search..." />
                                         <button className="btn btn-outline-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button>
-                                        <button className="btn btn-dark px-4" title="Search" ><i class="bi bi-search"></i></button>
+                                        <button className="btn btn-dark px-4" title="Search" ><i className="bi bi-search"></i></button>
                                 </div>
                             <div className="parentdpdown">
                                 <div className="ddw" >
@@ -168,7 +168,7 @@ function Reception() {
          
                                 <div className="col-sm-6">
                                     <div className="mb-3 ">
-                                    <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
+                                    <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className="bi bi-plus-circle me-2"></i>New check-in</button></Link>
                                     </div>
                                 </div>
                         </div>
@@ -216,62 +216,62 @@ function Reception() {
 
                     <div className="row me-1 d-flex justify-content-between">
                                     
-                                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                    {/*}                <div className="col-4 d-flex justify-content-start" ><i className="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
                                                 {/* <div className="col-6"></div> */}
                                                 <div className="col-12 d-flex justify-content-end">
-                                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                                <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-left"></i><span className="hide-element"></span></button>
                                                     <button className="btn btn-outline-dark m-1 grey-border active">1</button>
                                                     <button className="btn btn-outline-dark m-1 grey-border">2</button>
                                                     <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-right"></i></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button>
                                                     
                                                 </div>
                                             </div>
 
                     </Tab>
-                    <Tab className='tab-content-bg tab-bg' eventKey="expectedarrivals" title={<span> <i class="bi bi-arrow-down-right-square-fill me-2"/>Expected Arrivals</span>}>
+                    <Tab className='tab-content-bg tab-bg' eventKey="expectedarrivals" title={<span> <i className="bi bi-arrow-down-right-square-fill me-2"/>Expected Arrivals</span>}>
                         <ReceptionExpectedArrivals />
                         <div className="row me-1 d-flex justify-content-between">
                                     
-                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                    {/*}                <div className="col-4 d-flex justify-content-start" ><i className="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
                                 {/* <div className="col-6"></div> */}
                                 <div className="col-12 d-flex justify-content-end">
-                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-left"></i><span className="hide-element"></span></button>
                                     <button className="btn btn-outline-dark m-1 grey-border active">1</button>
                                     <button className="btn btn-outline-dark m-1 grey-border">2</button>
                                     <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button>
                                     
                                 </div>
                             </div>
 
                         
                     </Tab>
-                    <Tab className='tab-content-bg tab-bg' eventKey="departures" title={<span> <i class="bi bi-arrow-up-right-square-fill me-2"/>Expected Departures</span>}>
+                    <Tab className='tab-content-bg tab-bg' eventKey="departures" title={<span> <i className="bi bi-arrow-up-right-square-fill me-2"/>Expected Departures</span>}>
                         <ReceptionDepartures />
                         <div className="row me-1 d-flex justify-content-between">
                                     
-                    {/*}                <div className="col-4 d-flex justify-content-start" ><i class="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                    {/*}                <div className="col-4 d-flex justify-content-start" ><i className="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
                                 {/* <div className="col-6"></div> */}
                                 <div className="col-12 d-flex justify-content-end">
-                                <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-double-left"></i><span class="hide-element"></span></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><i class="bi bi-chevron-left"></i><span class="hide-element"></span></button>
+                                <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-left"></i><span className="hide-element"></span></button>
                                     <button className="btn btn-outline-dark m-1 grey-border active">1</button>
                                     <button className="btn btn-outline-dark m-1 grey-border">2</button>
                                     <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-right"></i></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span class="hide-element"></span><i class="bi bi-chevron-double-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button>
                                     
                                 </div>
                             </div>
 
                         
                     </Tab>
-                    <Tab className='tab-content-bg tab-bg' eventKey="hotelstatus" title={<span> <i class="bi bi-exclamation-circle-fill me-2"/>Hotel Status</span>}>
+                    <Tab className='tab-content-bg tab-bg' eventKey="hotelstatus" title={<span> <i className="bi bi-exclamation-circle-fill me-2"/>Hotel Status</span>}>
                         <ReceptionHotelStatus />
                     </Tab>
                     {/* <Tab eventKey="contact" title="Contact" disabled>

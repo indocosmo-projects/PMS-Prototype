@@ -27,7 +27,7 @@ function CheckInEdit(){
     return(
         <div>
             <div className="section">
-                <div className="container-fluid formcontent">
+                <div className="container-fluid formcontent py-0">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div d-flex justify-content-between'>
                         <h3 className="header">Check In <span className="dark-bg"><i class="bi bi-pencil-square me-1"></i>Edit</span></h3>

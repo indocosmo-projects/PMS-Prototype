@@ -20,7 +20,7 @@ function NewReservation() {
     return(
         <div>
             <div className="section">
-                <div className="container-fluid formcontent">
+                <div className="container-fluid formcontent py-0">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div'>
                         <h3 className="header"><i class="bi bi-calendar2-plus-fill me-2"></i>New Reservation</h3>

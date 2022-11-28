@@ -14,7 +14,7 @@ function CheckOut() {
         return(
             <div>
                 <div className="section">
-                    <div className="container-fluid formcontent">
+                    <div className="container-fluid formcontent py-0">
                         {/* ----- Heading ------ */}
                         <div className='sticky-div d-flex justify-content-between'>
                             <h3 className="header"><i class="bi bi-dash-circle-fill me-2"></i>Check Out</h3>

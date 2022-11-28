@@ -152,7 +152,7 @@ function ReceptionHotelStatus() {
 
                         <div className="col-sm-12 col-md-12">
                             <div className="status-hint-bg gap-4">
-                                            <div className='gray'>Status Colors<i class="bi bi-caret-right-fill gray"></i></div>
+                                            <div className='status-label'>Status Colors</div><i class="bi bi-chevron-right"></i>
                                             <div><i class="bi bi-circle-fill occupied me-2"></i>OCCUPIED</div>
                                             <div><i class="bi bi-circle-fill reserved me-2"></i>RESERVED</div>
                                             <div><i class="bi bi-circle-fill vaccant me-2"></i>VACCANT</div>
