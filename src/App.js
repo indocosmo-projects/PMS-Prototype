@@ -26,6 +26,25 @@ import Facility from './component/Facility/Facility';
 import PettyCash from './component/PettyCash/PettyCash';
 import FacilityProvider from './component/FacilityProvider/FacilityProvider';
 import PettyCashHeader from './component/PettyCash/PettyCashHeader';
+import Department from './component/Department/Department';
+import SystemSettings from './component/SystemSettings/SystemSettings';
+import Currency from './component/Currency/Currency';
+import AccountMaster from './component/AccountMaster/AccountMaster';
+import Season from './component/Season/Season';
+import Discount from './component/Discount/Discount';
+
+import Tax from './component/Tax/Tax';
+import Templates from './component/Templates/Templates';
+import ShiftItems from './component/ShiftItems/ShiftItems';
+import RoomType from './component/RoomType/RoomType';
+import Room from './component/Room/Room';
+import Floor from './component/Floor/Floor';
+import Corporates from './component/Corporates/Corporates';
+import RoomRates from './component/RoomRates/RoomRates';
+import PettyCashSetup from './component/PettyCashSetup/PettyCashSetup';
+import CorporateRates from './component/CorporateRates/CorporateRates';
+
+
 
 
 
@@ -62,6 +81,22 @@ function App() {
                 <Route exact path="/facilityprovider" component={FacilityProvider}/>
                 <Route exact path="/pettycash" component={PettyCash}/>
                 <Route exact path="/pettycashheader" component={PettyCashHeader}/>
+                <Route exact path="/systemsettings" component={SystemSettings}/>
+                <Route exact path="/department" component={Department}/>
+                <Route exact path="/currency" component={Currency}/>
+                <Route exact path="/accountmaster" component={AccountMaster}/>
+                <Route exact path="/season" component={Season}/>
+                <Route exact path="/discount" component={Discount}/>
+                <Route exact path="/tax" component={Tax}/>
+                <Route exact path="/templates" component={Templates}/>
+                <Route exact path="/shiftitems" component={ShiftItems}/>
+                <Route exact path="/roomtype" component={RoomType}/>
+                <Route exact path="/room" component={Room}/>
+                <Route exact path="/floor" component={Floor}/>
+                <Route exact path="/corporaterates" component={CorporateRates}/>
+                <Route exact path="/corporates" component={Corporates}/>
+                <Route exact path="/roomrates" component={RoomRates}/>
+                <Route exact path="/pettycashsetup" component={PettyCashSetup}/>
             </Switch>
             <Footer/>
         </Router>
