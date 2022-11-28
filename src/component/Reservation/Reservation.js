@@ -76,7 +76,7 @@ function Reservation() {
                         <td className="status-clr">{detail.status}</td>
                         <td>
                                 <Dropdown>
-                                <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                                <Dropdown.Toggle variant="primary btn-sm" id="dropdown-basic">
                                     Actions
                                 </Dropdown.Toggle>
 

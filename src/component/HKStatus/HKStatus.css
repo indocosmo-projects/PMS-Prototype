@@ -284,10 +284,18 @@
     position:-webkit-sticky;
     position: sticky;
     display: block;
-    top: 143px;
+    /* top: 143px; */
+    top: 40px;
     z-index: 998;
-    border-bottom: solid 1px #e6e8ef;
   }
+
+  .status-label{
+    border: solid 1px rgb(176, 191, 219);
+    border-radius: 1em;
+    padding: 0 1em;
+    padding-bottom: .1em;
+    background-color: #c9d5e7;
+}
 
   .green{
     color: #338f42;

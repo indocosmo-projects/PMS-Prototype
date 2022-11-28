@@ -14,17 +14,17 @@
     align-items: center;
     padding: 1em 3em;
     width: 100vw;
-    position: fixed;
+    /* position: fixed; */
     background-color: #ffffff;
     top:0;
     left: 0;
-    box-shadow:  0 1px 1px 0 rgba(219, 219, 219, 0.4);
+    /* box-shadow:  0 1px 1px 0 rgba(219, 219, 219, 0.4); */
     min-width: 100vw;
 }
 
-.navbar{
+/* .navbar{
     margin-bottom:4.5em;
-}
+} */
 .grey{
     color: var(--grey);
 }
