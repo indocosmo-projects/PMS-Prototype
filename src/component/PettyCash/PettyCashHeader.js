@@ -23,14 +23,58 @@ function PettyCashHeader() {
                 <tbody>
                     {
                     details.map(detail => <tr key={detail.id} >
-                        <td className="left">{detail.datetime}</td>
-                        <td className="left">{detail.opening}</td>
-                        <td className="left">{detail.contra}</td>
-                        <td className="left">{detail.payment}</td>
-                        <td className="left">{detail.balance}</td>
+                        <td className="left">{detail.id}</td>
+                        <td className="left">
+                            <div class="form-group">
+                                <select class="form-control" id="sel1">
+                                    <option>Anju</option>
+                                    <option>Cash</option>
+                                    <option>Building Maintenance</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td className="left">
+                            <div class="form-group">
+                                <select class="form-control" id="sel1">
+                                    <option>Payment</option>
+                                    <option>Journal</option>
+                                    <option>Contra</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td className="left">
+                        <div class="form-group">
+                                <input type="number" class="form-control usr" id="usr" value="0"/>
+                            </div>
+                        </td>
+                        <td className="left">
+                            <div class="form-group">
+                                <input type="number" class="form-control usr" id="usr" value="0"/>
+                            </div>
+                        </td>
+                        <td className="left">
+                            <div class="form-group">
+                                <input type="number" class="form-control usr" id="usr" value="0"/>
+                            </div>
+                        </td>
+                        <td className="left">
+                            <div class="form-group">
+                                <input type="text" class="form-control usr" id="usr" value="0"/>
+                            </div>
+                        </td>
+                        <td><button className="btn btn-danger"><i class="bi bi-dash"></i>Delete</button></td>
                     </tr>
                     )}
-                    
+                     <tr className="table-bordered">
+                                <td className="left"></td>
+                                <td className="left"></td>
+                                <td className="left">Total</td>
+                                <td className="left">0.00</td>
+                                <td className="left">0.00</td>
+                                <td className="left">0.00</td>
+                                <td className="left"></td>
+                                <td className=""><button className="btn btn-primary"><i className ="bi bi-plus-circle me-2"></i>Add</button></td>
+                            </tr>
                 </tbody>
         );
     }
@@ -56,7 +100,7 @@ function PettyCashHeader() {
 
                                     <div className="col-sm-6">
                                         <div className="mb-3 ">
-                                        <Link to="/newrequest"><button className="btn btn-primary" title="New Reservation" style={{float : 'right', height: 50}}><i className ="bi bi-plus-circle me-2"></i>New Request</button></Link>
+                                        <Link ><button className="btn btn-primary" title="New Reservation" style={{float : 'right', height: 50}}><i className ="bi bi-plus-circle me-2"></i>Save</button></Link>
                                         <Link ><button className="btn btn-danger" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i><PettyCashModal/></button></Link>
                                         </div>
                                     </div>
@@ -65,6 +109,24 @@ function PettyCashHeader() {
 
                     
                         <div className="">
+
+                                <table>
+                                    <tr>
+                                        <td className="thwidth left">Code <span className="asterik">*</span></td>
+                                        <td className="thwidth left"> <input type="text" class="form-control" id="pwd"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <td className="thwidth left">Name <span className="asterik">*</span></td>
+                                        <td className="thwidth left"> <input type="text" class="form-control" id="pwd"  /></td>
+                                    </tr>
+                                    <tr>
+                                        <td className="thwidth left">Description <span className="asterik">*</span></td>
+                                        <td className="thwidth left"> 
+                                            <input type="text" class="form-control" id="pwd"  />
+                                        </td>
+                                    </tr>
+                                </table>
+
                         <div className="row ms-2 mt-4">
                                 <div className="col-md-2 col-lg-1 col-3">
                                     <Form.Select size='sm' aria-label="No of Records" name="rec" id="rec" /*onChange={(e) => setRecordno((e.target.value))}*/ >
@@ -84,14 +146,18 @@ function PettyCashHeader() {
                         <table className="table request_table table-bordered">
                             <thead >
                                 <tr>
-                                    <th className="thstyle left">Date</th>
-                                    <th className="thstyle left">Opening</th>
-                                    <th className="thstyle left">Contra</th>
-                                    <th className="thstyle left">Payment</th>
-                                    <th className="thstyle left">Balance</th>
+                                    <th className="thstyle left">#</th>
+                                    <th className="thstyle left">Head</th>
+                                    <th className="thstyle left">Voucher Type</th>
+                                    <th className="thstyle left">Debit</th>
+                                    <th className="thstyle left">Credit</th>
+                                    <th className="thstyle left">Credit(Credit Card)</th>
+                                    <th className="thstyle left">Narration</th>
+                                    <th className="thstyle left"></th>
                                 </tr>
                             </thead>
                             {tdata()}
+                           
 
                         </table>
 
