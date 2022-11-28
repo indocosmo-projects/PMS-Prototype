@@ -101,10 +101,8 @@ function NavigationBarNew() {
                           <NavDropdown.Divider />
                           <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/action.3.1" disabled>Petty Cash</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/pettycashsetup">Petty Cash Head</NavLink></NavDropdown.Item>
-        
-
-                     </NavDropdown> 
-                </li>
+                          </NavDropdown> 
+                    </li>
               </ul>
             </div>
 
