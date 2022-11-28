@@ -1,0 +1,76 @@
+.roundedcorner{
+    border-radius: 5px;
+    padding : 3px;
+    padding-left: 12px;
+}
+
+.gray{
+    background-color: white;
+}
+
+.liststyle{
+    list-style-type: none;
+}
+
+.listyle{
+    display : inline-block;
+    padding : 5px;
+    background-color: rgb(236, 234, 230);
+    border-radius : 10px;
+    padding-right : 40px;
+    margin : 2px;
+    width : 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modaldisp{
+    position : fixed;
+    display : block;
+    width : 60vw;
+    margin : auto;
+    z-index: 100;
+    border : 2px solid black;
+    border-radius : 5px;
+    background-color: white;
+    top : 15vh;
+    left: 20vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mdbody{
+    height : 40vh;
+}
+.mdbody1{
+    height : 30vh;
+}
+.mdbody2{
+    height : 45vh; 
+}
+
+@media screen and (max-width: 576px) {
+    .mdbody {
+        height : 65vh;
+    }
+    .mdbody1{
+        height : 55vh;
+    }
+    .mdbody2{
+        height : 90vh; 
+        overflow: auto;
+    }
+    .btn-w{
+        width : 40vw;
+        margin: 2px;
+    }
+    .form-control{
+        margin : 2px;
+    }
+    .listyle{
+        width : 220px;
+    }
+    
+}
+
+.btn-float{
+    margin-left: 80%;
+}

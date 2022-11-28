@@ -6,6 +6,8 @@
     --black: #0f0d0d;
   }
 
+
+
 .container{
     margin: 0;
     z-index: 999;
@@ -244,4 +246,15 @@ div[role='menu'].visible {
             margin-top: 2em;
            }
         }
+
+.headerink{
+    color: var(--black) !important;
+    width: 100vw;
+} 
+
+.dplink{
+    text-decoration: none;
+    color : var(--grey);
+    width: 100vw;
+}
     

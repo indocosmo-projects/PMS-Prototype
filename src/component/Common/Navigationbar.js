@@ -34,6 +34,7 @@ function NavigationBar() {
 
             <Nav.Link><Link to="/request" className='nlink'>Requests</Link></Nav.Link>
             <Nav.Link><Link to="/reports" className='nlink'>Reports</Link></Nav.Link>
+            <Nav.Link><Link to="/hkstatus" className='nlink'>HK Status</Link></Nav.Link>
 
 
             <NavDropdown title="Tools" id="basic-nav-dropdown" className="nlink-drop">
