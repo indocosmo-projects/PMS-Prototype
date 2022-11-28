@@ -11,3 +11,11 @@
 .thwidth2{
     width :  1000px;
 }
+
+.thwidth3{
+    width :  300px;
+}
+
+.inline{
+    display: inline-block;
+}

@@ -252,20 +252,371 @@ function SystemSettings() {
                                     <td className="thwidth left">Decimal </td>
                                     <td className="thwidth1 left"> 
                                     <div class="form-group">
-                                            <select class="form-control" id="sel1">
-                                                <option selected>Monday</option>
-                                                <option>Tuesday</option>
-                                                <option>Wednesday</option>
-                                                <option>Thursday</option>
-                                                <option>Friday</option>
-                                                <option>Saturday</option>
-                                                <option>Sunday</option>
-                                            </select>
+                                    <input type="text" class="form-control decimal" id="decimal" value="2" disabled />
                                         </div>
                                     </td>
                                 </tr>
                             </table>
                         </div>
+
+
+
+                           <div >
+                            <div className='left bg-info p-1 rborder'>
+                                <h5>TARIFF</h5>
+                            </div>
+
+                            <table>
+                                <tr>
+                                    <td className="thwidth left">Weekly Special days </td>
+                                    <td className="thwidth2 left"> 
+                                    <div className="row">
+                                        <div className="col-sm-1">
+                                            <SwitchTog/><h6>SUN</h6>
+                                        </div>
+                                        <div className="col-sm-1">
+                                            <SwitchTog/><h6>MON</h6>
+                                        </div>
+                                        <div className="col-sm-1">
+                                            <SwitchTog/><h6>TUE</h6>
+                                        </div>
+                                        <div className="col-sm-1">
+                                            <SwitchTog/><h6>WED</h6>
+                                        </div>
+                                        <div className="col-sm-1">
+                                            <SwitchTog/><h6>THR</h6>
+                                        </div>
+                                        <div className="col-sm-1">
+                                            <SwitchTog/><h6>FRI</h6>
+                                        </div>
+                                        <div className="col-sm-1">
+                                            <SwitchTog/><h6>SAT</h6>
+                                        </div>
+                                    </div>
+                                    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="thwidth left">Tariff Includes Taxes </td>
+                                    <td className="thwidth2 left"> 
+                                    <SwitchTog/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+
+                          <div >
+                            <div className='left bg-info p-1 rborder'>
+                                <h5>FORMATS</h5>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td className="thwidth left">Date Display Format <span className="asterik">*</span> </td>
+                                    <td className="thwidth1 left"> 
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value="dd-mm-yyyy" disabled />
+                                        </div>
+                                    </td>
+                                    <td className="thwidth1 left">  <b>(E.g 24-08-2015)</b> </td>
+                                </tr>
+                                <tr>
+                                    <td className="thwidth left">Time Display Format <span className="asterik">*</span> </td>
+                                    <td className="thwidth1 left"> 
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value="hh:mm" disabled />
+                                        </div>
+                                    </td>
+                                    <td className="thwidth1 left">  <b>(E.g 02:00 AM)</b> </td>
+                                </tr>
+                            </table>
+                          </div>
+
+
+                        <div >
+                            <div className='left bg-info p-1 rborder'>
+                                <h5>SERVICE CHARGES</h5>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td className="thwidth left">Service Charge Is Applicable </td>
+                                    <td className="thwidth left"> 
+                                    <SwitchTog/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        
+                        <div >
+                            <div className='left bg-info p-1 rborder'>
+                                <h5>TAXATION</h5>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td className="thwidth left">Name </td>
+                                    <td className="thwidth left">Select</td>
+                                    <td className="thwidth left">User Defined Name</td>
+                                </tr>
+                                <tr>
+                                    <td className="thwidth left">Tax-1 </td>
+                                    <td className="thwidth left"><SwitchTog/></td>
+                                    <td className="thwidth left">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value="CGST"  />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="thwidth left">Tax-2 </td>
+                                    <td className="thwidth left"><SwitchTog/></td>
+                                    <td className="thwidth left">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value="SGST"  />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="thwidth left">Tax-3 </td>
+                                    <td className="thwidth left"><SwitchTog/></td>
+                                    <td className="thwidth left">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value="Cess"  />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="thwidth left">Tax-4 </td>
+                                    <td className="thwidth left"><SwitchTog/></td>
+                                    <td className="thwidth left">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value="" disabled  />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        
+
+                           
+                           <div >
+                                <div className='left bg-info p-1 rborder'>
+                                    <h5>ROUNDING</h5>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td className="thwidth left">Final Bill Rounding <span className="asterik">*</span> </td>
+                                        <td className="thwidth left">
+                                        <div class="form-group">
+                                            <select class="form-control" id="sel1">
+                                                <option selected>Near to 1</option>
+                                                <option>Near to 50</option>
+                                            </select>
+                                        </div></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+
+                              <div >
+                                <div className='left bg-info p-1 rborder'>
+                                    <h5>RESERVATION</h5>
+                                </div>
+                                <div>
+                                <table>
+                                    <tr>
+                                        <td className="thwidth3 left">Confirm bookings before<span className="asterik">*</span> </td>
+                                        <td className="thwidth left">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control decimal" id="decimal" value="0"   />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <b>days before the arrival date</b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="thwidth3 left">Max. rooms per booking<span className="asterik">*</span> </td>
+                                        <td className="thwidth left">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control decimal" id="decimal" value="29"   />
+                                            </div>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="thwidth3 left">Max. nights per booking<span className="asterik">*</span> </td>
+                                        <td className="thwidth left">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control decimal" id="decimal" value="50"   />
+                                            </div>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                </table>
+                                </div>
+
+                                <div>
+                                <table>
+                                     <tr>
+                                        <td className="thwidth3 left">Send notification on reservation<span className="asterik">*</span> </td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> Email </div></td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> SMS </div></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td className="thwidth3 left">Send notification on Cut Off Date<span className="asterik">*</span> </td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> Email </div></td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> SMS </div></td>
+                                    </tr>
+
+                                       <tr>
+                                        <td className="thwidth3 left">Send notification on confirmation<span className="asterik">*</span> </td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> Email </div></td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> SMS </div></td>
+                                    </tr>
+
+                                       <tr>
+                                        <td className="thwidth3 left">Send notification on cancellation<span className="asterik">*</span> </td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> Email </div></td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> SMS </div></td>
+                                    </tr>
+                                    
+                                  
+
+                                      <tr>
+                                        <td className="thwidth3 left">Send notification on No Show<span className="asterik">*</span> </td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> Email </div></td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> SMS </div></td>
+                                    </tr>
+
+                                      <tr>
+                                        <td className="thwidth3 left">Send notification on Check In<span className="asterik">*</span> </td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> Email </div></td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> SMS </div></td>
+                                    </tr>
+
+                                     <tr>
+                                        <td className="thwidth3 left">Send notification on Check Out<span className="asterik">*</span> </td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> Email </div></td>
+                                        <td><div className="inline"> <SwitchTog/> </div><div className="inline"> SMS </div></td>
+                                    </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+
+                            
+                            <div >
+                                <div className='left bg-info p-1 rborder'>
+                                    <h5>FINANCIAL YEAR</h5>
+                                </div>
+                                <div className="right">
+                                    <button className="btn btn-secondary">ADD</button>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td className="thwidth left"><b>CODE</b></td>
+                                        <td className="thwidth left"><b>FROM</b></td>
+                                        <td className="thwidth left"><b>TO</b></td>
+                                        <td className="thwidth left"><b>Use CODE</b></td>
+                                        <td className="thwidth left"><b>Use PREFIX</b></td>
+                                    </tr>
+
+                                     <tr>
+                                        <td className="thwidth left"><b>2022-23</b></td>
+                                        <td className="thwidth left"><b>01-04-2022</b></td>
+                                        <td className="thwidth left"><b>31-03-2023</b></td>
+                                        <td className="thwidth left"><b><SwitchTog/></b></td>
+                                        <td className="thwidth left"><b><SwitchTog/></b></td>
+                                    </tr>
+                                   
+                                </table>
+                               
+                            </div>
+
+                             <div >
+                                <div className='left bg-info p-1 rborder'>
+                                    <h5>MAIL SETTINGS</h5>
+                                </div>
+                                <table>
+                                <tr>
+                                    <td className="thwidth left">SMTP Server </td>
+                                    <td className="thwidth1 left"> 
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value="smtp.gmail.com"  />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="thwidth left">SMTP Port </td>
+                                    <td className="thwidth1 left"> 
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value="465"  />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="thwidth left">Mail ID </td>
+                                    <td className="thwidth1 left"> 
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value="booking@gmail.com"  />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="thwidth left">Password </td>
+                                    <td className="thwidth1 left"> 
+                                        <div class="form-group">
+                                            <input type="password" class="form-control decimal" id="decimal" value="smtp.gmail.com"  />
+                                        </div>
+                                    </td>
+                                </tr>
+                                </table>
+                            </div>
+
+                             <div >
+                                <div className='left bg-info p-1 rborder'>
+                                    <h5>SMS SETTINGS</h5>
+                                </div>
+
+                                <table>
+                                   <tr>
+                                    <td className="thwidth left">WEB Service </td>
+                                    <td className="thwidth1 left"> 
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value=""  />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="thwidth left">User ID </td>
+                                    <td className="thwidth1 left"> 
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value=""  />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="thwidth left">Password </td>
+                                    <td className="thwidth1 left"> 
+                                        <div class="form-group">
+                                            <input type="text" class="form-control decimal" id="decimal" value=""  />
+                                        </div>
+                                    </td>
+                                </tr>
+                                </table>
+                            </div>
+
+
+                            <div className="mt-3 left">
+                                <button type="button" className="btn btn-primary">Save</button>
+                                <button type="button" className="btn btn-secondary">Back</button>
+                            </div>
 
 
                     </div>
