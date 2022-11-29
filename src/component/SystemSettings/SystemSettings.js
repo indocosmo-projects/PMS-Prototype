@@ -9,7 +9,7 @@ function SystemSettings() {
                     <div className="container-fluid formcontent">
                         {/* ----- Heading ------ */}
                         <div className='sticky-div'>
-                            <h3 className="header"><i class="bi bi-calendar2-plus-fill me-2"></i>System Settings</h3>
+                            <h3 className="header"><i className="bi bi-calendar2-plus-fill me-2"></i>System Settings</h3>
                         </div>
 
                         <div >
@@ -37,96 +37,96 @@ function SystemSettings() {
                                 <tr>
                                     <td className="thwidth left">Company </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control company" id="company" value="INDOCOSMO" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control company" id="company" value="INDOCOSMO" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">Building </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control building" id="building" value="K P VALLON ROAD" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control building" id="building" value="K P VALLON ROAD" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">Street </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control street" id="street" value="KADAVANTHRA" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control street" id="street" value="KADAVANTHRA" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">City </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control city" id="city" value="KOCHI" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control city" id="city" value="KOCHI" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">State </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control state" id="state" value="Kerala" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control state" id="state" value="Kerala" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">Country </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control country" id="country" value="India" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control country" id="country" value="India" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">GST No </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control gst" id="gst" value="32ALRPM4399J2ZE" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control gst" id="gst" value="32ALRPM4399J2ZE" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">EMAIL </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control email" id="email" value="indocosmo@gmail.com" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control email" id="email" value="indocosmo@gmail.com" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">GST No </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control gst" id="gst" value="32ALRPM4399J2ZE" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control gst" id="gst" value="32ALRPM4399J2ZE" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">COMPANY URL </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control companyurl" id="companyurl" value="" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control companyurl" id="companyurl" value="" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">PHONE</td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control phone" id="phone" value="94470525282" />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control phone" id="phone" value="94470525282" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">LONG STAY </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="number" class="form-control longstay" id="longstay" value="5" />
+                                        <div className="form-group">
+                                            <input type="number" className="form-control longstay" id="longstay" value="5" />
                                         </div>
                                     </td>
                                 </tr>
@@ -143,48 +143,48 @@ function SystemSettings() {
                                 <tr>
                                     <td className="thwidth left">HEAD </td>
                                     <td className="thwidth2 left"> 
-                                    <div class="form-group">
-                                            <input type="text" class="form-control head" id="head" value="BOOKING CONFIRMATION VOUCHER" />
+                                    <div className="form-group">
+                                            <input type="text" className="form-control head" id="head" value="BOOKING CONFIRMATION VOUCHER" />
                                     </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">TEXT 1 </td>
                                     <td className="thwidth2 left"> 
-                                    <div class="form-group">
-                                            <input type="text" class="form-control head" id="head" value="Check-In/Check-Out Time is 12.00Noon." />
+                                    <div className="form-group">
+                                            <input type="text" className="form-control head" id="head" value="Check-In/Check-Out Time is 12.00Noon." />
                                     </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">TEXT 2 </td>
                                     <td className="thwidth2 left"> 
-                                    <div class="form-group">
-                                            <input type="text" class="form-control head" id="head" value="Early Checkin Is Subjected To Availability." />
+                                    <div className="form-group">
+                                            <input type="text" className="form-control head" id="head" value="Early Checkin Is Subjected To Availability." />
                                     </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">TEXT 3 </td>
                                     <td className="thwidth2 left"> 
-                                    <div class="form-group">
-                                            <input type="text" class="form-control head" id="head" value="Should You wish to guarantee the reservation,kindly fill the Credit Card Details." />
+                                    <div className="form-group">
+                                            <input type="text" className="form-control head" id="head" value="Should You wish to guarantee the reservation,kindly fill the Credit Card Details." />
                                     </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">TEXT 4 </td>
                                     <td className="thwidth2 left"> 
-                                    <div class="form-group">
-                                            <input type="text" class="form-control head" id="head" value="Retention charges for one night will be levied in case of No Shows Or Cancellations before 24 Hours of Check-In" />
+                                    <div className="form-group">
+                                            <input type="text" className="form-control head" id="head" value="Retention charges for one night will be levied in case of No Shows Or Cancellations before 24 Hours of Check-In" />
                                     </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">TEXT 5 </td>
                                     <td className="thwidth2 left"> 
-                                    <div class="form-group">
-                                            <input type="text" class="form-control head" id="head" value="In absence of arrival details/timings and MOBILE NO of the guest the room reserva tion will be deemed as guaranteed upto 15:00 hrs only,and may be released thereafter." />
+                                    <div className="form-group">
+                                            <input type="text" className="form-control head" id="head" value="In absence of arrival details/timings and MOBILE NO of the guest the room reserva tion will be deemed as guaranteed upto 15:00 hrs only,and may be released thereafter." />
                                     </div>
                                     </td>
                                 </tr>
@@ -202,8 +202,8 @@ function SystemSettings() {
                                 <tr>
                                     <td className="thwidth left">Business year start in <span className="asterik">*</span> </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <select class="form-control" id="sel1">
+                                        <div className="form-group">
+                                            <select className="form-control" id="sel1">
                                                 <option selected>April</option>
                                                 <option>May</option>
                                                 <option>June</option>
@@ -223,8 +223,8 @@ function SystemSettings() {
                                 <tr>
                                     <td className="thwidth left">Week starts on <span className="asterik">*</span></td>
                                     <td className="thwidth1 left"> 
-                                    <div class="form-group">
-                                            <select class="form-control" id="sel1">
+                                    <div className="form-group">
+                                            <select className="form-control" id="sel1">
                                                 <option selected>Monday</option>
                                                 <option>Tuesday</option>
                                                 <option>Wednesday</option>
@@ -239,8 +239,8 @@ function SystemSettings() {
                                 <tr>
                                     <td className="thwidth left">Base Currency <span className="asterik">*</span></td>
                                     <td className="thwidth1 left"> 
-                                    <div class="form-group ">
-                                            <select class="form-control" id="currency">
+                                    <div className="form-group ">
+                                            <select className="form-control" id="currency">
                                                 <option selected>YEN</option>
                                                 <option>INR</option>
                                                 <option>EURO</option>
@@ -251,8 +251,8 @@ function SystemSettings() {
                                    <tr>
                                     <td className="thwidth left">Decimal </td>
                                     <td className="thwidth1 left"> 
-                                    <div class="form-group">
-                                    <input type="text" class="form-control decimal" id="decimal" value="2" disabled />
+                                    <div className="form-group">
+                                    <input type="text" className="form-control decimal" id="decimal" value="2" disabled />
                                         </div>
                                     </td>
                                 </tr>
@@ -314,8 +314,8 @@ function SystemSettings() {
                                 <tr>
                                     <td className="thwidth left">Date Display Format <span className="asterik">*</span> </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value="dd-mm-yyyy" disabled />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value="dd-mm-yyyy" disabled />
                                         </div>
                                     </td>
                                     <td className="thwidth1 left">  <b>(E.g 24-08-2015)</b> </td>
@@ -323,8 +323,8 @@ function SystemSettings() {
                                 <tr>
                                     <td className="thwidth left">Time Display Format <span className="asterik">*</span> </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value="hh:mm" disabled />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value="hh:mm" disabled />
                                         </div>
                                     </td>
                                     <td className="thwidth1 left">  <b>(E.g 02:00 AM)</b> </td>
@@ -362,8 +362,8 @@ function SystemSettings() {
                                     <td className="thwidth left">Tax-1 </td>
                                     <td className="thwidth left"><SwitchTog/></td>
                                     <td className="thwidth left">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value="CGST"  />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value="CGST"  />
                                         </div>
                                     </td>
                                 </tr>
@@ -371,8 +371,8 @@ function SystemSettings() {
                                     <td className="thwidth left">Tax-2 </td>
                                     <td className="thwidth left"><SwitchTog/></td>
                                     <td className="thwidth left">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value="SGST"  />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value="SGST"  />
                                         </div>
                                     </td>
                                 </tr>
@@ -380,8 +380,8 @@ function SystemSettings() {
                                     <td className="thwidth left">Tax-3 </td>
                                     <td className="thwidth left"><SwitchTog/></td>
                                     <td className="thwidth left">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value="Cess"  />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value="Cess"  />
                                         </div>
                                     </td>
                                 </tr>
@@ -389,8 +389,8 @@ function SystemSettings() {
                                     <td className="thwidth left">Tax-4 </td>
                                     <td className="thwidth left"><SwitchTog/></td>
                                     <td className="thwidth left">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value="" disabled  />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value="" disabled  />
                                         </div>
                                     </td>
                                 </tr>
@@ -408,8 +408,8 @@ function SystemSettings() {
                                     <tr>
                                         <td className="thwidth left">Final Bill Rounding <span className="asterik">*</span> </td>
                                         <td className="thwidth left">
-                                        <div class="form-group">
-                                            <select class="form-control" id="sel1">
+                                        <div className="form-group">
+                                            <select className="form-control" id="sel1">
                                                 <option selected>Near to 1</option>
                                                 <option>Near to 50</option>
                                             </select>
@@ -428,8 +428,8 @@ function SystemSettings() {
                                     <tr>
                                         <td className="thwidth3 left">Confirm bookings before<span className="asterik">*</span> </td>
                                         <td className="thwidth left">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control decimal" id="decimal" value="0"   />
+                                            <div className="form-group">
+                                                <input type="text" className="form-control decimal" id="decimal" value="0"   />
                                             </div>
                                         </td>
                                         <td>
@@ -439,8 +439,8 @@ function SystemSettings() {
                                     <tr>
                                         <td className="thwidth3 left">Max. rooms per booking<span className="asterik">*</span> </td>
                                         <td className="thwidth left">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control decimal" id="decimal" value="29"   />
+                                            <div className="form-group">
+                                                <input type="text" className="form-control decimal" id="decimal" value="29"   />
                                             </div>
                                         </td>
                                         <td>
@@ -449,8 +449,8 @@ function SystemSettings() {
                                     <tr>
                                         <td className="thwidth3 left">Max. nights per booking<span className="asterik">*</span> </td>
                                         <td className="thwidth left">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control decimal" id="decimal" value="50"   />
+                                            <div className="form-group">
+                                                <input type="text" className="form-control decimal" id="decimal" value="50"   />
                                             </div>
                                         </td>
                                         <td>
@@ -547,32 +547,32 @@ function SystemSettings() {
                                 <tr>
                                     <td className="thwidth left">SMTP Server </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value="smtp.gmail.com"  />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value="smtp.gmail.com"  />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">SMTP Port </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value="465"  />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value="465"  />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">Mail ID </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value="booking@gmail.com"  />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value="booking@gmail.com"  />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">Password </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="password" class="form-control decimal" id="decimal" value="smtp.gmail.com"  />
+                                        <div className="form-group">
+                                            <input type="password" className="form-control decimal" id="decimal" value="smtp.gmail.com"  />
                                         </div>
                                     </td>
                                 </tr>
@@ -588,24 +588,24 @@ function SystemSettings() {
                                    <tr>
                                     <td className="thwidth left">WEB Service </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value=""  />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value=""  />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">User ID </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value=""  />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value=""  />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="thwidth left">Password </td>
                                     <td className="thwidth1 left"> 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control decimal" id="decimal" value=""  />
+                                        <div className="form-group">
+                                            <input type="text" className="form-control decimal" id="decimal" value=""  />
                                         </div>
                                     </td>
                                 </tr>
