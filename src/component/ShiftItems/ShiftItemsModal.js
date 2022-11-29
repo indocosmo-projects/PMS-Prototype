@@ -59,7 +59,6 @@ return (
       </Modal.Body>
       <Modal.Footer>
         <Button variant="primary" onClick={handleClose}>Save</Button>
-        <Button variant="danger" onClick={handleClose}>Reset</Button>
         <Button variant="secondary" onClick={handleClose}>
           Cancel
         </Button>
