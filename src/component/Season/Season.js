@@ -8,8 +8,6 @@ function Season() {
     const details =  
     [
     {id: 1, code:'ALL',name :'All Season',color:'Green',startday:'1-January',endday:'31-December'},
-
-
    ];
 
 

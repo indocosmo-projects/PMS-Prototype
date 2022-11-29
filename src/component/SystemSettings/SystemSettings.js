@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './SystemSettings.css'
 import SwitchTog from '../Common/SwitchTog';
 

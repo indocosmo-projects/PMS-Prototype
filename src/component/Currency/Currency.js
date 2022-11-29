@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import Form from 'react-bootstrap/Form';
 import CurrencyModal from '../Currency/CurrencyModal';
 import './Currency.css';
 
 function Currency() {
-      
     
     const details =  
     [
