@@ -59,30 +59,50 @@ function NavigationBarNew() {
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/nightaudit">Night Audit</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/mergeroom">Merge Room</NavLink></NavDropdown.Item>
                           <NavDropdown.Divider />
-                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/action.3.1" disabled>User Management</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/users" disabled>User Management</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/users">Users</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/usergroup">User Groups</NavLink></NavDropdown.Item>
                           <NavDropdown.Divider />
-                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/action.3.2"  disabled>Facility</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/facility"  disabled>Facility</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/facility">Facilities</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/facilityprovider">Facility Provider</NavLink></NavDropdown.Item>
                           <NavDropdown.Divider />
-                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/action.3.2"  disabled>Petty Cash</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/pettycash"  disabled>Petty Cash</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/pettycash">Petty Cash</NavLink></NavDropdown.Item>
         
                       </NavDropdown>
                 </li>
                 <li>
-                    <NavDropdown title="Set Up" id="basic-nav-dropdown" className="nlink-drop">
-                            <NavDropdown.Item>Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                              Separated link
-                            </NavDropdown.Item>
-                      </NavDropdown>
-                </li>
+                    <NavDropdown title="General Settings" id="basic-nav-dropdown" className="nlink-drop">
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/systemsettings">System Settings</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/department">Department</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/currency">Currency</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/accountmaster">Account Master</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/season">Season</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/discount">Discount</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/tax">Tax</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/templates">Templates</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/shiftitems">Shift</NavLink></NavDropdown.Item>
+                        </NavDropdown> 
+                    </li>
+                    <li>
+                         <NavDropdown title="Set Up" id="basic-nav-dropdown" className="nlink-drop">
+                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/roomtype" disabled>Rooms</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/roomtype">Room Type</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/room">Room</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/floor">Floor</NavLink></NavDropdown.Item>
+
+                          <NavDropdown.Divider />
+                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/corporaterates" disabled>Tarrifs And Promotions</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/corporaterates" >Corporates ta Rates</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/roomrates">Room Rates</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/corporates" >Corporates</NavLink></NavDropdown.Item>
+                          
+                          <NavDropdown.Divider />
+                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/pettycashsetup" disabled>Petty Cash</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/pettycashsetup">Petty Cash Head</NavLink></NavDropdown.Item>
+                          </NavDropdown> 
+                    </li>
               </ul>
             </div>
 

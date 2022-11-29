@@ -47,8 +47,8 @@ function UserGroups() {
     
                         <div className="row">
                             <div className="col-sm-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search" id="usr" />
+                                <div className="form-group">
+                                    <input type="text" className="form-control" placeholder="Search" id="usr" />
                                 </div>
                             </div>
                             <div className="col-sm-6">

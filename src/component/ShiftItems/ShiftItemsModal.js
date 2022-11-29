@@ -1,9 +1,9 @@
 import React,{ useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import './UserGroups.css';
+import './ShiftItems.css';
 
-function UsgrpModal() {
+function ShiftItemsModal() {
 
 const [show, setShow] = useState(false);
 
@@ -13,7 +13,7 @@ const handleShow = () => setShow(true);
 return (
   <>
     <Button variant="primary" onClick={handleShow}>
-     Add Group
+     New
     </Button>
 
     <Modal
@@ -24,29 +24,41 @@ return (
       style={{marginTop: 100}}
     >
       <Modal.Header className="bg-info" closeButton>
-        <Modal.Title >New User Group</Modal.Title>
+        <Modal.Title >Shift</Modal.Title>
       </Modal.Header>
       <Modal.Body>
           <table>
               <tr>
                   <td className="thwidth left">Code <span className="asterik">*</span></td>
-                  <td className="thwidth left"> <input type="text" class="form-control" id="pwd"  /></td>
+                  <td className="thwidth left"> <input type="text" className="form-control" id="pwd"  /></td>
               </tr>
               <tr>
                   <td className="thwidth left">Name <span className="asterik">*</span></td>
-                  <td className="thwidth left"> <input type="text" class="form-control" id="pwd"  /></td>
+                  <td className="thwidth left"> <input type="text" className="form-control" id="pwd"  /></td>
               </tr>
               <tr>
                   <td className="thwidth left">Description <span className="asterik">*</span></td>
                   <td className="thwidth left"> 
-                    <input type="text" class="form-control" id="pwd"  />
+                    <input type="text" className="form-control" id="pwd"  />
+                  </td>
+              </tr>
+              <tr>
+                  <td className="thwidth left">Shift Starts at <span className="asterik">*</span></td>
+                  <td className="thwidth left"> 
+                    <input type="time" className="form-control" id="pwd"  />
+                  </td>
+              </tr>
+              <tr>
+                  <td className="thwidth left">Shift ends at <span className="asterik">*</span></td>
+                  <td className="thwidth left"> 
+                    <input type="time" className="form-control" id="pwd"  />
+                   
                   </td>
               </tr>
           </table>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="primary" onClick={handleClose}>Save</Button>
-        <Button variant="danger" onClick={handleClose}>Reset</Button>
         <Button variant="secondary" onClick={handleClose}>
           Cancel
         </Button>
@@ -56,4 +68,4 @@ return (
 );
 }
 
-export default UsgrpModal;
+export default ShiftItemsModal;

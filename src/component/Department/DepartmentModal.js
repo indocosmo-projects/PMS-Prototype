@@ -1,9 +1,9 @@
 import React,{ useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import './UserGroups.css';
+import './Department.css';
 
-function UsgrpModal() {
+function DepartmentModal() {
 
 const [show, setShow] = useState(false);
 
@@ -13,7 +13,7 @@ const handleShow = () => setShow(true);
 return (
   <>
     <Button variant="primary" onClick={handleShow}>
-     Add Group
+    New
     </Button>
 
     <Modal
@@ -30,16 +30,16 @@ return (
           <table>
               <tr>
                   <td className="thwidth left">Code <span className="asterik">*</span></td>
-                  <td className="thwidth left"> <input type="text" class="form-control" id="pwd"  /></td>
+                  <td className="thwidth left"> <input type="text" className="form-control" id="pwd"  /></td>
               </tr>
               <tr>
                   <td className="thwidth left">Name <span className="asterik">*</span></td>
-                  <td className="thwidth left"> <input type="text" class="form-control" id="pwd"  /></td>
+                  <td className="thwidth left"> <input type="text" className="form-control" id="pwd"  /></td>
               </tr>
               <tr>
                   <td className="thwidth left">Description <span className="asterik">*</span></td>
                   <td className="thwidth left"> 
-                    <input type="text" class="form-control" id="pwd"  />
+                    <input type="text" className="form-control" id="pwd"  />
                   </td>
               </tr>
           </table>
@@ -56,4 +56,4 @@ return (
 );
 }
 
-export default UsgrpModal;
+export default DepartmentModal;

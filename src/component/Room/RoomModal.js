@@ -1,9 +1,9 @@
 import React,{ useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import './UserGroups.css';
+import './Room.css';
 
-function UsgrpModal() {
+function RoomModal() {
 
 const [show, setShow] = useState(false);
 
@@ -56,4 +56,4 @@ return (
 );
 }
 
-export default UsgrpModal;
+export default RoomModal;
