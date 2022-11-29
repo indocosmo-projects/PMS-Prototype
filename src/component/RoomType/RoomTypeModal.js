@@ -51,10 +51,10 @@ return (
                   <td className="thwidth left"></td>
               </tr>
           </table>
-          <div >
-                    <div className='left bg-info p-1 rborder'>
-                        <h5>Applicable occupancies</h5>
-                    </div>
+                    <div >
+                      <div className='left bg-info p-1 rborder'>
+                          <h5>Applicable occupancies</h5>
+                      </div>
 
                             <table>
                                 <tr>
