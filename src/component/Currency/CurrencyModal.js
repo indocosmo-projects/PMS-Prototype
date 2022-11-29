@@ -90,10 +90,10 @@ return (
           </Tabs>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handleClose}>Save</Button>
+        <Button variant="primary" onClick={handleClose}>Submit</Button>
         <Button variant="danger" onClick={handleClose}>Reset</Button>
         <Button variant="secondary" onClick={handleClose}>
-          Cancel
+          Back
         </Button>
       </Modal.Footer>
     </Modal>
