@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import DepartmentModal from '../Department/DepartmentModal';
+
 import './PettyCashSetup.css';
 
 function PettyCashSetup() {
