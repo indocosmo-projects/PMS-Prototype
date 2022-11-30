@@ -1,15 +1,17 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+import CorporatesModal from '../Corporates/CorporatesModal';
+import './Corporates.css';
 
 function Corporates() {
     
     const details =  
     [
-    {id: 1, code:'ACCNT',name :'ACCOUNTS',corporate:'Accounts Department',roomtype:'Assign Permissions',validfrom:'ACCOUNTS',validto:'ACCOUNTS',mealplan:'ACCOUNTS',status:'ACCOUNTS'},
-    {id: 2, code:'ACCNT',name :'ACCOUNTS',corporate:'Accounts Department',roomtype:'Assign Permissions',validfrom:'ACCOUNTS',validto:'ACCOUNTS',mealplan:'ACCOUNTS',status:'ACCOUNTS'},
-    {id: 3, code:'ACCNT',name :'ACCOUNTS',corporate:'Accounts Department',roomtype:'Assign Permissions',validfrom:'ACCOUNTS',validto:'ACCOUNTS',mealplan:'ACCOUNTS',status:'ACCOUNTS'},
-    {id: 4, code:'ACCNT',name :'ACCOUNTS',corporate:'Accounts Department',roomtype:'Assign Permissions',validfrom:'ACCOUNTS',validto:'ACCOUNTS',mealplan:'ACCOUNTS',status:'ACCOUNTS'},
-   
-    ];
+    {id: 1, code:'MAKE MY TRIP',name :'MAKE MY TRIP',customer:'TRAVEL_AGENT',contactperson:'',email:'',mobile:'',status:'X'},
+    {id: 2, code:'INDOCOSMO',name :'INDOCOSMO',customer:'CORPORATE',contactperson:'',email:'',mobile:'',status:'X'},
+    {id: 3, code:'INDOCOSMO',name :'INDOCOSMO',customer:'CORPORATE',contactperson:'',email:'',mobile:'',status:'X'},
+  
+];
 
 
     const tdata = () =>{
@@ -20,11 +22,10 @@ function Corporates() {
                     details.map(detail => <tr key={detail.id} >
                         <td className="left">{detail.code}</td>
                         <td className="left">{detail.name}</td>
-                        <td className="left">{detail.corporate}</td>
-                        <td className="left">{detail.roomtype}</td>
-                        <td className="left">{detail.validfrom}</td>
-                        <td className="left">{detail.validto}</td>
-                        <td className="left">{detail.mealplan}</td>
+                        <td className="left">{detail.customer}</td>
+                        <td className="left">{detail.contactperson}</td>
+                        <td className="left">{detail.email}</td>
+                        <td className="left">{detail.mobile}</td>
                         <td className="left">{detail.status}</td>
                     </tr>
                     )}
@@ -41,7 +42,7 @@ function Corporates() {
                     <div className="container-fluid formcontent">
                         {/* ----- Heading ------ */}
                         <div className='sticky-div'>
-                            <h3 className="header"><i className="bi bi-calendar2-plus-fill me-2"></i>Corporate TA Rates</h3>
+                            <h3 className="header"><i className="bi bi-calendar2-plus-fill me-2"></i>Corporate </h3>
                         </div>
 
                            <div className="row">
@@ -54,7 +55,7 @@ function Corporates() {
 
                                     <div className="col-sm-6">
                                         <div className="mb-3 ">
-                                        <Link ><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i><CorporateRatesModal/></button></Link>
+                                        <Link ><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className ="bi bi-plus-circle me-2"></i><CorporatesModal/></button></Link>
                                         </div>
                                     </div>
                             </div>
@@ -64,11 +65,10 @@ function Corporates() {
                                 <tr>
                                     <th className="thstyle left">Code</th>
                                     <th className="thstyle left">Name</th>
-                                    <th className="thstyle left">Corporate</th>
-                                    <th className="thstyle left">Room Type</th>
-                                    <th className="thstyle left">Valid From</th>
-                                    <th className="thstyle left">Valid To</th>
-                                    <th className="thstyle left">Meal Plan</th>
+                                    <th className="thstyle left">Customer</th>
+                                    <th className="thstyle left">Contact Person</th>
+                                    <th className="thstyle left">Email</th>
+                                    <th className="thstyle left">Mobile</th>
                                     <th className="thstyle left">Status</th>
                                 </tr>
                             </thead>

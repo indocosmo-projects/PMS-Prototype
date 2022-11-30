@@ -94,9 +94,9 @@ function NavigationBarNew() {
 
                           <NavDropdown.Divider />
                           <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/corporaterates" disabled>Tarrifs And Promotions</NavLink></NavDropdown.Item>
-                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/corporaterates" >Corporates ta Rates</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/corporaterates" >Corporates ta Rates</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/roomrates">Room Rates</NavLink></NavDropdown.Item>
-                          <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/corporates" >Corporates</NavLink></NavDropdown.Item>
+                          <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/corporates" >Corporates</NavLink></NavDropdown.Item>
                           
                           <NavDropdown.Divider />
                           <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/pettycashsetup" disabled>Petty Cash</NavLink></NavDropdown.Item>
@@ -111,9 +111,9 @@ function NavigationBarNew() {
           <Nav className='profile-nav'>
             <div className='profile-btn'>
           <NavDropdown  title="John Doe" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1"><i className="grey bi bi-person-fill me-2"></i>Profile</NavDropdown.Item>
+              <NavDropdown.Item href="/users"><i className="grey bi bi-person-fill me-2"></i>Profile</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2"><i className="grey bi bi-bell-fill me-2"></i>Notifications</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3"><i className="grey bi bi-gear-fill me-2"></i>Settings</NavDropdown.Item>
+              <NavDropdown.Item href="/systemsettings"><i className="grey bi bi-gear-fill me-2"></i>Settings</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4" className='red'><i class="bi bi-box-arrow-right me-2"></i>Logout</NavDropdown.Item>
             </NavDropdown>
