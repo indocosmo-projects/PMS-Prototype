@@ -228,3 +228,15 @@ select.form-control.form-select.text-center {
     max-width: 130px;
     flex-wrap: nowrap;
   }
+  .table-dark-row{
+    color: rgb(31, 31, 31);
+    background-color: rgb(228, 228, 228) !important;
+  }
+
+  .avail-tbody > tr > td{
+    padding: .2em !important;
+    cursor: pointer;
+  }
+.fs-small{
+    font-size: .825rem;
+}
