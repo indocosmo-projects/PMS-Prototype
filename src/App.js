@@ -32,7 +32,7 @@ import Currency from './component/Currency/Currency';
 import AccountMaster from './component/AccountMaster/AccountMaster';
 import Season from './component/Season/Season';
 import Discount from './component/Discount/Discount';
-
+import Home from './component/Home/Home';
 import Tax from './component/Tax/Tax';
 import Templates from './component/Templates/Templates';
 import ShiftItems from './component/ShiftItems/ShiftItems';
@@ -57,7 +57,7 @@ function App() {
            {/* <NavigationbarMannual/> */}
 
             <Switch>
-                <Route exact path='/' component={Reservation}/>
+                <Route exact path='/home' component={Home}/>
                 <Route exact path='/newreservation' component={NewReservation}/>
                 <Route exact path="/reservation" component={Reservation}/>
                 <Route exact path="/reception" component={Reception}/>
