@@ -1,6 +1,11 @@
 import React, {  useState } from 'react';
+import Table from 'react-bootstrap/Table';
+// import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+// import Tooltip from 'react-bootstrap/Tooltip';
+// import Popover from 'react-bootstrap/Popover';
+import Badge from 'react-bootstrap/Badge';
 
-
+  
 
 function RoomAvailability() {
     const [arrdate, setArrdate] = useState('');
@@ -27,7 +32,7 @@ function RoomAvailability() {
        
         <div onMouseUp={nightcalculation}>
         <div className="container-fluid">
-        <div className="row light-violet-bg rounded p-4">
+        <div className="row light-violet-bg rounded p-1">
                 <div className="col-lg-3 mb-2">
                         <div className="form-group">
                             <label className="text-left" htmlFor="arrival">Arrival Time <b className='text-danger'>*</b></label>
@@ -73,7 +78,7 @@ function RoomAvailability() {
         <div className="col-md-12">
         <div className= "roomavailability">
             <div className='m-1'>
-            <table className="table avail-table" style={{marginBottom: 0,}}>
+            <Table responsive="md" className="avail-table" style={{marginBottom: 0,}}>
                 <thead className="tabhead head-bg">
                     <tr>
                         <th>Room Type</th>
@@ -100,123 +105,146 @@ function RoomAvailability() {
                     </tr>
                 </thead>
                 <tbody className='avail-tbody'>
-                    <tr>
-                        <td>DLX</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>0</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
+                    <tr className='table-dark-row'>
+                        <td className='table-dark-row'>Total</td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>0</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
+                        <td><strong>30</strong></td>
                     </tr>
                     <tr>
-                        <td>PREM</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
+                        <td><strong>DLX</strong></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1700</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹4000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1900</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1800</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1500</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
                         <td>0</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
                     </tr>
                     <tr>
-                        <td>CLASS</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
+                        <td><strong>PREM</strong></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹15000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹18000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>10</strong><Badge className='mt-1' bg="secondary">₹20000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>10</strong><Badge className='mt-1' bg="secondary">₹20000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹20000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹15000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹18000</Badge></div></td>
                         <td>0</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹30000</Badge></div></td>
                     </tr>
                     <tr>
-                        <td>ECON</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
+                        <td><strong>CLASS</strong></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1500</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1800</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1500</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
                         <td>0</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
                     </tr>
                     <tr>
-                        <td>STND</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
+                        <td><strong>ECON</strong></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1800</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1500</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1500</Badge></div></td>
                         <td>0</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
-                        <td>6</td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                    </tr>
+                    <tr>
+                        <td><strong>STND</strong></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1800</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹2000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1500</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1800</Badge></div></td>
+                        <td>0</td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
+                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
                     </tr>
                 </tbody>
-            </table>
+            </Table>
 
                 <div className="d-flex justify-content-end">
                     <button type="button" className="btn"><i className="bi bi-chevron-left me-1"></i>Prev</button>
