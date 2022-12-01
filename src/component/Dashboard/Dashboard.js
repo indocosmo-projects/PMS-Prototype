@@ -1,16 +1,16 @@
 import React from 'react';
 import '../../style.css';
-import './Home.css';
+import './Dashboard.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-function Home() {
+function Dashboard() {
     return(
         <div>
-           <h1> Home </h1>
+           <h1> Dashboard </h1>
         </div>
     );
 }
 
-export default Home;
+export default Dashboard;
