@@ -80,6 +80,11 @@ function RoomRateTypeDiscount() {
                 <td>
                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="₹ 1500" disabled/>
                 </td>
+                <td>
+                    <InputGroup className="pt-1">
+                    <Form.Check type='checkbox' id='default-checkbox' label='Incl. Tax'/>
+                    </InputGroup>
+                </td>
                 <td className='rate-col'>
                     <select className="form-control form-select text-center">
                         <option> RACKRATE</option>
@@ -147,7 +152,7 @@ function RoomRateTypeDiscount() {
                             classNamePrefix="select"
                             menuPlacement="auto"
                             menuPortalTarget={document.body}
-    menuPosition={'fixed'}
+                            menuPosition={'fixed'}
                         />
                 </td>
                 <td>
@@ -157,10 +162,10 @@ function RoomRateTypeDiscount() {
                 </td>
 
                 <td className='rate-col'>
-                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="₹ 1500" disabled/>
+                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="₹ 100" disabled/>
                 </td>
                 <td className='rate-col'>
-                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="₹ 100" disabled/>
+                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue=""/>
                 </td>
                 <td className='rate-col'>
                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="₹ 1400" disabled/>
@@ -194,11 +199,10 @@ function RoomRateTypeDiscount() {
                                         <th>ROOM TYPE</th>
                                         <th>OCCUPANCY</th>
                                         <th>ROOM RATE</th>
+                                        <th>TAX</th>
                                         <th>RATE CODE</th>
                                         <th>COUNT</th>
                                         <th>ROOMS</th>
-                                        {/* <th>DOUBLE</th> */}
-                                        {/* <th>TRIPPLE</th> */}
                                         <th>EXTRAS</th>
                                         <th>SUB TOTAL</th>
                                         <th>DISCOUNT</th>
