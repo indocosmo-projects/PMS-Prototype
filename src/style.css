@@ -166,3 +166,18 @@ margin: .2em;
   height: 130px;
 }
 /* ------dropdown---item---height------------ */
+
+
+
+/* ----accordion edits---------- */
+.accordion-header > button{
+  padding: .5em;
+  background-color: rgb(247, 247, 247);
+}
+.accordion-header > button > h5{
+width: 100%;
+font-weight: 400;
+}
+.accordion-header > button > i{
+  color: rgb(0, 170, 0);
+}

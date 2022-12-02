@@ -12,7 +12,7 @@
     margin: 0;
     z-index: 999;
     align-items: center;
-    padding: 1em 3em;
+    padding: .5em 2em;
     width: 100vw;
     /* position: fixed; */
     background-color: #ffffff;
@@ -22,9 +22,6 @@
     min-width: 100vw;
 }
 
-/* .navbar{
-    margin-bottom:4.5em;
-} */
 .grey{
     color: var(--grey);
 }

@@ -5,12 +5,13 @@ import Table from 'react-bootstrap/Table';
 // import Popover from 'react-bootstrap/Popover';
 import Badge from 'react-bootstrap/Badge';
 
-  
+
 
 function RoomAvailability() {
     const [arrdate, setArrdate] = useState('');
     const [deptdate, setDeptdate] = useState('');
     const [nights, setNights] = useState(1);
+
 
     const nightcalculation = () =>{
         var arrd = arrdate.substring(0,10);
@@ -31,8 +32,8 @@ function RoomAvailability() {
     return (
        
         <div onMouseUp={nightcalculation}>
-        <div className="container-fluid">
-        <div className="row light-violet-bg rounded p-1">
+        <div className="light-violet-bg">
+        <div className="row">
                 <div className="col-lg-3 mb-2">
                         <div className="form-group">
                             <label className="text-left" htmlFor="arrival">Arrival Time <b className='text-danger'>*</b></label>
@@ -74,11 +75,12 @@ function RoomAvailability() {
                 </div>
         </div> 
 
-        <div className="row">
+        <div className="row ">
         <div className="col-md-12">
-        <div className= "roomavailability">
+        <div className= "roomavailability white-back">
             <div className='m-1'>
-            <Table responsive="md" className="avail-table" style={{marginBottom: 0,}}>
+                
+            <Table bordered responsive="md" className="avail-table">
                 <thead className="tabhead head-bg">
                     <tr>
                         <th>Room Type</th>

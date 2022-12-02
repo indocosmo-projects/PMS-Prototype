@@ -27,7 +27,7 @@
 
 .roomavailability{
     border-radius: .5em;
-    margin: 20px;
+    /* margin: 20px; */
     border : 1px solid rgb(241, 238, 238);
 }
 
@@ -234,9 +234,17 @@ select.form-control.form-select.text-center {
   }
 
   .avail-tbody > tr > td{
-    padding: .2em !important;
+    padding: .4em !important;
     cursor: pointer;
   }
 .fs-small{
     font-size: .825rem;
+}
+
+.white-back{
+    background-color: #ffffff;
+}
+.availability-accordion > button{
+    background-color: rgb(234, 235, 255) !important;
+    padding: .5em;
 }
