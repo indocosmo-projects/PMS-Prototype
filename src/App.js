@@ -32,7 +32,8 @@ import Currency from './component/Currency/Currency';
 import AccountMaster from './component/AccountMaster/AccountMaster';
 import Season from './component/Season/Season';
 import Discount from './component/Discount/Discount';
-import Home from './component/Home/Home';
+// import Home from './component/Home/Home';
+import Dashboard from './component/Dashboard/Dashboard'
 import Tax from './component/Tax/Tax';
 import Templates from './component/Templates/Templates';
 import ShiftItems from './component/ShiftItems/ShiftItems';
@@ -43,6 +44,7 @@ import Corporates from './component/Corporates/Corporates';
 import RoomRates from './component/RoomRates/RoomRates';
 import PettyCashSetup from './component/PettyCashSetup/PettyCashSetup';
 import CorporateRates from './component/CorporateRates/CorporateRates';
+// import { Dashboard } from '@mui/icons-material';
 
 
 
@@ -57,7 +59,7 @@ function App() {
            {/* <NavigationbarMannual/> */}
 
             <Switch>
-                <Route exact path='/home' component={Home}/>
+                <Route exact path='/dashboard' component={Dashboard}/>
                 <Route exact path='/newreservation' component={NewReservation}/>
                 <Route exact path="/reservation" component={Reservation}/>
                 <Route exact path="/reception" component={Reception}/>
