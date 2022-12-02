@@ -5,7 +5,6 @@ import './Department.css';
 
 function Department() {
 
-
     const details =  
     [
     {id: 1, code:'ACCNT',name :'ACCOUNTS',description:'Accounts Department',permission:'Assign Permissions'},
