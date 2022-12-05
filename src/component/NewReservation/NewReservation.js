@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import RoomAvailability from './RoomAvailability';
 import RoomRateTypeDiscount from './RoomRateTypeDiscount';
+// import RoomsInputModal from './RoomsInputModal';
 import ReservedBy from './ReservedBy';
 import ReservedFor from './ReservedFor';
 import Deposit from './Desposit';

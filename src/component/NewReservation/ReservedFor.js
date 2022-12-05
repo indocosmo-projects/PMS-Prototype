@@ -2,6 +2,8 @@ import React, { useState} from 'react';
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 // import Alert from 'react-bootstrap/Alert';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Button from 'react-bootstrap/Button';
 
 
 
@@ -39,7 +41,6 @@ const display = (e) => {
     return (
 
         <div className="col-12">
-
 
                         <Table className='overflow-reservefor' responsive>
                         <thead>
@@ -127,7 +128,7 @@ const display = (e) => {
                                     <div className='row'>
                                     <div className='col-12'>
                                             {/* <Alert variant="primary"> */}
-                                            <div className='border-alert'>
+                                            <div className='font-small-gray'>
                                                 <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2 Nights</b> before 
                                                 </div>
                                                 {/* <Alert.Link href="#"></Alert.Link> */}
@@ -198,15 +199,85 @@ const display = (e) => {
                                     </div>
                                     <div className="col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left"></label>
-                                            <textarea className="form-control" style={{ height: 60, }} placeholder="Address"></textarea>
+                                        <label className="text-left">Address</label>
+                                            <textarea className="form-control" style={{ height: 30, }} placeholder=""></textarea>
                                         </div>
                                     </div>
                                  
                                 </div>
+                                <div className="row mb-3">
+                                    <label className="left mb-2">Sharers Details</label>
+                                    <div className="row sharer-bg">
+                                            <div className='col-md-3 col-sm-6 col-6 left'>
+                                                <p className='f-light'>Male Audults</p>
+                                                <InputGroup className="mb-3 group-input-width">
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-dash"></i>
+                                                </Button>
+                                                <Form.Control className='text-center'
+                                                    placeholder="0"
+                                                    aria-label="1"
+                                                    aria-describedby="basic-addon2"
+                                                />
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-plus-lg"></i>
+                                                </Button>
+                                                </InputGroup>
+                                                </div>
 
-                            
+                                                <div className='col-md-3 col-sm-6 col-6 left'>
+                                                <p className='f-light'>Female Adults</p>
+                                                    <InputGroup className="mb-3 group-input-width">
+                                                    <Button variant="btn btn-secondary" id="button-addon2">
+                                                    <i className="bi bi-dash"></i>
+                                                    </Button>
+                                                    <Form.Control className='text-center'
+                                                        placeholder="0"
+                                                        aria-label="1"
+                                                        aria-describedby="basic-addon2"
+                                                    />
+                                                    <Button variant="btn btn-secondary" id="button-addon2">
+                                                    <i className="bi bi-plus-lg"></i>
+                                                    </Button>
+                                                </InputGroup>
+                                                </div>
 
+                                                <div className='col-md-3 col-sm-6 col-6 left'>
+                                                <p className='f-light'>Male Childrens</p>
+                                                <InputGroup className="mb-3 group-input-width">
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-dash"></i>
+                                                </Button>
+                                                <Form.Control className='text-center'
+                                                    placeholder="0"
+                                                    aria-label="1"
+                                                    aria-describedby="basic-addon2"
+                                                />
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-plus-lg"></i>
+                                                </Button>
+                                                </InputGroup>
+                                                </div>
+
+                                                <div className='col-md-3 col-sm-6 col-6 left'>
+                                                <p className='f-light'>Female Childrens</p>
+                                                <InputGroup className="mb-3 group-input-width">
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-dash"></i>
+                                                </Button>
+                                                <Form.Control className='text-center'
+                                                    placeholder="0"
+                                                    aria-label="1"
+                                                    aria-describedby="basic-addon2"
+                                                />
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-plus-lg"></i>
+                                                </Button>
+                                                </InputGroup>
+                                                </div>
+                                                </div>
+
+                                    </div>
                             </div>
 
                                     <div className="col-sm-12" >
@@ -278,9 +349,6 @@ const display = (e) => {
                   </div>
                 </div>
             </div>
-
-
-
         </div>
     );
 

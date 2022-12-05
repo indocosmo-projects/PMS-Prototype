@@ -248,9 +248,6 @@ select.form-control.form-select.text-center {
     background-color: rgb(234, 235, 255) !important;
     padding: .5em;
 }
-
-.border-alert{
-    border: solid 1px rgb(230, 230, 230);
-    border-radius: 10em;
-    background-color: rgb(247, 247, 247);
+.discount-input{
+    width: 200px !important;
 }
