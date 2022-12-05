@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
-import Alert from 'react-bootstrap/Alert';
+// import Alert from 'react-bootstrap/Alert';
 
 
 
@@ -101,7 +101,7 @@ const display = (e) => {
 
                         <div>
                             <form >
-                                <div className="row my-5 grey-bg px-2 py-4">
+                                <div className="row my-5 white-back px-2 py-3 round-1">
                                     <div className="col-sm-12 d-flex justify-content-between">
                                             <h4 className="text-start">Add Customer details</h4>
                                             <button type="button" onClick={handleDecrement} className="btn btn-outline-danger px-3 me-2"><i class="bi bi-x-circle me-2"></i>Close</button>
@@ -109,33 +109,46 @@ const display = (e) => {
 
                                     <div className="border-bottom">
                                 <div className="row my-3">
-                                    <div className="col-sm-4">
+                                    <div className="col-sm-12 col-md-6">
+                                    <div className='row'>
+                                    <div className="col-md-6">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Full Name <b className='text-danger'>*</b></label>
+                                            <label className="text-left">First Name<b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
-                                    <div className="col-sm-4">
+                                    <div className="col-md-6">
+                                        <div className="inputfieldpadding">
+                                            <label className="text-left">Last Name <b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" placeholder="" />
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div className='row'>
+                                    <div className='col-12'>
+                                            {/* <Alert variant="primary"> */}
+                                            <div className='border-alert'>
+                                                <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2 Nights</b> before 
+                                                </div>
+                                                {/* <Alert.Link href="#"></Alert.Link> */}
+                                            {/* </Alert> */}
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div className="col-sm-6 col-md-3">
                                         <div className="inputfieldpadding">
                                             <label className="text-left">Phone Number <b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
-                                    <div className="col-sm-4">
+                                    <div className="col-sm-6 col-md-3">
                                         <div className="inputfieldpadding">
                                             <label className="text-left">E-mail <b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
                                 </div>
-                                <div className='row'>
-                                    <div className='col-12 px-3'>
-                                            <Alert variant="primary">
-                                                <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2 Nights</b> before 
-                                                <Alert.Link href="#"></Alert.Link>
-                                            </Alert>
-                                    </div>
-                                </div>
+                                
                                 <div className="row my-3">
                                    
                                     <div className="col-sm-2">
@@ -228,8 +241,7 @@ const display = (e) => {
                                                     </div>
                                                 </div>
                                             
-                                                <div className="row my-3">
-
+                                                <div className="row">
                                                     <div className="col-sm-12">
                                                         <div className="inputfieldpadding">
                                                             <label className="text-left">Remarks</label>
@@ -237,9 +249,9 @@ const display = (e) => {
                                                         </div>
                                                     </div>
 
-                                                    <label className="chkbox left ms-2 mt-3" >
+                                                    {/* <label className="chkbox left ms-2 mt-3" >
                                                         <input type="checkbox" name="chkbox" /> Remember me
-                                                    </label>
+                                                    </label> */}
                                     
                                                 </div>
                                      </div>

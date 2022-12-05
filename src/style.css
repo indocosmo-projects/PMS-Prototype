@@ -181,3 +181,7 @@ font-weight: 400;
 .accordion-header > button > i{
   color: rgb(0, 170, 0);
 }
+
+.round-1{
+  border-radius: .5em;
+}

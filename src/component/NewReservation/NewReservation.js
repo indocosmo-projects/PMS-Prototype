@@ -27,7 +27,7 @@ function NewReservation() {
                     </div>
 
 
-                    <Accordion className="my-4">
+                        <Accordion className="my-4">
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header className='availability-accordion'><h5>Check Availability</h5></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
@@ -50,7 +50,7 @@ function NewReservation() {
                      {/* ----- Form   ------ */}
                     <div className="">
                         <form action="#">
-                            <div className="row ">
+                            <div className="row">
                                 <div className="col-md-4 col-lg-2">
                                     <div className="inputfieldpadding">
                                         <label className="text-left" htmlFor="reseNumber">Reservation Number</label>

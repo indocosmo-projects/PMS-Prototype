@@ -34,6 +34,21 @@ function CheckInEdit(){
                         <Link to="/reception"><Button variant="outline-secondary" size="sm"><i class="bi bi-arrow-left me-2"></i>Back</Button></Link>
                     </div>
 
+
+
+                    <Accordion className="my-4">
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header className='availability-accordion'><h5>Check Availability</h5></Accordion.Header>
+                                <Accordion.Body className='light-violet-bg'>
+
+                                <RoomAvailability/>
+
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            </Accordion>
+
+
                      {/* ----- Form   ------ */}
                      
                      <div className='checkdetails light-violet-bg'>
@@ -72,113 +87,43 @@ function CheckInEdit(){
 
                              </div>
 
-
-                            {/* <div className="col-md-4 vl">
-                                <div className="row mb-4">
-                                    <div className="col-md-6">
-                                        <div className="form-group">
-                                            <label className="text-left" htmlFor="pwd">Room</label>
-                                            <input type="password" className="form-control" placeholder="123" id="room_no" />
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 ">
-                                        <br/>
-                                    <button type="button" className="btn btn-warning w-100 mt-1">Transfer</button>
-
-                                    </div>
-                                </div>
-
-                                 <div className="row">
-                                    <div className="col-sm-2">
-                                        <div className="form-group">
-                                            <label  htmlFor="adult">Adult:</label>
-                                            <select className="form-control" id="adult">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-2">
-                                        <div className="form-group">
-                                            <label  htmlFor="child">Child:</label>
-                                            <select className="form-control" id="child">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-2">
-                                        <div className="form-group">
-                                            <label htmlFor="infant">Infant:</label>
-                                            <select className="form-control" id="infant">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6">
-                                    <label  htmlFor="extrabed">Extra Bed:</label>
-                                    <div className="form-group">
-                                            <i class="bi bi-check-circle-fill extra-bed-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
-
-                            {/* <div className="col-md-4">
-                                <div className="row mt-4 mb-2 white-bg">
-                                    <div className="col-md-6 vl">
-                                        <h5 className='mt-1'>Balance</h5>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <h4>₹ 12,500</h4>
-                                    </div>  
-                                </div>
-
-                                <div className="row">
-                                    <div className="col-sm-6">
-                                        <button className="btn btn-success w-100 m-1">Deposit</button>   
-                                        <button className="btn btn-info w-100 m-1">Bill Preview</button>   
-                                        <button className="btn btn-primary w-100 m-1">Sharer</button>   
-                                    </div>
-                                    <div className="col-sm-6">
-                                        <button className="btn btn-warning w-100 m-1">Deposit</button>   
-                                        <button className="btn btn-secondary w-100 m-1">Bill Preview</button>   
-                                        <button className="btn btn-danger w-100 m-1">Sharer</button>  
-                                    </div>
-                                </div>
-                               
-                            </div> */}
-
                          </div>
                         </div>
 
 
                      {/* ----- Room Availability ------ */}
-                     <div className="availability_check_bg my-4">
+                     {/* <div className="availability_check_bg my-4">
                      <h5 className='left mt-2 ps-3 grey'>Check Availability</h5>
                      <hr className='gray'/>
                      <RoomAvailability/>
-                     </div>  
+                     </div>   */}
 
-                     {/* ----- Room Rate Type Discount ------ */}
-                     <div className="availability_check_bg my-4">
-                        <h5 className='left mt-2 ps-3 grey'>Room Details</h5>
-                        <hr className='gray'/>
-                     <RoomRateTypeDiscount/>
-                     </div>  
 
 
                      
-                     <Accordion className="my-4" defaultActiveKey="0" alwaysOpen>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header><h5>Guest Details</h5></Accordion.Header>
+
+
+                     {/* ----- Room Rate Type Discount ------ */}
+                     {/* <div className="availability_check_bg my-4">
+                        <h5 className='left mt-2 ps-3 grey'>Room Details</h5>
+                        <hr className='gray'/>
+                     <RoomRateTypeDiscount/>
+                     </div>   */}
+
+
+                     
+                     {/* <Accordion className="my-4" defaultActiveKey="0" alwaysOpen> */}
+                     <Accordion className="my-4">
+                            <Accordion.Item eventKey="1">
+                                <Accordion.Header><h5>Room Details</h5><i class="bi bi-check-circle-fill pe-3"></i></Accordion.Header>
+                                <Accordion.Body className='light-violet-bg'>
+
+                                <RoomRateTypeDiscount/>
+
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="2">
+                                <Accordion.Header><h5>Guest Details</h5><i class="bi bi-check-circle-fill pe-3"></i></Accordion.Header>
                                 <Accordion.Body>
 
                                 <Table className='overflow-reservefor' responsive>
@@ -281,21 +226,33 @@ function CheckInEdit(){
 
                                 </Accordion.Body>
                             </Accordion.Item>
+
+
+                            <Accordion.Item eventKey="3">
+                                <Accordion.Header><h5>Billing Details</h5></Accordion.Header>
+                                <Accordion.Body className='light-violet-bg'>
+
+                                <CheckInEditBilling/>
+
+                                </Accordion.Body>
+                            </Accordion.Item>
+                    
+
                     </Accordion>
 
 
                      {/* ----- Billing ------ */}
 
-                     <div className="availability_check_bg my-4">
+                     {/* <div className="availability_check_bg my-4">
                      <h5 className='left mt-2 ps-3 grey'>Billing Details</h5>
                      <hr className='gray'/>
                      <CheckInEditBilling/>
                      </div>  
-                    
+                     */}
                                 
                                 
-                                <div className="row mb-3">
-                                    <div className='col-12 d-flex justify-content-between'>
+                                <div className="row">
+                                    <div className='col-12 d-flex justify-content-between  mb-3'>
                                                 <button type="button" className="btn btn-danger me-2 px-3" ><i class="bi bi-x-lg me-2"></i>Cancel</button>
                                             <div>
                                                 <button className="btn btn-outline-secondary me-3"><i className="bi bi-download me-2"></i>Download</button>
