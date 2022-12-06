@@ -28,7 +28,7 @@ function ReceptionExpectedArrivals() {
     const tdata = () =>{
         
         return( 
-                <tbody>
+                <tbody className='reception-tbody'>
                     {
                      details.map(detail =>  <tr key={detail.id} >
                         <td  style={{color : 'blue'}} >{detail.rese}</td>
