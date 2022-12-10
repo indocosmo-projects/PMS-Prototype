@@ -115,7 +115,7 @@ function CheckInEdit(){
                      {/* <Accordion className="my-4" defaultActiveKey="0" alwaysOpen> */}
                      <Accordion className="my-4">
                             <Accordion.Item eventKey="1">
-                                <Accordion.Header><h5>Room Details</h5><i class="bi bi-check-circle-fill pe-3"></i></Accordion.Header>
+                                <Accordion.Header><h5>Room Details</h5><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
 
                                 <RoomRateTypeDiscount/>
@@ -123,7 +123,7 @@ function CheckInEdit(){
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header><h5>Guest Details</h5><i class="bi bi-check-circle-fill pe-3"></i></Accordion.Header>
+                                <Accordion.Header><h5>Guest Details</h5><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
                                 <Accordion.Body>
 
                                 <Table className='overflow-reservefor' responsive>
@@ -229,7 +229,7 @@ function CheckInEdit(){
 
 
                             <Accordion.Item eventKey="3">
-                                <Accordion.Header><h5>Billing Details</h5></Accordion.Header>
+                                <Accordion.Header><h5>Billing Details</h5><i class="bi bi-exclamation-circle-fill pe-3 accordion-header-icon-red"></i></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
 
                                 <CheckInEditBilling/>
