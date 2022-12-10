@@ -109,21 +109,16 @@ const display = (e) => {
                                     </div>
 
                                     <div className="border-bottom">
-
-                                    <div className="row">  
-
-                                    <div className="col-md-6"> {/* ....left......*/}
-                                        
                                 <div className="row my-3">
-                                    <div className="col-sm-12 col-md-12">
+                                    <div className="col-sm-12 col-md-6">
                                     <div className='row'>
-                                    <div className="col-lg-6 col-md-12">
+                                    <div className="col-md-6">
                                         <div className="inputfieldpadding">
                                             <label className="text-left">First Name<b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
-                                    <div className="col-lg-6 col-md-12">
+                                    <div className="col-md-6">
                                         <div className="inputfieldpadding">
                                             <label className="text-left">Last Name <b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
@@ -132,30 +127,32 @@ const display = (e) => {
                                     </div>
                                     <div className='row'>
                                     <div className='col-12'>
+                                            {/* <Alert variant="primary"> */}
                                             <div className='font-small-gray'>
                                                 <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2 Nights</b> before 
-                                            </div>
+                                                </div>
+                                                {/* <Alert.Link href="#"></Alert.Link> */}
+                                            {/* </Alert> */}
                                     </div>
                                     </div>
                                     </div>
-                                    <div className="col-lg-6 col-md-12">
+                                    <div className="col-sm-6 col-md-3">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Phone Number<b className='text-danger'>*</b></label>
+                                            <label className="text-left">Phone Number <b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
-                                    <div className="col-lg-6 col-md-12">
+                                    <div className="col-sm-6 col-md-3">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">E-mail<b className='text-danger'>*</b></label>
+                                            <label className="text-left">E-mail <b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
                                 </div>
-
                                 
                                 <div className="row my-3">
                                    
-                                    <div className="col-lg-4 col-md-6 col-sm-4">
+                                    <div className="col-lg-2 col-md-3 col-sm-4">
                                         <div className="inputfieldpadding">
                                             <label className="text-left">Gender<b className='text-danger'>*</b></label>
                                             
@@ -167,9 +164,9 @@ const display = (e) => {
                                         </div>
                                     </div>
 
-                                    <div className="col-lg-4 col-md-6 col-sm-4">
+                                    <div className="col-lg-3 col-md-4 col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Country<b className='text-danger'>*</b></label>
+                                            <label className="text-left">Country <b className='text-danger'>*</b></label>
                                           
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -178,9 +175,9 @@ const display = (e) => {
                                             </Form.Select>
                                         </div>
                                     </div>
-                                    <div className="col-lg-4 col-md-6 col-sm-4">
+                                    <div className="col-lg-3 col-md-5 col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">State<b className='text-danger'>*</b></label>
+                                            <label className="text-left">State <b className='text-danger'>*</b></label>
                                             
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -189,7 +186,7 @@ const display = (e) => {
                                             </Form.Select>
                                         </div>
                                     </div>
-                                    <div className="col-lg-12 col-md-12 col-sm-12">
+                                    <div className="col-lg-4 col-md-12 col-sm-12">
                                         <div className="inputfieldpadding">
                                         <label className="text-left">Address</label>
                                             <textarea className="form-control" style={{ height: 30, }} placeholder=""></textarea>
@@ -197,18 +194,11 @@ const display = (e) => {
                                     </div>
                                  
                                 </div>
-
-                                </div> {/* ....left-end......*/}
-
-
-                                <div className="col-md-6 border-left"> {/* ....right......*/}
-
                                 <div className="row mb-3">
-                                    <h6 className="left mb-4">Sharers Details</h6>
+                                    <label className="left mb-2">Sharers Details</label>
                                     <div className="row sharer-bg">
-                                            <div className='col-md-6 col-sm-6 col-6 mb-2'>
+                                            <div className='col-md-3 col-sm-6 col-6 left'>
                                                 <p className='f-light'>Male Audults</p>
-                                                <div className='d-flex justify-content-center'>
                                                 <InputGroup className="mb-3 group-input-width">
                                                 <Button variant="btn btn-secondary" id="button-addon2">
                                                 <i className="bi bi-dash"></i>
@@ -223,11 +213,9 @@ const display = (e) => {
                                                 </Button>
                                                 </InputGroup>
                                                 </div>
-                                                </div>
 
-                                                <div className='col-md-6 col-sm-6 col-6 mb-2'>
+                                                <div className='col-md-3 col-sm-6 col-6 left'>
                                                 <p className='f-light'>Female Adults</p>
-                                                <div className='d-flex justify-content-center'>
                                                     <InputGroup className="mb-3 group-input-width">
                                                     <Button variant="btn btn-secondary" id="button-addon2">
                                                     <i className="bi bi-dash"></i>
@@ -242,11 +230,9 @@ const display = (e) => {
                                                     </Button>
                                                 </InputGroup>
                                                 </div>
-                                                </div>
 
-                                                <div className='col-md-6 col-sm-6 col-6 mb-2'>
+                                                <div className='col-md-3 col-sm-6 col-6 left'>
                                                 <p className='f-light'>Male Childrens</p>
-                                                <div className='d-flex justify-content-center'>
                                                 <InputGroup className="mb-3 group-input-width">
                                                 <Button variant="btn btn-secondary" id="button-addon2">
                                                 <i className="bi bi-dash"></i>
@@ -260,12 +246,10 @@ const display = (e) => {
                                                 <i className="bi bi-plus-lg"></i>
                                                 </Button>
                                                 </InputGroup>
-                                                </div>
                                                 </div>
 
-                                                <div className='col-md-6 col-sm-6 col-6 mb-2'>
+                                                <div className='col-md-3 col-sm-6 col-6 left'>
                                                 <p className='f-light'>Female Childrens</p>
-                                                <div className='d-flex justify-content-center'>
                                                 <InputGroup className="mb-3 group-input-width">
                                                 <Button variant="btn btn-secondary" id="button-addon2">
                                                 <i className="bi bi-dash"></i>
@@ -279,19 +263,15 @@ const display = (e) => {
                                                 <i className="bi bi-plus-lg"></i>
                                                 </Button>
                                                 </InputGroup>
-                                                </div>
                                                 </div>
                                                 </div>
 
                                     </div>
-                                </div> {/* ....right-end......*/}
-                            </div> {/* ....sperator-row-end......*/}
-
                             </div>
 
                                     <div className="col-sm-12" >
                                         <div className="col-sm-12">
-                                            <h6 className="text-start">Reservation Details </h6>
+                                            <h5 className="text-start">Reservation Details </h5>
                                         </div>
 
                                                 <div className="row my-3">

@@ -48,6 +48,10 @@ body{
     font-size: 1.2rem;
 }
 
+.border-left{
+  border-left: solid 1px rgb(233, 233, 233);
+}
+
 /* ----------------------scrollbar--styles---------------------- */
 ::-webkit-scrollbar {
   height: 8px;
