@@ -1,0 +1,39 @@
+.avail-date-head{
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    font-weight: 400;
+    background-color: rgb(60, 60, 60);
+    border-radius: .3em;
+    padding: 0 .5em;
+}
+
+.avail-date{
+    color: rgb(63, 63, 63);
+    font-size: medium;
+    font-weight: 400;
+}
+
+.head-bg{
+    background-color: #f7f7f7;
+    border-radius: 1em !important;
+  }
+
+  .avail-table{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .avail-table th:first-child{
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+
+  .avail-tbody td:first-child{
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: #ffffff;
+  }

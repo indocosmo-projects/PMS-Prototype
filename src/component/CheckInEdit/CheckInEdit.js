@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import RoomAvailability from './RoomAvailability';
+import RoomAvailability from '../Common/RoomAvailability';
 import RoomRateTypeDiscount from './RoomRateTypeDiscount';
 import './CheckInEdit.css';
 import CheckInEditDetails from './CheckInEditDetails';
@@ -38,7 +38,7 @@ function CheckInEdit(){
 
                     <Accordion className="my-4">
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header className='availability-accordion'><h5>Check Availability</h5></Accordion.Header>
+                                <Accordion.Header className='availability-accordion'><h5 className='pt-1'><i class="bi bi-search mx-1"></i>Check Availability</h5></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
 
                                 <RoomAvailability/>

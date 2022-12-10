@@ -127,7 +127,7 @@ border-color: rgb(236, 236, 236);
 }
 
 
-.avail-date-head{
+/* .avail-date-head{
     color: rgb(255, 255, 255);
     font-size: medium;
     font-weight: 400;
@@ -145,28 +145,8 @@ border-color: rgb(236, 236, 236);
 .head-bg{
     background-color: #f7f7f7;
     border-radius: 1em !important;
-  }
+  } */
 
-  .avail-table{
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .avail-table th:first-child{
-    position: sticky;
-    left: 0;
-    z-index: 2;
-    background-color: #f7f7f7;
-  }
-
-  .avail-tbody td:first-child{
-    position: sticky;
-    left: 0;
-    z-index: 2;
-    background-color: #ffffff;
-  }
-  
   /* .room-discount-table{
     background-color: #ffffff;
   } */

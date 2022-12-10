@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table';
 // import Tooltip from 'react-bootstrap/Tooltip';
 // import Popover from 'react-bootstrap/Popover';
 import Badge from 'react-bootstrap/Badge';
-
+import './RoomAvailability.css';
 
 
 function RoomAvailability() {

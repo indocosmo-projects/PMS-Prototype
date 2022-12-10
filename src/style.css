@@ -167,7 +167,7 @@ body{
   padding: 0 .8em;
 }
 .dropdown-menu .dropdown-divider {
-margin: .2em;
+  margin: .2em;
 
 }
 .dropdown-menu{
@@ -188,8 +188,16 @@ margin: .2em;
 width: 100%;
 font-weight: 400;
 }
-.accordion-header > button > i{
+
+/* .accordion-header > button > i{
   color: rgb(0, 170, 0);
+} */
+
+.accordion-header-icon-green{
+  color: rgb(0, 170, 0);
+}
+.accordion-header-icon-red{
+  color: rgb(224, 47, 47);
 }
 
 
