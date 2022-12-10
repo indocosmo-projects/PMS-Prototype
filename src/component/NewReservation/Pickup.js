@@ -7,7 +7,7 @@ function Pickup() {
                 <div className="row">
                                     <div className="col-sm-6 col-md-3">
                                         <div className="form-group">
-                                            <label className="text-left">Pick from</label>
+                                            <label className="text-left">Location</label>
                                            
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -18,21 +18,21 @@ function Pickup() {
                                         </div>
                                     </div>
                                     <div className="col-sm-6 col-md-3">
-                                        <div className="form-group">
-                                            <label className="text-left">Place</label>
-                                            <input type="text" className="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6 col-md-3">
                                     <div className="form-group">
                                         <label className="text-left" htmlFor="departure">Date & Time</label>
                                         <input type="datetime-local" className="form-control departure" name="departure" id="pickup-date" />
                                     </div>
                                     </div>
-                                    <div className="col-sm-6 col-md-3">
+                                    {/* <div className="col-sm-6 col-md-3">
                                         <div className="form-group">
                                             <label className="text-left">Phone Number</label>
                                             <input type="text" className="form-control" placeholder="" />
+                                        </div>
+                                    </div> */}
+                                    <div className="col-sm-6 col-md-6">
+                                        <div className="form-group">
+                                            <label className="text-left">Instructions</label>
+                                            <textarea className="form-control" style={{ height: 30, }} placeholder=""></textarea>
                                         </div>
                                     </div>
                                 </div>

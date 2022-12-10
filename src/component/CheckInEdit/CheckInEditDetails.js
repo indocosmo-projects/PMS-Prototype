@@ -27,7 +27,7 @@ function CheckInEditDetails() {
     ];
     return(
             <div className="section checkdetails light-violet-bg">
-                <div className="container-fluid light-violet-bg">
+                <div className="container-fluid ">
                 
                      <h4 className='left mb-3'><i class="bi bi-person-fill me-2"></i>Guest 1</h4>
 
@@ -390,8 +390,8 @@ function CheckInEditDetails() {
                             
                                 
                 </div>
-                <div className="row">
-                    <hr className='gray mt-0'/>
+                <div className="row mt-3">
+                    {/* <hr className='gray mt-0'/> */}
 
                     <div className="col-12 d-flex justify-content-end">
                 <Button variant="outline-primary px-3 py-1 me-3" size="sm"><i class="bi bi-file-earmark-arrow-up me-2"></i>Copy for all</Button>

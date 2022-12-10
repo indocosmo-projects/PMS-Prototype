@@ -26,7 +26,7 @@ function ReservedBy() {
                                     </div>
                                     <div className="col-sm-6 col-md-3">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">E-mail<b className='text-danger'>*</b></label>
+                                            <label className="text-left">E-mail</label>
                                             <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
@@ -36,7 +36,7 @@ function ReservedBy() {
                                    
                                     <div className="col-sm-6 col-md-2">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Gender <b className='text-danger'>*</b></label>
+                                            <label className="text-left">Gender</label>
                                         
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -48,7 +48,7 @@ function ReservedBy() {
 
                                     <div className="col-sm-6 col-md-3">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Country <b className='text-danger'>*</b></label>
+                                            <label className="text-left">Country</label>
                                            
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -59,7 +59,7 @@ function ReservedBy() {
                                     </div>
                                     <div className="col-sm-6 col-md-3">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">State <b className='text-danger'>*</b></label>
+                                            <label className="text-left">State</label>
                                            
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>

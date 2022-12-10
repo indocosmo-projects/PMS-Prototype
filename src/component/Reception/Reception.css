@@ -300,3 +300,7 @@
   .green{
     color: #338f42;
   }
+
+  .reception-tbody > tr > td{
+    padding: .4em !important;
+  }

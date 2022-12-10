@@ -135,7 +135,7 @@ function Reception() {
   
         return (
             <div className="section">
-                <div className="container-fluid py-0">
+                <div className="container-fluid pb-3">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div'>
                         <h3 className="header"><i className="bi bi-person-workspace me-2"></i>Reception</h3>

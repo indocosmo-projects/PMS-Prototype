@@ -29,7 +29,7 @@ function ReceptionExpectedDepartures() {
     const tdata = () =>{
         
         return( 
-            <tbody>
+            <tbody className='reception-tbody'>
             {
             details.map(detail => <tr key={detail.id} >
                 <td>{detail.roomno}</td>

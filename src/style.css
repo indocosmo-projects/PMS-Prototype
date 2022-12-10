@@ -24,6 +24,16 @@ body{
 .font-light-2{
   font-weight: 400;
 }
+
+.font-small-gray{
+  color: gray;
+  font-size: .825rem;
+  font-weight: 400;
+}
+.round-1{
+  border-radius: .5em;
+}
+
 .container-fluid{
     border-radius:  3px;
     background-color: white ;
@@ -36,6 +46,10 @@ body{
     opacity : 1;
     font-weight: 300;
     font-size: 1.2rem;
+}
+
+.border-left{
+  border-left: solid 1px rgb(233, 233, 233);
 }
 
 /* ----------------------scrollbar--styles---------------------- */
@@ -157,7 +171,7 @@ body{
   padding: 0 .8em;
 }
 .dropdown-menu .dropdown-divider {
-margin: .2em;
+  margin: .2em;
 
 }
 .dropdown-menu{
@@ -178,6 +192,21 @@ margin: .2em;
 width: 100%;
 font-weight: 400;
 }
-.accordion-header > button > i{
+
+/* .accordion-header > button > i{
+  color: rgb(0, 170, 0);
+} */
+
+.accordion-header-icon-green{
   color: rgb(0, 170, 0);
 }
+.accordion-header-icon-red{
+  color: rgb(224, 47, 47);
+}
+
+
+
+/* .table-bordered>*>* {
+  padding-top: .3em !important;
+  padding-bottom: .3em !important;
+} */
