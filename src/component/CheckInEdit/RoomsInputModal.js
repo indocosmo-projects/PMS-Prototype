@@ -5,52 +5,28 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import Modal from 'react-bootstrap/Modal';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
-import RoomsInputModal from './RoomsInputModal';
 
 const animatedComponents = makeAnimated();
 
-function RoomRateTypeDiscount() {
+function RoomsInputModal() {
 
-    const [count, setCount] = useState(1);
-    const [cn, setCn] = useState(5);
-    // const [del, setDel] = useState(0);
-    const details =
-        [
-            { id: 1, name: 'room1' },
-            { id: 2, name: 'room2' },
-            { id: 3, name: 'room3' },
-            { id: 4, name: 'room4' },
-            { id: 5, name: 'room5' },
-        ];
+    // const [count, setCount] = useState(1);
+    // const [cn, setCn] = useState(5);
+    const [show, setShow] = useState(false);
 
-        const handleIncrement = () => {
-            setCount((count + 1 ));
-            setCn(( cn + 1 ));
-            details.push(({ id: cn, name: 'rooms' + cn + '' }));
-        }
-        
-        const handleDecrement = () => {
-            setCount((count - 1 ));
-        }
-
-        // const deleteEachRow = (e) => {
-        //     setDel(e);
-        // }
-        
-        // const display = (e) => {
-        //     let classes = "left ";
-        //     if(del === e){
-        //         classes += "hide" 
-        //         return classes;
-        //     }
-        //     classes += e <= count ? "show " : "hide";
-        //     return classes;
-        // }
-        
-
-    const tdata = () => {
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+    // const details =
+    //     [
+    //         { id: 1, name: 'room1' },
+    //         { id: 2, name: 'room2' },
+    //         { id: 3, name: 'room3' },
+    //         { id: 4, name: 'room4' },
+    //         { id: 5, name: 'room5' },
+    //     ];
         const options = [
             {value: "101", label:"FLR 1, ROOM 101"},
             {value: "202", label:"FLR 2, ROOM 202"},
@@ -59,10 +35,23 @@ function RoomRateTypeDiscount() {
             {value: "305", label:"FLR 3, ROOM 303"},
             {value: "305", label:"FLR 3, ROOM 303"},
         ];
+
+        // const handleIncrement = () => {
+        //     setCount((count + 1 ));
+        //     setCn(( cn + 1 ));
+        //     details.push(({ id: cn, name: 'rooms' + cn + '' }));
+        // }
+        
+        // const handleDecrement = () => {
+        //     setCount((count - 1 ));
+        // }
+
+
+    const tdata = () => {
+        
         return(
             <tbody className='type-tbody'>
 
-            {/* { details.map(detail =>  <tr key={detail.id} className={display(detail.id)} > */}
                        <tr>
                 <td>
                     <select className="form-control form-select text-center">
@@ -157,12 +146,10 @@ function RoomRateTypeDiscount() {
                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="₹ 1400" disabled/>
                 </td>
                 <td>
-                    {/* <button className="btn btn-danger btn-xs me-2" onClick={(e) => deleteEachRow(detail.id)}><i className="bi bi-trash "></i></button> */}
-                <button className="btn btn-outline-danger btn-xs me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
+                <button className="btn btn-outline-danger btn-xs me-2"><i className="bi bi-trash "></i></button>
                 </td>
                     
                 </tr>
-                 {/* )}  */}
         </tbody>
         );
     }
@@ -170,13 +157,54 @@ function RoomRateTypeDiscount() {
 
 
         return(
-                <div>
-                    <div className="padcolumn mt-1" >
-                        {/* <div className="table"> */}
+                <>
+                    <Button variant="primary mb-3" onClick={handleShow}><i class="bi bi-plus-circle me-2"></i>Add Rooms</Button>
+
+                        <Modal show={show} onHide={handleClose}>
+                            <Modal.Header closeButton>
+                            <Modal.Title>Modal heading</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                            {tdata()}
+                            <Form>
+                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Email address</Form.Label>
+                                <Form.Control
+                                    type="email"
+                                    placeholder="name@example.com"
+                                    autoFocus
+                                />
+                                </Form.Group>
+                                <Form.Group
+                                className="mb-3"
+                                controlId="exampleForm.ControlTextarea1"
+                                >
+                                <Form.Label>Example textarea</Form.Label>
+                                <Form.Control as="textarea" rows={3} />
+                                </Form.Group>
+                            </Form>
+                            </Modal.Body>
+                            <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Close
+                            </Button>
+                            <Button variant="primary" onClick={handleClose}>
+                                Save Changes
+                            </Button>
+                            </Modal.Footer>
+      </Modal>
+
+
+
+
+
+
+
+
+
+                    {/* <div className="padcolumn mt-1" >
                             <div className='d-flex justify-content-between'>
-                                {/* <h4 className='left ms-2 mt-2'>Room Details</h4> */}
                                 <div>
-                                {/* <button className="btn btn-danger btn-xs me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button> */}
                                 </div>
                             </div>
                             <table className="table type-table">
@@ -202,19 +230,17 @@ function RoomRateTypeDiscount() {
                             
 
                             </table>
-                        {/* </div> */}
                             <div className='row'>
                                 <div>
-                                         {/* <button className="btn btn-primary btn-xs my-4" onClick={handleIncrement}><i class="bi bi-plus-circle me-2"></i>Add Rooms</button> */}
-                                         <RoomsInputModal />
+                                         <button className="btn btn-primary btn-xs my-4" onClick={handleIncrement}><i class="bi bi-plus-circle me-2"></i>Add Rooms</button>
                                 </div>
                                 <hr className='gray'/>
                             <div className='col-lg-10 col-md-10 col-3 d-flex justify-content-end total-text'>Grand Total</div>
                             <div className='col-lg-2 col-md-2 col-3 d-flex justify-content-center total-text highlight-bg'>₹ 3000</div>
                             </div>
-                    </div>
-                </div>
+                    </div> */}
+                </>
         );
 }
  
-export default RoomRateTypeDiscount;
+export default RoomsInputModal;

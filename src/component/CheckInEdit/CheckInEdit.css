@@ -326,3 +326,7 @@ select.form-control.form-select.text-center {
     max-width: 130px;
     flex-wrap: nowrap;
   }
+
+.payment-width{
+    max-width: 200px !important;
+}
