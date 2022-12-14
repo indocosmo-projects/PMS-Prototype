@@ -291,7 +291,7 @@ const display = (e) => {
 
                                     <div className="col-sm-12" >
                                         <div className="col-sm-12">
-                                            <h6 className="text-start">Reservation Details </h6>
+                                            <h6 className="text-start">Reservation Details</h6>
                                         </div>
 
                                                 <div className="row my-3">

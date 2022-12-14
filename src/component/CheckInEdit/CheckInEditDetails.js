@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
-import Alert from 'react-bootstrap/Alert';
+// import Alert from 'react-bootstrap/Alert';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -39,6 +39,9 @@ function CheckInEditDetails() {
                                 <Nav.Link eventKey="first">Guest Details <i class="bi bi-caret-right-fill"></i></Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
+                                <Nav.Link eventKey="sharer">Sharer Details <i class="bi bi-caret-right-fill"></i></Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
                                 <Nav.Link eventKey="second">ID Proofs <i class="bi bi-caret-right-fill"></i></Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
@@ -66,33 +69,60 @@ function CheckInEditDetails() {
                                     <div className='col-lg-10'>
                                 <div className="row mb-3">
 
-                                     <div className="col-md-12 col-lg-4 mb-2">
+                                     {/* <div className="col-md-12 col-lg-4 mb-2">
                                         <div className="form-group">
                                                 <label className="text-left">Name<b className='text-danger'>*</b></label>
                                                 <input type="text" className="form-control" placeholder="" id="fname" />
                                             </div>
-                                     </div>
-                                     <div className="col-md-12 col-lg-4 mb-2">
+                                     </div> */}
+
+
+                                <div className="col-lg-12 col-sm-12 col-md-12">
+                                    <div className='row'>
+                                    <div className="col-lg-6 col-md-12">
+                                        <div className="inputfieldpadding">
+                                            <label className="text-left">First Name<b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" placeholder="" />
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6 col-md-12">
+                                        <div className="inputfieldpadding">
+                                            <label className="text-left">Last Name <b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" placeholder="" />
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div className='row'>
+                                    <div className='col-12'>
+                                            <div className='font-small-gray'>
+                                                <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2 Nights</b> before 
+                                            </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+
+                                     <div className="col-md-12 col-lg-6 mb-2">
                                         <div className="form-group ">
                                                 <label className="text-left">Phone Number<b className='text-danger'>*</b></label>
                                                 <input type="text" className="form-control" placeholder="" id="phone" />
                                             </div>
                                      </div>
-                                     <div className="col-md-12 col-lg-4 mb-2">
+                                     <div className="col-md-12 col-lg-6 mb-2">
                                         <div className="form-group ">
                                                 <label className="text-left">E mail<b className='text-danger'>*</b></label>
                                                 <input type="text" className="form-control" placeholder="" id="emailaddress" />
                                             </div>
                                      </div>
                                      </div>
-                                     <div className="row mb-3">
+                                     {/* <div className="row mb-3">
                                     <div className="col-sm-12">
                                             <Alert variant="primary">
                                             <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2 Nights</b> before 
                                                 <Alert.Link href="#"></Alert.Link>
                                                 </Alert>
-                                                </div>
-                                    </div>
+                                            </div>
+                                    </div> */}
 
                                      </div>
                                     
@@ -143,45 +173,7 @@ function CheckInEditDetails() {
 
                                     </div>
 
-                                    <div className="row mb-3">
-                                    <label className="text-left left mb-2">Sharers Details</label>
-                                    <div className="col-lg-12 d-flex flex-row gap-3 sharer-bg">
-                                            <div>
-                                                <p className='f-light'>Number of Adults</p>
-                                                <InputGroup className="mb-3 group-input-width">
-                                                <Button variant="btn btn-secondary" id="button-addon2">
-                                                <i className="bi bi-dash"></i>
-                                                </Button>
-                                                <Form.Control className='text-center'
-                                                    placeholder="1"
-                                                    aria-label="1"
-                                                    aria-describedby="basic-addon2"
-                                                />
-                                                <Button variant="btn btn-secondary" id="button-addon2">
-                                                <i className="bi bi-plus-lg"></i>
-                                                </Button>
-                                                </InputGroup>
-                                                </div>
-
-                                                <div>
-                                                <p className='f-light'>Number of Children</p>
-                                                    <InputGroup className="mb-3 group-input-width">
-                                                    <Button variant="btn btn-secondary" id="button-addon2">
-                                                    <i className="bi bi-dash"></i>
-                                                    </Button>
-                                                    <Form.Control className='text-center'
-                                                        placeholder="1"
-                                                        aria-label="1"
-                                                        aria-describedby="basic-addon2"
-                                                    />
-                                                    <Button variant="btn btn-secondary" id="button-addon2">
-                                                    <i className="bi bi-plus-lg"></i>
-                                                    </Button>
-                                                </InputGroup>
-                                                </div>
-                                                </div>
-
-                                    </div>
+                                    
 
                                     {/* <div className="row">
 
@@ -196,6 +188,93 @@ function CheckInEditDetails() {
 
 
                         </Tab.Pane>
+
+
+                        <Tab.Pane eventKey="sharer">
+                        <div className="row mb-3">
+                                    {/* <h6 className="left mb-4">Sharers Details</h6> */}
+                                    <div className="row sharer-bg">
+                                            <div className='col-md-6 col-sm-6 col-6 mb-2'>
+                                                <p className='f-light'>Male Audults</p>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                <div className='d-flex justify-content-center'>
+                                                <InputGroup className="mb-3 group-input-width">
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-dash"></i>
+                                                </Button>
+                                                <Form.Control className='text-center'
+                                                    placeholder="0"
+                                                    aria-label="1"
+                                                    aria-describedby="basic-addon2"
+                                                />
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-plus-lg"></i>
+                                                </Button>
+                                                </InputGroup>
+                                                </div>
+                                                </div>
+
+                                                <div className='col-md-6 col-sm-6 col-6 mb-2'>
+                                                <p className='f-light'>Female Adults</p>
+                                                <div className='d-flex justify-content-center'>
+                                                    <InputGroup className="mb-3 group-input-width">
+                                                    <Button variant="btn btn-secondary" id="button-addon2">
+                                                    <i className="bi bi-dash"></i>
+                                                    </Button>
+                                                    <Form.Control className='text-center'
+                                                        placeholder="0"
+                                                        aria-label="1"
+                                                        aria-describedby="basic-addon2"
+                                                    />
+                                                    <Button variant="btn btn-secondary" id="button-addon2">
+                                                    <i className="bi bi-plus-lg"></i>
+                                                    </Button>
+                                                </InputGroup>
+                                                </div>
+                                                </div>
+
+                                                <div className='col-md-6 col-sm-6 col-6 mb-2'>
+                                                <p className='f-light'>Male Childrens</p>
+                                                <div className='d-flex justify-content-center'>
+                                                <InputGroup className="mb-3 group-input-width">
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-dash"></i>
+                                                </Button>
+                                                <Form.Control className='text-center'
+                                                    placeholder="0"
+                                                    aria-label="1"
+                                                    aria-describedby="basic-addon2"
+                                                />
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-plus-lg"></i>
+                                                </Button>
+                                                </InputGroup>
+                                                </div>
+                                                </div>
+
+                                                <div className='col-md-6 col-sm-6 col-6 mb-2'>
+                                                <p className='f-light'>Female Childrens</p>
+                                                <div className='d-flex justify-content-center'>
+                                                <InputGroup className="mb-3 group-input-width">
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-dash"></i>
+                                                </Button>
+                                                <Form.Control className='text-center'
+                                                    placeholder="0"
+                                                    aria-label="1"
+                                                    aria-describedby="basic-addon2"
+                                                />
+                                                <Button variant="btn btn-secondary" id="button-addon2">
+                                                <i className="bi bi-plus-lg"></i>
+                                                </Button>
+                                                </InputGroup>
+                                                </div>
+                                                </div>
+                                                </div>
+
+                                    </div>
+
+                        </Tab.Pane>
+
                         <Tab.Pane eventKey="second">
 
                                 <div className="row mb-3 left">

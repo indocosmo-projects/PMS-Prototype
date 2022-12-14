@@ -37,11 +37,8 @@ function ReceptionExpectedArrivals() {
                         <td >{detail.nights}</td>
                         <td >{detail.rooms}</td>
                         <td >{detail.bookedby}</td>
-                        {/* <td >{detail.bookedfor}</td> */}
                         <td><h6 className='d-flex justify-content-between'>{detail.bookedfor}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
                         <td >{detail.bookedon}</td>
-                        {/* <td className="bg-success text-white" >CHECK-IN</td> */}
-                        {/* <td><button className="btn btn-primary"><i class="bi bi-plus-circle me-2"></i>Check-in</button></td> */}
                         <td>
                                 <Dropdown as={ButtonGroup}>
                                 <Link to="/checkinedit"><Button variant="primary right-br-none btn-sm"><i class="bi bi-plus-circle me-2"></i>Check-in</Button></Link>
@@ -121,12 +118,10 @@ function ReceptionExpectedArrivals() {
   
 
         return (
-                <div className="container-fluid tab-bg">
-               
-                    {/* <div className="p-3"> */}
+                <div className="container-fluid tab-bg p-1">
                     <div className="row">
-                    <div className="col-sm-6">
-                            <div className="input-group mb-3 ">
+                    <div className="col-sm-12 col-md-6">
+                            <div className="input-group mb-3">
                                         <input type="text" className="form-control" placeholder="Search..." />
                                         <button className="btn btn-outline-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button>
                                         <button className="btn btn-dark px-4" title="Search" ><i class="bi bi-search"></i></button>
@@ -137,36 +132,21 @@ function ReceptionExpectedArrivals() {
                                 </div>
                             </div>
                         </div>
+
+                        <div className="col-sm-6 col-md-4 mb-2 d-flex justify-content-end">
+                                <label className="text-left" htmlFor="">Showing Records of</label>
+                                <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
+                        </div>
                        
-                        <div className="col-sm-6">
-                            <div className="mb-3 ">
+                        <div className="col-sm-6 col-md-2">
+                            <div className="mb-3">
                             <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New check-in</button></Link>
                             </div>
                         </div>
+
                     </div>
                   
-                    <div className="row mt-4 d-flex justify-content-between">
-                                {/* <div className="col-6 col-lg-6 d-flex justify-content-start">
-                                    <Form.Select className='records-fixed-size' size='sm' aria-label="No of Records" name="rec" id="rec" >
-                                        <option value="1">5</option>
-                                        <option value="2">10</option>
-                                        <option value="3">15</option>
-                                        <option value="3">All</option>
-                                    </Form.Select>
-                                    <label className="text-left" htmlFor="">Records per Page</label>
-
-                                </div> */}
-                              
-                                <div className="col-lg-12 mb-2 d-flex justify-content-end">
-                                        <label className="text-left" htmlFor="">Showing Records of</label>
-                                        <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
-                            </div>
-                               
-                            </div>
-
-                               
-                     
-
+                   
                      <table className="table table-bordered reception-table">
                         <thead >
                             <tr>
@@ -185,7 +165,6 @@ function ReceptionExpectedArrivals() {
 
                     </table>
                     
-                    {/* </div> */}
                 </div>
                 
         );

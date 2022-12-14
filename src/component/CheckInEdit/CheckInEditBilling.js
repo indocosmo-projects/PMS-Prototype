@@ -5,7 +5,10 @@ import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+// import Select from 'react-select';
+// import makeAnimated from 'react-select/animated';
 
+// const animatedComponents = makeAnimated();
 
 function CheckInEditBilling() {
     
@@ -13,6 +16,15 @@ function CheckInEditBilling() {
     const changeHandler = e => {
       setSelected(e.target.value);
     };
+    // const options = [
+    //     {value: "101", label:"FLR 1, ROOM 101"},
+    //     {value: "202", label:"FLR 2, ROOM 202"},
+    //     {value: "303", label:"FLR 3, ROOM 303"},
+    //     {value: "304", label:"FLR 3, ROOM 303"},
+    //     {value: "305", label:"FLR 3, ROOM 303"},
+    //     {value: "305", label:"FLR 3, ROOM 303"},
+    // ];
+
 
     return(
         <div className="CheckInEditBilling">
@@ -124,11 +136,57 @@ function CheckInEditBilling() {
 
                         </Form>
                         </div>
+                        
+
+                        {/* <div className="availability_check_bg mt-3">
+                        <div className="row">
+                            <div className="col-12">
+                                <h6 className='left ps-3 grey py-2'>Payment Details</h6>
+                                <hr className='gray mb-4 mt-0'/>
+
+                                <div className="col-12">
+                                <Select
+                            closeMenuOnSelect={false}
+                            components={animatedComponents}
+                            // defaultValue={}
+                            isMulti
+                            options={options}
+                            className="basic-multi-select"
+                            classNamePrefix="select"
+                            menuPlacement="auto"
+                            menuPortalTarget={document.body}
+                            menuPosition={'fixed'}
+                        />
+                            </div>
+                        </div>
+                        </div>
+                        </div> */}
 
                         <div className="availability_check_bg mt-3">
                         <div className="row">
                             <div className="col-12">
-                                <h6 className='left ps-3 grey py-2'>Deposit details</h6>
+                                <h6 className='left ps-3 grey py-2'>Payment Details</h6>
+                                <hr className='gray mb-4 mt-0'/>
+
+                                <div className="form-group mb-3 d-flex justify-content-center">
+                                    <label className="text-left" htmlFor="source">Payment method<b className='text-danger'>*</b></label>
+                                            <Form.Select className="payment-width" aria-label="Default select example">
+                                            <option value="1">INDIVIDUAL</option>
+                                            <option value="2">CORPORATE</option>
+                                            </Form.Select>
+                                 
+                                </div>
+
+                               
+                        </div>
+                        </div>
+                        </div>
+
+                                
+                        <div className="availability_check_bg mt-3">
+                        <div className="row">
+                            <div className="col-12">
+                                <h6 className='left ps-3 grey py-2'>Deposit Details</h6>
                                 <hr className='gray mb-4 mt-0'/>
                                 <div className="sharer-bg pb-4 mx-2">
                                 <Button variant="primary"><i class="bi bi-piggy-bank-fill me-2"></i>Deposit</Button>

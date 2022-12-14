@@ -29,14 +29,14 @@ function CheckInEdit(){
             <div className="section">
                 <div className="container-fluid formcontent py-0">
                     {/* ----- Heading ------ */}
-                    <div className='sticky-div d-flex justify-content-between'>
-                        <h3 className="header">Check In <span className="dark-bg"><i class="bi bi-pencil-square me-1"></i>Edit</span></h3>
+                    <div className='sticky-div d-flex justify-content-between pb-1'>
+                        <h3 className="header">Check In<span className="dark-bg ms-2"><i class="bi bi-pencil-square me-1"></i>Edit</span></h3>
                         <Link to="/reception"><Button variant="outline-secondary" size="sm"><i class="bi bi-arrow-left me-2"></i>Back</Button></Link>
                     </div>
 
 
 
-                    <Accordion className="my-4">
+                    {/* <Accordion className="my-4">
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header className='availability-accordion'><h5 className='pt-1'><i class="bi bi-search mx-1"></i>Check Availability</h5></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
@@ -45,43 +45,50 @@ function CheckInEdit(){
 
                                 </Accordion.Body>
                             </Accordion.Item>
-
-                            </Accordion>
+                            </Accordion> */}
 
 
                      {/* ----- Form   ------ */}
                      
                      <div className='checkdetails light-violet-bg'>
                         <div className="row p-4">
-                            <div className="col-md-3">
+                            <div className="col-xl-2 col-md-4 col-sm-6">
                                         <div className="form-group mb-3">
-                                            <label className="text-left" htmlFor="arrival">Arrival</label>
+                                            <label className="text-left" htmlFor="arrival">Arrival<b className='text-danger'>*</b></label>
                                             <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival" />
                                         </div>
                                     
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-xl-2 col-md-4 col-sm-6">
                                         <div className="form-group">
-                                            <label className="text-left" htmlFor="departure">Departure</label>
+                                            <label className="text-left" htmlFor="departure">Departure<b className='text-danger'>*</b></label>
                                             <input type="datetime-local" className="form-control departure" name="departure" id="departure" />
                                         </div>
                             </div>
                             
-                            <div className="col-md-3">
+                            <div className="col-xl-2 col-md-4 col-sm-6">
                                 <div className="form-group mb-3">
-                                    <label className="text-left" htmlFor="source">Source</label>
+                                    <label className="text-left" htmlFor="source">Source<b className='text-danger'>*</b></label>
                                     <Form.Select aria-label="Default select example">
-                                            <option>FIT/TA/CORPORATE</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
+                                            <option>FIT</option>
+                                            <option value="1">TA</option>
+                                            <option value="2">CORPORATE</option>
                                             </Form.Select>
                                  
                                 </div>
- 
                             </div>
-                            <div className="col-md-3">
+
+                            <div className="col-xl-3 col-md-4 col-sm-6">
                                     <div className="form-group">
-                                        <label className="text-left" htmlFor="pwd">Name</label>
+                                        <label className="text-left" htmlFor="pwd">TA/Company<b className='text-danger'>*</b></label>
+                                        <input type="password" className="form-control" placeholder="Name" id="pwd" />
+                                    </div>
+
+                             </div>
+
+                             <div className="col-xl-3 col-md-4 col-sm-6">
+                                    <div className="form-group">
+                                        <label className="text-left" htmlFor="pwd">GST<b className='text-danger'>*</b></label>
                                         <input type="password" className="form-control" placeholder="Name" id="pwd" />
                                     </div>
 

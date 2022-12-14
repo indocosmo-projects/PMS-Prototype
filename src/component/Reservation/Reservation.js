@@ -150,7 +150,7 @@ function Reservation() {
   
     
         return (
-            <div className="section ">
+            <div className="section h-100">
                 <div className="container-fluid py-0">
                     {/* ----- Heading ------ */}
                     <div className="sticky-div">
