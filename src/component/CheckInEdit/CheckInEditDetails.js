@@ -195,7 +195,7 @@ function CheckInEditDetails() {
                                     {/* <h6 className="left mb-4">Sharers Details</h6> */}
                                     <div className="row sharer-bg">
                                             <div className='col-md-6 col-sm-6 col-6 mb-2'>
-                                                <p className='f-light'>Male Audults</p>
+                                                <p className='f-light'>Male Audults</p>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                                                 <div className='d-flex justify-content-center'>
                                                 <InputGroup className="mb-3 group-input-width">
                                                 <Button variant="btn btn-secondary" id="button-addon2">

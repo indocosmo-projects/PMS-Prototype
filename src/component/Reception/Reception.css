@@ -11,18 +11,12 @@
     width : 320px;
 }
 
-/* .tdwidth{
-    width : 630px;
-} */
-
 .reception-table{
-    /* border-radius:.5em; */
     padding: .5em;
     overflow-x: auto;
     white-space: nowrap;
     min-width: 100%;
-    /* box-shadow: 3px 3px 10px rgba(129, 141, 163, 0.134); */
-    /* border: .5px solid rgb(235, 235, 235); */
+
 }
 
 @media only screen and (max-width: 1300px) {
@@ -67,12 +61,8 @@
 
 .active{
     background-color: rgb(255, 255, 255);
-    /* color: white; */
 }
 
-/* .active:hover{
-    color: white;
-} */
 
 .shade{
     background-color:  rgb(241, 238, 238); 
@@ -84,7 +74,6 @@
 .left{
     text-align : left;
 }
-
 
 .occupied{
     color : var(--occupied);
@@ -234,7 +223,6 @@
 
 
 .status-hint-bg{
-    /* background-color: rgb(255, 255, 255); */
     background-color: var(--tab-bg);
     padding: .5em 0;
     display: flex;
@@ -284,7 +272,6 @@
     position:-webkit-sticky;
     position: sticky;
     display: block;
-    /* top: 143px; */
     top: 40px;
     z-index: 998;
   }
@@ -302,5 +289,5 @@
   }
 
   .reception-tbody > tr > td{
-    padding: .4em !important;
+    padding: .1em !important;
   }

@@ -36,7 +36,7 @@ function CheckInEdit(){
 
 
 
-                    <Accordion className="my-4">
+                    {/* <Accordion className="my-4">
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header className='availability-accordion'><h5 className='pt-1'><i class="bi bi-search mx-1"></i>Check Availability</h5></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
@@ -45,8 +45,7 @@ function CheckInEdit(){
 
                                 </Accordion.Body>
                             </Accordion.Item>
-
-                            </Accordion>
+                            </Accordion> */}
 
 
                      {/* ----- Form   ------ */}

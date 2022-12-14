@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './Reception.css';
 import '../../style.css';
 import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table';
+// import Table from 'react-bootstrap/Table';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Badge from 'react-bootstrap/Badge';
@@ -37,23 +37,13 @@ function ReceptionExpectedDepartures() {
                 <td>{detail.arrival}</td>
                 <td>{detail.departure}</td>
                 <td>{detail.foliobalance}</td>
-                {/* <td className="bg-success text-white">CHECK-IN</td> */}
                 <td>
                     <button className="btn btn-primary btn-sm"><i class="bi bi-cash-coin me-2"></i>Deposit</button>
                 </td>
                         
                         <td>
-                            {/* <button className="btn btn-primary"><i class="bi bi-clipboard2-check me-2"></i>Posting</button> */}
                             <Posting />
                             </td>
-                    
-                        {/* <td>
-                            <button className="btn btn-primary"><i class="bi bi-receipt me-2"></i>Bill Preview</button>
-                            </td>
-                        
-                        <td>
-                            <button className="btn btn-primary"><i class="bi bi-person-plus-fill me-2"></i>Sharer</button>
-                        </td> */}
                      
                         <td>
                         <Dropdown as={ButtonGroup}>
@@ -154,17 +144,7 @@ function ReceptionExpectedDepartures() {
                         </div>
  
                      <div className="row mt-4 d-flex justify-content-between">
-                                {/* <div className="col-6 col-lg-6 d-flex justify-content-start">
-                                    <Form.Select className='records-fixed-size' size='sm' aria-label="No of Records" name="rec" id="rec" >
-                                        <option value="1">5</option>
-                                        <option value="2">10</option>
-                                        <option value="3">15</option>
-                                        <option value="3">All</option>
-                                    </Form.Select>
-                                    <label className="text-left" htmlFor="">Records per Page</label>
 
-                                </div> */}
-                              
                                 <div className="col-lg-12 mb-2 d-flex justify-content-end">
                                         <label className="text-left" htmlFor="">Showing Records of</label>
                                         <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
@@ -175,7 +155,7 @@ function ReceptionExpectedDepartures() {
                                
                          
                         <div>
-                            <Table className="table table-bordered reception-table" responsive>
+                            <table className="table table-bordered reception-table">
                                 <thead>
                                     <tr>
                                         <th>Room No.</th>
@@ -185,14 +165,12 @@ function ReceptionExpectedDepartures() {
                                         <th>Folio Balance</th>
                                         <th>Deposit</th>
                                         <th>Posting</th>
-                                        {/* <th>Bill Previews</th>
-                                        <th>Add Sharer</th> */}
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                         {tdata()}
 
-                            </Table>
+                            </table>
                         </div>
                 </div>
                 
