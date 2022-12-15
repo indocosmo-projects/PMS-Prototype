@@ -129,12 +129,10 @@ body{
     position:-webkit-sticky;
     position: sticky;
     display: block;
-    /* top: 90px; */
     top: 0px;
     z-index: 998;
-    /* padding:.5em 0; */
     padding-top: .5em;
-    margin-bottom: .5em;
+    /* margin-bottom: .5em; */
     border-bottom: solid 1px #f0f0f0;
 }
 
@@ -185,10 +183,10 @@ body{
 
 /* ----accordion edits---------- */
 .accordion-header > button{
-  padding: .5em;
+  padding: .2em .5em;
   background-color: rgb(247, 247, 247);
 }
-.accordion-header > button > h5{
+.accordion-header > button > h6{
 width: 100%;
 font-weight: 400;
 }
@@ -210,3 +208,7 @@ font-weight: 400;
   padding-top: .3em !important;
   padding-bottom: .3em !important;
 } */
+
+.pt-45{
+  padding-top: 32px;
+}
