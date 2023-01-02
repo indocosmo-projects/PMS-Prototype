@@ -4,50 +4,40 @@ import '../../style.css';
 import './NewReservation.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import RoomAvailability from '../Common/RoomAvailability';
+// import RoomAvailability from '../Common/RoomAvailability';
 import RoomRateTypeDiscount from './RoomRateTypeDiscount';
 // import RoomsInputModal from './RoomsInputModal';
 import ReservedBy from './ReservedBy';
 import ReservedFor from './ReservedFor';
 import Deposit from './Desposit';
 import Pickup from './Pickup';
+import CheckRooms from './CheckRooms';
 
 
 function NewReservation() {
 
    
     return(
-        <div>
-            <div className="section">
-                <div className="container-fluid formcontent py-0">
+                <div className="container-fluid formcontent py-0 h-100">
                     {/* ----- Heading ------ */}
-                    <div className='sticky-div'>
+                    <div className='sticky-div d-flex justify-content-between'>
                         <h3 className="header"><i class="bi bi-calendar2-plus-fill me-2"></i>New Reservation</h3>
-                    </div>
-
-
-                        <Accordion className="my-4">
+                        {/* <Accordion>
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header className='availability-accordion'><h5 className='pt-1'><i class="bi bi-search mx-1"></i>Check Availability</h5></Accordion.Header>
+                                <Accordion.Header className='availability-accordion'><h6 className='pt-1'><i class="bi bi-search mx-1"></i>Check Availability</h6></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
 
                                 <RoomAvailability/>
 
                                 </Accordion.Body>
                             </Accordion.Item>
-                            </Accordion>
+                            </Accordion> */}
+                            <CheckRooms />
+                    </div>
 
 
-
-                     {/* ----- Room Availability ------ */}
-                     {/* <div className="availability_check_bg my-4">
-                        <h5 className='left mt-2 ps-3 grey'>Check Availability</h5>
-                        <hr className='gray'/>
-                     <RoomAvailability/>
-                     </div>   */}
                         
                      {/* ----- Form   ------ */}
-                    <div className="">
                         <form action="#">
                             <div className="row">
                                 <div className="col-md-4 col-lg-2">
@@ -93,7 +83,6 @@ function NewReservation() {
                                 </div>
                             </div>
                         </form>
-                    </div>
 
 
                     
@@ -108,17 +97,9 @@ function NewReservation() {
                    
 
                      {/* <Accordion className="my-4" defaultActiveKey="0" alwaysOpen> */}
-                     <Accordion className="my-4">
-                                {/* <Accordion.Item eventKey="0">
-                                <Accordion.Header><h5>Check Availability</h5></Accordion.Header>
-                                <Accordion.Body className='light-violet-bg'>
-
-                                <RoomAvailability/>
-
-                                </Accordion.Body>
-                            </Accordion.Item> */}
+                     <Accordion className="my-1">
                                 <Accordion.Item eventKey="0">
-                                <Accordion.Header><h5 className='me-2'>Room Details</h5><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
+                                <Accordion.Header><h6 className='me-2'>Room Details</h6><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
 
                     {/* ----- Room Reserved By  ------ */}
@@ -127,7 +108,7 @@ function NewReservation() {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
-                                <Accordion.Header><h5 className='me-2'>Reserved By</h5> <i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
+                                <Accordion.Header><h6 className='me-2'>Reserved By</h6><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
 
                     {/* ----- Room Reserved By  ------ */}
@@ -136,7 +117,7 @@ function NewReservation() {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header><h5  className='me-2'>Reserved For</h5><i class="bi bi-exclamation-circle-fill pe-3 accordion-header-icon-red"></i></Accordion.Header>
+                                <Accordion.Header><h6  className='me-2'>Reserved For</h6><i class="bi bi-exclamation-circle-fill pe-3 accordion-header-icon-red"></i></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
                                     
                     {/* -------- Reserved For----------- */}
@@ -145,7 +126,7 @@ function NewReservation() {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="3">
-                                <Accordion.Header><h5>Deposit Details</h5></Accordion.Header>
+                                <Accordion.Header><h6>Deposit Details</h6></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
                                     
                     {/* -------- Reserved For----------- */}
@@ -154,7 +135,7 @@ function NewReservation() {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="4">
-                                <Accordion.Header><h5>Pick Up Details</h5></Accordion.Header>
+                                <Accordion.Header><h6>Pick Up Details</h6></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg'>
                                     
                     {/* -------- Reserved For----------- */}
@@ -180,14 +161,7 @@ function NewReservation() {
                                         </div>
                                 </div>
                                 
-                                
-                  
-
-                    
-
                 </div>
-            </div>
-        </div>
     );
 }
  

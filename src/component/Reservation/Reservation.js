@@ -150,16 +150,18 @@ function Reservation() {
   
     
         return (
-            <div className="section h-100">
-                <div className="container-fluid py-0">
+                <div className="container-fluid py-0 h-100">
                     {/* ----- Heading ------ */}
-                    <div className="sticky-div">
+                    <div className="sticky-div d-flex justify-content-between">
                             <h3 className="header"><i className="bi bi-calendar-week-fill me-2"></i>Reservations</h3>
+                            <button className="btn btn-sm pe-3" title="New Reservation"><i className="bi bi-arrow-repeat me-2"></i>Update data</button>
                         </div>
+                        
+
                     <div className="row search-area-bg">
 
                         <div className="row d-flex justify-content-between">
-                        <div className="col-sm-6">
+                        <div className="col-lg-6 col-sm-12">
                             <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
                                         <button className="btn btn-outline-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button>
@@ -171,41 +173,19 @@ function Reservation() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-6 d-flex justify-content-end">
+                        <div className="col-lg-4 col-sm-6 mb-2 d-flex justify-content-end">
+                                        <label className="text-left" htmlFor="">Showing Records of</label>
+                                        <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
+                            </div>
+                        <div className="col-lg-2 col-sm-6 d-flex justify-content-end">
                                     <div className="mb-3 ">
                                         <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation"><i className="bi bi-plus-circle me-2"></i>New reservation</button></Link>
                                     </div>
                         </div>
                         </div>
 
-                        <div className="mb-0">
 
-                            <div className="row d-flex justify-content-between">
-                                {/* <div className="col-6 col-lg-6 d-flex justify-content-start">
-                                    <Form.Select className='records-fixed-size' size='sm' aria-label="No of Records" name="rec" id="rec" >
-                                        <option value="1">5</option>
-                                        <option value="2">10</option>
-                                        <option value="3">15</option>
-                                        <option value="3">All</option>
-                                    </Form.Select>
-                                    <label className="text-left" htmlFor="">Records per Page</label>
-
-                                </div> */}
-                             
-                                
-                                <div className='col-lg-6 d-flex justify-content-start'>
-                                <button className="btn btn-dark btn-sm update-btn" title="New Reservation"><i className="bi bi-arrow-repeat me-2"></i>Update data</button>
-                                </div>
-                                <div className="col-lg-6 mb-2 d-flex justify-content-end">
-                                        <label className="text-left" htmlFor="">Showing Records of</label>
-                                        <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
-                            </div>
-                               
-                            </div>
-
-
-
-                            <div className="row mb-2">
+                            <div className="row">
                                 <div className="col-sm-12 reservation_table">
                                     <Table className="table table-striped table-bordered" responsive>
                                         <thead >
@@ -249,10 +229,8 @@ function Reservation() {
                                             </div>
 
 
-                        </div>
                     </div>
                 </div>
-            </div>
         );
     
     }

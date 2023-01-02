@@ -1,10 +1,10 @@
 import React, {  useState } from 'react';
 import Table from 'react-bootstrap/Table';
-// import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-// import Tooltip from 'react-bootstrap/Tooltip';
-// import Popover from 'react-bootstrap/Popover';
 import Badge from 'react-bootstrap/Badge';
+// import DateRangePicker from 'rsuite/DateRangePicker';
 import './RoomAvailability.css';
+// import { DatePicker } from 'rsuite';
+
 
 
 function RoomAvailability() {
@@ -36,14 +36,14 @@ function RoomAvailability() {
         <div className="row">
                 <div className="col-lg-3 mb-2">
                         <div className="form-group">
-                            <label className="text-left" htmlFor="arrival">Arrival Time <b className='text-danger'>*</b></label>
+                            <label className="text-left" htmlFor="arrival">Checkin Time<b className='text-danger'>*</b></label>
                             <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival" onChange={(e) => setArrdate((e.target.value))}/>
                         </div>
                 </div>
 
                 <div className="col-lg-3 mb-2">
                         <div className="form-group">
-                            <label className="text-left" htmlFor="departure">Departure Time <b className='text-danger'>*</b></label>
+                            <label className="text-left" htmlFor="departure">Checkout Time<b className='text-danger'>*</b></label>
                             <input type="datetime-local" className="form-control departure" name="departure" onChange={(e) => setDeptdate((e.target.value))} id="departure" />
                         </div>
 
@@ -58,20 +58,17 @@ function RoomAvailability() {
 
                 <div className="col-lg-2 mb-2">   
                         <div className="form-group">
-                            <label className="text-left" htmlFor="rooms">Rooms <b className='text-danger'>*</b></label>
+                            <label className="text-left" htmlFor="rooms">No. of Rooms<b className='text-danger'>*</b></label>
                             <input type="number"  className="form-control"  placeholder="Select Rooms count" min="1"  name="rooms" id="rooms"  />
                         </div>
                 </div>
 
-                <div className="col-lg-3 mb-2  mt-1">   
-                    <div className="form-group" >
-                        {/* <div className='row'>
-                    <label className="grey mb-1" htmlFor="rooms">Click <b>Go</b> to check availability</label>
-                    </div> */}
-                    <div className='row justify-content-center pt-4'>
-                        <button type="button" className="btn btn-primary w-50"><i class="bi bi-search me-2"></i>Check Availability</button>
-                        </div>
-                    </div>
+                <div className="col-lg-3 mb-2 pt-45">   
+                    {/* <div className="form-group" > */}
+                    {/* <div className='row justify-content-center'> */}
+                        <button type="button" className="btn btn-primary btn"><i class="bi bi-search me-2"></i>Check</button>
+                        {/* </div> */}
+                    {/* </div> */}
                 </div>
         </div> 
 
