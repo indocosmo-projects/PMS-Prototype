@@ -37,7 +37,7 @@ body{
 .container-fluid{
     border-radius:  3px;
     background-color: white ;
-    padding : 1em !important;
+    /* padding : 1em !important; */
 }
 
 .header {
@@ -50,6 +50,11 @@ body{
 
 .border-left{
   border-left: solid 1px rgb(233, 233, 233);
+}
+
+
+.h-100 {
+  min-height: 80vh;
 }
 
 /* ----------------------scrollbar--styles---------------------- */

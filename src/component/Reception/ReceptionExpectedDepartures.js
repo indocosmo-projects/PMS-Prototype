@@ -33,7 +33,7 @@ function ReceptionExpectedDepartures() {
             {
             details.map(detail => <tr key={detail.id} >
                 <td>{detail.roomno}</td>
-                <td><h6 className='d-flex justify-content-between'>{detail.guest}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
+                <td><h6 className='d-flex justify-content-between pt-2 px-1'>{detail.guest}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
                 <td>{detail.arrival}</td>
                 <td>{detail.departure}</td>
                 <td>{detail.foliobalance}</td>
@@ -120,12 +120,12 @@ function ReceptionExpectedDepartures() {
   
 
         return (
-                <div className="container-fluid tab-bg">
-                        <div className="row">
-                        <div className="col-sm-6">
-                            <div className="input-group mb-3 ">
+                <div className="container-fluid tab-bg pb-2">
+                    <div className="row">
+                    <div className="col-sm-12 col-md-6">
+                            <div className="input-group mb-3">
                                         <input type="text" className="form-control" placeholder="Search..." />
-                                        <button className="btn btn-outline-secondary search-opt-btn"  onClick={count}  ><i className="bi bi-caret-down"></i></button>
+                                        <button className="btn btn-outline-secondary search-opt-btn"  onClick={count} ><i className="bi bi-caret-down"></i></button>
                                         <button className="btn btn-dark px-4" title="Search" ><i class="bi bi-search"></i></button>
                                 </div>
                             <div className="parentdpdown">
@@ -135,26 +135,20 @@ function ReceptionExpectedDepartures() {
                             </div>
                         </div>
 
-         
-                                <div className="col-sm-6">
-                                    <div className="mb-3 ">
-                                    <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New check-in</button></Link>
-                                    </div>
-                                </div>
+                        <div className="col-sm-6 col-md-4 mb-2 d-flex justify-content-end">
+                                <label className="text-left" htmlFor="">Showing Records of</label>
+                                <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
                         </div>
- 
-                     <div className="row mt-4 d-flex justify-content-between">
-
-                                <div className="col-lg-12 mb-2 d-flex justify-content-end">
-                                        <label className="text-left" htmlFor="">Showing Records of</label>
-                                        <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
+                       
+                        <div className="col-sm-6 col-md-2">
+                            <div className="mb-3">
+                            <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New check-in</button></Link>
                             </div>
-                               
-                            </div>
+                        </div>
 
-                               
+                    </div>
+   
                          
-                        <div>
                             <table className="table table-bordered reception-table">
                                 <thead>
                                     <tr>
@@ -171,7 +165,22 @@ function ReceptionExpectedDepartures() {
                                         {tdata()}
 
                             </table>
-                        </div>
+
+                            <div className="row me-1 d-flex justify-content-between">
+                                    
+                                {/*}<div className="col-4 d-flex justify-content-start" ><i className="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                {/* <div className="col-6"></div> */}
+                                <div className="col-12 d-flex justify-content-end">
+                                <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-left"></i><span className="hide-element"></span></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-right"></i></button>
+                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button>
+                                    
+                                </div>
+                            </div>
                 </div>
                 
         );

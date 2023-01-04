@@ -150,7 +150,7 @@ function Reservation() {
   
     
         return (
-                <div className="container-fluid py-0 h-100">
+                <div className="container-fluid py-0 h-100 mb-3">
                     {/* ----- Heading ------ */}
                     <div className="sticky-div d-flex justify-content-between">
                             <h3 className="header"><i className="bi bi-calendar-week-fill me-2"></i>Reservations</h3>

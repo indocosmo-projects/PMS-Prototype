@@ -86,7 +86,6 @@
 }
 
 
-
 .reserved{
     color : var(--reserved);
 }
@@ -98,7 +97,6 @@
 }
 
 
-
 .vaccant{
     color : var(--vaccant);
 }
@@ -108,7 +106,6 @@
 .border-bottom-vaccant{
     border: 5px solid var(--vaccant);
 }
-
 
 
 .clean{
@@ -141,9 +138,13 @@
 }
 
 .room{
-    border-radius : 15px;
-    margin : 10px;
+    border-radius : 10px;
+    margin : 2px;
     box-shadow: 2px 2px 5px rgba(211, 211, 211, 0.288);
+}
+
+hr{
+    margin: 8px !important;
 }
 
 .rmtype{
@@ -167,6 +168,7 @@
     margin : 0px !important;
     padding: 0px;
     overflow : auto;
+    text-align: start;
 }
 
 .listItem{
@@ -175,9 +177,9 @@
 }
 
 .rmnum{
-    height: 50px;
+    height: 30px;
     font-weight: bolder;
-    font-size : 30px;
+    font-size : 28px;
 }
 
 .left{
@@ -255,7 +257,7 @@
     background-color: var(--tab-bg);
 }
 .tab-content-bg{
-    padding-bottom: 2em;
+    /* padding-bottom: 2em; */
     border-radius: 0 0 .5em .5em;
     border-left: solid 1px #dee2e6;
     border-right: solid 1px #dee2e6;
@@ -274,6 +276,7 @@
     display: block;
     top: 40px;
     z-index: 998;
+    background-color: var(--tab-bg);
   }
 
 .status-label{
@@ -289,5 +292,6 @@
   }
 
   .reception-tbody > tr > td{
-    padding: .1em !important;
+    padding: 0em !important;
+    vertical-align: middle;
   }
