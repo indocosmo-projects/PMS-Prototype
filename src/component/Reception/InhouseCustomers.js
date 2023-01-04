@@ -31,7 +31,7 @@ function InhouseCustomers() {
                     {
                     details.map(detail => <tr key={detail.id} >
                         <td>{detail.roomno}</td>
-                        <td><h6 className='d-flex justify-content-between'>{detail.guest}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
+                        <td><h6 className='d-flex justify-content-between pt-2 px-1'>{detail.guest}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
                         <td>{detail.arrival}</td>
                         <td>{detail.departure}</td>
                         <td>{detail.foliobalance}</td>
@@ -116,7 +116,7 @@ function InhouseCustomers() {
     }
   
         return (
-                <div className="container-fluid tab-bg p-1">
+                <div className="container-fluid tab-bg pb-2">
                         <div className="row mb-3">
                         <div className="col-sm-6">
                             <div className="input-group mb-3 mb-sm-0">
@@ -139,7 +139,6 @@ function InhouseCustomers() {
                                 </div>
                         </div>
  
-                        <div>
                             <table className="table table-bordered reception-table">
                                 <thead>
                                     <tr>
@@ -156,7 +155,23 @@ function InhouseCustomers() {
 
                                         {tdata()}
                             </table>
-                        </div>
+
+                        <div className="row me-1 d-flex justify-content-between">
+                                    
+                                                {/*}<div className="col-4 d-flex justify-content-start" ><i className="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
+                                                {/* <div className="col-6"></div> */}
+                                                <div className="col-12 d-flex justify-content-end">
+                                                <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-left"></i><span className="hide-element"></span></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-right"></i></button>
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button>
+                                                    
+                                                </div>
+                                            </div>
+
                 </div>
         );
 }

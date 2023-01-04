@@ -1,6 +1,8 @@
 import React from 'react';
+// import { useRef, useEffect } from "react";
 import './Reception.css';
 import '../../style.css';
+import {Row, Col} from 'react-bootstrap';
 // import Form from 'react-bootstrap/Form';
 import Accordion from 'react-bootstrap/Accordion';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -32,6 +34,9 @@ function ReceptionHotelStatus() {
         {id: 18, name : '118', status: 'V' },
     ]
 
+
+
+
     const roomlist = (room) => {
         
         if(room.status === 'O')return (
@@ -40,7 +45,7 @@ function ReceptionHotelStatus() {
                         <Dropdown.Toggle variant="" id="dropdown-basic" className='text-white'>
                             <div className="col-12 rmnum">{room.name}</div>
                             <hr/>
-                            <div className="col-12"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                            <div className="col-12"><i className="fa fa-bed me-2"></i>DLX</div>
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
@@ -65,7 +70,7 @@ function ReceptionHotelStatus() {
                         <Dropdown.Toggle variant="" id="dropdown-basic" className='text-white'>
                         <div className="col-12 rmnum">{room.name}</div>
                         <hr/>
-                        <div className="col-12"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                        <div className="col-12"><i className="fa fa-bed me-2"></i>DLX</div>
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
@@ -94,7 +99,7 @@ function ReceptionHotelStatus() {
                         <Dropdown.Toggle variant="" id="dropdown-basic" className='text-white'>
                             <div className="col-12 rmnum">{room.name}</div>
                             <hr/>
-                            <div className="col-12"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                            <div className="col-12"><i className="fa fa-bed me-2"></i>DLX</div>
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
@@ -111,7 +116,7 @@ function ReceptionHotelStatus() {
                         <Dropdown.Toggle variant="" id="dropdown-basic" className='text-white'>
                             <div className="col-12 rmnum">{room.name}</div>
                             <hr/>
-                            <div className="col-12"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                            <div className="col-12"><i className="fa fa-bed me-2"></i>DLX</div>
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
@@ -131,7 +136,7 @@ function ReceptionHotelStatus() {
                         <Dropdown.Toggle variant="" id="dropdown-basic" className='text-white'>
                             <div className="col-12 rmnum">{room.name}</div>
                             <hr/>
-                            <div className="col-12"><i className="fa fa-bed me-2 mb-2"></i>DLX</div>
+                            <div className="col-12"><i className="fa fa-bed me-2"></i>DLX</div>
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
@@ -147,28 +152,35 @@ function ReceptionHotelStatus() {
         return(
                 <div className="container-fluid tab-bg">
                 
-                    <div className="row mt-4 sticky-div-hotel-status">
+                    <div className="row mt-1 sticky-div-hotel-status">
                     {/* <p className='left'>Check your hotel status across the floors</p> */}
 
                         <div className="col-sm-12 col-md-12">
-                            <div className="status-hint-bg gap-4">
-                                            <div className='status-label'>Status Colors</div><i class="bi bi-chevron-right"></i>
-                                            <div><i class="bi bi-circle-fill occupied me-2"></i>OCCUPIED</div>
-                                            <div><i class="bi bi-circle-fill reserved me-2"></i>RESERVED</div>
-                                            <div><i class="bi bi-circle-fill vaccant me-2"></i>VACCANT</div>
-                                            <div><i class="bi bi-circle-fill clean me-2"></i>CLEAN</div>
-                                            <div><i class="bi bi-circle-fill dirty me-2"></i>DIRTY</div>
-                            </div>
+                                <Row>
+                                        <Col md={2} sm={12} xs={12} className='d-flex justify-content-start'>
+                                            <div className='status-label'>Status Colors <i class="bi bi-chevron-right"></i></div>
+                                        </Col>
+                                        <Col md={2} sm={4} xs={4} className='d-flex justify-content-start'>
+                                        <div><i class="bi bi-circle-fill occupied me-2"></i>OCCUPIED</div>
+                                        </Col>
+                                        <Col md={2} sm={4} xs={4} className='d-flex justify-content-start'>
+                                        <div><i class="bi bi-circle-fill reserved me-2"></i>RESERVED</div>
+                                        </Col>
+                                        <Col md={2} sm={4} xs={4} className='d-flex justify-content-start'>
+                                        <div><i class="bi bi-circle-fill vaccant me-2"></i>VACCANT</div>
+                                        </Col>
+                                        <Col md={2} sm={4} xs={4} className='d-flex justify-content-start'>
+                                        <div><i class="bi bi-circle-fill clean me-2"></i>CLEAN</div>
+                                        </Col>
+                                        <Col md={2} sm={4} xs={4} className='d-flex justify-content-start'>
+                                        <div><i class="bi bi-circle-fill dirty me-2"></i>DIRTY</div>
+                                        </Col>
+                                </Row>
                         </div>
-                            {/* <div className="col-sm-12 col-md-4">
-                                    <div className="p-3">
-                                        <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New Check-in</button></Link>
-                                    </div>
-                            </div> */}
                     </div>
 
 
-                    <div className="row p-3">
+                    <div className="row">
                         <div className="col-sm-12 col-md-8" >
                     <Accordion className="my-4" defaultActiveKey="0" alwaysOpen>
                             <Accordion.Item eventKey="0">
