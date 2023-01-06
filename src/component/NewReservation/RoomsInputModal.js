@@ -50,10 +50,11 @@ function RoomsInputModal() {
     const tdata = () => {
         
         return(
-            <tbody className='type-tbody'>
 
-                       <tr>
-                <td>
+                <div className='row'>
+
+                <div className='col-sm-6 mb-2'>
+                    <label>ROOM TYPE</label>
                     <select className="form-control form-select text-center">
                         <option>DLX</option>
                         <option>STND</option>
@@ -61,31 +62,45 @@ function RoomsInputModal() {
                         <option>CLASS</option>
                         <option>PREM</option>
                     </select>
-                </td>
-                <td>
+                </div>
+                <div className='col-sm-6 mb-2'>
+                <label>OCCUPANCY</label>
                     <select className="form-control form-select text-center">
                         <option>Single</option>
                         <option>Double</option>
                         <option>Tripple</option>
                     </select>
-                </td>
-                <td>
-                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="₹ 1500" />
-                </td>
-                <td>
+                </div>
+                
+                <div className='col-sm-6 mb-2'>
+                <label>TAX</label>
                     <InputGroup className="pt-1">
                     <Form.Check type='checkbox' id='default-checkbox' label='Incl. Tax'/>
                     </InputGroup>
-                </td>
-                <td className='rate-col'>
+                </div>
+
+                <div className='col-sm-6 mb-2'>
+                <label>ROOM RATE</label>
+                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="₹ 1500" />
+                </div>
+
+                <div className='col-sm-6 mb-2'>
+                <label>RATE CODE</label>
                     <select className="form-control form-select text-center">
                         <option> RACKRATE</option>
                         <option> 2</option>
                         <option> 3</option>
                     </select>
-                </td>
-                <td>
-                <InputGroup className="mb-3 group-input-width">
+                </div>
+
+                <div className='col-sm-6 mb-2'>
+                <label>SUB TOTAL</label>
+                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="₹ 100" disabled/>
+                </div>
+                
+                <div className='col-sm-6 mb-2'>
+                <label>COUNT</label>
+                <InputGroup className="group-input-width">
                         <Button variant="btn btn-secondary" id="button-addon2">
                         <i className="bi bi-dash"></i>
                         </Button>
@@ -99,33 +114,12 @@ function RoomsInputModal() {
                         </Button>
                     </InputGroup>
                 
-                </td>
-                <td className='room-rate-col'>
-                        <Select
-                            closeMenuOnSelect={false}
-                            components={animatedComponents}
-                            // defaultValue={}
-                            isMulti
-                            options={options}
-                            className="basic-multi-select"
-                            classNamePrefix="select"
-                            menuPlacement="auto"
-                            menuPortalTarget={document.body}
-                            menuPosition={'fixed'}
-                        />
-                </td>
-                <td>
-                    <InputGroup className="pt-1">
-                    <Form.Check type='checkbox' id='default-checkbox' label='Extra Bed'/>
-                    </InputGroup>
-                </td>
+                </div>
 
-                <td className='rate-col'>
-                    <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="₹ 100" disabled/>
-                </td>
-                <td>
+                <div className='col-sm-6 mb-2'>
+                <label>DISCOUNT</label>
                     {/* <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue=""/> */}
-                    <InputGroup className="mb-3 discount-input">
+                    <InputGroup className="discount-input">
                         <Form.Control aria-label="Text input with dropdown button" />
 
                         <DropdownButton
@@ -141,16 +135,45 @@ function RoomsInputModal() {
                         <Dropdown.Item href="#">Separated link</Dropdown.Item>
                         </DropdownButton>
                     </InputGroup>
-                </td>
-                <td className='rate-col'>
+                </div>
+                
+
+                <div className='col-sm-6 mb-2'>
+                <label>ROOMS</label>
+                        <Select
+                            closeMenuOnSelect={false}
+                            components={animatedComponents}
+                            // defaultValue={}
+                            isMulti
+                            options={options}
+                            className="basic-multi-select"
+                            classNamePrefix="select"
+                            menuPlacement="auto"
+                            menuPortalTarget={document.body}
+                            menuPosition={'fixed'}
+                        />
+                </div>
+
+                <div className='col-sm-6 mb-2'>
+                <label>TOTAL</label>
                     <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue="₹ 1400" disabled/>
-                </td>
-                <td>
-                <button className="btn btn-outline-danger btn-xs me-2"><i className="bi bi-trash "></i></button>
-                </td>
+                </div>
+                
+                <div className='col-sm-6 mb-2'>
+                <label>EXTRAS</label>
+                    <InputGroup className="pt-1">
+                    <Form.Check type='checkbox' id='default-checkbox' label='Extra Bed'/>
+                    </InputGroup>
+                </div>
+
+                
+               
+                <div className='col-sm-6 mb-2 d-flex justify-content-center align-items-center flex-column'>
+                <label>RESET</label>
+                <button className="btn btn-outline-danger btn-xs me-2"><i class="bi bi-x-circle"></i></button>
+                </div>
                     
-                </tr>
-        </tbody>
+            </div>
         );
     }
 
@@ -166,7 +189,7 @@ function RoomsInputModal() {
                             </Modal.Header>
                             <Modal.Body>
                             {tdata()}
-                            <Form>
+                            {/* <Form>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label>Email address</Form.Label>
                                 <Form.Control
@@ -182,7 +205,7 @@ function RoomsInputModal() {
                                 <Form.Label>Example textarea</Form.Label>
                                 <Form.Control as="textarea" rows={3} />
                                 </Form.Group>
-                            </Form>
+                            </Form> */}
                             </Modal.Body>
                             <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose}>
