@@ -1,6 +1,6 @@
 import React from 'react';
 import RoomAvailability from '../Common/RoomAvailability';
-import RoomRateTypeDiscount from './RoomRateTypeDiscount';
+import RoomRateTypeDiscount from '../RoomsSelect/RoomRateTypeDiscount';
 import './CheckInEdit.css';
 import { Link } from "react-router-dom";
 

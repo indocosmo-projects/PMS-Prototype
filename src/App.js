@@ -10,7 +10,7 @@ import RoomList from './component/RoomList/RoomList';
 import NavigationbarNew from './component/Common/NavigationbarNew';
 // import NavigationbarMannual from './component/Common/NavigationbarMannual';
 import CheckInEdit from './component/CheckInEdit/CheckInEdit';
-import CheckInEditOtherDetails from './component/CheckInEdit/CheckInEditOtherDetails';
+// import CheckInEditOtherDetails from './component/CheckInEdit/CheckInEditOtherDetails';
 import ShiftManagement from './component/Shift/ShiftManagement';
 import Request from './component/Request/Request';
 import NewRequest from './component/NewRequest/NewRequest';
@@ -67,7 +67,7 @@ function App() {
                 <Route exact path="/receptionhotelstatus" component={ReceptionHotelStatus}/>
                 <Route exact path="/roomlist" component={RoomList}/>
                 <Route exact path="/checkInEdit" component={CheckInEdit}/>
-                <Route exact path="/checkInOtherDetails" component={CheckInEditOtherDetails}/>
+                {/* <Route exact path="/checkInOtherDetails" component={CheckInEditOtherDetails}/> */}
                 <Route exact path="/shiftManagement" component={ShiftManagement}/>
                 <Route exact path="/request" component={Request}/>
                 <Route exact path="/newrequest" component={NewRequest}/>

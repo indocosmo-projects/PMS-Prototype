@@ -3,18 +3,13 @@
     padding : 5px;
     text-align : left;
 }
-.text-left{
-    /* padding : 5px;
-    font-weight : 10px;
-    font-size: 14px; */
-    float: left;
-}
+
 
 .formcontent{
     background-color: rgb(255, 255, 255);
     border-radius:.5em;
     box-shadow: 5px 5px 20px rgba(124, 130, 138, 0.053);
-    padding: .5em;
+    /* padding: .5em; */
 }
 
 .availability_check_bg{

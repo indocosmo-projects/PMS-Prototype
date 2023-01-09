@@ -28,12 +28,12 @@ function RoomsInputModal() {
     //         { id: 5, name: 'room5' },
     //     ];
         const options = [
-            {value: "101", label:"FLR 1, ROOM 101"},
-            {value: "202", label:"FLR 2, ROOM 202"},
-            {value: "303", label:"FLR 3, ROOM 303"},
-            {value: "304", label:"FLR 3, ROOM 303"},
-            {value: "305", label:"FLR 3, ROOM 303"},
-            {value: "305", label:"FLR 3, ROOM 303"},
+            {value: "101", label:"FLR1 ROOM 101"},
+            {value: "202", label:"FLR2 ROOM 202"},
+            {value: "303", label:"FLR3 ROOM 303"},
+            {value: "304", label:"FLR3 ROOM 303"},
+            {value: "305", label:"FLR3 ROOM 303"},
+            {value: "305", label:"FLR3 ROOM 303"},
         ];
 
         // const handleIncrement = () => {
@@ -149,8 +149,8 @@ function RoomsInputModal() {
                             className="basic-multi-select"
                             classNamePrefix="select"
                             menuPlacement="auto"
-                            menuPortalTarget={document.body}
-                            menuPosition={'fixed'}
+                            // menuPortalTarget={document.body}
+                            // menuPosition={'fixed'}
                         />
                 </div>
 
@@ -166,12 +166,6 @@ function RoomsInputModal() {
                     </InputGroup>
                 </div>
 
-                
-               
-                <div className='col-sm-6 mb-2 d-flex justify-content-center align-items-center flex-column'>
-                <label>RESET</label>
-                <button className="btn btn-outline-danger btn-xs me-2"><i class="bi bi-x-circle"></i></button>
-                </div>
                     
             </div>
         );
@@ -207,13 +201,20 @@ function RoomsInputModal() {
                                 </Form.Group>
                             </Form> */}
                             </Modal.Body>
-                            <Modal.Footer>
-                            <Button variant="secondary" onClick={handleClose}>
+                            <Modal.Footer className='d-flex justify-content-between'>
+
+                            <Button variant="danger" className="me-2"><i class="bi bi-x-circle me-1"></i>Reset</Button>
+                            
+
+                            <div>
+                            <Button variant="dark me-2" onClick={handleClose}>
                                 Close
                             </Button>
                             <Button variant="primary" onClick={handleClose}>
                                 Save Changes
                             </Button>
+                            </div>
+
                             </Modal.Footer>
       </Modal>
 

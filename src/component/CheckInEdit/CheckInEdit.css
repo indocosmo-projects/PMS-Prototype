@@ -8,9 +8,6 @@
     text-align : left;
 }
 .text-left{
-    /* padding : 5px;
-    font-weight : 10px;
-    font-size: 14px; */
     float: left;
 }
 
@@ -19,14 +16,9 @@
   }
 
 .formcontent{
-    /* padding : 5px;
-    padding-bottom : 20px;
-    margin-left: 1px; 
-    margin-right: 1px;  */
     background-color: rgb(255, 255, 255);
     border-radius:.5em;
     box-shadow: 5px 5px 20px rgba(124, 130, 138, 0.053);
-    padding: .5em;
 }
 
 .availability_check_bg{
@@ -39,7 +31,6 @@
 
 .roomavailability{
     border-radius: .5em;
-    /* margin: 20px; */
     border : 1px solid rgb(241, 238, 238);
 }
 
@@ -155,7 +146,7 @@ border-color: rgb(236, 236, 236);
   }
 
    .type-table{
-    display: block;
+    /* display: block; */
     overflow-x: auto;
     white-space: nowrap;
   }

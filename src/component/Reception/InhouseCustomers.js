@@ -36,7 +36,7 @@ function InhouseCustomers() {
                         <td>{detail.departure}</td>
                         <td>{detail.foliobalance}</td>
                        
-                        <td>
+                        <td className='center'>
                             <button className="btn btn-primary btn-sm"><i className="bi bi-cash-coin me-2"></i>Deposit</button>
                         </td>
                                 

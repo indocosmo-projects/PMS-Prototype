@@ -5,7 +5,7 @@ import './NewReservation.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 // import RoomAvailability from '../Common/RoomAvailability';
-import RoomRateTypeDiscount from './RoomRateTypeDiscount';
+import RoomRateTypeDiscount from '../RoomsSelect/RoomRateTypeDiscount';
 // import RoomsInputModal from './RoomsInputModal';
 import ReservedBy from './ReservedBy';
 import ReservedFor from './ReservedFor';
@@ -18,7 +18,7 @@ function NewReservation() {
 
    
     return(
-                <div className="container-fluid formcontent py-0 h-100">
+                <div className="container-fluid py-0 h-100">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div d-flex justify-content-between'>
                         <h3 className="header"><i class="bi bi-calendar2-plus-fill me-2"></i>New Reservation</h3>
@@ -100,7 +100,7 @@ function NewReservation() {
                      <Accordion className="my-1">
                                 <Accordion.Item eventKey="0">
                                 <Accordion.Header><h6 className='me-2'>Room Details</h6><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
-                                <Accordion.Body className='light-violet-bg'>
+                                <Accordion.Body className='p-0'>
 
                     {/* ----- Room Reserved By  ------ */}
                                 <RoomRateTypeDiscount/>
@@ -162,6 +162,7 @@ function NewReservation() {
                                 </div>
                                 
                 </div>
+                
     );
 }
  
