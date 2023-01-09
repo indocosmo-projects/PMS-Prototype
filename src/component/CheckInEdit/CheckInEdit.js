@@ -25,9 +25,7 @@ function CheckInEdit(){
         {value: "305", label:"FLR 3, ROOM 303"},
     ];
     return(
-        <div>
-            <div className="section">
-                <div className="container-fluid formcontent py-0">
+                <div className="container-fluid py-0 h-100 mb-3">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div d-flex justify-content-between pb-1'>
                         <h3 className="header">Check In<span className="dark-bg ms-2"><i class="bi bi-pencil-square me-1"></i>Edit</span></h3>
@@ -51,7 +49,7 @@ function CheckInEdit(){
                      {/* ----- Form   ------ */}
                      
                      <div className='checkdetails light-violet-bg'>
-                        <div className="row p-4">
+                        <div className="row px-2 pb-2">
                             <div className="col-xl-2 col-md-4 col-sm-6">
                                         <div className="form-group mb-3">
                                             <label className="text-left" htmlFor="arrival">Arrival<b className='text-danger'>*</b></label>
@@ -123,7 +121,7 @@ function CheckInEdit(){
                      <Accordion className="my-4">
                             <Accordion.Item eventKey="1">
                                 <Accordion.Header><h6>Room Details</h6><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
-                                <Accordion.Body className='light-violet-bg'>
+                                <Accordion.Body className='light-violet-bg p-0'>
 
                                 <RoomRateTypeDiscount/>
 
@@ -131,7 +129,7 @@ function CheckInEdit(){
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
                                 <Accordion.Header><h6>Guest Details</h6><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
-                                <Accordion.Body>
+                                <Accordion.Body className='text-center'>
 
                                 <Table className='overflow-reservefor' responsive>
                                 <thead>
@@ -217,19 +215,16 @@ function CheckInEdit(){
                                     <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
                                     </tr>
                                 </tbody>
+                                
                             </Table>
 
                                 <CheckInEditDetails/>
 
-                                <div className="row">
-                    
-                <div className='col-12 d-flex justify-content-center'>
-                   
-                        <button type="button" className="btn btn-primary px-4" ><i class="bi bi-plus-circle me-2"></i>Add Guest</button>
-                        
-
-                  </div>
-                </div>
+                                {/* <div className="row">
+                                    <div className='col-12 d-flex justify-content-center'>
+                                        <button type="button" className="btn btn-primary px-4" ><i class="bi bi-plus-circle me-2"></i>Add Guest</button>
+                                    </div>
+                                </div> */}
 
                                 </Accordion.Body>
                             </Accordion.Item>
@@ -237,7 +232,7 @@ function CheckInEdit(){
 
                             <Accordion.Item eventKey="3">
                                 <Accordion.Header><h6>Billing Details</h6><i class="bi bi-exclamation-circle-fill pe-3 accordion-header-icon-red"></i></Accordion.Header>
-                                <Accordion.Body className='light-violet-bg'>
+                                <Accordion.Body className='light-violet-bg p-0'>
 
                                 <CheckInEditBilling/>
 
@@ -274,8 +269,6 @@ function CheckInEdit(){
                     
 
                 </div>
-            </div>
-        </div>
     );
 }
  

@@ -13,11 +13,11 @@ import Posting from './Posting';
 function InhouseCustomers() {
   
     const details =
-                [{id: 1, roomno:'104',guest:'Tom Hardy', badge:'2',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
-                {id: 2, roomno:'104',guest:'John Wick', badge:'8', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
-                {id: 3, roomno:'104',guest:'Peter Parker', badge:'1', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
-                {id: 4, roomno:'104',guest:'Harry Potter', badge:'2', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
-                {id: 5, roomno:'104',guest:'Peter Pan', badge:'5', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'2780' },  
+                [{id: 1, roomno:'104',guest:'Tom Hardy', badge:'2',  arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'₹ 2780' },  
+                {id: 2, roomno:'104',guest:'John Wick', badge:'8', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'₹ 2780' },  
+                {id: 3, roomno:'104',guest:'Peter Parker', badge:'1', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'₹ 2780' },  
+                {id: 4, roomno:'104',guest:'Harry Potter', badge:'2', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'₹ 2780' },  
+                {id: 5, roomno:'104',guest:'Peter Pan', badge:'5', arrival: '20-07-2018, 10:00 AM', departure: '21-07-2018, 10:00 AM', foliobalance:'₹ 2780' },  
                 ];
 
     const [dropdown, setDropdown] = useState(0);
@@ -30,19 +30,19 @@ function InhouseCustomers() {
                 <tbody className='reception-tbody'>
                     {
                     details.map(detail => <tr key={detail.id} >
-                        <td>{detail.roomno}</td>
+                        <td><span className='ps-2'>{detail.roomno}</span></td>
                         <td><h6 className='d-flex justify-content-between pt-2 px-1'>{detail.guest}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
-                        <td>{detail.arrival}</td>
-                        <td>{detail.departure}</td>
-                        <td>{detail.foliobalance}</td>
+                        <td><span className='ps-2'>{detail.arrival}</span></td>
+                        <td><span className='ps-2'>{detail.departure}</span></td>
+                        <td className='text-center'>{detail.foliobalance}</td>
                        
-                        <td className='center'>
+                        <td className='text-center'>
                             <button className="btn btn-primary btn-sm"><i className="bi bi-cash-coin me-2"></i>Deposit</button>
                         </td>
                                 
-                                <td><Posting /></td>
+                                <td className='text-center'><Posting /></td>
 
-                                <td>
+                                <td className='text-center'>
                                 <Dropdown as={ButtonGroup}>
                                 <Link to="/checkout"><Button variant="danger right-br-none btn-sm"><i className="bi bi-box-arrow-right me-2"></i>Check-out</Button></Link>
 

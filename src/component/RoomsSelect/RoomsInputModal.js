@@ -1,4 +1,3 @@
-// import { CheckBox } from '@mui/icons-material';
 import React,{ useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -179,7 +178,7 @@ function RoomsInputModal() {
 
                         <Modal show={show} onHide={handleClose}>
                             <Modal.Header closeButton>
-                            <Modal.Title>Modal heading</Modal.Title>
+                            <Modal.Title>Add Rooms</Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
                             {tdata()}

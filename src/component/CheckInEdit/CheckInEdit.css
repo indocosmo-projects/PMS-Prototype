@@ -196,8 +196,8 @@ select.form-control.form-select.text-center {
 }
 
 .checkdetails{
-    margin:2em 0em;
-    border: solid 1px rgb(226, 226, 226);
+    margin:.5em 0em;
+    border: solid 1px rgb(231, 231, 231);
     border-radius: .5em;
 }
 

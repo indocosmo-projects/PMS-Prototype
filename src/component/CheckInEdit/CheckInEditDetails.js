@@ -1,17 +1,16 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import './CheckInEdit.css';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
-// import Alert from 'react-bootstrap/Alert';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
-// import { Link } from "react-router-dom";
 
 const animatedComponents = makeAnimated();
 
@@ -25,15 +24,34 @@ function CheckInEditDetails() {
         {value: "305", label:"FLR 3, ROOM 303"},
         {value: "305", label:"FLR 3, ROOM 303"},
     ];
+
+    const [show, setShow] = useState(false);
+
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return(
-            <div className="section checkdetails light-violet-bg">
                 <div className="container-fluid ">
+                {/* --------------------------------------------------------------------------------------------------- */}
+
+
+                <Button variant="primary mb-3" onClick={handleShow}><i class="bi bi-plus-circle me-2"></i>Add Guest</Button>
+
                 
-                     <h4 className='left mb-3'><i class="bi bi-person-fill me-2"></i>Guest 1</h4>
+                  <Modal  
+                    size="xl" 
+                    show={show} 
+                    onHide={handleClose}
+                    >
+                            <Modal.Header closeButton>
+                            <Modal.Title>Add Guest</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
 
                             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                         <Row>
-                            <Col md={2}>
+                            <Col lg={2} md={3} sm={3}>
                             <Nav variant="pills" className="flex-column">
                                 <Nav.Item>
                                 <Nav.Link eventKey="first">Guest Details <i class="bi bi-caret-right-fill"></i></Nav.Link>
@@ -55,18 +73,18 @@ function CheckInEditDetails() {
                                 </Nav.Item>
                             </Nav>
                             </Col>
-                            <Col md={10}>
+                            <Col lg={10} md={9} sm={9}>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
                                 
                                 <div className="row mb-3">
-                                     <div className="col-lg-2 mb-2 d-flex flex-column">
-                                        <div className='pro-img-bg'>
+                                     <div className="col-lg-3 mb-2 d-flex flex-column">
+                                        <div className='pro-img-bg text-center'>
                                             <i class="bi bi-person-circle profile-img"></i>
                                             <Button variant="secondary" size="sm"><i class="bi bi-upload me-2"></i>Upload Image</Button>
                                         </div>
                                     </div>
-                                    <div className='col-lg-10'>
+                                    <div className='col-lg-9'>
                                 <div className="row mb-3">
 
                                      {/* <div className="col-md-12 col-lg-4 mb-2">
@@ -466,17 +484,41 @@ function CheckInEditDetails() {
                         </Row>
                     </Tab.Container>
 
+
+
+
+                            </Modal.Body>
+                            <Modal.Footer className='d-flex justify-content-between'>
+
+                            <Button variant="warning" className="me-2"><i class="bi bi-clipboard-plus-fill me-1"></i>Duplicate details</Button>
                             
+
+                            <div>
+                            <Button variant="dark me-2" onClick={handleClose}>
+                            <i class="bi bi-x-lg me-1"></i> Close
+                            </Button>
+                            <Button variant="primary" onClick={handleClose}>
+                            <i class="bi bi-file-earmark-arrow-up-fill me-1"></i>Save Changes
+                            </Button>
+                            </div>
+
+                            </Modal.Footer>
+                    </Modal>
+
+
+
+
+                {/* --------------------------------------------------------------------------------------------------- */}
+                     {/* <h4 className='left mb-3'><i class="bi bi-person-fill me-2"></i>Guest 1</h4> */}
                                 
-                </div>
-                <div className="row mt-3">
-                    {/* <hr className='gray mt-0'/> */}
+                {/* </div> */}
+                {/* <div className="row mt-3">
 
                     <div className="col-12 d-flex justify-content-end">
                 <Button variant="outline-primary px-3 py-1 me-3" size="sm"><i class="bi bi-file-earmark-arrow-up me-2"></i>Copy for all</Button>
                 <Button variant="primary px-3 py-1" size="sm"><i class="bi bi-file-earmark-arrow-up me-2"></i>Save</Button>
                 </div>
-                </div>
+                </div> */}
 
             </div>
     );

@@ -31,15 +31,15 @@ function ReceptionExpectedArrivals() {
                 <tbody className='reception-tbody'>
                     {
                      details.map(detail =>  <tr key={detail.id} >
-                        <td  style={{color : 'blue'}} >{detail.rese}</td>
-                        <td >{detail.arrival}</td>
-                        <td >{detail.departure}</td>
-                        <td >{detail.nights}</td>
-                        <td >{detail.rooms}</td>
-                        <td >{detail.bookedby}</td>
+                        <td  style={{color : 'blue'}} ><span className='ps-2'>{detail.rese}</span></td>
+                        <td ><span className='ps-2'>{detail.arrival}</span></td>
+                        <td ><span className='ps-2'>{detail.departure}</span></td>
+                        <td className='text-center'>{detail.nights}</td>
+                        <td className='text-center'>{detail.rooms}</td>
+                        <td ><span className='ps-2'>{detail.bookedby}</span></td>
                         <td><h6 className='d-flex justify-content-between pt-2 px-1'>{detail.bookedfor}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
-                        <td >{detail.bookedon}</td>
-                        <td>
+                        <td ><span className='ps-2'>{detail.bookedon}</span></td>
+                        <td className='text-center'>
                                 <Dropdown as={ButtonGroup}>
                                 <Link to="/checkinedit"><Button variant="primary right-br-none btn-sm"><i class="bi bi-plus-circle me-2"></i>Check-in</Button></Link>
 
