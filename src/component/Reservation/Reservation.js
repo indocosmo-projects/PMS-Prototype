@@ -67,14 +67,14 @@ function Reservation() {
                         <td style={{color : 'blue'}} >{detail.rese}</td>
                         <td>{detail.arrival}</td>
                         <td>{detail.departure}</td>
-                        <td>{detail.nights}</td>
-                        <td>{detail.rooms}</td>
+                        <td className='text-center'>{detail.nights}</td>
+                        <td className='text-center'>{detail.rooms}</td>
                         <td>{detail.bookedby}</td>
                         <td><h6 className='d-flex justify-content-between'>{detail.bookedfor}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
                         <td>{detail.bookedon}</td>
-                        <td>{detail.left}</td>
+                        <td className='text-center'>{detail.left}</td>
                         <td className="status-clr">{detail.status}</td>
-                        <td>
+                        <td className='text-center'>
                                 <Dropdown>
                                 <Dropdown.Toggle variant="primary btn-sm" id="dropdown-basic">
                                     Actions

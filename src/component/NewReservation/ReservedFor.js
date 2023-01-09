@@ -4,6 +4,8 @@ import Form from 'react-bootstrap/Form';
 // import Alert from 'react-bootstrap/Alert';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 
 
@@ -65,7 +67,7 @@ const display = (e) => {
                                     <td>917786676757</td>
                                     <td>Male</td>
                                     <td>India</td>
-                            <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
+                            <td><button className='btn btn-outline-secondary me-2 btn-sm'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger btn-sm'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                             <tr>
                             <td>2</td>
@@ -77,7 +79,7 @@ const display = (e) => {
                                     <td>918787867554</td>
                                     <td>Male</td>
                                     <td>India</td>
-                            <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
+                            <td><button className='btn btn-outline-secondary me-2 btn-sm'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger btn-sm'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                             <tr>
                             <td>3</td>
@@ -89,7 +91,7 @@ const display = (e) => {
                                     <td>912544678907</td>
                                     <td>Female</td>
                                     <td>India</td>
-                            <td><button className='btn btn-outline-secondary me-2'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger'><i className="bi bi-trash3"></i></button></td>
+                            <td><button className='btn btn-outline-secondary me-2 btn-sm'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger btn-sm'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                         </tbody>
                         </Table>
@@ -105,7 +107,7 @@ const display = (e) => {
                                 <div className="row my-5 white-back px-2 py-3 round-1">
                                     <div className="col-sm-12 d-flex justify-content-between">
                                             <h4 className="text-start">Add Customer details</h4>
-                                            <button type="button" onClick={handleDecrement} className="btn btn-outline-danger px-3 me-2"><i class="bi bi-x-circle me-2"></i>Close</button>
+                                            <button type="button" onClick={handleDecrement} className="btn btn-outline-danger px-3 me-2 btn-sm"><i class="bi bi-x-circle me-2"></i>Close</button>
                                     </div>
 
                                     <div className="border-bottom">
@@ -119,19 +121,19 @@ const display = (e) => {
                                     <div className='row'>
                                     <div className="col-lg-6 col-md-12">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">First Name<b className='text-danger'>*</b></label>
+                                            <label>First Name<b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-12">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Last Name <b className='text-danger'>*</b></label>
+                                            <label>Last Name <b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
                                     </div>
                                     <div className='row'>
-                                    <div className='col-12'>
+                                    <div className='col-12 text-center'>
                                             <div className='font-small-gray'>
                                                 <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2 Nights</b> before 
                                             </div>
@@ -140,13 +142,22 @@ const display = (e) => {
                                     </div>
                                     <div className="col-lg-6 col-md-12">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Phone Number<b className='text-danger'>*</b></label>
-                                            <input type="text" className="form-control" placeholder="" />
+                                        <label>Phone Number<b className='text-danger'>*</b></label>
+                                            <PhoneInput
+                                            country={'in'}
+                                            // value={this.state.phone}
+                                            // onChange={phone => this.setState({ phone })}
+                                            inputProps={{
+                                                name: 'phone',
+                                                required: true,
+                                                autoFocus: true
+                                              }}
+                                            />
                                         </div>
                                     </div>
                                     <div className="col-lg-6 col-md-12">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">E-mail<b className='text-danger'>*</b></label>
+                                            <label>E-mail<b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
                                         </div>
                                     </div>
@@ -157,7 +168,7 @@ const display = (e) => {
                                    
                                     <div className="col-lg-4 col-md-6 col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Gender<b className='text-danger'>*</b></label>
+                                            <label>Gender<b className='text-danger'>*</b></label>
                                             
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -169,7 +180,7 @@ const display = (e) => {
 
                                     <div className="col-lg-4 col-md-6 col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">Country<b className='text-danger'>*</b></label>
+                                            <label>Country<b className='text-danger'>*</b></label>
                                           
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -180,7 +191,7 @@ const display = (e) => {
                                     </div>
                                     <div className="col-lg-4 col-md-6 col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label className="text-left">State<b className='text-danger'>*</b></label>
+                                            <label>State<b className='text-danger'>*</b></label>
                                             
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -189,9 +200,15 @@ const display = (e) => {
                                             </Form.Select>
                                         </div>
                                     </div>
-                                    <div className="col-lg-12 col-md-12 col-sm-12">
+                                    <div className="col-lg-4 col-md-6 col-sm-6">
                                         <div className="inputfieldpadding">
-                                        <label className="text-left">Address</label>
+                                        <label>PIN/ZIP</label>
+                                            <input className="form-control"  placeholder=""></input>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-8 col-md-12">
+                                        <div className="inputfieldpadding">
+                                        <label>Address</label>
                                             <textarea className="form-control" style={{ height: 30, }} placeholder=""></textarea>
                                         </div>
                                     </div>
@@ -297,32 +314,32 @@ const display = (e) => {
                                                 <div className="row my-3">
                                                     <div className="col-lg-3 col-md-4 col-sm-6">
                                                         <div className="inputfieldpadding">
-                                                            <label className="text-left" htmlFor="arrivaldate">Arrival Date<b className='text-danger'>*</b></label>
+                                                            <label htmlFor="arrivaldate">Arrival Date<b className='text-danger'>*</b></label>
                                                             <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-3 col-md-4 col-sm-6">
                                                         <div className="inputfieldpadding">
-                                                            <label className="text-left" htmlFor="arrivaldate">Departure Date<b className='text-danger'>*</b></label>
+                                                            <label htmlFor="arrivaldate">Departure Date<b className='text-danger'>*</b></label>
                                                             <input type="datetime-local" className="form-control" id="departuredate" placeholder="Enter Departure Date" name="departuredate" />
                                                         </div>
                                                     </div>
                                                     {/* <div className="col-sm-4">
                                                         <div className="inputfieldpadding">
-                                                            <label className="text-left">Location<b className='text-danger'>*</b></label>
+                                                            <label>Location<b className='text-danger'>*</b></label>
                                                             <input type="text" className="form-control" placeholder="" />
                                                         </div>
                                                     </div> */}
                                                     {/* <div className="col-sm-4">
                                                         <div className="inputfieldpadding">
-                                                            <label className="text-left">Seats<b className='text-danger'>*</b></label>
+                                                            <label>Seats<b className='text-danger'>*</b></label>
                                                             <input type="text" className="form-control" placeholder="" />
                                                         </div>
                                                     </div> */}
 
                                                     <div className="col-lg-6">
                                                         <div className="inputfieldpadding">
-                                                            <label className="text-left">Remarks</label>
+                                                            <label>Remarks</label>
                                                             <textarea type="text" className="form-control" placeholder="" />
                                                         </div>
                                                     </div>

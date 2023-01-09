@@ -16,28 +16,18 @@ function CheckInEditBilling() {
     const changeHandler = e => {
       setSelected(e.target.value);
     };
-    // const options = [
-    //     {value: "101", label:"FLR 1, ROOM 101"},
-    //     {value: "202", label:"FLR 2, ROOM 202"},
-    //     {value: "303", label:"FLR 3, ROOM 303"},
-    //     {value: "304", label:"FLR 3, ROOM 303"},
-    //     {value: "305", label:"FLR 3, ROOM 303"},
-    //     {value: "305", label:"FLR 3, ROOM 303"},
-    // ];
-
 
     return(
-        <div className="CheckInEditBilling">
-            {/* <div className="section"> */}
+        // <div className="CheckInEditBilling">
                 <div className="container-fluid">
-                    <div className="availability_check_bg light-violet-bg">
-                <div className='d-flex flex-row justify-content-between pt-2'>
+                    <div className="availability_check_bg light-violet-bg mt-2">
+                <div className='d-flex flex-row justify-content-between'>
                 <h6 className='left ps-3 grey'>Billing Type</h6>
                 <p className='pe-3'>* Visible only for group</p>
                 </div>
-                     <hr className='gray mb-4 mt-0'/>
+                     <hr className='gray my-0'/>
                    
-                        <Form className='row py-3 mx-2'>
+                        <Form className='row py-1 mx-2 text-center'>
                             <div className="col-lg-6 border-right">
                         <Form.Check
                             className="form-check-bg"
@@ -198,7 +188,7 @@ function CheckInEditBilling() {
 
 
                 </div>
-        </div>
+        // </div>
     );
 
 }

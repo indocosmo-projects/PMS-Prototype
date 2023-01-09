@@ -1,0 +1,89 @@
+
+
+   .type-table{
+    /* display: block; */
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  @media only screen and (min-width: 1230px) {
+    .type-table{
+        /* width: 100% !important; */
+        display: inline-table;
+      }
+    }
+
+
+
+ .total-text{
+    align-items: center;
+ }
+ .type-table .input-group{
+    flex-wrap: unset;
+ }
+
+ .type-table input.text-center.form-control {
+    width: 80px;
+}
+select.form-control.form-select.text-center {
+    min-width: max-content;
+}
+
+.disp{
+    text-align: left;
+    width : 100%;
+}
+
+.overflow-reservefor{
+    padding: .5em;
+    overflow-x: auto;
+    white-space: nowrap;
+    min-width: 100%;
+}
+
+.highlight-bg{
+    background-color: rgb(240, 240, 240);
+    border-radius: .5em;
+}
+
+.type-table th:last-child{
+    position: sticky;
+    right: 0;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+  .type-tbody td:last-child{
+    position: sticky;
+    right: 0;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+
+  .group-input-width{
+    min-width: 130px;
+    max-width: 130px;
+    flex-wrap: nowrap;
+  }
+  .table-dark-row{
+    color: rgb(31, 31, 31);
+    background-color: rgb(228, 228, 228) !important;
+  }
+
+  .avail-tbody > tr > td{
+    padding: .4em !important;
+    cursor: pointer;
+  }
+.fs-small{
+    font-size: .825rem;
+}
+
+.white-back{
+    background-color: #ffffff;
+}
+.availability-accordion > button{
+    background-color: rgb(234, 235, 255) !important;
+    padding: .5em;
+}
+.discount-input{
+    width: 200px !important;
+}
