@@ -22,22 +22,26 @@ function Reception() {
                 <Tabs
                     defaultActiveKey="inhouse"
                     id="justify-tab-example"
-                    className="mt-2 mb-4 status-tab"
+                    className="mt-2 status-tab"
                     justify >
 
-                    <Tab className='tab-content-bg tab-bg' eventKey="inhouse" title={<span><i className="bi bi-house-door-fill me-2"/>In-House Customers</span>}>
+                    <Tab className='tab-content-bg tab-bg p-2' eventKey="inhouse" title={<div><i className="bi bi-house-door-fill me-2"/><p className='p-0 m-0'>In-House Customers</p></div>}>
                         <InhouseCustomers />
                     </Tab>
 
-                    <Tab className='tab-content-bg tab-bg' eventKey="expectedarrivals" title={<span> <i className="bi bi-arrow-down-right-square-fill me-2"/>Expected Arrivals</span>}>
+                    <Tab className='tab-content-bg tab-bg p-2' eventKey="expectedarrivals" title={<div><i className="bi bi-arrow-down-right-square-fill me-2"/><p className='p-0 m-0'>Expected Arrivals</p></div>}>
                         <ReceptionExpectedArrivals />
                     </Tab>
 
-                    <Tab className='tab-content-bg tab-bg' eventKey="departures" title={<span> <i className="bi bi-arrow-up-right-square-fill me-2"/>Expected Departures</span>}>
+                    <Tab className='tab-content-bg tab-bg p-2' eventKey="departures" title={<div><i className="bi bi-arrow-up-right-square-fill me-2"/><p className='p-0 m-0'>Expected Departures</p></div>}>
                         <ReceptionDepartures />
                     </Tab>
 
-                    <Tab className='tab-content-bg tab-bg' eventKey="hotelstatus" title={<span> <i className="bi bi-exclamation-circle-fill me-2"/>Hotel Status</span>}>
+                    <Tab className='tab-content-bg tab-bg p-2' eventKey="enquiries" title={<div><i className="bi bi-exclamation-circle-fill me-2"/><p className='p-0 m-0'>Enquiry Confirmation</p></div>}>
+                        {/* <ReceptionHotelStatus /> */}
+                    </Tab>
+
+                    <Tab className='tab-content-bg tab-bg p-2' eventKey="hotelstatus" title={<div><i className="bi bi-exclamation-circle-fill me-2"/><p className='p-0 m-0'>Hotel Status</p></div>}>
                         <ReceptionHotelStatus />
                     </Tab>
 

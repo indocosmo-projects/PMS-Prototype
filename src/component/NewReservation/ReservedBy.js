@@ -74,7 +74,7 @@ function ReservedBy() {
                                             <input type="text" className="form-control" placeholder="" />
                                     </div>
 
-                                    <div className="col-lg-12 col-sm-6 col-md6 py-1">
+                                    <div className="col-lg-12 col-sm-6 col-6 py-1">
                                             <label>Address</label>
                                             <textarea className="form-control" style={{ height: 60, }} placeholder=""></textarea>
                                     </div>
