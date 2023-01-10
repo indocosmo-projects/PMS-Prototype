@@ -135,7 +135,7 @@ body{
     position: sticky;
     display: block;
     top: 0px;
-    z-index: 998;
+    z-index: 994;
     /* margin-bottom: .5em; */
     border-bottom: solid 1px #f0f0f0;
     padding: 0em 1em;
@@ -230,3 +230,20 @@ font-weight: 400;
 .react-tel-input .form-control {
   width: 100% !important;
 }
+
+
+/* -----date-range-picker----z-indexes---important------------------ */
+.ant-picker-panel-container {
+z-index: 999 !important;
+}
+
+
+.fade.modal-backdrop.show {
+z-index: 996 !important;
+}
+
+.fade.modal.show {
+z-index: 997 !important;
+}
+
+/* -----date-range-picker----z-indexes---important------------------ */

@@ -7,6 +7,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Badge from 'react-bootstrap/Badge';
 import Table from 'react-bootstrap/Table';
 import { Link } from "react-router-dom";
+import DateRangePicker from '../Common/DateRangePicker';
 //import ReservationService from '../../service/ReservationService';
 
 function Reservation() {
@@ -157,7 +158,6 @@ function Reservation() {
                             <button className="btn btn-sm pe-3" title="New Reservation"><i className="bi bi-arrow-repeat me-2"></i>Update data</button>
                         </div>
                         
-
                     <div className="row search-area-bg">
 
                         <div className="row d-flex justify-content-between">
