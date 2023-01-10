@@ -5,6 +5,7 @@ import Badge from 'react-bootstrap/Badge';
 import './RoomAvailability.css';
 // import { DatePicker } from 'rsuite';
 
+import DateRangePicker from './DateRangePicker';
 
 
 function RoomAvailability() {
@@ -23,6 +24,12 @@ function RoomAvailability() {
         console.log("====="+arrdate + "---" +deptdate +"----"+ diffDays);
         console.log(diffDays + " days");
         setNights((diffDays));
+
+        const selectionRange = {
+            startDate: new Date(),
+            endDate: new Date(),
+            key: 'selection',
+          }
        
         return (
             diffDays
@@ -33,8 +40,9 @@ function RoomAvailability() {
        
         <div onMouseUp={nightcalculation}>
         <div className="light-violet-bg">
+
         <div className="row">
-                <div className="col-lg-3 mb-2">
+                {/* <div className="col-lg-3 mb-2">
                         <div className="form-group">
                             <label className="text-left" htmlFor="arrival">Checkin Time<b className='text-danger'>*</b></label>
                             <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival" onChange={(e) => setArrdate((e.target.value))}/>
@@ -47,7 +55,13 @@ function RoomAvailability() {
                             <input type="datetime-local" className="form-control departure" name="departure" onChange={(e) => setDeptdate((e.target.value))} id="departure" />
                         </div>
 
-                </div>
+                </div> */}
+
+
+        <div className="col-lg-6  d-flex flex-column">
+        <label className="text-left" htmlFor="nights">Duration</label>
+        <DateRangePicker />
+        </div>
 
                 <div className="col-lg-1 mb-2">   
                         <div className="form-group">
