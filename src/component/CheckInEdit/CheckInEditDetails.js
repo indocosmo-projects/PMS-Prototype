@@ -7,9 +7,12 @@ import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
-import InputGroup from 'react-bootstrap/InputGroup';
+// import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Table from 'react-bootstrap/Table';
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 
 const animatedComponents = makeAnimated();
@@ -77,15 +80,15 @@ function CheckInEditDetails() {
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
                                 
-                                <div className="row mb-3">
-                                     <div className="col-lg-3 mb-2 d-flex flex-column">
+                                <div className="row">
+                                     <div className="col-lg-3 d-flex flex-column mb-2">
                                         <div className='pro-img-bg text-center'>
                                             <i class="bi bi-person-circle profile-img"></i>
                                             <Button variant="secondary" size="sm"><i class="bi bi-upload me-2"></i>Upload Image</Button>
                                         </div>
                                     </div>
                                     <div className='col-lg-9'>
-                                <div className="row mb-3">
+                                <div className="row">
 
                                      {/* <div className="col-md-12 col-lg-4 mb-2">
                                         <div className="form-group">
@@ -97,21 +100,17 @@ function CheckInEditDetails() {
 
                                 <div className="col-lg-12 col-sm-12 col-md-12">
                                     <div className='row'>
-                                    <div className="col-lg-6 col-md-12">
-                                        <div className="inputfieldpadding">
+                                    <div className="col-lg-6 col-md-12 mb-1">
                                             <label className="text-left">First Name<b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
-                                        </div>
                                     </div>
-                                    <div className="col-lg-6 col-md-12">
-                                        <div className="inputfieldpadding">
+                                    <div className="col-lg-6 col-md-12 mb-1">
                                             <label className="text-left">Last Name <b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
-                                        </div>
                                     </div>
                                     </div>
                                     <div className='row'>
-                                    <div className='col-12'>
+                                    <div className='col-12 text-center mb-1'>
                                             <div className='font-small-gray'>
                                                 <i class="bi bi-exclamation-circle"></i> <b>Tom</b> has already stayed with us <b>2 Nights</b> before 
                                             </div>
@@ -120,13 +119,20 @@ function CheckInEditDetails() {
                                 </div>
 
 
-                                     <div className="col-md-12 col-lg-6 mb-2">
-                                        <div className="form-group ">
-                                                <label className="text-left">Phone Number<b className='text-danger'>*</b></label>
-                                                <input type="text" className="form-control" placeholder="" id="phone" />
-                                            </div>
+                                     <div className="col-md-12 col-lg-6 pt-2">
+                                     <label>Phone Number<b className='text-danger'>*</b></label>
+                                            <PhoneInput
+                                            country={'in'}
+                                            // value={this.state.phone}
+                                            // onChange={phone => this.setState({ phone })}
+                                            inputProps={{
+                                                name: 'phone',
+                                                required: true,
+                                                autoFocus: true
+                                              }}
+                                            />
                                      </div>
-                                     <div className="col-md-12 col-lg-6 mb-2">
+                                     <div className="col-md-12 col-lg-6">
                                         <div className="form-group ">
                                                 <label className="text-left">E mail<b className='text-danger'>*</b></label>
                                                 <input type="text" className="form-control" placeholder="" id="emailaddress" />
@@ -148,7 +154,7 @@ function CheckInEditDetails() {
                                     
 
 
-                                    <div className="row mb-3">
+                                    <div className="row mb-2">
 
                                     <div className="col-sm-4">
                                     <label className="text-left">Gender<b className='text-danger'>*</b></label>
@@ -179,7 +185,7 @@ function CheckInEditDetails() {
 
                                     </div>
 
-                                    <div className="row mb-3">
+                                    <div className="row">
 
                                     <div className="col-sm-12">
                                         <div className="form-group ">
@@ -209,8 +215,73 @@ function CheckInEditDetails() {
 
 
                         <Tab.Pane eventKey="sharer">
-                        <div className="row mb-3">
-                                    {/* <h6 className="left mb-4">Sharers Details</h6> */}
+
+                        <div className='row'>
+                            <div className='col-12'>
+                        <Table striped bordered hover size="sm">
+                                    <thead>
+                                        <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Gender</th>
+                                        <th>Age</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>Male</td>
+                                        <td>15</td>
+                                        </tr>
+
+                                        <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>Male</td>
+                                        <td>12</td>
+                                        </tr>
+
+                                        <tr>
+                                        <td>3</td>
+                                        <td>Selena</td>
+                                        <td>Female</td>
+                                        <td>16</td>
+                                        </tr>
+
+                                    </tbody>
+                             </Table>
+                        </div>
+                        </div>
+                        <hr className='grey'></hr>
+
+                                <div className='row'>
+                                    <h5>Add Sharers</h5>
+                                    <div className="col-lg-4 col-sm-12 col-12">
+                                            <label className="text-left">Full Name<b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" placeholder="" />
+                                    </div>
+                                    <div className="col-lg-3 col-sm-6 col-6">
+                                            <label className="text-left">Gender<b className='text-danger'>*</b></label>
+                                            <Form.Select aria-label="Default select example">
+                                                <option>Select Gender</option>
+                                                <option value="1">Male</option>
+                                                <option value="2">Female</option>
+                                                </Form.Select>
+                                    </div>
+                                    <div className="col-lg-3 col-sm-6 col-6">
+                                            <label className="text-left">Age<b className='text-danger'>*</b></label>
+                                            <input type="number" className="form-control" placeholder="" />
+                                    </div>
+                                    <div className="col-lg-2 col-md-12 d-flex flex-column pt-3">
+                                        <label className='pb-3'></label>
+                                        <Button variant="primary" size="md"><i class="bi bi-plus-circle me-2"></i>Add</Button>
+                                    </div>
+
+                                    </div>
+
+
+                        {/* <div className="row mb-3">
                                     <div className="row sharer-bg">
                                             <div className='col-md-6 col-sm-6 col-6 mb-2'>
                                                 <p className='f-light'>Male Audults</p>
@@ -289,7 +360,7 @@ function CheckInEditDetails() {
                                                 </div>
                                                 </div>
 
-                                    </div>
+                                    </div> */}
 
                         </Tab.Pane>
 
@@ -440,8 +511,8 @@ function CheckInEditDetails() {
 
                             <Tab.Pane eventKey="four">
                                 <div className="row mt-4">
-                                    <div className="col-lg-12">
-                                    <p className='gray'>Assign a room manually for this Guest (Optional)</p>
+                                    <div className="col-lg-12 text-center">
+                                    <p>Assign a room manually for this Guest (Optional)</p>
                                 </div>
                                 </div>
                                 <div className="row d-flex justify-content-center">

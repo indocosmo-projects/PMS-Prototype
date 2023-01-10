@@ -109,7 +109,7 @@ function NewReservation() {
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
                                 <Accordion.Header><h6 className='me-2'>Reserved By</h6><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
-                                <Accordion.Body className='light-violet-bg'>
+                                <Accordion.Body className='light-violet-bg p-2'>
 
                     {/* ----- Room Reserved By  ------ */}
                                 <ReservedBy />

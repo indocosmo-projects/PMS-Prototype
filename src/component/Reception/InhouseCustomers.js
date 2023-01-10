@@ -144,8 +144,8 @@ function InhouseCustomers() {
                                     <tr>
                                         <th>Room No.</th>
                                         <th>Guest</th>
-                                        <th>Check In Date</th>
-                                        <th>Check Out Date</th>
+                                        <th>Arrival Date</th>
+                                        <th>Departure Date</th>
                                         <th>Folio Balance</th>
                                         <th>Deposit</th>
                                         <th>Posting</th>

@@ -11,6 +11,8 @@ import Table from 'react-bootstrap/Table';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 import CheckInEditBilling from './CheckInEditBilling';
+import ReservedBy from '../NewReservation/ReservedBy';
+
 
 const animatedComponents = makeAnimated();
 
@@ -104,21 +106,10 @@ function CheckInEdit(){
                      </div>   */}
 
 
-
-                     
-
-
-                     {/* ----- Room Rate Type Discount ------ */}
-                     {/* <div className="availability_check_bg my-4">
-                        <h5 className='left mt-2 ps-3 grey'>Room Details</h5>
-                        <hr className='gray'/>
-                     <RoomRateTypeDiscount/>
-                     </div>   */}
-
-
                      
                      {/* <Accordion className="my-4" defaultActiveKey="0" alwaysOpen> */}
                      <Accordion className="my-4">
+
                             <Accordion.Item eventKey="1">
                                 <Accordion.Header><h6>Room Details</h6><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg p-0'>
@@ -127,7 +118,18 @@ function CheckInEdit(){
 
                                 </Accordion.Body>
                             </Accordion.Item>
+
                             <Accordion.Item eventKey="2">
+                                <Accordion.Header><h6>Reserved By</h6><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
+                                <Accordion.Body className='light-violet-bg p-2'>
+
+                                <ReservedBy />
+
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+
+                            <Accordion.Item eventKey="3">
                                 <Accordion.Header><h6>Guest Details</h6><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
                                 <Accordion.Body className='text-center'>
 
@@ -230,7 +232,7 @@ function CheckInEdit(){
                             </Accordion.Item>
 
 
-                            <Accordion.Item eventKey="3">
+                            <Accordion.Item eventKey="4">
                                 <Accordion.Header><h6>Billing Details</h6><i class="bi bi-exclamation-circle-fill pe-3 accordion-header-icon-red"></i></Accordion.Header>
                                 <Accordion.Body className='light-violet-bg p-0'>
 
@@ -264,9 +266,6 @@ function CheckInEdit(){
                                 </div>
                                 
                                 
-                  
-
-                    
 
                 </div>
     );
