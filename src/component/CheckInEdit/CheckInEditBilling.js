@@ -22,12 +22,12 @@ function CheckInEditBilling() {
                 <div className="container-fluid">
                     <div className="availability_check_bg light-violet-bg mt-2">
                 <div className='d-flex flex-row justify-content-between'>
-                <h6 className='left ps-3 grey'>Billing Type</h6>
-                <p className='pe-3'>* Visible only for group</p>
+                <h6 className='left ps-2 grey'>Billing Type</h6>
+                <p className='pe-2'>* Visible only for group</p>
                 </div>
                      <hr className='gray my-0'/>
                    
-                        <Form className='row py-1 mx-2 text-center'>
+                        <Form className='row py-1 text-center'>
                             <div className="col-lg-6 border-right">
                         <Form.Check
                             className="form-check-bg"
@@ -43,11 +43,11 @@ function CheckInEditBilling() {
 
                                     <div aria-hidden={selected !== "ind" ? true : false} className="total-bg mt-3">
                                         
-                                         <Alert key="primary" variant="primary" className="mx-4 mt-3">
+                                         <Alert key="primary" variant="primary p-2">
                                          <i class="bi bi-person-fill me-2"></i><b>Individual Billing</b> is Selected
                                         </Alert>
 
-                                    <ListGroup as="ol" numbered className="mt-4 p-4">
+                                    <ListGroup as="ol" numbered className="p-0">
                                     <p className="left gray">Guests will be billed listed down</p>
                                         <ListGroup.Item
                                             as="li"
@@ -55,7 +55,7 @@ function CheckInEditBilling() {
                                         >
                                             <div className="ms-2 me-auto left">
                                             <div className="fw-bold">Tom</div>
-                                            Cras justo odio
+                                            {/* Cras justo odio */}
                                             </div>
                                             <Badge bg="light" className="ind-billing-badge">
                                             <i class="bi bi-check-circle-fill"></i>
@@ -67,7 +67,7 @@ function CheckInEditBilling() {
                                         >
                                             <div className="ms-2 me-auto left">
                                             <div className="fw-bold">Jack</div>
-                                            Cras justo odio
+                                            {/* Cras justo odio */}
                                             </div>
                                             <Badge bg="light" className="ind-billing-badge">
                                             <i class="bi bi-check-circle-fill"></i>
@@ -79,7 +79,7 @@ function CheckInEditBilling() {
                                         >
                                             <div className="ms-2 me-auto left">
                                             <div className="fw-bold">Pam</div>
-                                            Cras justo odio
+                                            {/* Cras justo odio */}
                                             </div>
                                             <Badge bg="light" className="ind-billing-badge">
                                             <i class="bi bi-check-circle-fill"></i>
@@ -105,14 +105,14 @@ function CheckInEditBilling() {
 
                         />
 
-                                    <div aria-hidden={selected !== "grp" ? true : false} className="total-bg mt-3">
+                                    <div aria-hidden={selected !== "grp" ? true : false} className="total-bg mt-1">
 
-                                            <Alert key="warning" variant="warning" className="mx-4 mt-3">
+                                            <Alert key="warning" variant="warning p-2">
                                             <i class="bi bi-people-fill me-2"></i><b>Group Billing</b> is Selected
                                             </Alert>
 
                                             <div className="grp-bill-padding">
-                                            <p className="left gray mt-4">Select the Guest to be Group billed</p>
+                                            <p className="left gray">Select the Guest to be Group billed</p>
                                             <Form.Select aria-label="Default select example">
                                                 <option>Select the Guest</option>
                                                 <option value="1">Tom</option>
@@ -175,7 +175,7 @@ function CheckInEditBilling() {
                                 
                         <div className="availability_check_bg mt-3">
                         <div className="row">
-                            <div className="col-12">
+                            <div className="col-12 text-center">
                                 <h6 className='left ps-3 grey py-2'>Deposit Details</h6>
                                 <hr className='gray mb-4 mt-0'/>
                                 <div className="sharer-bg pb-4 mx-2">

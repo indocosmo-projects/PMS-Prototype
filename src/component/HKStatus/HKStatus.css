@@ -244,10 +244,10 @@
 
 
 
-.status-tab > li.nav-item{
+/* .status-tab > li.nav-item{
     background-color: #f7f7f7 !important;
     border-radius:.5em .5em 0 0;
-}
+} */
 
 .status-tab > li > button {
     color: #96a7c2;

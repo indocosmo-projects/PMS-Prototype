@@ -7,15 +7,15 @@ function ReservedBy() {
     return(
         <div className="col-12 py-2" >
                                 <div className="row">
-                                    <div className="col-sm-6 col-md-3">
+                                    <div className="col-lg-3 col-md-6 col-6">
                                             <label>First Name<b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
                                     </div>
-                                    <div className="col-sm-6 col-md-3">
+                                    <div className="col-lg-3 col-md-6 col-6">
                                             <label>Last Name<b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
                                     </div>
-                                    <div className="col-sm-6 col-md-3">       
+                                    <div className="col-lg-3 col-md-6 col-6">       
                                             <label>Phone Number<b className='text-danger'>*</b></label>
                                             <PhoneInput
                                             country={'in'}
@@ -28,15 +28,18 @@ function ReservedBy() {
                                               }}
                                             />
                                     </div>
-                                    <div className="col-sm-6 col-md-3">
-                                            <label>E-mail</label>
+                                    <div className="col-lg-3 col-md-6 col-6">
+                                            <label>Landline Phone</label>
                                             <input type="text" className="form-control" placeholder="" />
                                     </div>
                                 </div>
 
                                 <div className="row">
-                                   
-                                    <div className="col-lg-2 col-sm-6 col-md-3 py-1">
+                                <div className="col-lg-3 col-sm-6 col-md-6 col-6 py-1">
+                                            <label>E-mail</label>
+                                            <input type="text" className="form-control" placeholder="" />
+                                    </div>
+                                    <div className="col-lg-2 col-sm-6 col-md-3 col-6 py-1">
                                             <label>Gender</label>
                                         
                                             <Form.Select aria-label="Default select example">
@@ -46,7 +49,7 @@ function ReservedBy() {
                                             </Form.Select>
                                     </div>
 
-                                    <div className="col-lg-2 col-sm-6 col-md-3 py-1">
+                                    <div className="col-lg-2 col-sm-6 col-md-3 col-6 py-1">
                                             <label>Country</label>
                                            
                                             <Form.Select aria-label="Default select example">
@@ -56,7 +59,7 @@ function ReservedBy() {
                                             </Form.Select>
                                     </div>
 
-                                    <div className="col-lg-2 col-sm-6 col-md-3 py-1">
+                                    <div className="col-lg-2 col-sm-6 col-md-3 col-6 py-1">
                                             <label>State</label>
                                            
                                             <Form.Select aria-label="Default select example">
@@ -66,18 +69,19 @@ function ReservedBy() {
                                             </Form.Select>
                                     </div>
 
-                                    <div className="col-lg-2 col-sm-6 col-md-3 py-1">
+                                    <div className="col-lg-3 col-sm-6 col-md-3 col-6 py-1">
                                             <label>PIN/ZIP</label>
                                             <input type="text" className="form-control" placeholder="" />
                                     </div>
 
-                                    <div className="col-lg-4 col-sm-6 col-md-12 py-1">
+                                    <div className="col-lg-12 col-sm-6 col-6 py-1">
                                             <label>Address</label>
                                             <textarea className="form-control" style={{ height: 60, }} placeholder=""></textarea>
                                     </div>
                                  
                                 </div>
                                         <hr className='gray'></hr>
+
                                     <div className="row">
                                                     <div className="col-sm-12">
                                                         <label>Special Instructions/Comments</label>
