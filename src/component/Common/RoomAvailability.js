@@ -41,7 +41,7 @@ function RoomAvailability() {
         <div onMouseUp={nightcalculation}>
         <div className="light-violet-bg">
 
-        <div className="row">
+        <div className="row mb-2">
                 {/* <div className="col-lg-3 mb-2">
                         <div className="form-group">
                             <label className="text-left" htmlFor="arrival">Checkin Time<b className='text-danger'>*</b></label>
@@ -63,24 +63,20 @@ function RoomAvailability() {
         <DateRangePicker />
         </div>
 
-                <div className="col-lg-1 mb-2">   
-                        <div className="form-group">
+                <div className="col-lg-2 col-6 mb-2">   
                                 <label className="text-left" htmlFor="nights">Nights</label>
                                 <input type="number"  className="form-control"  value={nights} min="1" name="nights" id="nights" />
-                        </div> 
                 </div>
 
-                <div className="col-lg-2 mb-2">   
-                        <div className="form-group">
+                <div className="col-lg-2 col-6 mb-2">   
                             <label className="text-left" htmlFor="rooms">No. of Rooms<b className='text-danger'>*</b></label>
                             <input type="number"  className="form-control"  placeholder="Select Rooms count" min="1"  name="rooms" id="rooms"  />
-                        </div>
                 </div>
 
-                <div className="col-lg-3 mb-2 pt-45">   
+                <div className="col-lg-2 mb-2 pt-45 text-center">   
                     {/* <div className="form-group" > */}
                     {/* <div className='row justify-content-center'> */}
-                        <button type="button" className="btn btn-primary btn"><i class="bi bi-search me-2"></i>Check</button>
+                        <button type="button" className="btn btn-primary btn w-100"><i class="bi bi-search me-2"></i>Check</button>
                         {/* </div> */}
                     {/* </div> */}
                 </div>
@@ -93,7 +89,7 @@ function RoomAvailability() {
                 
             <Table bordered responsive="md" className="avail-table">
                 <thead className="tabhead head-bg">
-                    <tr>
+                    <tr className='text-center'>
                         <th>Room Type</th>
                         <th><span className='avail-date'>16-Sep-22</span><br/><span className='avail-date-head'> Fri </span></th>
                         <th><span className='avail-date'>17-Sep-22</span><br/><span className='avail-date-head'> Sat </span></th>

@@ -104,7 +104,7 @@ const display = (e) => {
 
                         <div>
                             <form >
-                                <div className="row my-5 white-back px-2 py-3 round-1">
+                                <div className="row white-back mt-2 px-2 py-2 round-1">
                                     <div className="col-sm-12 d-flex justify-content-between">
                                             <h4 className="text-start">Add Customer details</h4>
                                             <button type="button" onClick={handleDecrement} className="btn btn-outline-danger px-3 me-2 btn-sm"><i class="bi bi-x-circle me-2"></i>Close</button>
@@ -116,7 +116,7 @@ const display = (e) => {
 
                                     <div className="col-md-6"> {/* ....left......*/}
                                         
-                                <div className="row my-3">
+                                <div className="row">
                                     <div className="col-sm-12 col-md-12">
                                     <div className='row'>
                                     <div className="col-lg-6 col-md-12">
@@ -164,7 +164,7 @@ const display = (e) => {
                                 </div>
 
                                 
-                                <div className="row my-3">
+                                <div className="row">
                                    
                                     <div className="col-lg-4 col-md-6 col-sm-4">
                                         <div className="inputfieldpadding">

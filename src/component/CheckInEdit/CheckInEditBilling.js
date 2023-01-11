@@ -18,17 +18,15 @@ function CheckInEditBilling() {
     };
 
     return(
-        // <div className="CheckInEditBilling">
-                <div className="container-fluid">
-                    <div className="availability_check_bg light-violet-bg mt-2">
+            <div className="container-fluid light-violet-bg">
                 <div className='d-flex flex-row justify-content-between'>
-                <h6 className='left ps-2 grey'>Billing Type</h6>
+                <h6 className='left ps-2 grey pt-2'>Billing Type</h6>
                 <p className='pe-2'>* Visible only for group</p>
                 </div>
-                     <hr className='gray my-0'/>
+                     <hr className='grey my-0'/>
                    
-                        <Form className='row py-1 text-center'>
-                            <div className="col-lg-6 border-right">
+                        <Form className='row py-1 text-center mt-2'>
+                            <div className="col-lg-6 border-right mb-2">
                         <Form.Check
                             className="form-check-bg"
                             inline
@@ -91,7 +89,7 @@ function CheckInEditBilling() {
                         </div>
 
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 mb-2">
                         <Form.Check
                         className="form-check-bg"
                             inline
@@ -125,7 +123,6 @@ function CheckInEditBilling() {
                             </div>
 
                         </Form>
-                        </div>
                         
 
                         {/* <div className="availability_check_bg mt-3">
@@ -152,13 +149,13 @@ function CheckInEditBilling() {
                         </div>
                         </div> */}
 
-                        <div className="availability_check_bg mt-3">
                         <div className="row">
-                            <div className="col-12">
-                                <h6 className='left ps-3 grey py-2'>Payment Details</h6>
-                                <hr className='gray mb-4 mt-0'/>
+                            <div className="col-sm-6 mb-2">
+                            <div className="availability_check_bg">
+                                <h6 className='left ps-2 grey'>Payment Details</h6>
+                                <hr className='gray mb-2 mt-0'/>
 
-                                <div className="form-group mb-3 d-flex justify-content-center">
+                                <div className="d-flex justify-content-center">
                                     <label className="text-left" htmlFor="source">Payment method<b className='text-danger'>*</b></label>
                                             <Form.Select className="payment-width" aria-label="Default select example">
                                             <option value="1">INDIVIDUAL</option>
@@ -166,29 +163,21 @@ function CheckInEditBilling() {
                                             </Form.Select>
                                  
                                 </div>
+                                </div>
+                            </div>
 
-                               
-                        </div>
-                        </div>
-                        </div>
-
-                                
-                        <div className="availability_check_bg mt-3">
-                        <div className="row">
-                            <div className="col-12 text-center">
-                                <h6 className='left ps-3 grey py-2'>Deposit Details</h6>
-                                <hr className='gray mb-4 mt-0'/>
-                                <div className="sharer-bg pb-4 mx-2">
-                                <Button variant="primary"><i class="bi bi-piggy-bank-fill me-2"></i>Deposit</Button>
+                            <div className="col-sm-6 text-center mb-2">
+                            <div className="availability_check_bg">
+                                    <h6 className='left ps-2 grey'>Deposit Details</h6>
+                                    <hr className='gray'/>
+                                    <div className="sharer-bg">
+                                        <Button variant="primary"><i class="bi bi-piggy-bank-fill me-2"></i>Deposit</Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        </div>
-                        
-
 
                 </div>
-        // </div>
     );
 
 }

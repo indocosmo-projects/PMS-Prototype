@@ -178,7 +178,9 @@ function RoomsInputModal() {
 
                         <Modal show={show} onHide={handleClose}>
                             <Modal.Header closeButton>
-                            <Modal.Title>Add Rooms</Modal.Title>
+                                <Modal.Title>
+                                    <h5 className="p-0 m-0">Add Rooms</h5>
+                                </Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
                             {tdata()}
@@ -210,7 +212,7 @@ function RoomsInputModal() {
                                 Close
                             </Button>
                             <Button variant="primary" onClick={handleClose}>
-                                Save Changes
+                            <i class="bi bi-plus-circle me-1"></i> Add
                             </Button>
                             </div>
 

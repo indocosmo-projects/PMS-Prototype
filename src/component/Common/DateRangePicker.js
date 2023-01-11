@@ -8,14 +8,14 @@ function DateRangePicker () {
 
 return (
   <div>
-  <Space direction="vertical" size={12}>
-    <RangePicker />
+  {/* <Space direction="vertical" size={12}> */}
+    <RangePicker style={{ width: '100%' }} />
     {/* <RangePicker showTime />
     <RangePicker picker="week" />
     <RangePicker picker="month" />
     <RangePicker picker="quarter" />
     <RangePicker picker="year" /> */}
-  </Space>
+  {/* </Space> */}
   </div>
 );
 }

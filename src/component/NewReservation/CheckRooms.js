@@ -15,7 +15,7 @@ function MyVerticallyCenteredModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Check Rooms Availability
+          <h5 className="p-0 m-0">Check Rooms Availability</h5>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
