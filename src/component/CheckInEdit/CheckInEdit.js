@@ -234,7 +234,7 @@ function CheckInEdit(){
 
                             <Accordion.Item eventKey="4">
                                 <Accordion.Header><h6>Billing Details</h6><i class="bi bi-exclamation-circle-fill pe-3 accordion-header-icon-red"></i></Accordion.Header>
-                                <Accordion.Body className='light-violet-bg p-0'>
+                                <Accordion.Body className='p-0'>
 
                                 <CheckInEditBilling/>
 

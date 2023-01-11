@@ -38,7 +38,6 @@ function CheckInEditDetails() {
                 <div className="container-fluid ">
                 {/* --------------------------------------------------------------------------------------------------- */}
 
-
                 <Button variant="primary mb-3" onClick={handleShow}><i class="bi bi-plus-circle me-2"></i>Add Guest</Button>
 
                 
@@ -48,7 +47,9 @@ function CheckInEditDetails() {
                     onHide={handleClose}
                     >
                             <Modal.Header closeButton>
-                            <Modal.Title>Add Guest</Modal.Title>
+                                <Modal.Title>
+                                    <h5 className="p-0 m-0">Add Guest</h5>
+                                </Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
 

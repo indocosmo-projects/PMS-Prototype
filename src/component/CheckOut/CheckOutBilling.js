@@ -26,12 +26,11 @@ function CheckOutBilling() {
 
     return(
         <div className="CheckInEditBilling">
-            {/* <div className="section"> */}
                 <div className="container-fluid light-violet-bg">
-                <h6 className='left mt-2 ps-3 grey'>Billing Type</h6>
-                     <hr className='gray mb-4'/>
+                {/* <h6 className='left mt-2 ps-2 pt-2 grey'>Billing Type</h6> */}
+                     {/* <hr className='gray mb-4'/> */}
                    
-                        <Form className='row py-3  mx-2'>
+                        <Form className='row text-center py-2'>
                             <div className="col-lg-6 border-right">
                         <Form.Check
                             className="form-check-bg"
@@ -45,7 +44,7 @@ function CheckOutBilling() {
                             onChange={changeHandler}
                         />
 
-                                    <div aria-hidden={selected !== "ind" ? true : false} className=" mt-3">
+                                    <div aria-hidden={selected !== "ind" ? true : false} className="mt-3 text-center">
                                         
                                          <Alert key="primary" variant="primary" className="mx-4 mt-3">
                                          <i class="bi bi-person-fill me-2"></i><b>Individual Billing</b> is Selected
@@ -118,16 +117,18 @@ function CheckOutBilling() {
                                             <i class="bi bi-people-fill me-2"></i><b>Group Billing</b> is Selected
                                             </Alert>
 
-                                            <div className="grp-bill-padding">
-                                            <p className="left gray mt-4">Select the Guest to be Group billed</p>
+                                            <div className="row mb-3">
+                                                <div className="col-sm-6">
+                                            <p className="left grey">Select the Guest to be Group billed</p>
                                             <Form.Select aria-label="Default select example">
                                                 <option>Select the Room/Guest</option>
                                                 <option value="1">FLR 1, ROOM 101 / Tom</option>
                                                 <option value="2">FLR 1, ROOM 102 / Jack</option>
                                                 <option value="3">FLR 1, ROOM 103 / Pam</option>
                                             </Form.Select>
-
-                                            <p className="left gray mt-4">Select the Guests to be Transferred</p>
+                                            </div>
+                                            <div className="col-sm-6">
+                                            <p className="left grey">Select the Guests to be Transferred</p>
 
                                                 <Select
                                                     closeMenuOnSelect={false}
@@ -142,8 +143,14 @@ function CheckOutBilling() {
                                                     menuPosition={'fixed'}
                                                 />
 
-                                                <Button variant="primary mb-2 mt-4"><i class="bi bi-check-lg me-1"></i>Transfer</Button>
 
+                                            </div>
+                                            </div>
+
+                                            <div className="row mb-2">
+                                                <div className="col-12">
+                                                <Button variant="primary"><i class="bi bi-check-lg me-1"></i>Transfer</Button>
+                                            </div>
                                             </div>
                                     </div>
                             </div>
@@ -164,7 +171,6 @@ function CheckOutBilling() {
 
 
                 </div>
-            {/* </div> */}
         </div>
     );
 
