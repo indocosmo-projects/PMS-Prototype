@@ -314,13 +314,13 @@ const display = (e) => {
                                                 <div className="row my-3">
                                                     <div className="col-lg-3 col-md-4 col-sm-6">
                                                         <div className="inputfieldpadding">
-                                                            <label htmlFor="arrivaldate">Arrival Date<b className='text-danger'>*</b></label>
+                                                            <label htmlFor="arrivaldate">Check-in Date<b className='text-danger'>*</b></label>
                                                             <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-3 col-md-4 col-sm-6">
                                                         <div className="inputfieldpadding">
-                                                            <label htmlFor="arrivaldate">Departure Date<b className='text-danger'>*</b></label>
+                                                            <label htmlFor="arrivaldate">Check-out Date<b className='text-danger'>*</b></label>
                                                             <input type="datetime-local" className="form-control" id="departuredate" placeholder="Enter Departure Date" name="departuredate" />
                                                         </div>
                                                     </div>

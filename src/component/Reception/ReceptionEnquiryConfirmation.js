@@ -10,7 +10,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 
 
-function ReceptionExpectedArrivals() {
+function ReceptionEnquiryConfirmation() {
 
 
     const details =  
@@ -187,4 +187,4 @@ function ReceptionExpectedArrivals() {
     
 }
  
-export default ReceptionExpectedArrivals;
+export default ReceptionEnquiryConfirmation;

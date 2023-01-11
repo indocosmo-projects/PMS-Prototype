@@ -257,7 +257,7 @@ function CheckInEditDetails() {
                         <hr className='grey'></hr>
 
                                 <div className='row'>
-                                    <h5>Add Sharers</h5>
+                                    <h5>Add sharer details</h5>
                                     <div className="col-lg-4 col-sm-12 col-12">
                                             <label className="text-left">Full Name<b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" placeholder="" />
@@ -528,8 +528,6 @@ function CheckInEditDetails() {
                                             className="basic-multi-select"
                                             classNamePrefix="select"
                                             menuPlacement="auto"
-                                            menuPortalTarget={document.body}
-                                            menuPosition={'fixed'}
                                             />
                                 </div>
                                 </div>
@@ -562,7 +560,7 @@ function CheckInEditDetails() {
                             </Modal.Body>
                             <Modal.Footer className='d-flex justify-content-between'>
 
-                            <Button variant="warning" className="me-2"><i class="bi bi-clipboard-plus-fill me-1"></i>Duplicate details</Button>
+                            {/* <Button variant="warning" className="me-2"><i class="bi bi-clipboard-plus-fill me-1"></i>Duplicate details</Button> */}
                             
 
                             <div>

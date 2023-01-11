@@ -154,8 +154,9 @@ function NewReservation() {
                                 <div className="row mb-1">
                                     <div className='col-12 d-flex justify-content-between mb-3'>
                                             <button type="button" className="btn btn-danger me-2 px-3" ><i class="bi bi-x-lg me-2"></i>Cancel</button>
-                                            <div>
+                                            <div className=''>
                                                 <button className="btn btn-outline-secondary me-3"><i className="bi bi-download me-2"></i>Download</button>
+                                                <button type="button" className="btn btn-dark px-3 me-3" ><i class="bi bi-check-lg me-2"></i>Save & Check-in</button>
                                                 <button type="button" className="btn btn-success px-3" ><i class="bi bi-check-lg me-2"></i>Save</button>
                                             </div>
                                         </div>
