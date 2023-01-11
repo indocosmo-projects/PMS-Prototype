@@ -7,6 +7,7 @@ import InhouseCustomers from './InhouseCustomers';
 import ReceptionExpectedArrivals from './ReceptionExpectedArrivals';
 import ReceptionDepartures from './ReceptionExpectedDepartures';
 import ReceptionHotelStatus from './ReceptionHotelStatus';
+import ReceptionEnquiryConfirmation from './ReceptionEnquiryConfirmation';
 
 
 function Reception() {
@@ -38,7 +39,7 @@ function Reception() {
                     </Tab>
 
                     <Tab className='tab-content-bg tab-bg p-2' eventKey="enquiries" title={<div><i className="bi bi-exclamation-circle-fill me-2"/><p className='p-0 m-0'>Enquiry Confirmation</p></div>}>
-                        {/* <ReceptionHotelStatus /> */}
+                        <ReceptionEnquiryConfirmation />
                     </Tab>
 
                     <Tab className='tab-content-bg tab-bg p-2' eventKey="hotelstatus" title={<div><i className="bi bi-exclamation-circle-fill me-2"/><p className='p-0 m-0'>Hotel Status</p></div>}>

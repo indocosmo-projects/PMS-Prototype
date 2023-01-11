@@ -189,10 +189,10 @@ function Reservation() {
                                 <div className="col-sm-12 reservation_table">
                                     <Table className="table table-striped table-bordered" responsive>
                                         <thead >
-                                            <tr className='center'>
+                                            <tr className='center grey'>
                                                 <th>Resv Id</th>
-                                                <th>Arrival Date<i className="bi bi-arrow-down-up sort-btn"></i></th>
-                                                <th>Departure Date<i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th>Check-in Date<i className="bi bi-arrow-down-up sort-btn"></i></th>
+                                                <th>Check-out Date<i className="bi bi-arrow-down-up sort-btn"></i></th>
                                                 <th>Nights<i className="bi bi-arrow-down-up sort-btn"></i> </th>
                                                 <th>No of Rooms<i className="bi bi-arrow-down-up sort-btn"></i></th>
                                                 <th>Booked By<i className="bi bi-arrow-down-up sort-btn"></i></th>

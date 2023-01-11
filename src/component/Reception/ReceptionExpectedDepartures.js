@@ -151,11 +151,11 @@ function ReceptionExpectedDepartures() {
                          
                             <table className="table table-bordered reception-table">
                                 <thead>
-                                    <tr>
+                                    <tr className='grey'>
                                         <th>Room No.</th>
                                         <th>Guest</th>
-                                        <th>Arrival Date</th>
-                                        <th>Departure Date</th>
+                                        <th>Check-in Date</th>
+                                        <th>Check-out Date</th>
                                         <th>Folio Balance</th>
                                         <th>Deposit</th>
                                         <th>Posting</th>

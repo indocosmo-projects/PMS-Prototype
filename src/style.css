@@ -247,3 +247,8 @@ z-index: 997 !important;
 }
 
 /* -----date-range-picker----z-indexes---important------------------ */
+
+
+thead th {
+  background-color: #e2e4f8 !important;
+}
