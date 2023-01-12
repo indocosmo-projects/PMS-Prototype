@@ -32,6 +32,7 @@ function NewReservation() {
                                 </Accordion.Body>
                             </Accordion.Item>
                             </Accordion> */}
+
                             <CheckRooms />
                     </div>
 

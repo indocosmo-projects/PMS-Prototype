@@ -1,82 +1,61 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from "react-router-dom";
-import logo from '../../assets/niko.png';
-import './Navigation.css';
+import React, { useState } from "react";
+import { Layout, Button, Drawer } from "antd";
+import LeftMenu from "./LeftMenu";
+import RightMenu from "./RightMenu";
+import { MenuOutlined } from "@ant-design/icons";
+// import { useLocation } from "react-router-dom";
+import './Navigationbar.css';
 
 
-function NavigationBar() {
+const Navigationbar = () => {
+  const [visible, setVisible] = useState(false);
+  const showDrawer = () => {
+    setVisible(!visible);
+  };
+
+  // If you do not want to auto-close the mobile drawer when a path is selected
+  // Delete or comment out the code block below
+  // From here
+  // let { pathname: location } = useLocation();
+  // useEffect(() => {
+  //   setVisible(false);
+  // }, [location]);
+  // Upto here
+
   return (
-    <Navbar  bg="dark"  expand="lg">
-      <Container className="nav">
-    
-        <Navbar.Brand href="#home"><div className='logo-cover'><img src={logo} className="logo" alt="logo"/></div></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-        
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto gap-2">
+    <nav className="navbar">
+      <Layout>
+        <Layout className="nav-header">
+          <div className="logo">
+            {/* <h3 className="brand-font">Brand Here</h3> */}
+          </div>
+          <div className="navbar-menu">
+            <div className="leftMenu">
+              <LeftMenu mode={"horizontal"} />
+            </div>
+            <Button className="menuButton" type="text" onClick={showDrawer}>
+              <MenuOutlined />
+            </Button>
+            <div className="rightMenu">
+              <RightMenu mode={"horizontal"} />
+            </div>
 
-              <Nav.Link><Link to="/home" className='nlink'>Home</Link></Nav.Link>
-              <Nav.Link><Link to="/reservation" className='nlink'>Reservation</Link></Nav.Link>
-              <Nav.Link><Link to="/reception" className='nlink'>Reception</Link></Nav.Link>
-
-            <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink-drop">
-              <NavDropdown.Item><Link to="/shiftmanagement" className="nlink-drop">Shift Management</Link></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Link><Link to="/request" className='nlink'>Requests</Link></Nav.Link>
-            <Nav.Link><Link to="/reports" className='nlink'>Reports</Link></Nav.Link>
-            <Nav.Link><Link to="/hkstatus" className='nlink'>HK Status</Link></Nav.Link>
-
-
-            <NavDropdown title="Tools" id="basic-nav-dropdown" className="nlink-drop">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown title="Setup" id="basic-nav-dropdown" className="nlink-drop">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-
-          </Nav>
-
-          <Nav className='profile-btn'>
-          <NavDropdown  title="John Doe" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1"><i className="grey bi bi-person-fill me-2"></i>Profile</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2"><i className="grey bi bi-bell-fill me-2"></i>Notifications</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3"><i className="grey bi bi-gear-fill me-2"></i>Settings</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4" className='red'><i class="bi bi-box-arrow-right me-2"></i>Logout</NavDropdown.Item>
-            </NavDropdown>
-            </Nav>
-
-        </Navbar.Collapse>
-  
-            
-      </Container>
-      
-    </Navbar>
-    
+            <Drawer
+              title={"Brand Here"}
+              placement="right"
+              closable={true}
+              onClose={showDrawer}
+              visible={visible}
+              style={{ zIndex: 99999 }}
+            >
+              <LeftMenu mode={"inline"} />
+              <RightMenu mode={"inline"} />
+            </Drawer>
+          </div>
+        </Layout>
+      </Layout>
+   </nav>
   );
-}
+};
 
-export default NavigationBar;
+export default Navigationbar;

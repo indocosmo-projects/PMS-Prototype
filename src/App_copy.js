@@ -8,8 +8,9 @@ import ReceptionExpectedArrivals from './component/Reception/ReceptionExpectedAr
 import ReceptionHotelStatus from './component/Reception/ReceptionHotelStatus';
 import RoomList from './component/RoomList/RoomList';
 import NavigationbarNew from './component/Common/NavigationbarNew';
-// import Navigationbar from './component/Common/Navigationbar';
+// import NavigationbarMannual from './component/Common/NavigationbarMannual';
 import CheckInEdit from './component/CheckInEdit/CheckInEdit';
+// import CheckInEditOtherDetails from './component/CheckInEdit/CheckInEditOtherDetails';
 import ShiftManagement from './component/Shift/ShiftManagement';
 import Request from './component/Request/Request';
 import NewRequest from './component/NewRequest/NewRequest';
@@ -31,6 +32,7 @@ import Currency from './component/Currency/Currency';
 import AccountMaster from './component/AccountMaster/AccountMaster';
 import Season from './component/Season/Season';
 import Discount from './component/Discount/Discount';
+// import Home from './component/Home/Home';
 import Dashboard from './component/Dashboard/Dashboard'
 import Tax from './component/Tax/Tax';
 import Templates from './component/Templates/Templates';
@@ -49,10 +51,9 @@ function App() {
 
         return (
     <div className="App">
-      
+        <NavigationbarNew/>  
         <Router>
-
-        <NavigationbarNew/> 
+           {/* <NavigationbarMannual/> */}
 
             <Switch>
                 <Route exact path='/dashboard' component={Dashboard}/>
@@ -96,12 +97,8 @@ function App() {
                 <Route exact path="/roomrates" component={RoomRates}/>
                 <Route exact path="/pettycashsetup" component={PettyCashSetup}/>
             </Switch>
-
+            </Router>
             <Footer/>
-
-          </Router>
-
-            
         
     </div>
   );

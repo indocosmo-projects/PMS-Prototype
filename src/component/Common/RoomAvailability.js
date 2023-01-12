@@ -1,11 +1,50 @@
 import React, {  useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import Badge from 'react-bootstrap/Badge';
-// import DateRangePicker from 'rsuite/DateRangePicker';
 import './RoomAvailability.css';
-// import { DatePicker } from 'rsuite';
-
 import DateRangePicker from './DateRangePicker';
+import { DownOutlined, UserOutlined } from '@ant-design/icons';
+import { Button, Dropdown, message, Space, Tooltip } from 'antd';
+
+
+const handleButtonClick = (e) => {
+    message.info('Click on left button.');
+    console.log('click left button', e);
+  };
+  const handleMenuClick = (e) => {
+    message.info('Click on menu item.');
+    console.log('click', e);
+  };
+  const items = [
+    {
+      label: '1st menu item',
+      key: '1',
+      icon: <UserOutlined />,
+    },
+    {
+      label: '2nd menu item',
+      key: '2',
+      icon: <UserOutlined />,
+    },
+    {
+      label: '3rd menu item',
+      key: '3',
+      icon: <UserOutlined />,
+      danger: true,
+    },
+    {
+      label: '4rd menu item',
+      key: '4',
+      icon: <UserOutlined />,
+      danger: true,
+      disabled: true,
+    },
+  ];
+  const menuProps = {
+    items,
+    onClick: handleMenuClick,
+  };
+
 
 
 function RoomAvailability() {
@@ -67,6 +106,18 @@ function RoomAvailability() {
                                 <label className="text-left" htmlFor="nights">Nights</label>
                                 <input type="number"  className="form-control"  value={nights} min="1" name="nights" id="nights" />
                 </div>
+
+                <div className="col-lg-2 col-6 mb-2">   
+                <Dropdown menu={menuProps}>
+                                <Button>
+                                    <Space>
+                                    Button
+                                    <DownOutlined />
+                                    </Space>
+                                </Button>
+                                </Dropdown>
+                </div>
+                
 
                 <div className="col-lg-2 col-6 mb-2">   
                             <label className="text-left" htmlFor="rooms">No. of Rooms<b className='text-danger'>*</b></label>
