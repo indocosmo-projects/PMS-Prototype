@@ -1,24 +1,41 @@
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { NavLink } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../assets/niko.png';
 import './Navigation.css';
+// import { DownOutlined } from '@ant-design/icons';
+// import { Dropdown, Space } from 'antd';
 
+
+const items = [
+  {
+    key: '1',
+    label: (
+      <NavLink activeClassName="active-link" to="/shiftmanagement">Shift Management</NavLink>
+    ),
+  },
+  {
+    key: '2',
+    label: (
+      <NavLink activeClassName="active-link" to="/shiftmanagement">Shift Management</NavLink>
+    ),
+  },
+
+];
 
 function NavigationBarNew() {
   return (
-    <Navbar  bg="dark"  expand="lg">
-      <Container className="nav">
-    
+    <Navbar expand="lg">
+  
         <Navbar.Brand href="#home"><div className='logo-cover'><img src={logo} className="logo" alt="logo"/></div></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto gap-2 nav-main">
 
-                  <div>
+                  <div >
               <ul className="nav"> 
                 <li>
                   <NavLink exact to="/home">Home</NavLink>
@@ -34,10 +51,25 @@ function NavigationBarNew() {
                   </NavLink>
                 </li>
                 <li>
+                {/* <Dropdown
+                  menu={{
+                    items,
+                    // defaultSelectedKeys: ['2'],
+                  }}
+                >
+                  <button className='nav-dropdown-btn p-0' onClick={(e) => e.preventDefault()}>
+                    <Space>
+                    Shift
+                      <DownOutlined />
+                    </Space>
+                  </button>
+                </Dropdown> */}
+
                     <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink-drop">
                             <NavDropdown.Item><NavLink activeClassName="active-link" to="/shiftmanagement">Shift Management</NavLink></NavDropdown.Item>
                     
                       </NavDropdown>
+
                 </li>
                 <li>
                   <NavLink activeClassName="active-link" to="/request">
@@ -55,6 +87,21 @@ function NavigationBarNew() {
                   </NavLink>
                 </li>
                 <li>
+
+
+                {/* <Dropdown
+                  menu={{
+                    items,
+                  }}
+                >
+                  <button className='nav-dropdown-btn p-0' onClick={(e) => e.preventDefault()}>
+                    <Space>
+                    Tools
+                      <DownOutlined />
+                    </Space>
+                  </button>
+                </Dropdown> */}
+
                     <NavDropdown title="Tools" id="basic-nav-dropdown" className="nlink-drop">
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/nightaudit">Night Audit</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/mergeroom">Merge Room</NavLink></NavDropdown.Item>
@@ -121,9 +168,6 @@ function NavigationBarNew() {
             </Nav>
 
         </Navbar.Collapse>
-  
-            
-      </Container>
       
     </Navbar>
     

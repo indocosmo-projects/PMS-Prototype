@@ -36,7 +36,7 @@ function CheckRooms() {
 
   return (
     <>
-      <Button variant="primary" className='me-2 mb-2' onClick={() => setModalShow(true)}>
+      <Button variant="outline-primary" className='me-2 mb-2' onClick={() => setModalShow(true)}>
       <i class="bi bi-clipboard2-check me-2"></i>Check Availability
       </Button>
 

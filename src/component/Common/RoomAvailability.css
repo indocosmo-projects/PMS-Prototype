@@ -37,3 +37,48 @@
     z-index: 2;
     background-color: #ffffff;
   }
+
+  .min-width-popover-input{
+    min-width: 120px !important;
+  }
+  .ant-picker-input.ant-picker-input-active {
+    height: 28px;
+}
+.ant-picker.ant-picker-range {
+    box-shadow: 2px 2px 5px rgba(172, 177, 202, 0.295);
+    border: solid 1px rgb(189, 189, 189);
+}
+
+.ant-picker.ant-picker-range:hover {
+  border: solid 1px rgb(171, 176, 253);
+
+}
+
+.pop-over-input-btn-roomavail{
+  box-shadow: 2px 2px 5px rgba(172, 177, 202, 0.295);
+  border: solid 1px rgb(189, 189, 189);
+}
+
+.pop-over-input-btn-roomavail:hover{
+  border: solid 1px rgb(171, 176, 253) !important;
+}
+
+.grey-line{
+  color: rgb(216, 216, 216);
+}
+
+.font-size-xs{
+font-size: x-small;
+}
+
+.popover__head{
+  background-color:  #e2e4f8;
+}
+
+.input-font-size-popover{
+  font-size: larger;
+}
+
+.room-avail-td-btn:hover{
+background-color: #a5c4ff !important;
+}

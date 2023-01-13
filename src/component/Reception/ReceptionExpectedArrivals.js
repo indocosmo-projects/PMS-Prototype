@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Badge from 'react-bootstrap/Badge';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { Pagination } from 'antd';
 
 
 
@@ -133,16 +134,16 @@ function ReceptionExpectedArrivals() {
                             </div>
                         </div>
 
-                        <div className="col-sm-6 col-md-4 mb-2 d-flex justify-content-end">
+                        <div className="col-sm-6 col-md-6 mb-2 d-flex justify-content-end">
                                 <label className="text-left" htmlFor="">Showing Records of</label>
                                 <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
                         </div>
                        
-                        <div className="col-sm-6 col-md-2">
+                        {/* <div className="col-sm-6 col-md-2">
                             <div className="mb-3">
                             <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New check-in</button></Link>
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
                   
@@ -170,14 +171,14 @@ function ReceptionExpectedArrivals() {
                                 {/*} <div className="col-4 d-flex justify-content-start" ><i className="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
                                 {/* <div className="col-6"></div> */} 
                                 <div className="col-12 d-flex justify-content-end">
-                                <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-left"></i><span className="hide-element"></span></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-right"></i></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button>
-                                    
+                                                <Pagination
+                                                        total={85}
+                                                        showTotal={(total, range) => `${range[0]}-${range[1]} of ${total} items`}
+                                                        defaultPageSize={20}
+                                                        defaultCurrent={1}
+                                                        showQuickJumper
+                                                    />
+
                                 </div>
                             </div>
                     

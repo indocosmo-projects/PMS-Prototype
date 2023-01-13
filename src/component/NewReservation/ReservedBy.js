@@ -2,10 +2,39 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
+import { Checkbox } from 'antd';
+
+
+
+const onChange = (e) => {
+  console.log(`checked = ${e.target.checked}`);
+};
 
 function ReservedBy() {
     return(
         <div className="col-12 py-2" >
+                                <div className="row mb-3">
+                                <div className="col-md-6 col-lg-3 col-6">
+                                        <label className="text-left" htmlFor="email">TA/Company Name <b className='text-danger'>*</b></label>
+                                            <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue=""/>
+
+                                    </div>
+                                    <div className="col-md-6 col-lg-3 col-6">
+                                        <label className="text-left" htmlFor="email">GST<b className='text-danger'>*</b></label>
+                                        <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue=""/>
+                                </div>
+                                <div className="col-md-6 col-lg-3 col-6">
+                                        <label className="text-left" htmlFor="email">Bill to<b className='text-danger'>*</b></label>
+                                        <Form.Select aria-label="Default select example">
+                                                    <option>Select</option>
+                                                    <option value="1">FIT</option>
+                                                    <option value="2">CORPORATE</option>
+                                                    <option value="2">TA</option>
+                                            </Form.Select>
+                                </div>
+                                </div>
+                                <hr className='grey'></hr>
+
                                 <div className="row">
                                     <div className="col-lg-3 col-md-6 col-6">
                                             <label>First Name<b className='text-danger'>*</b></label>
@@ -40,7 +69,7 @@ function ReservedBy() {
                                             <input type="text" className="form-control" placeholder="" />
                                     </div>
                                     <div className="col-lg-2 col-sm-6 col-md-3 col-6 py-1">
-                                            <label>Gender</label>
+                                            <label>Gender<b className='text-danger'>*</b></label>
                                         
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -50,7 +79,7 @@ function ReservedBy() {
                                     </div>
 
                                     <div className="col-lg-2 col-sm-6 col-md-3 col-6 py-1">
-                                            <label>Country</label>
+                                            <label>Country<b className='text-danger'>*</b></label>
                                            
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -60,7 +89,7 @@ function ReservedBy() {
                                     </div>
 
                                     <div className="col-lg-2 col-sm-6 col-md-3 col-6 py-1">
-                                            <label>State</label>
+                                            <label>State<b className='text-danger'>*</b></label>
                                            
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -75,7 +104,7 @@ function ReservedBy() {
                                     </div>
 
                                     <div className="col-lg-12 col-sm-6 col-6 py-1">
-                                            <label>Address</label>
+                                            <label>Street Address</label>
                                             <textarea className="form-control" style={{ height: 60, }} placeholder=""></textarea>
                                     </div>
                                  
@@ -100,6 +129,11 @@ function ReservedBy() {
                                                         <label>Discount Amount</label>
                                                         <input type="text" className="form-control shw_dsct_rgt" defaultValue="₹ 100" disabled/>
                                                     </div> */}
+                                        </div>
+                                        <div className="row mt-3">
+                                                <div className='d-flex justify-content-end'>
+                                                <Checkbox onChange={onChange}>Same for <b>Reserved For</b></Checkbox>
+                                                </div>
                                         </div>
                                                 
                             </div>

@@ -174,7 +174,7 @@ function RoomRateTypeDiscount() {
                 <td>₹50</td>
                 <td>₹1450</td>
                 <td>
-                <button className="btn btn-outline-danger btn-sm me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
+                <button className='btn btn-outline-secondary btn-sm me-2'><i className="bi bi-pencil-square"></i></button><button className="btn btn-outline-danger btn-sm me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
                 </td>
                     
                 </tr>
@@ -188,7 +188,7 @@ function RoomRateTypeDiscount() {
 
 
         return(
-            <div className='container-fluid'>
+            <div className=''>
                     <div className='row'>
                         <div className='col-12'>
                             <table className="table type-table">

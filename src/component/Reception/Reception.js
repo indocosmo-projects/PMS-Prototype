@@ -14,7 +14,7 @@ function Reception() {
   
         return (
             <div className="section p-0">
-                <div className="container-fluid h-100 mb-3">
+                <div className="container-fluid h-100 my-2">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div'>
                         <h3 className="header"><i className="bi bi-person-workspace me-2"></i>Reception</h3>
@@ -26,7 +26,7 @@ function Reception() {
                     className="mt-2 status-tab"
                     justify >
 
-                    <Tab className='tab-content-bg tab-bg p-2' eventKey="inhouse" title={<div><i className="bi bi-house-door-fill me-2"/><p className='p-0 m-0'>In-House Customers</p></div>}>
+                    <Tab className='tab-content-bg tab-bg p-2' eventKey="inhouse" title={<div><i className="bi bi-house-door-fill me-2"/><p className='p-0 m-0'>In-House Guests</p></div>}>
                         <InhouseCustomers />
                     </Tab>
 
@@ -38,7 +38,7 @@ function Reception() {
                         <ReceptionDepartures />
                     </Tab>
 
-                    <Tab className='tab-content-bg tab-bg p-2' eventKey="enquiries" title={<div><i className="bi bi-exclamation-circle-fill me-2"/><p className='p-0 m-0'>Enquiry Confirmation</p></div>}>
+                    <Tab className='tab-content-bg tab-bg p-2' eventKey="enquiries" title={<div><i class="bi bi-calendar-check-fill me-2"></i><p className='p-0 m-0'>Enquiry Confirmation</p></div>}>
                         <ReceptionEnquiryConfirmation />
                     </Tab>
 

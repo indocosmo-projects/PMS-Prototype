@@ -12,27 +12,25 @@ import ReservedFor from './ReservedFor';
 import Deposit from './Desposit';
 import Pickup from './Pickup';
 import CheckRooms from './CheckRooms';
+import RoomAvailabilitySearch from '../Common/RoomAvailabilitySearch';
 
 
 function NewReservation() {
 
    
     return(
-                <div className="container-fluid py-0 h-100 mb-3">
+                <div className="container-fluid py-0 h-100 my-2">
                     {/* ----- Heading ------ */}
-                    <div className='sticky-div d-flex justify-content-between'>
+                    <div className='sticky-div d-flex justify-content-between row'>
+                        <div className='col-lg-2 col-sm-4'>
                         <h3 className="header"><i class="bi bi-calendar2-plus-fill me-2"></i>New Reservation</h3>
-                        {/* <Accordion>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header className='availability-accordion'><h6 className='pt-1'><i class="bi bi-search mx-1"></i>Check Availability</h6></Accordion.Header>
-                                <Accordion.Body className='light-violet-bg'>
-
-                                <RoomAvailability/>
-
-                                </Accordion.Body>
-                            </Accordion.Item>
-                            </Accordion> */}
-                            <CheckRooms />
+                            </div>
+                            <div className='col-lg-8 col-sm-4 text-center'>
+                                <RoomAvailabilitySearch />
+                            </div>
+                            <div className='col-lg-2 col-sm-4 text-center'>
+                                <CheckRooms />
+                            </div>
                     </div>
 
 
@@ -40,25 +38,7 @@ function NewReservation() {
                      {/* ----- Form   ------ */}
                         <form action="#">
                             <div className="row">
-                                <div className="col-md-4 col-lg-2">
-                                    <div className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="reseNumber">Reservation Number</label>
-                                            <input type="number" className="form-control" id="reseNumber" defaultValue="100" name="reseNumber" disabled />
-                                    </div>
-                                </div>
-                                <div className="col-md-4 col-lg-2">
-                                    <div className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="arrivaldate">Current Date</label>
-                                            <input type="date" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" disabled/>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 col-lg-2">
-                                    <div className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="departdate">Reserved By <b className='text-danger'>*</b></label>
-                                            <input type="text" className="form-control" id="departdate" placeholder="Enter Reserved By" name="departdate" />
-                                    </div>
-                                </div>
-                                <div className="col-md-4 col-lg-2">
+                            <div className="col-md-4 col-lg-2">
                                     <div  className="inputfieldpadding">
                                         <label className="text-left" htmlFor="email">Source <b className='text-danger'>*</b></label>
                                         <select className="form-select">
@@ -69,17 +49,36 @@ function NewReservation() {
                                     </div>
                                 </div>
                                 <div className="col-md-4 col-lg-2">
-                                    <div  className="inputfieldpadding">
+                                    {/* <div className="inputfieldpadding">
+                                        <label className="text-left" htmlFor="reseNumber">Reservation Number</label>
+                                            <input type="number" className="form-control" id="reseNumber" defaultValue="100" name="reseNumber" disabled />
+                                    </div> */}
+                                </div>
+                                <div className="col-md-4 col-lg-2">
+                                    {/* <div className="inputfieldpadding">
+                                        <label className="text-left" htmlFor="arrivaldate">Current Date</label>
+                                            <input type="date" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" disabled/>
+                                    </div> */}
+                                </div>
+                                <div className="col-md-4 col-lg-2">
+                                    {/* <div className="inputfieldpadding">
+                                        <label className="text-left" htmlFor="departdate">Reserved By <b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" id="departdate" placeholder="Enter Reserved By" name="departdate" />
+                                    </div> */}
+                                </div>
+                               
+                                <div className="col-md-4 col-lg-2">
+                                    {/* <div  className="inputfieldpadding">
                                         <label className="text-left" htmlFor="email">TA/Company Name <b className='text-danger'>*</b></label>
                                             <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue=""/>
 
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className="col-md-4 col-lg-2">
-                                    <div  className="inputfieldpadding">
+                                    {/* <div  className="inputfieldpadding">
                                         <label className="text-left" htmlFor="email">GST<b className='text-danger'>*</b></label>
                                         <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue=""/>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </form>
@@ -118,7 +117,7 @@ function NewReservation() {
                             </Accordion.Item>
                             <Accordion.Item eventKey="2">
                                 <Accordion.Header><h6  className='me-2'>Reserved For</h6><i class="bi bi-exclamation-circle-fill pe-3 accordion-header-icon-red"></i></Accordion.Header>
-                                <Accordion.Body className='light-violet-bg'>
+                                <Accordion.Body className='light-violet-bg p-0'>
                                     
                     {/* -------- Reserved For----------- */}
                               <ReservedFor />  
@@ -151,7 +150,7 @@ function NewReservation() {
                     
                                 
                                 
-                                <div className="row mb-1">
+                                <div className="row mb-1 mt-3">
                                     <div className='col-12 d-flex justify-content-between mb-3'>
                                             <button type="button" className="btn btn-danger me-2 px-3" ><i class="bi bi-x-lg me-2"></i>Cancel</button>
                                             <div className=''>
