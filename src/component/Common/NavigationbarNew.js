@@ -5,8 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../assets/niko.png';
 import './Navigation.css';
-import { DownOutlined } from '@ant-design/icons';
-import { Dropdown, Space } from 'antd';
+// import { DownOutlined } from '@ant-design/icons';
+// import { Dropdown, Space } from 'antd';
 
 
 const items = [
@@ -51,7 +51,7 @@ function NavigationBarNew() {
                   </NavLink>
                 </li>
                 <li>
-                <Dropdown
+                {/* <Dropdown
                   menu={{
                     items,
                     // defaultSelectedKeys: ['2'],
@@ -63,12 +63,12 @@ function NavigationBarNew() {
                       <DownOutlined />
                     </Space>
                   </button>
-                </Dropdown>
+                </Dropdown> */}
 
-                    {/* <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink-drop">
+                    <NavDropdown title="Shift" id="basic-nav-dropdown" className="nlink-drop">
                             <NavDropdown.Item><NavLink activeClassName="active-link" to="/shiftmanagement">Shift Management</NavLink></NavDropdown.Item>
                     
-                      </NavDropdown> */}
+                      </NavDropdown>
 
                 </li>
                 <li>
@@ -89,7 +89,7 @@ function NavigationBarNew() {
                 <li>
 
 
-                <Dropdown
+                {/* <Dropdown
                   menu={{
                     items,
                   }}
@@ -100,9 +100,9 @@ function NavigationBarNew() {
                       <DownOutlined />
                     </Space>
                   </button>
-                </Dropdown>
+                </Dropdown> */}
 
-                    {/* <NavDropdown title="Tools" id="basic-nav-dropdown" className="nlink-drop">
+                    <NavDropdown title="Tools" id="basic-nav-dropdown" className="nlink-drop">
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/nightaudit">Night Audit</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/mergeroom">Merge Room</NavLink></NavDropdown.Item>
                           <NavDropdown.Divider />
@@ -117,7 +117,7 @@ function NavigationBarNew() {
                           <NavDropdown.Item><NavLink activeClassName="active-link headerink" to="/pettycash"  disabled>Petty Cash</NavLink></NavDropdown.Item>
                           <NavDropdown.Item><NavLink activeClassName="active-link dplink" to="/pettycash">Petty Cash</NavLink></NavDropdown.Item>
         
-                      </NavDropdown> */}
+                      </NavDropdown>
                 </li>
                 <li>
                     <NavDropdown title="General Settings" id="basic-nav-dropdown" className="nlink-drop">

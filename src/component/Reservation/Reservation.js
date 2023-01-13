@@ -7,8 +7,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Badge from 'react-bootstrap/Badge';
 import Table from 'react-bootstrap/Table';
 import { Link } from "react-router-dom";
-import DateRangePicker from '../Common/DateRangePicker';
-//import ReservationService from '../../service/ReservationService';
+import { Pagination } from 'antd';
 
 function Reservation() {
     
@@ -151,11 +150,11 @@ function Reservation() {
   
     
         return (
-                <div className="container-fluid py-0 h-100 mb-3">
+                <div className="container-fluid py-0 h-100 my-2">
                     {/* ----- Heading ------ */}
                     <div className="sticky-div d-flex justify-content-between">
                             <h3 className="header"><i className="bi bi-calendar-week-fill me-2"></i>Reservations</h3>
-                            <button className="btn btn-sm pe-3" title="New Reservation"><i className="bi bi-arrow-repeat me-2"></i>Update data</button>
+                            <button className="btn btn-sm pe-3" title="New Reservation"><i className="bi bi-arrow-repeat me-2"></i>OTA Update</button>
                         </div>
                         
                     <div className="row search-area-bg">
@@ -174,7 +173,7 @@ function Reservation() {
                             </div>
                         </div>
                         <div className="col-lg-4 col-sm-6 mb-2 d-flex justify-content-end">
-                                        <label className="text-left" htmlFor="">Showing Records of</label>
+                                        <label className="text-left" htmlFor="">Records of</label>
                                         <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
                             </div>
                         <div className="col-lg-2 col-sm-6 d-flex justify-content-end">
@@ -214,17 +213,24 @@ function Reservation() {
 
                             <div className="row d-flex justify-content-between">
                                     
-                                    {/*}                <div className="col-4 d-flex justify-content-start" ><i className="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
-                                                {/* <div className="col-6"></div> */}
                                                 <div className="col-12 d-flex justify-content-end">
-                                                <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
+                                                {/* <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
                                                     <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-left"></i><span className="hide-element"></span></button>
                                                     <button className="btn btn-outline-dark m-1 grey-border active">1</button>
                                                     <button className="btn btn-outline-dark m-1 grey-border">2</button>
                                                     <button className="btn btn-outline-dark m-1 grey-border">3</button>
                                                     <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-right"></i></button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button>
-                                                    
+                                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button> */}
+
+
+                                                    <Pagination
+                                                        total={85}
+                                                        showTotal={(total, range) => `${range[0]}-${range[1]} of ${total} items`}
+                                                        defaultPageSize={20}
+                                                        defaultCurrent={1}
+                                                        showQuickJumper
+                                                    />
+                                                                                                        
                                                 </div>
                                             </div>
 

@@ -27,7 +27,7 @@ function CheckInEdit(){
         {value: "305", label:"FLR 3, ROOM 303"},
     ];
     return(
-                <div className="container-fluid py-0 h-100 mb-3">
+                <div className="container-fluid py-0 h-100 my-2">
                     {/* ----- Heading ------ */}
                     <div className='sticky-div d-flex justify-content-between pb-1'>
                         <h3 className="header">Check In<span className="dark-bg ms-2"><i class="bi bi-pencil-square me-1"></i>Edit</span></h3>
@@ -54,14 +54,14 @@ function CheckInEdit(){
                         <div className="row px-2 pb-2">
                             <div className="col-xl-2 col-md-4 col-sm-6">
                                         <div className="form-group mb-3">
-                                            <label className="text-left" htmlFor="arrival">Arrival<b className='text-danger'>*</b></label>
+                                            <label className="text-left" htmlFor="arrival">Check-in<b className='text-danger'>*</b></label>
                                             <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival" />
                                         </div>
                                     
                             </div>
                             <div className="col-xl-2 col-md-4 col-sm-6">
                                         <div className="form-group">
-                                            <label className="text-left" htmlFor="departure">Departure<b className='text-danger'>*</b></label>
+                                            <label className="text-left" htmlFor="departure">Check-out<b className='text-danger'>*</b></label>
                                             <input type="datetime-local" className="form-control departure" name="departure" id="departure" />
                                         </div>
                             </div>
@@ -78,21 +78,21 @@ function CheckInEdit(){
                                 </div>
                             </div>
 
-                            <div className="col-xl-3 col-md-4 col-sm-6">
+                            {/* <div className="col-xl-3 col-md-4 col-sm-6">
                                     <div className="form-group">
                                         <label className="text-left" htmlFor="pwd">TA/Company<b className='text-danger'>*</b></label>
                                         <input type="password" className="form-control" placeholder="Name" id="pwd" />
                                     </div>
 
-                             </div>
+                             </div> */}
 
-                             <div className="col-xl-3 col-md-4 col-sm-6">
+                             {/* <div className="col-xl-3 col-md-4 col-sm-6">
                                     <div className="form-group">
                                         <label className="text-left" htmlFor="pwd">GST<b className='text-danger'>*</b></label>
                                         <input type="password" className="form-control" placeholder="Name" id="pwd" />
                                     </div>
 
-                             </div>
+                             </div> */}
 
                          </div>
                         </div>
@@ -131,7 +131,7 @@ function CheckInEdit(){
 
                             <Accordion.Item eventKey="3">
                                 <Accordion.Header><h6>Guest Details</h6><i class="bi bi-check-circle-fill pe-3 accordion-header-icon-green"></i></Accordion.Header>
-                                <Accordion.Body className='text-center'>
+                                <Accordion.Body className='text-center p-0'>
 
                                 <Table className='overflow-reservefor' responsive>
                                 <thead>
@@ -255,7 +255,7 @@ function CheckInEdit(){
                      */}
                                 
                                 
-                                <div className="row">
+                                <div className="row mt-3">
                                     <div className='col-12 d-flex justify-content-between  mb-3'>
                                                 <button type="button" className="btn btn-danger me-2 px-3" ><i class="bi bi-x-lg me-2"></i>Cancel</button>
                                             <div>

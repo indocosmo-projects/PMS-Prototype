@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
+import Alert from 'react-bootstrap/Alert';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 // import InputGroup from 'react-bootstrap/InputGroup';
@@ -35,7 +36,7 @@ function CheckInEditDetails() {
     const handleShow = () => setShow(true);
 
     return(
-                <div className="container-fluid ">
+                <div className="container-fluid">
                 {/* --------------------------------------------------------------------------------------------------- */}
 
                 <Button variant="primary mb-3" onClick={handleShow}><i class="bi bi-plus-circle me-2"></i>Add Guest</Button>
@@ -367,139 +368,125 @@ function CheckInEditDetails() {
 
                         <Tab.Pane eventKey="second">
 
-                                <div className="row mb-3 left">
 
-                                     <div className="col-md-2">
-                                        <Form>
-                                                
-                                                    <div className='left'>
-                                                    <Form.Check 
-                                                        type="checkbox"
-                                                        id="checkbox"
-                                                        label="Passport"
-                                                    />
+{/* ...........................new................................ */}
+<div className='row'>
+                            <div className='col-12'>
+                        <Table striped bordered hover size="sm">
+                                    <thead>
+                                        <tr>
+                                        <th>#</th>
+                                        <th>TYPE</th>
+                                        <th>NO.</th>
+                                        <th>Issued on</th>
+                                        <th>Expires on</th>
+                                        <th>View</th>
+                                        <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>1</td>
+                                        <td>Passport</td>
+                                        <td>GJHGD67R3761R27</td>
+                                        <td>02-Feb-2003</td>
+                                        <td>02-Feb-2030</td>
+                                        <td><Button variant="me-3" size="sm"><i class="bi bi-eye-fill me-2"></i></Button></td>
+                                        <td><button className='btn btn-outline-secondary me-2 btn-sm'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger btn-sm'><i className="bi bi-trash3"></i></button></td>
+                                        </tr>
 
-                                                    </div>
-                                              
-                                        </Form>
-                                            </div>
-                                     <div className="col-md-10">
+                                        <tr>
+                                        <td>2</td>
+                                        <td>Passport</td>
+                                        <td>GJHGD67R3761R27</td>
+                                        <td>02-Feb-2003</td>
+                                        <td>02-Feb-2030</td>
+                                        <td><Button variant="me-3" size="sm"><i class="bi bi-eye-fill me-2"></i></Button></td>
+                                        <td><button className='btn btn-outline-secondary me-2 btn-sm'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger btn-sm'><i className="bi bi-trash3"></i></button></td>
+                                        </tr>
 
-                                        <div className="row mb-3 left">
+                                        <tr>
+                                        <td>3</td>
+                                        <td>Passport</td>
+                                        <td>GJHGD67R3761R27</td>
+                                        <td>02-Feb-2003</td>
+                                        <td>02-Feb-2030</td>
+                                        <td><Button variant="me-3" size="sm"><i class="bi bi-eye-fill me-2"></i></Button></td>
+                                        <td><button className='btn btn-outline-secondary me-2 btn-sm'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger btn-sm'><i className="bi bi-trash3"></i></button></td>
+                                        </tr>
 
-                                                        <div className="col-md-2">
-                                                            <div className="form-group ">
-                                                            <label for="adults">option</label>
-                                                            <select className="form-control" id="options">
-                                                                <option>option 1</option>
-                                                                <option>option 2</option>
-                                                                <option>option 3</option>
-                                                            </select>
-                                                            </div>
-                                                        </div>
+                                    </tbody>
+                             </Table>
+                        </div>
+                        </div>
+                        <hr className='grey'></hr>
 
-                                                        <div className="col-md-4">
-                                                            <div className="form-group ">
-                                                                    <label for="passportnumber">Passport Number</label>
-                                                                    <input type="text" className="form-control" placeholder="" id="passportnumber" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="col-md-3">
-                                                            <div className="form-group ">
-                                                                    <label for="issueon">Issued</label>
-                                                                    {/* <input type="text" className="form-control" placeholder="Issued On" id="issueon" /> */}
-                                                                    <input type="datetime-local" className="form-control" name="issued" id="issued"/>
-
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="col-md-3">
-                                                            <div className="form-group ">
-                                                                    <label for="expon">Expiry</label>
-                                                                    {/* <input type="text" className="form-control" placeholder="Expiry Date" id="expon" /> */}
-                                                                    <input type="datetime-local" className="form-control" name="expiry" id="expiry"/>
-
-                                                            </div>
-                                                        </div>
-
-                                                </div>
-
-                                            <div className="row mb-3 right">
-
-                                            <div className="col-md-12">
-                                            <Button variant="light me-3" size="sm"><i class="bi bi-eye-fill me-2"></i>View Passport</Button>
-                                            <Button variant="secondary" size="sm"><i class="bi bi-upload me-2"></i>Upload Image</Button>
-                                            </div>
+                                <div className='row'>
+                                    <h5>ID details</h5>
+                                    <div className="col-lg-3 col-sm-12 col-12">
                                             
-                                            
-                                            </div>
+                                            <label>Type<b className='text-danger'>*</b></label>
+                                            <Form.Select aria-label="Default select example">
+                                                <option>Select ID type</option>
+                                                <option value="1">Passport</option>
+                                                <option value="2">PAN</option>
+                                                <option value="2">Drivers License</option>
+                                                </Form.Select>
+                                    </div>
+                                    <div className="col-lg-4 col-sm-6 col-6">
+                                    <label>Number<b className='text-danger'>*</b></label>
+                                            <input type="text" className="form-control" placeholder="" />
+                                    </div>
+                                    <div className="col-lg-3 col-sm-6 col-6  d-flex flex-column pt-2">
+                                    <label className='pb-3'></label>
+                                        <Button variant="outline-secondary" size="md"><i class="bi bi-upload me-2"></i>Upload</Button>
+                                    </div>
+                                    <div className="col-lg-2 col-md-12 d-flex flex-column pt-2">
+                                        <label className='pb-3'></label>
+                                        <Button variant="primary" size="md"><i class="bi bi-plus-circle me-2"></i>Add</Button>
+                                    </div>
+                                    <div className="col-lg-5 col-sm-6 col-6">
+                                    {/* <div className="form-group "> */}
+                                        <label for="issueon">Issued on<b className='text-danger'>*</b></label>
+                                        <input type="datetime-local" className="form-control" name="issued" id="issued"/>
+                                     {/* </div> */}
+                                    </div>
+                                    <div className="col-lg-5 col-sm-6 col-6">
+                                    {/* <div className="form-group "> */}
+                                        <label for="expon">Expires on<b className='text-danger'>*</b></label>
+                                        <input type="datetime-local" className="form-control" name="expiry" id="expiry"/>
+                                        {/* </div> */}
+                                    </div>
+
+                                    </div>
+
+                                    <hr className='grey'></hr>
 
 
-
-
-                                            </div>
-
+                                    <div className="row px-3">
+                                    <Alert show={show} variant="success">
+                                        {/* <Alert.Heading>How's it going?!</Alert.Heading> */}
+                                        <p>
+                                        <i class="bi bi-exclamation-circle me-2"></i>Found an ID of MR. Mark from past data, you can validate and use the same ID</p>
+                                        <hr />
+                                        <div className="d-flex justify-content-end">
+                                        <Button variant="dark me-3" size="sm"><i class="bi bi-eye-fill me-2"></i>View image</Button>
+                                        <Button onClick={() => setShow(false)} variant="outline-success" size='sm'>
+                                            Add this ID
+                                        </Button>
                                         </div>
+                                    </Alert>
 
 
-                                        
-                                        <div className="row mb-3 left">
-
-                                     <div className="col-md-2">
-                                        <Form>
-                                                
-                                                    <div className='left'>
-                                                    <Form.Check 
-                                                        type="checkbox"
-                                                        id="checkbox"
-                                                        label="PAN"
-                                                    />
-
-                                                    </div>
-                                              
-                                        </Form>
-                                            </div>
-                                     <div className="col-md-10">
-
-                                        <div className="row mb-3 left">
-
-                                                        <div className="col-md-2">
-                                                            <div className="form-group ">
-                                                            <label for="adults">option</label>
-                                                            <select className="form-control" id="options">
-                                                                <option>option 1</option>
-                                                                <option>option 2</option>
-                                                                <option>option 3</option>
-                                                            </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="col-md-10">
-                                                            <div className="form-group ">
-                                                                    <label for="passportnumber">PAN Number</label>
-                                                                    <input type="text" className="form-control" placeholder="" id="passportnumber" />
-                                                            </div>
-                                                        </div>
-
-                                                </div>
-
-                                            <div className="row mb-3 right">
-
-                                            <div className="col-md-12">
-                                            <Button variant="light me-3" size="sm"><i class="bi bi-eye-fill me-2"></i>View PAN</Button>
-                                            <Button variant="secondary" size="sm"><i class="bi bi-upload me-2"></i>Upload Image</Button>
-                                            </div>
-                                            
-                                            
-                                            </div>
+                                <div className="col-md-12">
+                                </div>
 
 
+                                </div>
+
+{/* ...................new............................... */}
 
 
-                                            </div>
-
-                                        </div>
                                
                             </Tab.Pane>
 

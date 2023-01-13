@@ -8,6 +8,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Badge from 'react-bootstrap/Badge';
 import Posting from './Posting';
+import { Pagination } from 'antd';
 
 
 function InhouseCustomers() {
@@ -132,17 +133,17 @@ function InhouseCustomers() {
                         </div>
 
          
-                                <div className="col-sm-6">
+                                {/* <div className="col-sm-6">
                                     <div className="mb-3">
                                     <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i className="bi bi-plus-circle me-2"></i>New check-in</button></Link>
                                     </div>
-                                </div>
+                                </div> */}
                         </div>
  
                             <table className="table table-bordered reception-table">
                                 <thead>
                                     <tr className='grey'>
-                                        <th>Room No.</th>
+                                        <th>Room No</th>
                                         <th>Guest</th>
                                         <th>Check-in Date</th>
                                         <th>Check-out Date</th>
@@ -157,18 +158,17 @@ function InhouseCustomers() {
                             </table>
 
                         <div className="row me-1 d-flex justify-content-between">
-                                    
-                                                {/*}<div className="col-4 d-flex justify-content-start" ><i className="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
-                                                {/* <div className="col-6"></div> */}
+        
                                                 <div className="col-12 d-flex justify-content-end">
-                                                <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-left"></i><span className="hide-element"></span></button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-right"></i></button>
-                                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button>
-                                                    
+
+                                                <Pagination
+                                                        total={85}
+                                                        showTotal={(total, range) => `${range[0]}-${range[1]} of ${total} items`}
+                                                        defaultPageSize={20}
+                                                        defaultCurrent={1}
+                                                        showQuickJumper
+                                                    />
+
                                                 </div>
                                             </div>
 

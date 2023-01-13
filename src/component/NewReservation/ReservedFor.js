@@ -106,11 +106,11 @@ const display = (e) => {
                             <form >
                                 <div className="row white-back mt-2 px-2 py-2 round-1">
                                     <div className="col-sm-12 d-flex justify-content-between">
-                                            <h4 className="text-start">Add Customer details</h4>
+                                            <h4 className="text-start">Add Guest details</h4>
                                             <button type="button" onClick={handleDecrement} className="btn btn-outline-danger px-3 me-2 btn-sm"><i class="bi bi-x-circle me-2"></i>Close</button>
                                     </div>
 
-                                    <div className="border-bottom">
+                                    <div className="border-bottom m-0">
 
                                     <div className="row">  
 
@@ -168,7 +168,7 @@ const display = (e) => {
                                    
                                     <div className="col-lg-4 col-md-6 col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label>Gender<b className='text-danger'>*</b></label>
+                                            <label>Gender<b className='text-danger'>*</b><b className='text-danger'>*</b></label>
                                             
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -180,7 +180,7 @@ const display = (e) => {
 
                                     <div className="col-lg-4 col-md-6 col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label>Country<b className='text-danger'>*</b></label>
+                                            <label>Country<b className='text-danger'>*</b><b className='text-danger'>*</b></label>
                                           
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -191,7 +191,7 @@ const display = (e) => {
                                     </div>
                                     <div className="col-lg-4 col-md-6 col-sm-4">
                                         <div className="inputfieldpadding">
-                                            <label>State<b className='text-danger'>*</b></label>
+                                            <label>State<b className='text-danger'>*</b><b className='text-danger'>*</b></label>
                                             
                                             <Form.Select aria-label="Default select example">
                                                     <option>Select</option>
@@ -208,7 +208,7 @@ const display = (e) => {
                                     </div>
                                     <div className="col-lg-8 col-md-12">
                                         <div className="inputfieldpadding">
-                                        <label>Address</label>
+                                        <label>Street Address</label>
                                             <textarea className="form-control" style={{ height: 30, }} placeholder=""></textarea>
                                         </div>
                                     </div>
@@ -307,12 +307,8 @@ const display = (e) => {
                             </div>
 
                                     <div className="col-sm-12" >
-                                        <div className="col-sm-12">
-                                            <h6 className="text-start">Reservation Details</h6>
-                                        </div>
-
-                                                <div className="row my-3">
-                                                    <div className="col-lg-3 col-md-4 col-sm-6">
+                                                <div className="row">
+                                                    {/* <div className="col-lg-3 col-md-4 col-sm-6">
                                                         <div className="inputfieldpadding">
                                                             <label htmlFor="arrivaldate">Check-in Date<b className='text-danger'>*</b></label>
                                                             <input type="datetime-local" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" />
@@ -323,21 +319,10 @@ const display = (e) => {
                                                             <label htmlFor="arrivaldate">Check-out Date<b className='text-danger'>*</b></label>
                                                             <input type="datetime-local" className="form-control" id="departuredate" placeholder="Enter Departure Date" name="departuredate" />
                                                         </div>
-                                                    </div>
-                                                    {/* <div className="col-sm-4">
-                                                        <div className="inputfieldpadding">
-                                                            <label>Location<b className='text-danger'>*</b></label>
-                                                            <input type="text" className="form-control" placeholder="" />
-                                                        </div>
                                                     </div> */}
-                                                    {/* <div className="col-sm-4">
-                                                        <div className="inputfieldpadding">
-                                                            <label>Seats<b className='text-danger'>*</b></label>
-                                                            <input type="text" className="form-control" placeholder="" />
-                                                        </div>
-                                                    </div> */}
+                                                   
 
-                                                    <div className="col-lg-6">
+                                                    <div className="col-lg-12">
                                                         <div className="inputfieldpadding">
                                                             <label>Remarks</label>
                                                             <textarea type="text" className="form-control" placeholder="" />

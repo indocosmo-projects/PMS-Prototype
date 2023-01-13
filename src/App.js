@@ -52,7 +52,7 @@ function App() {
       
         <Router>
 
-        <NavigationbarNew/> 
+        <NavigationbarNew /> 
 
             <Switch>
                 <Route exact path='/dashboard' component={Dashboard}/>

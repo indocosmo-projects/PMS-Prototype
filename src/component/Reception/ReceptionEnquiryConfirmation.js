@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Badge from 'react-bootstrap/Badge';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { Pagination } from 'antd';
 
 
 
@@ -41,24 +42,14 @@ function ReceptionEnquiryConfirmation() {
                         <td ><span className='ps-2'>{detail.bookedon}</span></td>
                         <td className='text-center'>
                                 <Dropdown as={ButtonGroup}>
-                                <Link to="/checkinedit"><Button variant="primary right-br-none btn-sm"><i class="bi bi-plus-circle me-2"></i>Check-in</Button></Link>
+                                <Link to="/checkinedit"><Button variant="primary right-br-none btn-sm"><i class="bi bi-plus-circle me-2"></i>Reserve</Button></Link>
 
                                     <Dropdown.Toggle className='checkin-split' split variant="primary btn-sm" id="dropdown-split-basic" />
 
                                     <Dropdown.Menu>
                                         <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
                                         <Dropdown.Divider />
-                                        <Dropdown.Item href="#/action-3">Deposit</Dropdown.Item>
-                                        <Dropdown.Divider />
-                                        <Dropdown.Item href="#/action-3">Pick up</Dropdown.Item>
-                                        <Dropdown.Divider />
-                                        <Dropdown.Item href="#/action-3">GRC</Dropdown.Item>
-                                        <Dropdown.Divider />
-                                        <Dropdown.Item href="#/action-3">Confirm</Dropdown.Item>
-                                        <Dropdown.Divider />
-                                        <Dropdown.Item href="#/action-3">No Show</Dropdown.Item>
-                                        <Dropdown.Divider />
-                                        <Dropdown.Item href="#/action-2">Cancel</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-1">Remove</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                                 </td>
@@ -133,16 +124,16 @@ function ReceptionEnquiryConfirmation() {
                             </div>
                         </div>
 
-                        <div className="col-sm-6 col-md-4 mb-2 d-flex justify-content-end">
+                        <div className="col-sm-6 col-md-6 mb-2 d-flex justify-content-end">
                                 <label className="text-left" htmlFor="">Showing Records of</label>
                                 <input type="date" className="form-control arrival date-fixed-size" name="arrival" id="arrival"/>
                         </div>
                        
-                        <div className="col-sm-6 col-md-2">
+                        {/* <div className="col-sm-6 col-md-2">
                             <div className="mb-3">
                             <Link to="/newreservation"><button className="btn btn-primary" title="New Reservation" style={{float : 'right'}}><i class="bi bi-plus-circle me-2"></i>New check-in</button></Link>
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
                   
@@ -150,14 +141,14 @@ function ReceptionEnquiryConfirmation() {
                      <table className="table table-bordered reception-table reception-table-2">
                         <thead >
                             <tr className='grey'>
-                                <th>Resv No</th>
+                                <th>Enq No</th>
                                 <th>Check-in Date</th>
                                 <th>Check-out Date</th>
                                 <th>Nights</th>
                                 <th>Rooms</th>
                                 <th>Booked By</th>
                                 <th>Booked For</th>
-                                <th>Booked On</th>
+                                <th>Enquired On</th>
                                 <th>Actions</th>
                             </tr>							
                         </thead>
@@ -170,14 +161,13 @@ function ReceptionEnquiryConfirmation() {
                                 {/*} <div className="col-4 d-flex justify-content-start" ><i className="bi bi-eye-fill me-2"></i>Showing 1 to {recordno} of {details.length} entries</div>
                                 {/* <div className="col-6"></div> */} 
                                 <div className="col-12 d-flex justify-content-end">
-                                <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-left"></i><span className="hide-element"></span></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border active">1</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border">2</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border">3</button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-right"></i></button>
-                                    <button className="btn btn-outline-dark m-1 grey-border"><span className="hide-element"></span><i className="bi bi-chevron-double-right"></i></button>
-                                    
+                                                 <Pagination
+                                                        total={85}
+                                                        showTotal={(total, range) => `${range[0]}-${range[1]} of ${total} items`}
+                                                        defaultPageSize={20}
+                                                        defaultCurrent={1}
+                                                        showQuickJumper
+                                                    />
                                 </div>
                             </div>
                     

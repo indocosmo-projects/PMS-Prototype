@@ -2,135 +2,55 @@ import React, {  useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import Badge from 'react-bootstrap/Badge';
 import './RoomAvailability.css';
-import DateRangePicker from './DateRangePicker';
-import { DownOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Dropdown, message, Space, Tooltip } from 'antd';
+// import DateRangePicker from './DateRangePicker';
+// import { Cascader, InputNumber, Select, Space } from 'antd';
+// import Button from 'react-bootstrap/Button';
+// import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+// import Popover from 'react-bootstrap/Popover';
+import RoomAvailabilitySearch from './RoomAvailabilitySearch';
+import Button from 'react-bootstrap/Button';
 
-
-const handleButtonClick = (e) => {
-    message.info('Click on left button.');
-    console.log('click left button', e);
-  };
-  const handleMenuClick = (e) => {
-    message.info('Click on menu item.');
-    console.log('click', e);
-  };
-  const items = [
-    {
-      label: '1st menu item',
-      key: '1',
-      icon: <UserOutlined />,
-    },
-    {
-      label: '2nd menu item',
-      key: '2',
-      icon: <UserOutlined />,
-    },
-    {
-      label: '3rd menu item',
-      key: '3',
-      icon: <UserOutlined />,
-      danger: true,
-    },
-    {
-      label: '4rd menu item',
-      key: '4',
-      icon: <UserOutlined />,
-      danger: true,
-      disabled: true,
-    },
-  ];
-  const menuProps = {
-    items,
-    onClick: handleMenuClick,
-  };
 
 
 
 function RoomAvailability() {
-    const [arrdate, setArrdate] = useState('');
-    const [deptdate, setDeptdate] = useState('');
+    // const [arrdate, setArrdate] = useState('');
+    // const [deptdate, setDeptdate] = useState('');
     const [nights, setNights] = useState(1);
 
 
-    const nightcalculation = () =>{
-        var arrd = arrdate.substring(0,10);
-        var deptd = deptdate.substring(0,10);
-        const date1 = new Date(arrd);
-        const date2 = new Date(deptd);
-        const diffTime = Math.abs(date2 - date1);
-        var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-        console.log("====="+arrdate + "---" +deptdate +"----"+ diffDays);
-        console.log(diffDays + " days");
-        setNights((diffDays));
+    // const nightcalculation = () =>{
+    //     var arrd = arrdate.substring(0,10);
+    //     var deptd = deptdate.substring(0,10);
+    //     const date1 = new Date(arrd);
+    //     const date2 = new Date(deptd);
+    //     const diffTime = Math.abs(date2 - date1);
+    //     var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+    //     console.log("====="+arrdate + "---" +deptdate +"----"+ diffDays);
+    //     console.log(diffDays + " days");
+    //     setNights((diffDays));
 
-        const selectionRange = {
-            startDate: new Date(),
-            endDate: new Date(),
-            key: 'selection',
-          }
+    //     const selectionRange = {
+    //         startDate: new Date(),
+    //         endDate: new Date(),
+    //         key: 'selection',
+    //       }
        
-        return (
-            diffDays
-        );
-    }
+    //     return (
+    //         diffDays
+    //     );
+    // }
     
     return (
        
-        <div onMouseUp={nightcalculation}>
+        // <div onMouseUp={nightcalculation}>
+        <div>
         <div className="light-violet-bg">
 
-        <div className="row mb-2">
-                {/* <div className="col-lg-3 mb-2">
-                        <div className="form-group">
-                            <label className="text-left" htmlFor="arrival">Checkin Time<b className='text-danger'>*</b></label>
-                            <input type="datetime-local" className="form-control arrival" name="arrival" id="arrival" onChange={(e) => setArrdate((e.target.value))}/>
-                        </div>
-                </div>
+        <div className="row">
 
-                <div className="col-lg-3 mb-2">
-                        <div className="form-group">
-                            <label className="text-left" htmlFor="departure">Checkout Time<b className='text-danger'>*</b></label>
-                            <input type="datetime-local" className="form-control departure" name="departure" onChange={(e) => setDeptdate((e.target.value))} id="departure" />
-                        </div>
+        <RoomAvailabilitySearch />
 
-                </div> */}
-
-
-        <div className="col-lg-6  d-flex flex-column">
-        <label className="text-left" htmlFor="nights">Duration</label>
-        <DateRangePicker />
-        </div>
-
-                <div className="col-lg-2 col-6 mb-2">   
-                                <label className="text-left" htmlFor="nights">Nights</label>
-                                <input type="number"  className="form-control"  value={nights} min="1" name="nights" id="nights" />
-                </div>
-
-                <div className="col-lg-2 col-6 mb-2">   
-                <Dropdown menu={menuProps}>
-                                <Button>
-                                    <Space>
-                                    Button
-                                    <DownOutlined />
-                                    </Space>
-                                </Button>
-                                </Dropdown>
-                </div>
-                
-
-                <div className="col-lg-2 col-6 mb-2">   
-                            <label className="text-left" htmlFor="rooms">No. of Rooms<b className='text-danger'>*</b></label>
-                            <input type="number"  className="form-control"  placeholder="Select Rooms count" min="1"  name="rooms" id="rooms"  />
-                </div>
-
-                <div className="col-lg-2 mb-2 pt-45 text-center">   
-                    {/* <div className="form-group" > */}
-                    {/* <div className='row justify-content-center'> */}
-                        <button type="button" className="btn btn-primary btn w-100"><i class="bi bi-search me-2"></i>Check</button>
-                        {/* </div> */}
-                    {/* </div> */}
-                </div>
         </div> 
 
         <div className="row ">
@@ -190,7 +110,7 @@ function RoomAvailability() {
                     </tr>
                     <tr>
                         <td><strong>DLX</strong></td>
-                        <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1700</Badge></div></td>
+                        <td><Button variant="btn-sm room-avail-td-btn p-0"><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1700</Badge></div></Button></td>
                         <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹4000</Badge></div></td>
                         <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹3000</Badge></div></td>
                         <td><div className='d-flex justify-content-between'><strong className='me-2'>6</strong><Badge className='mt-1' bg="secondary">₹1900</Badge></div></td>
