@@ -247,7 +247,7 @@ hr{
 }
 
 .status-tab > li > button.active{
-    background-color: var(--tab-bg) !important;
+    /* background-color: var(--tab-bg) !important; */
     color: #525b92 !important;
     font-weight: 500;
 }
@@ -256,9 +256,9 @@ hr{
     margin-bottom: 0 !important;
 }
 
-.tab-bg{
+/* .tab-bg{
     background-color: var(--tab-bg);
-}
+} */
 .tab-content-bg{
     border-radius: 0 0 .5em .5em;
     border-left: solid 1px #dee2e6;

@@ -213,10 +213,10 @@ select.form-control.form-select.text-center {
 
 }
 
-.tab-pane{
+/* .tab-pane{
     padding-top: 1em;
     background-color: var(--tab-bg);
-}
+} */
 
 .nav-pills .nav-item .nav-link{
     display: flex;

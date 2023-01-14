@@ -150,16 +150,18 @@ function Reservation() {
   
     
         return (
-                <div className="container-fluid py-0 h-100 my-2">
-                    {/* ----- Heading ------ */}
-                    <div className="sticky-div d-flex justify-content-between">
+<div className='h-100 main-bg'>
+            <div className="sticky-div d-flex justify-content-between px-2">
                             <h3 className="header"><i className="bi bi-calendar-week-fill me-2"></i>Reservations</h3>
                             <button className="btn btn-sm pe-3" title="New Reservation"><i className="bi bi-arrow-repeat me-2"></i>OTA Update</button>
                         </div>
+                <div className="container-fluid px-2 mt-2">
+                    {/* ----- Heading ------ */}
+                    
                         
-                    <div className="row search-area-bg">
+                    <div className="row search-area-bg white-round-bg d-flex justify-content-center px-0 m-0">
 
-                        <div className="row d-flex justify-content-between">
+                        <div className="row d-flex justify-content-between p-0">
                         <div className="col-lg-6 col-sm-12">
                             <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
@@ -184,7 +186,7 @@ function Reservation() {
                         </div>
 
 
-                            <div className="row">
+                            <div className="row p-0">
                                 <div className="col-sm-12 reservation_table">
                                     <Table className="table table-striped table-bordered" responsive>
                                         <thead >
@@ -236,6 +238,7 @@ function Reservation() {
 
 
                     </div>
+                </div>
                 </div>
         );
     
