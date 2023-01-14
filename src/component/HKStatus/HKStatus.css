@@ -254,7 +254,7 @@
 }
 
 .status-tab > li > button.active{
-    background-color: var(--tab-bg) !important;
+    /* background-color: var(--tab-bg) !important; */
     color: #525b92 !important;
     font-weight: 500;
 }
@@ -263,9 +263,9 @@
     margin-bottom: 0 !important;
 }
 
-.tab-bg{
+/* .tab-bg{
     background-color: var(--tab-bg);
-}
+} */
 .tab-content-bg{
     /* padding-bottom: 2em; */
     border-radius: 0 0 .5em .5em;

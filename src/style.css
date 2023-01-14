@@ -34,10 +34,18 @@ body{
   border-radius: .5em;
 }
 
-.container-fluid{
+/* .container-fluid{
     border-radius:  3px;
-    background-color: white ;
-    /* padding : 1em !important; */
+    background-color: rgb(255, 255, 255) ;
+} */
+.main-bg{
+  background-color: rgb(240, 241, 248) ;
+
+}
+
+.white-round-bg{
+  border-radius:  8px;
+    background-color: rgb(255, 255, 255) ;
 }
 
 .header {
@@ -54,7 +62,7 @@ body{
 
 
 .h-100 {
-  min-height: 80vh;
+  min-height: 85vh;
 }
 
 /* ----------------------scrollbar--styles---------------------- */
@@ -136,11 +144,8 @@ body{
     display: block;
     top: 0px;
     z-index: 994;
-    /* margin-bottom: .5em; */
-    border-bottom: solid 1px #f0f0f0;
-    padding: 0em 1em;
+    border-bottom: solid 1px #e2e2e2;
     padding-top: .5em;
-    border-radius: 0 0 8px 8px;
 }
 
 .right-br-none{
@@ -196,6 +201,7 @@ body{
 .accordion-header > button > h6{
 width: 100%;
 font-weight: 500;
+font-size: large !important;
 }
 
 /* .accordion-header > button > i{
@@ -252,3 +258,20 @@ z-index: 997 !important;
 thead th {
   background-color: #e2e4f8 !important;
 }
+
+
+.table>:not(caption)>*>* {
+  padding: .2rem .5rem !important;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+  .row-reverse-sm{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .row-reverse-sm > div{
+    display: flex;
+    justify-content: center !important;
+  }
+  }

@@ -13,12 +13,15 @@ import ReceptionEnquiryConfirmation from './ReceptionEnquiryConfirmation';
 function Reception() {
   
         return (
-            <div className="section p-0">
-                <div className="container-fluid h-100 my-2">
-                    {/* ----- Heading ------ */}
-                    <div className='sticky-div'>
+            <div className='h-100 main-bg'>
+
+                {/* ----- Heading ------ */}
+                <div className='sticky-div px-2'>
                         <h3 className="header"><i className="bi bi-person-workspace me-2"></i>Reception</h3>
                     </div>
+                    
+                <div className="container-fluid px-2 mt-2">
+                    
                     
                 <Tabs
                     defaultActiveKey="inhouse"

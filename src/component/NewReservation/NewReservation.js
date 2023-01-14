@@ -4,6 +4,8 @@ import '../../style.css';
 import './NewReservation.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import InputGroup from 'react-bootstrap/InputGroup';
+
 // import RoomAvailability from '../Common/RoomAvailability';
 import RoomRateTypeDiscount from '../RoomsSelect/RoomRateTypeDiscount';
 // import RoomsInputModal from './RoomsInputModal';
@@ -37,49 +39,54 @@ function NewReservation() {
                         
                      {/* ----- Form   ------ */}
                         <form action="#">
-                            <div className="row">
-                            <div className="col-md-4 col-lg-2">
+                            <div className="row mt-3">
+                            <div className="col-lg-4 col-md-6">
                                     <div  className="inputfieldpadding">
-                                        <label className="text-left" htmlFor="email">Source <b className='text-danger'>*</b></label>
+                                    <InputGroup>
+                                        <InputGroup.Text id="inputGroup-sizing-default">
+                                        Source <b className='text-danger'>*</b>
+                                        </InputGroup.Text>
                                         <select className="form-select">
                                             <option>FIT</option>
                                             <option>TA</option>
                                             <option>CORPORATE</option>
                                         </select>
+                                    </InputGroup>
+                                        
                                     </div>
                                 </div>
-                                <div className="col-md-4 col-lg-2">
-                                    {/* <div className="inputfieldpadding">
+                                {/* <div className="col-md-4 col-lg-2">
+                                    <div className="inputfieldpadding">
                                         <label className="text-left" htmlFor="reseNumber">Reservation Number</label>
                                             <input type="number" className="form-control" id="reseNumber" defaultValue="100" name="reseNumber" disabled />
-                                    </div> */}
-                                </div>
-                                <div className="col-md-4 col-lg-2">
-                                    {/* <div className="inputfieldpadding">
+                                    </div>
+                                </div> */}
+                                {/* <div className="col-md-4 col-lg-2">
+                                    <div className="inputfieldpadding">
                                         <label className="text-left" htmlFor="arrivaldate">Current Date</label>
                                             <input type="date" className="form-control" id="arrivaldate" placeholder="Enter Arrival Date" name="arrivaldate" disabled/>
-                                    </div> */}
-                                </div>
-                                <div className="col-md-4 col-lg-2">
-                                    {/* <div className="inputfieldpadding">
+                                    </div>
+                                </div> */}
+                                {/* <div className="col-md-4 col-lg-2">
+                                    <div className="inputfieldpadding">
                                         <label className="text-left" htmlFor="departdate">Reserved By <b className='text-danger'>*</b></label>
                                             <input type="text" className="form-control" id="departdate" placeholder="Enter Reserved By" name="departdate" />
-                                    </div> */}
-                                </div>
+                                    </div>
+                                </div> */}
                                
-                                <div className="col-md-4 col-lg-2">
-                                    {/* <div  className="inputfieldpadding">
+                                {/* <div className="col-md-4 col-lg-2">
+                                    <div  className="inputfieldpadding">
                                         <label className="text-left" htmlFor="email">TA/Company Name <b className='text-danger'>*</b></label>
                                             <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue=""/>
 
-                                    </div> */}
-                                </div>
-                                <div className="col-md-4 col-lg-2">
-                                    {/* <div  className="inputfieldpadding">
+                                    </div>
+                                </div> */}
+                                {/* <div className="col-md-4 col-lg-2">
+                                    <div  className="inputfieldpadding">
                                         <label className="text-left" htmlFor="email">GST<b className='text-danger'>*</b></label>
                                         <input className="form-control form-control-inline input-medium default-date-picker inner_login" size="16" type="text" defaultValue=""/>
-                                    </div> */}
-                                </div>
+                                    </div>
+                                </div> */}
                             </div>
                         </form>
 
@@ -150,15 +157,17 @@ function NewReservation() {
                     
                                 
                                 
-                                <div className="row mb-1 mt-3">
-                                    <div className='col-12 d-flex justify-content-between mb-3'>
+                                <div className="row mb-1 mt-3 row-reverse-sm">
+                                    {/* <div className='d-flex justify-content-between mb-3'> */}
+                                        <div className='col-sm-3 mb-2'> 
                                             <button type="button" className="btn btn-danger me-2 px-3" ><i class="bi bi-x-lg me-2"></i>Cancel</button>
-                                            <div className=''>
+                                            </div>
+                                            <div className='col-sm-9 d-flex justify-content-end mb-2'>
                                                 <button className="btn btn-outline-secondary me-3"><i className="bi bi-download me-2"></i>Download</button>
                                                 <button type="button" className="btn btn-dark px-3 me-3" ><i class="bi bi-check-lg me-2"></i>Save & Check-in</button>
                                                 <button type="button" className="btn btn-success px-3" ><i class="bi bi-check-lg me-2"></i>Save</button>
                                             </div>
-                                        </div>
+                                        {/* </div> */}
                                 </div>
                                 
                 </div>
