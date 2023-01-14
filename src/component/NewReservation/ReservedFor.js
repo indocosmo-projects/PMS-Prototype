@@ -345,7 +345,7 @@ const display = (e) => {
                     )}
                 {/* </ul> */}
                 <br />
-                <div className="row">
+                <div className="row pb-2">
                     
                 <div className='col-12 d-flex justify-content-center'>
                    
