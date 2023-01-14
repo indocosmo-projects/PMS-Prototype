@@ -46,7 +46,7 @@ const display = (e) => {
 
                         <Table className='overflow-reservefor' responsive>
                         <thead>
-                            <tr>
+                            <tr className='grey'>
                             <th>No.</th>
                             <th>Name</th>
                             <th>Email</th>
@@ -67,7 +67,7 @@ const display = (e) => {
                                     <td>917786676757</td>
                                     <td>Male</td>
                                     <td>India</td>
-                            <td><button className='btn btn-outline-secondary me-2 btn-sm'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger btn-sm'><i className="bi bi-trash3"></i></button></td>
+                            <td><button className='btn p-0 me-3'><i className="bi bi-pencil-square"></i></button><button className='btn red p-0'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                             <tr>
                             <td>2</td>
@@ -79,7 +79,7 @@ const display = (e) => {
                                     <td>918787867554</td>
                                     <td>Male</td>
                                     <td>India</td>
-                            <td><button className='btn btn-outline-secondary me-2 btn-sm'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger btn-sm'><i className="bi bi-trash3"></i></button></td>
+                            <td><button className='btn p-0 me-3'><i className="bi bi-pencil-square"></i></button><button className='btn red p-0'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                             <tr>
                             <td>3</td>
@@ -91,7 +91,7 @@ const display = (e) => {
                                     <td>912544678907</td>
                                     <td>Female</td>
                                     <td>India</td>
-                            <td><button className='btn btn-outline-secondary me-2 btn-sm'><i className="bi bi-pencil-square"></i></button><button className='btn btn-outline-danger btn-sm'><i className="bi bi-trash3"></i></button></td>
+                            <td><button className='btn p-0 me-3'><i className="bi bi-pencil-square"></i></button><button className='btn red p-0'><i className="bi bi-trash3"></i></button></td>
                             </tr>
                         </tbody>
                         </Table>
@@ -107,7 +107,7 @@ const display = (e) => {
                                 <div className="row white-back mt-2 px-2 py-2 round-1">
                                     <div className="col-sm-12 d-flex justify-content-between">
                                             <h4 className="text-start">Add Guest details</h4>
-                                            <button type="button" onClick={handleDecrement} className="btn btn-outline-danger px-3 me-2 btn-sm"><i class="bi bi-x-circle me-2"></i>Close</button>
+                                            <button type="button" onClick={handleDecrement} className="btn red p-0e-2 btn-sm"><i class="bi bi-x-circle me-2"></i>Close</button>
                                     </div>
 
                                     <div className="border-bottom m-0">

@@ -157,15 +157,17 @@ function NewReservation() {
                     
                                 
                                 
-                                <div className="row mb-1 mt-3">
-                                    <div className='col-12 d-flex justify-content-between mb-3'>
+                                <div className="row mb-1 mt-3 row-reverse-sm">
+                                    {/* <div className='d-flex justify-content-between mb-3'> */}
+                                        <div className='col-sm-3 mb-2'> 
                                             <button type="button" className="btn btn-danger me-2 px-3" ><i class="bi bi-x-lg me-2"></i>Cancel</button>
-                                            <div className=''>
+                                            </div>
+                                            <div className='col-sm-9 d-flex justify-content-end mb-2'>
                                                 <button className="btn btn-outline-secondary me-3"><i className="bi bi-download me-2"></i>Download</button>
                                                 <button type="button" className="btn btn-dark px-3 me-3" ><i class="bi bi-check-lg me-2"></i>Save & Check-in</button>
                                                 <button type="button" className="btn btn-success px-3" ><i class="bi bi-check-lg me-2"></i>Save</button>
                                             </div>
-                                        </div>
+                                        {/* </div> */}
                                 </div>
                                 
                 </div>

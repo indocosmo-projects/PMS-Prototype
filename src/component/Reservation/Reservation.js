@@ -70,7 +70,7 @@ function Reservation() {
                         <td className='text-center'>{detail.nights}</td>
                         <td className='text-center'>{detail.rooms}</td>
                         <td>{detail.bookedby}</td>
-                        <td><h6 className='d-flex justify-content-between'>{detail.bookedfor}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
+                        <td><h6 className='d-flex justify-content-between m-0'>{detail.bookedfor}<Badge  className='ms-2' bg="secondary">{detail.badge} <span className='font-light-2'>Nights</span></Badge></h6></td>
                         <td>{detail.bookedon}</td>
                         <td className='text-center'>{detail.left}</td>
                         <td className="status-clr">{detail.status}</td>
@@ -161,7 +161,7 @@ function Reservation() {
                         
                     <div className="row search-area-bg white-round-bg d-flex justify-content-center px-0 m-0">
 
-                        <div className="row d-flex justify-content-between p-0">
+                        <div className="row d-flex justify-content-between p-0 mt-1">
                         <div className="col-lg-6 col-sm-12">
                             <div className="input-group mb-3 ">
                                 <input type="text" className="form-control" placeholder="Search..." />
@@ -213,7 +213,7 @@ function Reservation() {
                             </div>
 
 
-                            <div className="row d-flex justify-content-between">
+                            <div className="row d-flex justify-content-between mb-2">
                                     
                                                 <div className="col-12 d-flex justify-content-end">
                                                 {/* <button className="btn btn-outline-dark m-1 grey-border"><i className="bi bi-chevron-double-left"></i><span className="hide-element"></span></button>

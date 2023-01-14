@@ -174,7 +174,7 @@ function RoomRateTypeDiscount() {
                 <td>₹50</td>
                 <td>₹1450</td>
                 <td>
-                <button className='btn btn-outline-secondary btn-sm me-2'><i className="bi bi-pencil-square"></i></button><button className="btn btn-outline-danger btn-sm me-2" onClick={handleDecrement}><i className="bi bi-trash "></i></button>
+                <button className='btn me-3 p-0'><i className="bi bi-pencil-square"></i></button><button className="btn p-0  me-2" onClick={handleDecrement}><i className="bi bi-trash red"></i></button>
                 </td>
                     
                 </tr>
@@ -192,20 +192,20 @@ function RoomRateTypeDiscount() {
                     <div className='row'>
                         <div className='col-12'>
                             <table className="table type-table">
-                                <thead className="">
-                                    <tr>
-                                        <th>ROOM TYPE</th>
-                                        <th>OCCUPANCY</th>
-                                        <th>ROOM RATE</th>
-                                        <th>TAX</th>
-                                        <th>RATE CODE</th>
-                                        <th>COUNT</th>
-                                        <th>ROOMS</th>
-                                        <th>EXTRAS</th>
-                                        <th>SUB TOTAL</th>
-                                        <th>DISCOUNT</th>
-                                        <th>TOTAL</th>
-                                        <th></th>
+                                <thead>
+                                    <tr className='grey'>
+                                        <th>Room Type</th>
+                                        <th>Occupancy</th>
+                                        <th>Room Rate</th>
+                                        <th>Tax</th>
+                                        <th>Rate Code</th>
+                                        <th>Count</th>
+                                        <th>Rooms</th>
+                                        <th>Extras</th>
+                                        <th>Sub Total</th>
+                                        <th>Discount</th>
+                                        <th>Total</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 

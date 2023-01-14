@@ -39,7 +39,7 @@ body{
     background-color: rgb(255, 255, 255) ;
 } */
 .main-bg{
-  background-color: rgb(237, 238, 246) ;
+  background-color: rgb(240, 241, 248) ;
 
 }
 
@@ -201,6 +201,7 @@ body{
 .accordion-header > button > h6{
 width: 100%;
 font-weight: 500;
+font-size: large !important;
 }
 
 /* .accordion-header > button > i{
@@ -257,3 +258,20 @@ z-index: 997 !important;
 thead th {
   background-color: #e2e4f8 !important;
 }
+
+
+.table>:not(caption)>*>* {
+  padding: .2rem .5rem !important;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+  .row-reverse-sm{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .row-reverse-sm > div{
+    display: flex;
+    justify-content: center !important;
+  }
+  }
